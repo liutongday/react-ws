@@ -52,13 +52,26 @@ const Home = React.createClass({
                 <div>
                   Hello, World.
                 </div>
-                <div>react-ws 致力于像搭积木一样快速搭建项目</div>
+                <div>基于react 致力于像搭积木一样快速搭建前端项目</div>
                 <hr/>
                 <div>
                     <h4>Link</h4>
-                    <a href="http://gmfe.github.io/gm-bootstrap/css/" target="_blank">gm-bootstrap</a>
+                    <a href="http://www.material-ui.com/#/" target="_blank">Material UI</a>
                     <br/>
-                    <a href="http://react-bootstrap.github.io/" target="_blank">react-bootstrap</a>
+                    <a href="http://ant.design/" target="_blank">AntDesign</a>
+                    <br/>
+                    <a href="https://github.com/ant-design/ant-design" target="_blank">AntDesign源码分享</a>
+                    <br/>
+                    <a href="hmttp://v3.bootcss.com/" target="_blank">Bootstrap3</a>
+                    <br/>
+                    <a href="https://www.npmjs.co/package/babel" target="_blank">NPM</a>
+                    <br/>
+                    <h4>如果你自己也想构建一个</h4>
+                    <a href="https://segmentfault.com/a/1190000002767365" target="_blank">example1</a>
+                    <br/>
+                    <a href="http://www.csdn.net/article/2015-05-24/2824757-building-modular-javascript-applications-in-es6-with-react-webpack-and-babel?reload=1" target="_blank">example2</a>
+                    <br/>
+
                 </div>
             </div>
         );
