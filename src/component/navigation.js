@@ -85,7 +85,7 @@ let Navigation = React.createClass({
         this.props.onSelect(value.key);
     },
     handleToggle(value){
-        // 先这样恶心处理吧
+        // 先这样处理吧
         value.open = !value.open;
         this.setState(this.state);
     },
