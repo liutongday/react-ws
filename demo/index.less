@@ -1,0 +1,44 @@
+@import "../node_modules/gm-bootstrap/less/variables.less";
+@import "../node_modules/gm-bootstrap/less/mixins.less";
+@import "../node_modules/gm-bootstrap/less/custom.less";
+@import "../src/css/variables.less";
+
+h1 {
+  border-bottom: 1px solid #eee;
+  margin: 24px 0 16px;
+  padding-bottom: 0.3em;
+}
+
+.doc-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 10px;
+  border-left: 1px solid @ws-border-color;
+
+  a {
+    display: block;
+    padding: 2px 2px 2px 1em;
+    color: black;
+  }
+
+  a.doc-nav-title {
+    padding-left: 0;
+  }
+
+
+  &:hover,
+  &:focus {
+    //border:2px solid red;width:200px;height:20px;float:left;margin-right: 10px;
+     transform:rotate(360deg) scale(1.2);
+      -webkit-transform:rotate(360deg) scale(1.2);
+      -moz-transform:rotate(360deg) scale(1.2);
+      -o-transform:rotate(360deg) scale(1.2);
+      -ms-transform:rotate(360deg) scale(1.2);
+
+  }
+
+  > img {
+    display: block;
+  }
+}
