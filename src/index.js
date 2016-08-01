@@ -19,6 +19,7 @@ module.exports = {
     Navigation,
     Affix,
     Storage,
+    Switch,
     Validate,
     ValidateMixin,
 };

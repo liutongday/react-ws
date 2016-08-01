@@ -18,12 +18,11 @@ import ReactDOM from 'react-dom';
 import {
     Flex,
     Storage,
-    Switch,
 } from '../src/index';
 import _ from 'underscore';
 
 import Layout from './component/layout';
-//import Form from './component/form';
+import Form from './component/form';
 
 window.Storage = Storage;
 
@@ -48,9 +47,10 @@ class App extends React.Component {
     render() {
         return (
             <div className="container">
-              
-			  <Layout />
-			  
+
+			    <Layout />
+			    <Form />
+
             </div>
         );
     }

@@ -68,7 +68,7 @@ const Component = React.createClass({
         return (
             <div>
                 <h1 id="form">表单</h1>
-                <h2 id="former">Former(alpha)</h2>
+                <h2 id="former">Form</h2>
                 <FormerDom/>
                 <h2 id="switch">Switch</h2>
                 <div>
