@@ -20,7 +20,9 @@ import {
     Storage,
 } from '../src/index';
 import _ from 'underscore';
-
+import NavRight from './component/shijian';
+import Hello from './component/hell';
+import Weixin from './component/weixin';
 import Layout from './component/layout';
 import Form from './component/form';
 
@@ -50,7 +52,9 @@ class App extends React.Component {
 
 			    <Layout />
 			    <Form />
-
+                <Hello/>
+                <NavRight/>
+                <Weixin/>
             </div>
         );
     }
