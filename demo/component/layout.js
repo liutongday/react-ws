@@ -19,7 +19,7 @@ import {
 var FlexWrap = React.createClass({
     render(){
         return (
-            <Flex column height="200px">
+            <Flex column height="20%">
                 <Flex>top</Flex>
                 <Flex flex>
                     <Flex>
