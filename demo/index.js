@@ -18,6 +18,8 @@ import ReactDOM from 'react-dom';
 import {
     Flex,
     Storage,
+    Nowtime,
+    Head
 } from '../src/index';
 import _ from 'underscore';
 
@@ -48,9 +50,10 @@ class App extends React.Component {
         return (
             <div className="container">
 
-			    <Layout />
-			    <Form />
-
+			    {/*<Layout />*/}
+			    {/*<Form />*/}
+               {/* <Nowtime />*/}
+                <Head />
             </div>
         );
     }

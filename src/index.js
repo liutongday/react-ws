@@ -9,6 +9,9 @@ import Storage from './component/storage';
 import Switch from './component/switch';
 import Validate from './component/validate';
 import ValidateMixin from './component/validate.mixin';
+import Nowtime from './component/Nowtime';
+import Head from './component/head'
+
 
 
 import './index.less';
@@ -22,4 +25,6 @@ module.exports = {
     Switch,
     Validate,
     ValidateMixin,
+    Nowtime,
+    Head
 };
