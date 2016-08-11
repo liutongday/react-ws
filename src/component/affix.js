@@ -4,51 +4,41 @@ import classNames from 'classnames';
 import assign from 'object-assign';
 import shallowequal from 'shallowequal';
 
-function getScroll(w, top?: boolean) {
-  let ret = w[`page${top ? 'Y' : 'X'}Offset`];
-  const method = `scroll${top ? 'Top' : 'Left'}`;
-  if (typeof ret !== 'number') {
-    const d = w.document;
-    // ie6,7,8 standard mode
-    ret = d.documentElement[method];
-    if (typeof ret !== 'number') {
-      // quirks mode
-      ret = d.body[method];
-    }
-  }
-  return ret;
+function getScroll(w, top: boolean) {
+	let ret = w[`page${top ? 'Y' : 'X'}Offset`];
+	const method = `scroll${top ? 'Top' : 'Left'}`;
+	if (typeof ret !== 'number') {
+		const d = w.document;
+		// ie6,7,8 standard mode
+		ret = d.documentElement[method];
+		if (typeof ret !== 'number') {
+			// quirks mode
+			ret = d.body[method];
+		}
+	}
+	return ret;
 }
 
 function getOffset(element) {
-  const rect = element.getBoundingClientRect();
-  const body = document.body;
-  const clientTop = element.clientTop || body.clientTop || 0;
-  const clientLeft = element.clientLeft || body.clientLeft || 0;
-  const scrollTop = getScroll(window, true);
-  const scrollLeft = getScroll(window);
+	const rect = element.getBoundingClientRect();
+	const body = document.body;
+	const clientTop = element.clientTop || body.clientTop || 0;
+	const clientLeft = element.clientLeft || body.clientLeft || 0;
+	const scrollTop = getScroll(window, true);
+	const scrollLeft = getScroll(window);
 
-  return {
-    top: rect.top + scrollTop - clientTop,
-    left: rect.left + scrollLeft - clientLeft,
-  };
+	return {
+		top: rect.top + scrollTop - clientTop,
+		left: rect.left + scrollLeft - clientLeft,
+	};
 }
 
-// Affix
-export interface AffixProps {
-  /**
-   * 距离窗口顶部达到指定偏移量后触发
-   */
-  offsetTop?: number;
-  offset?: number;
-  offsetBottom?: number;
-  style?: React.CSSProperties;
-  onChange?: (affixed?: boolean) => any;
-}
-
-export default class Affix extends React.Component<AffixProps, any> {
+export default class Affix extends React.Component{
 	static propTypes = {
 		offsetTop: React.PropTypes.number,
 		offsetBottom: React.PropTypes.number,
+		offset: React.PropTypes.number,
+		onChange: (affixed: boolean) => any
 	};
 
 	static defaultProps = {
@@ -58,7 +48,7 @@ export default class Affix extends React.Component<AffixProps, any> {
 	scrollEvent: any;
 	resizeEvent: any;
 	refs: {
-		fixedNode: any;
+		fixedNode: any
 	};
 
 	constructor(props) {
@@ -168,7 +158,7 @@ export default class Affix extends React.Component<AffixProps, any> {
       	  this.resizeEvent.remove();
     	}
   	}
-	
+
 	render() {
 	    const className = classNames({
 	      'ws-affix': this.state.affixStyle,
@@ -185,6 +175,6 @@ export default class Affix extends React.Component<AffixProps, any> {
 	        </div>
 	      </div>
 	    );
-	  }
+	}
 
 }

@@ -50,8 +50,8 @@ var navData = [{
 export default class NavigationWrap extends React.Component{
     render(){
         return (
-          <Affix offsetTop={25}>
-            <Navigation className="ws-whiteframe1" data={navData} select={this.props.location.pathname}/>
+          <Affix offsetTop={75}>
+            <Navigation className="ws-whiteframe1" data={navData} />
           </Affix>  
         );
     }

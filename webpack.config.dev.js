@@ -9,7 +9,8 @@ module.exports = {
     entry: {
         'index': [
             './demo/index'
-        ]
+        ],
+        'site': './site/layout/index'
     },
     output: {
         path: path.join(__dirname, 'build'),
