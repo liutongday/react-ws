@@ -9,7 +9,8 @@ module.exports = {
     entry: {
         'index': [
             './demo/index'
-        ]
+        ],
+        'site': './site/layout/index'
     },
     output: {
         path: path.join(__dirname, 'build'),
@@ -35,6 +36,9 @@ module.exports = {
         }, {
             test: /\.(css|less)$/,
             loader: 'style!css!postcss!less'
+        },{
+            test: /\.(jpg|png)$/,
+            loader: "url?limit=8192"
         }]
     },
     postcss: function () {

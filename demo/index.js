@@ -24,8 +24,8 @@ import _ from 'underscore';
 import Hello from './component/hell';
 import Layout from './component/layout';
 import Form from './component/form';
-import Apps from './component/apps';
-
+import LeftNavigation from './component/LeftNavigation';
+import NavigationWrap from './component/NavigationWrap';import Apps from './component/apps';
 window.Storage = Storage;
 
 
@@ -48,14 +48,30 @@ function initNav() {
 class App extends React.Component {
     render() {
         return (
-            <div className="container">
-                <Apps/>
+            <div className="HolyGrail">
+                <header>Unicom Test</header>
+<div className="HolyGrail-body"><Apps/><<<<<<< .mine
+
+=======
+
+>>>>>>> .theirs
+                    <nav className="HolyGrail-nav">
+                        <LeftNavigation />
+                    </nav>
+
+                    <div className="HolyGrail-content">
+                        <Layout />
+                        <Form />
+                    </div>
+                </div>
             </div>
+
+
         );
     }
 
     componentDidMount() {
-        initNav();
+        //initNav();
     }
 }
 

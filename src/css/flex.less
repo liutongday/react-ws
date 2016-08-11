@@ -6,7 +6,7 @@
   flex: auto;
 }
 
-.ws-flex-none {
+  .ws-flex-none {
   flex: none;
 }
 
@@ -16,9 +16,13 @@
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content:space-around;
-  align-content: space-between;
+justify-content: flex-start; /*主轴上的对齐方式*/
+  align-content: stretch; /*多根轴线的对齐方式*/justify-content:space-around;
+  align-content: space-between;<<<<<<< .mine
   align-items: stretch;
+=======
+  align-items: stretch; /*交叉轴上的对齐方式*/
+>>>>>>> .theirs
   box-sizing: border-box;
   margin-bottom: -50px;
 
