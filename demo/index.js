@@ -23,6 +23,7 @@ import _ from 'underscore';
 
 import Layout from './component/layout';
 import Form from './component/form';
+import WsTable from './component/table-ws';
 
 window.Storage = Storage;
 
@@ -50,6 +51,7 @@ class App extends React.Component {
 
 			    <Layout />
 			    <Form />
+                <WsTable />
 
             </div>
         );
