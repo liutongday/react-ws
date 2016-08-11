@@ -36,6 +36,9 @@ module.exports = {
         }, {
             test: /\.(css|less)$/,
             loader: 'style!css!postcss!less'
+        },{
+            test: /\.(jpg|png)$/,
+            loader: "url?limit=8192"
         }]
     },
     postcss: function () {

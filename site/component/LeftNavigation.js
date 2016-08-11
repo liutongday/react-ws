@@ -34,7 +34,7 @@ class Navigator extends React.Component {
             const content = demo.content;
             return (
                 <li key={demo.id}>
-                    <a href={`#${demo.id}`}>
+                    <a href={`#${demo.id}`} id={`${demo.id}`}>
                         <img src={`${demo.img_url}`} className="img-size"/>
                     </a>
                 </li>
