@@ -18,6 +18,8 @@ import ReactDOM from 'react-dom';
 import {
     Flex,
     Storage,
+    HelloWorld,
+    Selector,
 } from '../src/index';
 import _ from 'underscore';
 
@@ -25,7 +27,6 @@ import Layout from './component/layout';
 import Form from './component/form';
 
 window.Storage = Storage;
-
 
 function initNav() {
     let div = document.createElement('div');
@@ -48,8 +49,9 @@ class App extends React.Component {
         return (
             <div className="container">
 
-			    <Layout />
-			    <Form />
+			{/*    <Layout />
+			    <Form />*/}
+			    <Selector/>
 
             </div>
         );
@@ -61,3 +63,5 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App/>, document.getElementById('appContainer'));
+/*
+ReactDOM.render(<HelloWorld/>,document.getElementById('test'));*/

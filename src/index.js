@@ -9,7 +9,8 @@ import Storage from './component/storage';
 import Switch from './component/switch';
 import Validate from './component/validate';
 import ValidateMixin from './component/validate.mixin';
-
+import HelloWorld from './component/hellworld';
+import Selector from './component/selector';
 
 import './index.less';
 
@@ -22,4 +23,6 @@ module.exports = {
     Switch,
     Validate,
     ValidateMixin,
+    HelloWorld,
+    Selector,
 };
