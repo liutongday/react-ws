@@ -9,7 +9,7 @@ import Storage from './component/storage';
 import Switch from './component/switch';
 import Validate from './component/validate';
 import ValidateMixin from './component/validate.mixin';
-
+import Weixin from './component/weixin';
 
 import './index.less';
 
@@ -22,4 +22,5 @@ module.exports = {
     Switch,
     Validate,
     ValidateMixin,
+    Weixin
 };

@@ -18,13 +18,13 @@ import ReactDOM from 'react-dom';
 import {
     Flex,
     Storage,
+    Weixin
 } from '../src/index';
 import _ from 'underscore';
-import NavRight from './component/shijian';
 import Hello from './component/hell';
-import Weixin from './component/weixin';
 import Layout from './component/layout';
 import Form from './component/form';
+import Apps from './component/apps';
 
 window.Storage = Storage;
 
@@ -49,12 +49,7 @@ class App extends React.Component {
     render() {
         return (
             <div className="container">
-
-			    <Layout />
-			    <Form />
-                <Hello/>
-                <NavRight/>
-                <Weixin/>
+                <Apps/>
             </div>
         );
     }
