@@ -9,6 +9,10 @@ import Storage from './component/storage';
 import Switch from './component/switch';
 import Validate from './component/validate';
 import ValidateMixin from './component/validate.mixin';
+import HelloWorld from './component/helloworld';
+import Calendar from './component/calendar';
+import DatePicker from './component/datepicker';
+import Rili from './component/rili';
 
 
 import './index.less';
@@ -22,4 +26,8 @@ module.exports = {
     Switch,
     Validate,
     ValidateMixin,
+    HelloWorld,
+    Calendar,
+    DatePicker,
+    Rili,
 };

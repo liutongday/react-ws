@@ -168,7 +168,7 @@ export default class Affix extends React.Component<AffixProps, any> {
       	  this.resizeEvent.remove();
     	}
   	}
-	
+
 	render() {
 	    const className = classNames({
 	      'ws-affix': this.state.affixStyle,
