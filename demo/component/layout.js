@@ -19,16 +19,60 @@ import {
 var FlexWrap = React.createClass({
     render(){
         return (
-            <Flex column height="200px">
-                <Flex>top</Flex>
-                <Flex flex>
-                    <Flex>
-                        <Flex style={{background: 'red'}}>
-                            <div style={{background: 'yellow'}}>left1</div>
+            <Flex row>
+                <Flex row none className="col-lg-4 col-md-6">
+                    <Flex column className="col-lg-4 col-lg-6">
+                        <Flex>top</Flex>
+                        <Flex flex>
+                            <Flex>
+                                <Flex style={{background: 'red'}}>
+                                    <div style={{background: 'yellow'}}>left1</div>
+                                </Flex>
+                            </Flex>
+                            <Flex flex>content</Flex>
                         </Flex>
                     </Flex>
-                    <Flex flex>content</Flex>
+
+                    <Flex column nowrap className="col-lg-8 col-md-6">
+                        <Flex>top</Flex>
+                        <Flex flex>
+                            <Flex>
+                                <Flex style={{background: 'blue'}}>
+                                    <div style={{background: 'red'}}>left1</div>
+                                </Flex>
+                            </Flex>
+                            <Flex flex>content</Flex>
+                        </Flex>
+                    </Flex>
                 </Flex>
+
+                <Flex row className="col-lg-8 col-md-12">
+                    <Flex column className="col-lg-4 col-lg-6">
+                        <Flex>top</Flex>
+                        <Flex flex>
+                            <Flex>
+                                <Flex style={{background: 'red'}}>
+                                    <div style={{background: 'yellow'}}>left1</div>
+                                </Flex>
+                            </Flex>
+                            <Flex flex>content</Flex>
+                        </Flex>
+                    </Flex>
+
+                    <Flex column nowrap className="col-lg-8 col-md-6 col-md-offset-4">
+                        <Flex>top</Flex>
+                        <Flex flex>
+                            <Flex>
+                                <Flex style={{background: 'blue'}}>
+                                    <div style={{background: 'red'}}>left1</div>
+                                </Flex>
+                            </Flex>
+                            <Flex flex>content</Flex>
+                        </Flex>
+                    </Flex>
+                </Flex>
+
+
             </Flex>
         );
     }
