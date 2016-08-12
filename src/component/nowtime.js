@@ -5,7 +5,7 @@ import React from 'react';
 import classNames from 'classnames';
 import * as ReactDOM from 'react-dom';
 
-class Nowtime extends  React.Component {
+class NowTime extends  React.Component {
     //初始化状态机
     constructor(props) {
         super(props);
@@ -68,9 +68,9 @@ class Nowtime extends  React.Component {
     render() {
         return (
             <div id="nowtime">
-                <span>{this.state.date}</span>
+                <span  className="ws-nowtime">{this.state.date}</span>
             </div>
         )
     }
 }
-export default Nowtime;
+export default NowTime;
