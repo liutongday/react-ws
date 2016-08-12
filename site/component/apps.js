@@ -33,27 +33,26 @@ var Apps= React.createClass({
     },
     getCommonListData: function(){
         var self = this;
-        //var str = {name:'huangxiaojian',age:'23'};
+        //var str = '{"name":"huangxiaojian","age":"23"}'
         var param = {
             name:"Hubot",
             login:"hubot"
         }
 
-       //console.log(str);
+        console.log(JSON.stringify(param));
             fetch('http://10.0.94.34:8080/api/testredis',{
             credentials:'same-origin',
             method: 'POST',
             //method: 'GET',
             mode:'cors',
             headers: {
-                "Content-Type": "application/json; charset=utf-8",
+                "Content-Type": "application/x-www-form-urlencoded",
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
             },
-                //body:param
-                body:JSON.stringify(param)
+                body:encodeURI(JSON.stringify(param),"utf-8")
                 //body: JSON.parse(str)
-                //body: JSON.stringify(str)
-                //body:"{name:'Hubot',login:'hubot'}"
+                //body: JSON.stringify(param)
+                //body:"name=123&login=123456"
         })
             .then(function(res) {
                 console.log("Response succeeded?", JSON.stringify(res.ok));
@@ -61,6 +60,7 @@ var Apps= React.createClass({
                 return res.json();
         })
             .then(function(dataSource) {
+                console.log("********");
                 console.log(dataSource);
                 console.log(self);//此时的this值已经改变（undefined）
                 self.setState({

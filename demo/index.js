@@ -25,7 +25,8 @@ import Hello from './component/hell';
 import Layout from './component/layout';
 import Form from './component/form';
 import LeftNavigation from './component/LeftNavigation';
-import NavigationWrap from './component/NavigationWrap';import Apps from './component/apps';
+import NavigationWrap from './component/NavigationWrap';
+import Apps from './component/apps';
 window.Storage = Storage;
 
 
@@ -50,11 +51,8 @@ class App extends React.Component {
         return (
             <div className="HolyGrail">
                 <header>Unicom Test</header>
-<div className="HolyGrail-body"><Apps/><<<<<<< .mine
+                    <div className="HolyGrail-body">
 
-=======
-
->>>>>>> .theirs
                     <nav className="HolyGrail-nav">
                         <LeftNavigation />
                     </nav>
@@ -62,6 +60,7 @@ class App extends React.Component {
                     <div className="HolyGrail-content">
                         <Layout />
                         <Form />
+                        <Apps/>
                     </div>
                 </div>
             </div>
