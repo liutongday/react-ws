@@ -28,7 +28,6 @@ export default class Header extends React.Component {
         return(
             <header className="ws-header-color">
                 <Flex row >
-                    <Flex column>
                             <div id="head"  >
                                 <div id="head_top" className="" >
                                     <NowTime  />
@@ -68,7 +67,6 @@ export default class Header extends React.Component {
                                     </div>
                                 </div>
                             </div>
-                    </Flex>
                 </Flex>
             </header>
         );
