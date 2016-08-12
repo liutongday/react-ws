@@ -33,6 +33,7 @@ class Navigator extends React.Component {
         const jumper = _.map(list, (demo) => {
             const content = demo.content;
             return (
+
                 <div>
                     <li >
                         <a href={`#${demo.id}`}>
