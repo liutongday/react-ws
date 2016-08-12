@@ -88,7 +88,7 @@ const renderThs = (columns) => (
             <th
                 key={`th-${index}`}
                 style={getStyle(col.props)}
-                className={`react-smart-ws-th col-${index} col-${dataKey} ${className || ''}`}
+                className={`react-ws-th col-${index} col-${dataKey} ${className || ''} `}
             >
                 {content}
             </th>
@@ -119,7 +119,7 @@ const renderTds = (data, entry, columns, rowIndex) => (
             <td
                 key={`td-${index}`}
                 style={getStyle(col.props)}
-                className={`react-smart-ws-td col-${index} col-${dataKey} ${className || ''}`}
+                className={`react-ws-td col-${index} col-${dataKey} ${className || ''}  `}
             >
                 {content}
             </td>
@@ -145,12 +145,18 @@ function Table(props) {
     const aStyle={
         display:'block',
         textAlign:'right',
-        color:'black',
+        color:'#999C9f',
+        backgroundColor:'#fBfBfB',
+        height:'27px',
+        fontSize:'12px',
+    };
+    const pstyle={
+        marginRight:'18px',
     };
     return (
-        <div className={`react-smart-table-container ${className || ''}`} style={{width:400}}>
-            <a style={aStyle}>更多></a>
-            <table className="react-ws-table">
+        <div className={`react-ws-table-container ${className || ''} `} >
+            <a style={aStyle}><span style={pstyle}>更多></span></a>
+            <table className="react-ws-table ">
                 {hasNames(columns) && (
                     <thead className="react-ws-table-thead">
                     <tr className="react-ws-table-tr">
