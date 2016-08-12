@@ -40,15 +40,16 @@ class Navigator extends React.Component {
                             <img src={`${demo.img_url}`+'.png'} className="img-size"/>
                         </a>
                     </li>
-                    <li id={demo.id} className="ws-toc-display">
+
+                    <li id={demo.id} style={{display: 'none'}}>
                         <a >
                             <img src={`${demo.img_url}`+'_rep.png'} className="img-size"/>
                         </a>
                     </li>
                 </div>
-
             );
         });
+        
         return(
             <ul className="ws-toc" >
                 {jumper}
