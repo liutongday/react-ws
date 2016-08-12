@@ -23,6 +23,7 @@ class Navigator extends React.Component {
         super(props);
     }
     render() {
+
         const list = [{"id":"app","img_url":"../site/images/left-nav/app","content":"App排行榜"},
                 {"id":"new","img_url":"../site/images/left-nav/new","content":"热点新闻"},
                 {"id":"busi","img_url":"../site/images/left-nav/busi","content":"电商热词风云榜"},
@@ -49,7 +50,7 @@ class Navigator extends React.Component {
                 </div>
             );
         });
-        
+
         return(
             <ul className="ws-toc" >
                 {jumper}
@@ -60,6 +61,7 @@ class Navigator extends React.Component {
 
 export default class LeftNavigation extends React.Component{
     render(){
+
         return (
             <Affix offsetTop={65}>
                <Navigator />
