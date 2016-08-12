@@ -40,7 +40,7 @@ class Navigator extends React.Component {
                             <img src={`${demo.img_url}`+'.png'} className="img-size"/>
                         </a>
                     </li>
-                    <li key={demo.id} className="ws-toc-display">
+                    <li id={demo.id} className="ws-toc-display">
                         <a >
                             <img src={`${demo.img_url}`+'_rep.png'} className="img-size"/>
                         </a>
