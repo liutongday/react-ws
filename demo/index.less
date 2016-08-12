@@ -2,8 +2,65 @@
 @import "../node_modules/gm-bootstrap/less/mixins.less";
 @import "../node_modules/gm-bootstrap/less/custom.less";
 @import "../src/css/variables.less";
+<<<<<<< HEAD
 @import "css/head.less";
 @import "../src/css/nowtime.less";
+=======
+@import "./css/LeftNavigation.less";
+
+.HolyGrail {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.HolyGrail-body {
+  display: flex;
+  flex: 1;
+}
+.HolyGrail-nav, .HolyGrail-ads {
+  /* 两个边栏的宽度设为12em */
+  flex: 0 0 10em;
+  /* 导航放到最左边 */
+  order: -1;
+}
+.HolyGrail-content {
+  flex: 1;
+}
+header,
+footer {
+  flex: 1;
+}
+
+@screen-sm-min = "768px";
+@screen-md-min = "992px";
+@screen-lg-min = "1200px";
+
+@media (max-width: @screen-sm-min) {
+  .HolyGrail-body {
+    flex-direction: column;
+    flex: 1;
+  }
+  .HolyGrail-nav,
+  .HolyGrail-ads,
+  .HolyGrail-content {
+    flex: auto;
+  }
+}
+
+@media (max-width: @screen-md-min) {
+  .HolyGrail-body {
+    flex-direction: column;
+    flex: 1;
+  }
+  .HolyGrail-nav,
+  .HolyGrail-ads,
+  .HolyGrail-content {
+    flex: auto;
+  }
+}
+
+>>>>>>> 00953b2a2e06c9970aff7ad5e62f4f836f1870eb
 h1 {
   border-bottom: 1px solid #eee;
   margin: 24px 0 16px;
@@ -15,7 +72,11 @@ h1 {
   top: 0;
   left: 0;
   padding: 10px;
+  margin-top: 10%;
+  margin-left: 1%;
   border-left: 1px solid @ws-border-color;
+  background: url("/demo/images/affix.png");
+  background-repeat: no-repeat;
 
   a {
     display: block;
@@ -31,10 +92,22 @@ h1 {
   &:hover,
   &:focus {
     //border:0px solid red;width:200px;height:20px;float:left;margin-right: 10px;
-    background-color: #FF6050;width:165px;height:36px;float:left;margin-right: 10px;
+    //background-color: #FF6050;width:165px;height:36px;float:left;;
+
   }
 
   > img {
     display: block;
+    background: url("/demo/images/logo.png");
+  }
+}
+.doc-nav-title {
+  padding: 30px;
+  margin-top: 10px;
+  &:hover,
+  &:focus {
+    //border:0px solid red;width:200px;height:20px;float:left;margin-right: 10px;
+    background-color: #FF6050;width:165px;height:30px;float:left;;
+
   }
 }

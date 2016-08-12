@@ -26,7 +26,12 @@ import _ from 'underscore';
 
 import Layout from './component/layout';
 import Form from './component/form';
+<<<<<<< HEAD
 import Head from './component/head';
+=======
+import LeftNavigation from './component/LeftNavigation';
+import NavigationWrap from './component/NavigationWrap';
+>>>>>>> 00953b2a2e06c9970aff7ad5e62f4f836f1870eb
 
 window.Storage = Storage;
 
@@ -50,19 +55,35 @@ function initNav() {
 class App extends React.Component {
     render() {
         return (
-            <div className="container">
+            <div className="HolyGrail">
+                <header>Unicom Test</header>
 
+<<<<<<< HEAD
 			    {/*<Layout />*/}
 			    {/*<Form />*/}
 
                 <Head />
+=======
+                <div className="HolyGrail-body">
+>>>>>>> 00953b2a2e06c9970aff7ad5e62f4f836f1870eb
 
+                    <nav className="HolyGrail-nav">
+                        <LeftNavigation />
+                    </nav>
+
+                    <div className="HolyGrail-content">
+                        <Layout />
+                        <Form />
+                    </div>
+                </div>
             </div>
+
+
         );
     }
 
     componentDidMount() {
-        initNav();
+        //initNav();
     }
 }
 
