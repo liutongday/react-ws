@@ -18,14 +18,21 @@ import ReactDOM from 'react-dom';
 import {
     Flex,
     Storage,
+    NowTime,
+
+
 } from '../src/index';
 import _ from 'underscore';
 
 import Layout from './component/layout';
 import Form from './component/form';
+
+import Head from './component/head';
+
 import LeftNavigation from './component/LeftNavigation';
 import NavigationWrap from './component/NavigationWrap';
 import WsTable from './component/table-ws';
+
 
 window.Storage = Storage;
 
@@ -52,8 +59,15 @@ class App extends React.Component {
             <div className="HolyGrail">
                 <header>Unicom Test</header>
 
+
+			    {/*<Layout />*/}
+			    {/*<Form />*/}
+
+                <Head />
+
                 <div className="HolyGrail-body">
               
+
 
                     <nav className="HolyGrail-nav">
                         <LeftNavigation />

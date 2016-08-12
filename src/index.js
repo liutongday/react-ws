@@ -11,7 +11,7 @@ import Validate from './component/validate';
 import ValidateMixin from './component/validate.mixin';
 import Table from './component/table';
 import Column from './component/column';
-
+import NowTime from './component/nowtime';
 
 import './index.less';
 
@@ -26,4 +26,5 @@ module.exports = {
     ValidateMixin,
     Table,
     Column,
+    NowTime,
 };
