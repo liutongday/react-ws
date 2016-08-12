@@ -49,16 +49,8 @@ function initNav() {
 class App extends React.Component {
     render() {
         return (
-            <div className="HolyGrail">
-                <header>Unicom Test</header>
-
-<<<<<<< HEAD
-			{/*    <Layout />
-			    <Form />*/}
-			    <Selector/>
-=======
+          /*  <div className="HolyGril">
                 <div className="HolyGrail-body">
->>>>>>> 76ee9240ab952233d7a73c71449e97a01124a8c6
 
                     <nav className="HolyGrail-nav">
                         <LeftNavigation />
@@ -69,8 +61,10 @@ class App extends React.Component {
                         <Form />
                     </div>
                 </div>
-            </div>
+            </div>*/
 
+
+            <Selector/>
 
         );
     }
