@@ -16,13 +16,7 @@ var Title = React.createClass({
     },*/
     render:function () {
         var data = this.props.role;
-        /*var item = this.porps.role:
-         var id = item.id;
-         var tupian = item.tupian;
-         var name = item.name;
-         var number = item.number;
-         var jiantou = item.jiantou;*/
-        //var data = {id :'1',tupian:'u797.png',name:'微信',number:'222222',jiantou:'1'};
+        //var data = {tupian:'u797.png',name:'微信'};
         var chart ="/src/images/"+data.tupian;
         var name = data.name;
         //var chart ="/demo/images/u797.png";
