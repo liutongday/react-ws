@@ -23,7 +23,9 @@ import {
 
 } from '../src/index';
 import _ from 'underscore';
-
+import NavRight from './component/shijian';
+import Hello from './component/hell';
+import Weixin from './component/weixin';
 import Layout from './component/layout';
 import Form from './component/form';
 
@@ -58,16 +60,9 @@ class App extends React.Component {
         return (
             <div className="HolyGrail">
                 <header>Unicom Test</header>
-
-
-			    {/*<Layout />*/}
-			    {/*<Form />*/}
-
                 <Head />
 
                 <div className="HolyGrail-body">
-              
-
 
                     <nav className="HolyGrail-nav">
                         <LeftNavigation />
@@ -77,8 +72,12 @@ class App extends React.Component {
                         <Layout />
                         <Form />
                         <WsTable />
+                        <Hello/>
+                        <NavRight/>
+                        <Weixin/>
                     </div>
                 </div>
+
             </div>
 
 
