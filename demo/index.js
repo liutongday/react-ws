@@ -28,6 +28,7 @@ import Head from './component/head';
 import LeftNavigation from './component/LeftNavigation';
 import WsTable from './component/table-ws';
 import Apps from './component/apps';
+import Titles from './component/titles';
 
 window.Storage = Storage;
 
@@ -69,7 +70,9 @@ class App extends React.Component {
                         <Hello />
                         <Selector />
                         <Weixin />
-                        <Apps />
+                        <Apps/>
+                        <Titles/>
+
                     </div>
 
                 </div>

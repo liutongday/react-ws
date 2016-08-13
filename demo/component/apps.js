@@ -11,7 +11,7 @@
  *
  * <p>Company: 北京东方国信科技股份有限公司 </p>
  *
- * @author panxw
+ * @author zhangxj
  * @version 1.0.0
  */
 import '../css/apps.less';

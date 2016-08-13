@@ -21,15 +21,9 @@ var Title = React.createClass({
         var name = data.name;
         //var chart ="/demo/images/u797.png";
         return(
-            <div className="main">
-                <div className="xuhao">
-                    <input disabled="disabled" className={this.state.tupian} change={this.changeTupian}></input>
-                    <p className="shuzi">{data.id}</p>
-                    <img className="weixin" src={chart}/>
-                    <input disabled="disabled" className="name" value={name} ></input>
-                    <input disabled="disabled" className="usenumber" value={data.number}/>
-                    <input className={this.state.arrow} change={this.changeHandle}/>
-                </div>
+            <div className="title">
+                <img className="chart" src={chart}/>
+                <input disabled="disabled" className="name" value={name} ></input>
             </div>
         )
     }
