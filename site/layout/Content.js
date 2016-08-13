@@ -13,11 +13,11 @@
  */
 
 import React from 'react';
-
+import Titles from '../component/titles';
+import Apps from '../component/apps';
 import Layout from '../../demo/component/layout';
 import Form from '../../demo/component/form';
 import LeftNavigation from '../component/LeftNavigation';
-import Apps from '../component/apps';
 
 export default class Content extends React.Component {
     constructor(props) {
@@ -31,10 +31,9 @@ export default class Content extends React.Component {
                 <nav className="HolyGrail-nav">
                     <LeftNavigation />
                 </nav>
-
                 <div className="HolyGrail-content">
 
-                    <Form/>
+                    <Titles/>
                     <Apps />
 
                 </div>

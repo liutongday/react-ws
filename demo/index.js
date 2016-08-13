@@ -64,13 +64,14 @@ class App extends React.Component {
                     </nav>
 
                     <div className="HolyGrail-content">
+
                         <Layout />
                         <Form />
                         <WsTable />
                         <Hello />
                         <Selector />
-                        <Apps/>
                         <Titles/>
+                        <Apps/>
 
                     </div>
 
