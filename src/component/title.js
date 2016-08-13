@@ -2,51 +2,18 @@
  * Created by Administrator on 2016/8/13.
  */
 import React from 'react';
-//
-import '../css/weixin.less';
-var Weixin = React.createClass({
+import '../css/title.less';
+var Title = React.createClass({
     getInitialState(){
         return {
-            stateValue:'1',
-            tubiaoValue:'',
-            inputValue: '57639',
-            arrow:'red',
-            tupian:'hou'
+            stateValue:'APP活跃用户总排行',
         };
     },
-    componentDidMount: function() {
-        // this.getCommonListData();
+   /* componentDidMount: function() {
         var item = this.props.role;
-        var id = item.id;
-        var jiantou = item.jiantou;
-        this.changeHandle(jiantou);
-        this.changeTupian(id);
-    },
-    //右下角箭头切换
-    changeHandle:function (index) {
-        //var index = '0';
-        switch (index) {
-            case '1':
-                this.setState({arrow:"red"});
-                break;
-            case '0':
-                this.setState({arrow:"ping"});
-                break;
-            case '-1':
-                this.setState({arrow:"green"});
-                break;
-        }
-    },
-    //左上角序号背景
-    changeTupian:function (index) {
-        //var index = 2;
-        if(index>3){
-            this.setState({tupian:"hou"});
-        }
-        else {
-            this.setState({tupian:"qian"});
-        }
-    },
+        var name = item.name;
+        this.changeHandle(name);
+    },*/
     render:function () {
         var data = this.props.role;
         /*var item = this.porps.role:
@@ -73,4 +40,4 @@ var Weixin = React.createClass({
         )
     }
 });
-export default Weixin;
+export default Title;
