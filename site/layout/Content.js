@@ -17,6 +17,7 @@ import React from 'react';
 import Layout from '../../demo/component/layout';
 import Form from '../../demo/component/form';
 import LeftNavigation from '../component/LeftNavigation';
+import Apps from '../component/apps';
 
 export default class Content extends React.Component {
     constructor(props) {
@@ -34,6 +35,7 @@ export default class Content extends React.Component {
                 <div className="HolyGrail-content">
 
                     <Form/>
+                    <Apps />
 
                 </div>
 

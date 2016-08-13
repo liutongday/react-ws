@@ -69,7 +69,6 @@ class App extends React.Component {
                         <WsTable />
                         <Hello />
                         <Selector />
-                        <Weixin />
                         <Apps/>
                         <Titles/>
 

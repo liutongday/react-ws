@@ -20,7 +20,7 @@ import ReactDOM from 'react-dom';
 import Header from './Header';
 import Footer from './Footer';
 import Content from './Content';
-import Apps from '../component/apps';
+
 export default class Page extends React.Component {
 
     constructor(props) {
@@ -34,7 +34,6 @@ export default class Page extends React.Component {
             <div className="HolyGrail">
                 <Header />
                 <Content />
-                <Apps />
                 <Footer />
 
             </div>
