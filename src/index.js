@@ -12,6 +12,8 @@ import ValidateMixin from './component/validate.mixin';
 import Table from './component/table';
 import Column from './component/column';
 import NowTime from './component/nowtime';
+import Calendar from './component/calendar';
+import DatePicker from './component/datepicker';
 
 import './index.less';
 
@@ -27,4 +29,6 @@ module.exports = {
     Table,
     Column,
     NowTime,
+    Calendar,
+    DatePicker,
 };
