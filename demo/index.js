@@ -16,25 +16,18 @@ import 'gm-bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-    Flex,
     Storage,
-    NowTime,
-    HelloWorld,
     Selector,
+    Weixin,
 } from '../src/index';
 import _ from 'underscore';
-import NavRight from './component/shijian';
 import Hello from './component/hell';
-import Weixin from './component/weixin';
 import Layout from './component/layout';
 import Form from './component/form';
-
 import Head from './component/head';
-
 import LeftNavigation from './component/LeftNavigation';
-import NavigationWrap from './component/NavigationWrap';
 import WsTable from './component/table-ws';
-
+import Apps from './component/apps';
 
 window.Storage = Storage;
 
@@ -60,6 +53,7 @@ class App extends React.Component {
 
             <div className="HolyGrail">
                 <header>Unicom Test</header>
+
                 <Head />
 
                 <div className="HolyGrail-body">
@@ -72,14 +66,15 @@ class App extends React.Component {
                         <Layout />
                         <Form />
                         <WsTable />
-                        <Hello/>
-                        <NavRight/>
-                        <Weixin/>
-                        <Selector/>
+                        <Hello />
+                        <Selector />
+                        <Weixin />
+                        <Apps />
                     </div>
-                </div>
 
+                </div>
             </div>
+
 
         );
     }

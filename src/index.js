@@ -16,6 +16,7 @@ import Calendar from './component/calendar';
 import DatePicker from './component/datepicker';
 import HelloWorld from './component/hellworld';
 import Selector from './component/selector';
+import Weixin from './component/weixin';
 
 import './index.less';
 
@@ -35,4 +36,5 @@ module.exports = {
     DatePicker,
     HelloWorld,
     Selector,
+    Weixin,
 };
