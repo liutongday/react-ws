@@ -19,8 +19,8 @@ import {
     Flex,
     Storage,
     NowTime,
-
-
+    HelloWorld,
+    Selector,
 } from '../src/index';
 import _ from 'underscore';
 import NavRight from './component/shijian';
@@ -37,7 +37,6 @@ import WsTable from './component/table-ws';
 
 
 window.Storage = Storage;
-
 
 function initNav() {
     let div = document.createElement('div');
@@ -58,6 +57,7 @@ function initNav() {
 class App extends React.Component {
     render() {
         return (
+
             <div className="HolyGrail">
                 <header>Unicom Test</header>
                 <Head />
@@ -75,11 +75,11 @@ class App extends React.Component {
                         <Hello/>
                         <NavRight/>
                         <Weixin/>
+                        <Selector/>
                     </div>
                 </div>
 
             </div>
-
 
         );
     }

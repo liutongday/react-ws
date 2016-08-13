@@ -14,6 +14,8 @@ import Column from './component/column';
 import NowTime from './component/nowtime';
 import Calendar from './component/calendar';
 import DatePicker from './component/datepicker';
+import HelloWorld from './component/hellworld';
+import Selector from './component/selector';
 
 import './index.less';
 
@@ -31,4 +33,6 @@ module.exports = {
     NowTime,
     Calendar,
     DatePicker,
+    HelloWorld,
+    Selector,
 };
