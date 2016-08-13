@@ -23,7 +23,7 @@ var Title = React.createClass({
         return(
             <div className="title">
                 <img className="chart" src={chart}/>
-                <input disabled="disabled" className="name" value={name} ></input>
+                <input disabled="disabled" className="titlename" value={name} ></input>
             </div>
         )
     }

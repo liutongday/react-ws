@@ -59,8 +59,8 @@ class App extends React.Component {
                     </nav>
 
                     <div className="HolyGrail-content">
-                        <Apps/>
                         <Titles/>
+                        <Apps/>
                     </div>
                 </div>
             </div>
