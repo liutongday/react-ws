@@ -10,7 +10,7 @@ import Switch from './component/switch';
 import Validate from './component/validate';
 import ValidateMixin from './component/validate.mixin';
 import Weixin from './component/weixin';
-
+import Title from './component/title';
 import './index.less';
 
 module.exports = {
@@ -22,5 +22,6 @@ module.exports = {
     Switch,
     Validate,
     ValidateMixin,
-    Weixin
+    Weixin,
+    Title
 };
