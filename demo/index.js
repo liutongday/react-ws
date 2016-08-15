@@ -16,18 +16,21 @@ import 'gm-bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-    Flex,
     Storage,
+    Selector,
+    Weixin,
 } from '../src/index';
 import _ from 'underscore';
-
+import Hello from './component/hell';
 import Layout from './component/layout';
 import Form from './component/form';
+import Head from './component/head';
 import LeftNavigation from './component/LeftNavigation';
-import NavigationWrap from './component/NavigationWrap';
+import WsTable from './component/table-ws';
+import Apps from './component/apps';
+import Titles from './component/titles';
 
 window.Storage = Storage;
-
 
 function initNav() {
     let div = document.createElement('div');
@@ -48,8 +51,11 @@ function initNav() {
 class App extends React.Component {
     render() {
         return (
+
             <div className="HolyGrail">
                 <header>Unicom Test</header>
+
+                <Head />
 
                 <div className="HolyGrail-body">
 
@@ -58,9 +64,17 @@ class App extends React.Component {
                     </nav>
 
                     <div className="HolyGrail-content">
+
                         <Layout />
                         <Form />
+                        <WsTable />
+                        <Hello />
+                        <Selector />
+                        <Titles/>
+                        <Apps/>
+
                     </div>
+
                 </div>
             </div>
 
