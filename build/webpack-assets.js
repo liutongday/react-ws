@@ -1,1 +1,1 @@
-window.WEBPACK_ASSETS = {"index":{"js":"/react-ws/build/index.a3839d34901214403414.bundle.js"},"site":{"js":"/react-ws/build/site.a3839d34901214403414.bundle.js"}}
+window.WEBPACK_ASSETS = {"index":{"js":"/react-ws/build/index.7ce5cba44b2b40f5efb3.bundle.js"},"site":{"js":"/react-ws/build/site.7ce5cba44b2b40f5efb3.bundle.js"}}

@@ -51,6 +51,10 @@ export default class Header extends React.Component {
                                         <span id="head_top_right2">退出</span>
                                     </div>
                                 </div>
+
+
+
+
                                 <div id="head_down">
                                     <div id="head_down_left">
                                         <img src="/site/images/head/head_down_left.png" />
