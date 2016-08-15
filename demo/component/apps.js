@@ -105,7 +105,6 @@ var Apps= React.createClass({
         if (this.state.data) {
             var self = this;
             var reciveData = self.state.data;
-            console.log(reciveData);
             //debugger
 
             var rolesListDatainfo = reciveData.map(function (role, index) {
@@ -121,7 +120,7 @@ var Apps= React.createClass({
                         {rolesListDatainfo}
                     </Flex>
                     <p className="biaoshi">></p>
-                    <p className="more">更多</p>
+                    <p className="more">展开</p>
                 </div>
             );
         } else {

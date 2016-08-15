@@ -27,6 +27,7 @@ import Form from './component/form';
 import LeftNavigation from './component/LeftNavigation';
 import NavigationWrap from './component/NavigationWrap';
 import Apps from './component/apps';
+import Chart from './component/chart';
 import Titles from './component/titles';
 window.Storage = Storage;
 
@@ -61,6 +62,7 @@ class App extends React.Component {
                     <div className="HolyGrail-content">
                         <Titles/>
                         <Apps/>
+                        <Chart/>
                     </div>
                 </div>
             </div>
