@@ -7,6 +7,9 @@
   background: url("/demo/images/affix.png");
   background-repeat: no-repeat;
 }
+.ws-toc-display {
+  visibility: hidden; display: none;
+}
 .ws-toc li {
   list-style-type:none;
   padding-top: 8px;
@@ -27,14 +30,13 @@
   color: #666;
 }
 
-.ws-toc a:hover {
+/*.ws-toc a:hover {
   background-color: #FF6050;
-}
-.form a:hover {
+}*/
+
+#app a:hover {
   background-color: #FF6050;
-}
-.ws-toc #switch a:hover {
-  background-image: url("../images/left-nav/busi_rep.png");
+  visibility: visible;
 }
 
 .toc ul li a.current {

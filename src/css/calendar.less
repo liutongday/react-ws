@@ -1,0 +1,108 @@
+.ws-calendar {
+  width: 198px;
+  overflow: hidden;
+  border: 1px solid @ws-form-border-color;
+  border-radius: 4px;
+  position: relative;
+  background: white;
+}
+
+.ws-calendar-head {
+  background-color: @gray-lighter;
+}
+
+.ws-calendar-head-title {
+  font-weight: bold;
+  line-height: 24px;
+}
+
+.ws-calendar-head-pre, .ws-calendar-head-next {
+  width: 24px;
+  height: 24px;
+  border-radius: 4px;
+  color: inherit;
+}
+
+.ws-calendar-head-pre:hover, .ws-calendar-head-next:hover {
+  background-color: @gray-lighter;
+  text-decoration: none;
+}
+
+.ws-calendar-head-month {
+  cursor: pointer;
+}
+
+.ws-calendar-week {
+  background-color: @gray-lighter;
+}
+
+.ws-calendar-content {
+}
+
+.ws-calendar-months {
+  position: absolute;
+  top: 24px;
+  border: 1px solid @ws-form-border-color;
+  right: 5px;
+  bottom: 5px;
+  left: 5px;
+  background: white;
+}
+
+.ws-calendar-month {
+
+  width: 56px;
+  height: 40px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  margin: 2px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.ws-calendar-month:hover {
+  background-color: @list-group-hover-bg;
+}
+
+.ws-calendar-day-name {
+  color: black;
+  display: inline-block;
+  width: 24px;
+  line-height: 24px;
+  text-align: center;
+  margin: 2px;
+}
+
+.ws-calendar-day {
+  color: black;
+  display: inline-block;
+  width: 24px;
+  line-height: 24px;
+  text-align: center;
+  margin: 2px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.ws-calendar-day:hover {
+  background-color: @list-group-hover-bg;
+}
+
+.ws-calendar-day-old {
+  color: #999999;
+}
+
+.ws-calendar-day-new {
+  color: #999999;
+}
+
+.ws-calendar-active {
+  background-color: @brand-primary;
+  color: white;
+}
+
+.ws-calendar-active:hover {
+  background-color: @brand-primary;
+  color: white;
+}
