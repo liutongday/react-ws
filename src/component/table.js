@@ -147,7 +147,7 @@ function Table(props) {
         textAlign:'right',
         color:'#999C9f',
         backgroundColor:'#fBfBfB',
-        height:'27px',
+        height:'26px',
         fontSize:'12px',
     };
     const pstyle={
@@ -156,7 +156,7 @@ function Table(props) {
     return (
         <div className={`react-ws-table-container ${className || ''} `} >
             <a style={aStyle}><span style={pstyle}>更多></span></a>
-            <table className="react-ws-table ">
+            <table className="react-ws-table">
                 {hasNames(columns) && (
                     <thead className="react-ws-table-thead">
                     <tr className="react-ws-table-tr">

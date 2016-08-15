@@ -15,13 +15,22 @@ const data = [
 
 function WsTable() {
     const keys = Object.keys(data[0]);
+    window.onload=function showtable(){
+        var tablename=document.getElementById("mytable");
+        var li=tablename.getElementsByTagName("tr");
+        for (var i=0;i<=li.length;i++){
+            if (i%2==0){
+                li[i].style.backgroundColor="#FFB584";
+            }else li[i].style.backgroundColor="#FFFFFF";
+        }
+    }
 
     return (
         <Table data={data} className={styles.container}>
             <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
             <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} />
             <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'} align='center'/>
-          <Column dataKey={keys[3]} name={keys[3]} key={'col-{keys[3]}'} align='center'/>
+            <Column dataKey={keys[3]} name={keys[3]} key={'col-{keys[3]}'} align='center'/>
            {/* {
                 keys.map(entry => {
                     console.log(entry);
