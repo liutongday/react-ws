@@ -15,14 +15,17 @@ import './index.less';
 import 'gm-bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
+
 import {
     Flex,
     Storage,
+
 } from '../src/index';
 import _ from 'underscore';
 
 import Layout from './component/layout';
 import Form from './component/form';
+import Screen from './component/screen';
 
 window.Storage = Storage;
 
@@ -48,9 +51,9 @@ class App extends React.Component {
         return (
             <div className="container">
 
-			    <Layout />
-			    <Form />
-
+			    {/*<Layout />*/}
+			    {/*<Form />*/}
+                <Screen/>
             </div>
         );
     }
