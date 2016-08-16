@@ -6,18 +6,23 @@
   flex: auto;
 }
 
-.ws-flex-none {
+  .ws-flex-none {
   flex: none;
 }
 
 .ws-flex {
+  padding:20px;
+  align-items: flex-start;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  justify-content: flex-start;
-  align-content: stretch;
+justify-content: flex-start; /*主轴上的对齐方式*/
+  align-content: stretch; /*多根轴线的对齐方式*/justify-content:space-around;
+  align-content: space-between;
   align-items: stretch;
+  align-items: stretch; /*交叉轴上的对齐方式*/
   box-sizing: border-box;
+  margin-bottom: -50px;
 
   &.ws-flex-wrap {
     flex-wrap: wrap;

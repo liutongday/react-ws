@@ -17,18 +17,29 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import {
-    Flex,
     Storage,
+<<<<<<< HEAD
 
+=======
+    Selector,
+    Weixin,
+>>>>>>> 8cf3cbe78d5bdb6dc287898aa92a1882b316904a
 } from '../src/index';
 import _ from 'underscore';
-
+import Hello from './component/hell';
 import Layout from './component/layout';
 import Form from './component/form';
+<<<<<<< HEAD
 import Screen from './component/screen';
+=======
+import Head from './component/head';
+import LeftNavigation from './component/LeftNavigation';
+import WsTable from './component/table-ws';
+import Apps from './component/apps';
+import Titles from './component/titles';
+>>>>>>> 8cf3cbe78d5bdb6dc287898aa92a1882b316904a
 
 window.Storage = Storage;
-
 
 function initNav() {
     let div = document.createElement('div');
@@ -49,17 +60,45 @@ function initNav() {
 class App extends React.Component {
     render() {
         return (
-            <div className="container">
 
+<<<<<<< HEAD
 			    {/*<Layout />*/}
 			    {/*<Form />*/}
                 <Screen/>
+=======
+            <div className="HolyGrail">
+                <header>Unicom Test</header>
+
+                <Head />
+
+                <div className="HolyGrail-body">
+
+                    <nav className="HolyGrail-nav">
+                        <LeftNavigation />
+                    </nav>
+
+                    <div className="HolyGrail-content">
+
+                        <Layout />
+                        <Form />
+                        <WsTable />
+                        <Hello />
+                        <Selector />
+                        <Titles/>
+                        <Apps/>
+
+                    </div>
+
+                </div>
+>>>>>>> 8cf3cbe78d5bdb6dc287898aa92a1882b316904a
             </div>
+
+
         );
     }
 
     componentDidMount() {
-        initNav();
+        //initNav();
     }
 }
 
