@@ -1,5 +1,6 @@
 /**
- * Created by Administrator on 2016/8/4.
+ * Created by zhangxinjing on 2016/8/4.
+ * descprition：根据数据渲染20个app
  */
 /**
  *
@@ -33,11 +34,12 @@ var Apps= React.createClass({
     },
     getCommonListData: function(){
         var self = this;
-        //var str = {name:'huangxiaojian',age:'23'};
+        //传送数据
         var param = {
             name:"Hubot",
             login:"hubot"
         }
+        //缓存数据
         var rolesListData = [{id :'1',tupian:'u797.png',name:'微信',number:'222222',jiantou:'1'},
             {id :'2',tupian:'u825.png',name:'QQ',number:'33333',jiantou:'0'},
             {id :'3',tupian:'u715.png',name:'腾讯视频',number:'44444',jiantou:'-1'},
@@ -58,12 +60,12 @@ var Apps= React.createClass({
             {id :'18',tupian:'u8003.png',name:'京东',number:'55555',jiantou:'1'},
             {id :'19',tupian:'u8007.png',name:'360手机卫士',number:'55555',jiantou:'1'},
             {id :'20',tupian:'u8011.png',name:'QQ空间',number:'55555',jiantou:'-1'},];
-       //console.log(str);
+        //fectch请求
             fetch('http://10.0.94.34:8080/api/testredis',{
             credentials:'same-origin',
             method: 'POST',
             //method: 'GET',
-            mode:'cors',
+            mode:'cors',//跨域请求
             headers: {
                 "Content-Type": "application/json; charset=utf-8",
                 "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
@@ -106,7 +108,6 @@ var Apps= React.createClass({
             var self = this;
             var reciveData = self.state.data;
             //debugger
-
             var rolesListDatainfo = reciveData.map(function (role, index) {
                 console.log(role);
                 return (

@@ -1,5 +1,6 @@
 /**
- * Created by Administrator on 2016/8/13.
+ * Created by zhangixnjing on 2016/8/13.
+ * descprition：标题组件
  */
 import React from 'react';
 import '../css/title.less';

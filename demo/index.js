@@ -28,6 +28,7 @@ import LeftNavigation from './component/LeftNavigation';
 import NavigationWrap from './component/NavigationWrap';
 import Apps from './component/apps';
 import Chart from './component/chart';
+import Map from './component/map';
 import Titles from './component/titles';
 window.Storage = Storage;
 
@@ -63,6 +64,7 @@ class App extends React.Component {
                         <Titles/>
                         <Apps/>
                         <Chart/>
+                        <Map/>
                     </div>
                 </div>
             </div>
