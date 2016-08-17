@@ -86,8 +86,6 @@ export default class Header extends React.Component {
                                         {/*</ul>*/}
                                     </div>
                 </Flex>
-
-
             </header>
         );
     }
