@@ -5,7 +5,7 @@ import React from 'react';
 import classNames from 'classnames';
 
 var Flex = React.createClass({
-    propTypes: {
+    propTypes: {//属性校验器，表示改属性必须是bool，否则报错
         flex: React.PropTypes.oneOfType([React.PropTypes.number, React.PropTypes.bool]),
         auto: React.PropTypes.bool,
         none: React.PropTypes.bool,
