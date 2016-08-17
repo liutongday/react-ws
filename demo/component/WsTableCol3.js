@@ -1,6 +1,5 @@
 
 /**
- *
  * <p>Title: BONC - React </p>
  *
  * <p>Description: 单页面应用的构建文件 index.js </p>
