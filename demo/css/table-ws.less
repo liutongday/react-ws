@@ -1,14 +1,32 @@
 .container table{
 
 }
-.react-ws-table-container{
+.ws-table-container{
     width: 380px;
+    overflow-y:scroll;
+    height: 200px;
+}
+
+.ws-table-container::-webkit-scrollbar{
+    background-color: #f2f2f2;
+}
+::-webkit-scrollbar-button:increment{
+    background-image: url('/demo/images/arrowDown.png') ;
+}
+::-webkit-scrollbar-button:decrement{
+    background-image: url('/demo/images/arrowUp.png') ;
+}
+::-webkit-scrollbar-thumb:vertical{
+    -webkit-border-image: url("/demo/images/u1096.png") 0 13 0 13;
+    border-color: transparent;
+    border-width: 0 13px;
+    min-width: 20px;
 }
 .react-ws-table {
     width: 100%;
 }
 
-.react-ws-table-thead th {
+.ws-table-thead th {
     background-color: #f2f2f2;
     width:20%;
     font-size: 12px;
@@ -17,26 +35,26 @@
     height: 45px;
 }
 
-.react-ws-table-tr:nth-of-type(odd){
+.ws-table-tr:nth-of-type(odd){
     background-color: #fBfBfB;
 }
-.react-ws-table-tr:nth-of-type(even){
+.ws-table-tr:nth-of-type(even){
     background-color: #f2f2f2;
 }
 
 
-.react-ws-td{
+.ws-td{
     width:20%;
     font-size: 13px;
     color: #999C9f;
     height: 45px;
 }
-.react-ws-td.col-1{
+.ws-td.col-1{
     width:35%;
 }
-.react-ws-td.col-2{
+.ws-td.col-2{
     width:25%;
 }
-.react-ws-td.col-3{
+.ws-td.col-3{
     width:20%;
 }

@@ -15,7 +15,7 @@
 import React from 'react';
 import Titles from '../component/titles';
 import Apps from '../component/apps';
-import Table from '../../demo/component/table-ws';
+import Table from '../../demo/component/WsTableCol4';
 import Form from '../../demo/component/form';
 import LeftNavigation from '../component/LeftNavigation';
 

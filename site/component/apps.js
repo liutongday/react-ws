@@ -37,7 +37,7 @@ var Apps= React.createClass({
         var param = {
             name:"Hubot",
             login:"hubot"
-        }
+        };
         var rolesListData = [{id :'1',tupian:'u797.png',name:'微信',number:'222222',jiantou:'1'},
             {id :'2',tupian:'u825.png',name:'QQ',number:'33333',jiantou:'0'},
             {id :'3',tupian:'u715.png',name:'腾讯视频',number:'44444',jiantou:'-1'},
@@ -114,7 +114,7 @@ var Apps= React.createClass({
                 return (
                     <Weixin role={role} key={index}/>
                 );
-            })
+            });
             return (
                 <div className="app">
                     <Flex ws-flex row wrap>
