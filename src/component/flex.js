@@ -52,9 +52,13 @@ var Flex = React.createClass({
             'ws-flex-align-stretch': this.props.alignStretch
         }, this.props.className);
 
-        let style = Object.assign({}, this.props.style);
+        //let style = Object.assign({}, this.props.style);
         if (this.props.flex) {
+<<<<<<< HEAD
             this.props.style.flex = (typeof this.props.flex === 'boolean') ? 1 : this.props.flex;
+=======
+            //this.props.style.flex =  this.props.flex;
+>>>>>>> c6c7903a008dc3f37900ec06fbe18ea2001ee063
         }
         if (this.props.height) {
             this.props.style.height = this.props.height;
@@ -63,7 +67,7 @@ var Flex = React.createClass({
             this.props.style.width = this.props.width;
         }
 
-        return <div {...this.props} className={cn} style={style}>{this.props.children}</div>;
+        return <div {...this.props} className={cn} style={ this.props.style}>{this.props.children}</div>;
     }
 });
 

@@ -26,7 +26,7 @@ import Layout from './component/layout';
 import Form from './component/form';
 import Head from './component/head';
 import LeftNavigation from './component/LeftNavigation';
-import WsTable from './component/table-ws';
+import WsTable from './component/WsTableCol4';
 import Apps from './component/apps';
 import Titles from './component/titles';
 
