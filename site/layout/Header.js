@@ -24,7 +24,6 @@ export default class Header extends React.Component {
         super(props);
     }
     render() {
-
         const list = [
                             {"id":"data-query","text":"数据查询"},
                              {"id":"key-areas","text":"重点区域分析"},
@@ -38,8 +37,6 @@ export default class Header extends React.Component {
             return (
                 <li key={site.id}>
                     <a href={`#${site.id}`}  >{content}</a>
-
-
                 </li>
             );
         });
@@ -50,7 +47,6 @@ export default class Header extends React.Component {
                                 <NowTime  />
                             </div>
                             <div id="head_top" className="Grid-cell u-lof4" >
-
                                             <div id="head_top_left">
                                                 <img  src="/site/images/head/head_top_left.png"      />
                                                 <span id="head_top_left_span1">张三</span>
