@@ -42,7 +42,7 @@ export default class Header extends React.Component {
         });
         return(
             <header className="ws-header-color">
-                <Flex row >
+                <Flex row  id="ws-head">
                             <div id="head" className="u-lof10"  >
                                 <NowTime  />
                             </div>
@@ -68,7 +68,7 @@ export default class Header extends React.Component {
                                             </div>
                             </div>
                 </Flex>
-                <Flex row >
+                <Flex row  id="ws-down">
                                     <div id="head_down_left" className="u-lof5">
                                         <img src="/site/images/head/head_down_left.png" />
                                         <span>统一数据分析系统</span>
