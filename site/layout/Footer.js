@@ -27,7 +27,7 @@ export default class Footer extends React.Component {
                 <footer id="footer">
                     <Flex row className="ws-footer-bg">
 
-                        <div  id="foot_left"       className="u-1of10">
+                        <div  id="foot_left" className="u-1of10">
                             <img alt="logo" className="ws-footer-logo" src="../site/images/footer-logo.png" />
                         </div>
 
