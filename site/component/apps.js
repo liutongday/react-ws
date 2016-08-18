@@ -59,8 +59,11 @@ var Apps= React.createClass({
             {id :'19',tupian:'u8007.png',name:'360手机卫士',number:'55555',jiantou:'1'},
             {id :'20',tupian:'u8011.png',name:'QQ空间',number:'55555',jiantou:'-1'},];
 
-        console.log(JSON.stringify(param));
-            fetch('http://10.0.94.34:8080/api/testredis',{
+        self.setState({
+            data: rolesListData});
+        
+        //console.log(JSON.stringify(param));
+            /*fetch('http://10.0.94.34:8080/api/testredis',{
             credentials:'same-origin',
             method: 'POST',
             //method: 'GET',
@@ -92,11 +95,8 @@ var Apps= React.createClass({
                 self.setState({
                     data: rolesListData});
             })
-        /*fetch("http://blog.parryqiu.com", {
-         method: 'GET',
-         mode: 'no-cors',
-         cache: 'default'
-         }).then(function(response){console.log(response)})*/
+     */
+
     },
     componentDidMount: function() {
         this.getCommonListData();

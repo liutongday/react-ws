@@ -54,7 +54,11 @@ var Flex = React.createClass({
 
         //let style = Object.assign({}, this.props.style);
         if (this.props.flex) {
+
+            this.props.style.flex = (typeof this.props.flex === 'boolean') ? 1 : this.props.flex;
+
             //this.props.style.flex =  this.props.flex;
+
         }
         if (this.props.height) {
             this.props.style.height = this.props.height;
