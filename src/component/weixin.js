@@ -1,5 +1,8 @@
 /**
- * Created by Administrator on 2016/7/30.
+ * Created by zhangxinjing on 2016/7/30.
+ * /**
+ *
+ * descprition：app单个组件
  */
 import React from 'react';
 //

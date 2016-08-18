@@ -120,8 +120,8 @@ var Apps= React.createClass({
                     <Flex ws-flex row wrap>
                         {rolesListDatainfo}
                     </Flex>
-                    <span className="biaoshi">></span>
-                    <p className="more">更多</p>
+                    <p className="biaoshi">></p>
+                    <p className="more">展开</p>
                 </div>
             );
         } else {

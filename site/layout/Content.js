@@ -13,8 +13,12 @@
  */
 
 import React from 'react';
-import Titles from '../component/titles';
 import Apps from '../component/apps';
+import {
+    Selector,
+    DatePicker,
+    Title
+} from '../../src/index';
 import Table from '../../demo/component/WsTableCol4';
 import Form from '../../demo/component/form';
 import LeftNavigation from '../component/LeftNavigation';
@@ -32,10 +36,13 @@ export default class Content extends React.Component {
                     <LeftNavigation />
                 </nav>
                 <div className="HolyGrail-content">
-                    <Form />
-                    <Table />
-                    <Titles/>
+                    <div className="row">
+                        <Selector />
+                    </div>
+                    <Title icon="app-user" name="APP活跃用户总排行"/>
                     <Apps />
+
+                    <Title icon="app-part" name="APP分类排行"/>
 
                 </div>
 

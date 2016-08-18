@@ -15,20 +15,22 @@ import './index.less';
 import 'gm-bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Router, Route, IndexRoute, hashHistory, Link} from 'react-router';
 import {
     Storage,
     Selector,
     Weixin,
 } from '../src/index';
 import _ from 'underscore';
-import Hello from './component/hell';
 import Layout from './component/layout';
 import Form from './component/form';
 import Head from './component/head';
 import LeftNavigation from './component/LeftNavigation';
 import WsTable from './component/WsTableCol4';
 import Apps from './component/apps';
-import Titles from './component/titles';
+import Chart from './component/chart';
+import Map from './component/map';
+
 
 window.Storage = Storage;
 
@@ -65,14 +67,7 @@ class App extends React.Component {
 
                     <div className="HolyGrail-content">
 
-                        <Layout />
-                        <Form />
-                        <WsTable />
-                        <Hello />
-                        <Selector />
-                        <Titles/>
-                        <Apps/>
-
+                        <Apps />
                     </div>
 
                 </div>
@@ -87,4 +82,24 @@ class App extends React.Component {
     }
 }
 
-ReactDOM.render(<App/>, document.getElementById('appContainer'));
+class Pages extends React.Component {
+    render() {
+        return (
+
+            <Router history={hashHistory}>
+                <Route path="/" component={App}>
+                    <IndexRoute component={Layout}></IndexRoute>
+                    <Route path="form" component={Form}></Route>
+                    <Route path="wstable" component={WsTable}></Route>
+                    <Route path="map" component={Map}></Route>
+                    <Route path="selector" component={Selector}></Route>
+                    <Route path="apps" component={Apps}></Route>
+                    <Route path="chart" component={Chart}></Route>
+                </Route>
+            </Router>
+
+        );
+    }
+}
+
+ReactDOM.render(<Pages/>, document.getElementById('appContainer'));
