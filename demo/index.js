@@ -30,6 +30,8 @@ import WsTable from './component/WsTableCol4';
 import Apps from './component/apps';
 import Chart from './component/chart';
 import Map from './component/map';
+import CheckboxGroup from './component/CheckboxGroup';
+
 
 
 window.Storage = Storage;
@@ -53,7 +55,6 @@ function initNav() {
 class App extends React.Component {
     render() {
         return (
-
             <div className="HolyGrail">
                 <header>Unicom Test</header>
 
@@ -68,11 +69,12 @@ class App extends React.Component {
                     <div className="HolyGrail-content">
 
                         <Apps />
+                        <CheckboxGroup />
                     </div>
 
                 </div>
-            </div>
 
+            </div>
 
         );
     }

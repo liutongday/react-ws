@@ -19,8 +19,7 @@ import {
     DatePicker,
     Title
 } from '../../src/index';
-import Table from '../../demo/component/WsTableCol4';
-import Form from '../../demo/component/form';
+import CheckboxGroup from '../../demo/component/CheckboxGroup';
 import LeftNavigation from '../component/LeftNavigation';
 
 export default class Content extends React.Component {
@@ -43,7 +42,8 @@ export default class Content extends React.Component {
                     <Apps />
 
                     <Title icon="app-part" name="APP分类排行"/>
-
+                    <CheckboxGroup />
+                    
                 </div>
 
             </div>
