@@ -26,7 +26,8 @@ import Layout from './component/layout';
 import Form from './component/form';
 import Head from './component/head';
 import LeftNavigation from './component/LeftNavigation';
-import WsTable from './component/WsTableCol4';
+import WsTable1 from './component/wsTableCol4';
+import WsTable2 from './component/wsTableCol3';
 import Apps from './component/apps';
 import Titles from './component/titles';
 
@@ -67,7 +68,8 @@ class App extends React.Component {
 
                         <Layout />
                         <Form />
-                        <WsTable />
+                        <WsTable1 />
+                        <WsTable2/>
                         <Hello />
                         <Selector />
                         <Titles/>

@@ -10,7 +10,7 @@ const propTypes = {
 };
 
 const defaultProps = {
-    align: 'left',
+   /* align: 'center',*/
 
 };
 
