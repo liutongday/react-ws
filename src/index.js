@@ -18,6 +18,7 @@ import HelloWorld from './component/hellworld';
 import Selector from './component/selector';
 import Weixin from './component/weixin';
 import Title from './component/title';
+import ModulePartition from './component/ModulePartition';
 
 import './index.less';
 
@@ -38,5 +39,6 @@ module.exports = {
     HelloWorld,
     Selector,
     Weixin,
-    Title
+    Title,
+    ModulePartition
 };

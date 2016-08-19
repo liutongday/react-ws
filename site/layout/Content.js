@@ -18,6 +18,9 @@ import Apps from '../component/apps';
 import Table from '../../demo/component/table-ws';
 import Form from '../../demo/component/form';
 import LeftNavigation from '../component/LeftNavigation';
+import {
+    ModulePartition
+} from '../../src/index';
 
 export default class Content extends React.Component {
     constructor(props) {
@@ -34,8 +37,10 @@ export default class Content extends React.Component {
                 <div className="HolyGrail-content">
                     <Form />
                     <Table />
+                    <ModulePartition name="App排行榜" en_name="App Ranking List"/>
                     <Titles/>
                     <Apps />
+
 
                 </div>
 
