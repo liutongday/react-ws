@@ -52,7 +52,7 @@ class Navigator extends React.Component {
                                 <img src={`${demo.img_url}`+'.png'} className="img-size"/>
                             </a>
                             <div onMouseOut={this.outLine.bind(this,id)}  id={`${demo.id}`} className="row display_n ws-left-lab-bg">
-                                <img src={`${demo.img_url}`+'_rep.png'} className="rep-img-size "/>
+                                <a href={'#'+`${demo.id}`+'_module'}><img src={`${demo.img_url}`+'_rep.png'} className="rep-img-size "/></a>
                                 <span className="ws-left-text-marg-t"><font>{content}</font></span>
                             </div>
                         </li>

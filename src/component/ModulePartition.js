@@ -22,23 +22,26 @@ var ModulePartition=React.createClass(
         //     };
         // },
         render:function () {
-            var chinese_module_title=this.props.name;
-            var english_module_title=this.props.en_name;
+            let id = this.props.id;
+            let chinese_module_title=this.props.name;
+            let english_module_title=this.props.en_name;
             return (
-                <div id="module_partition">
-                    <div id="partition_line">
-                        <div id="line">
-                            <img id="line_img" src="/src/images/module_partition/line.png"/>
+                <div id={id}>
+                    <div id="module_partition">
+                        <div id="partition_line">
+                            <div id="line">
+                                <img id="line_img" src="/src/images/module_partition/line.png"/>
+                            </div>
+                            <div  id="picture">
+                                <img id="top_shape"  src="/src/images/module_partition/top_shape.png"/>
+                                <img id="bottom_shape" src="/src/images/module_partition/bottom_shape.png"/>
+                                <img id="center_line" src="/src/images/module_partition/center_line.png"/>
+                            </div>
                         </div>
-                        <div  id="picture">
-                            <img id="top_shape"  src="/src/images/module_partition/top_shape.png"/>
-                            <img id="bottom_shape" src="/src/images/module_partition/bottom_shape.png"/>
-                            <img id="center_line" src="/src/images/module_partition/center_line.png"/>
+                        <div id="module_title">
+                            <div id="chinese_title"><p>{chinese_module_title}</p></div>
+                            <div id="english_title">{english_module_title}</div>
                         </div>
-                    </div>
-                    <div id="module_title">
-                        <div id="chinese_title"><p>{chinese_module_title}</p></div>
-                        <div id="english_title">{english_module_title}</div>
                     </div>
                 </div>
             );
