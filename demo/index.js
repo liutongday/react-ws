@@ -69,12 +69,7 @@ class App extends React.Component {
 
                     <div className="HolyGrail-content">
                         <Apps />
-                        <CheckboxGroup />
-                        <Layout />
-                        <Form />
-                        <WsTable1 />
-                        <WsTable2/>
-                        <Selector />
+
                     </div>
 
                 </div>

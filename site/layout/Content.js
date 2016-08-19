@@ -17,7 +17,8 @@ import Apps from '../component/apps';
 import {
     Selector,
     DatePicker,
-    Title
+    Title,
+    ModulePartition
 } from '../../src/index';
 import CheckboxGroup from '../../demo/component/CheckboxGroup';
 import Table from '../component/wsTableCol4';
@@ -36,17 +37,17 @@ export default class Content extends React.Component {
                     <LeftNavigation />
                 </nav>
                 <div className="HolyGrail-content">
-                    <div className="row">
-                        <Selector />
-                    </div>
+
+                    <ModulePartition name="App排行榜" en_name="App Ranking List"/>
                     <Title icon="app-user" name="APP活跃用户总排行"/>
                     <Apps />
-
 
                     <Title icon="app-part" name="APP分类排行"/>
                     <CheckboxGroup />
                      <Table />
-                    
+
+                    <ModulePartition name="热点新闻" en_name="Hot News"/>
+                    <Title icon="new-hot-event" name="事件热度趋势"/>
                 </div>
 
             </div>
