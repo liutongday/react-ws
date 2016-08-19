@@ -26,7 +26,8 @@ import Layout from './component/layout';
 import Form from './component/form';
 import Head from './component/head';
 import LeftNavigation from './component/LeftNavigation';
-import WsTable from './component/WsTableCol4';
+import WsTable1 from './component/wsTableCol4';
+import WsTable2 from './component/wsTableCol3';
 import Apps from './component/apps';
 import Chart from './component/chart';
 import Map from './component/map';
@@ -67,9 +68,13 @@ class App extends React.Component {
                     </nav>
 
                     <div className="HolyGrail-content">
-
                         <Apps />
                         <CheckboxGroup />
+                        <Layout />
+                        <Form />
+                        <WsTable1 />
+                        <WsTable2/>
+                        <Selector />
                     </div>
 
                 </div>
@@ -84,24 +89,4 @@ class App extends React.Component {
     }
 }
 
-class Pages extends React.Component {
-    render() {
-        return (
-
-            <Router history={hashHistory}>
-                <Route path="/" component={App}>
-                    <IndexRoute component={Layout}></IndexRoute>
-                    <Route path="form" component={Form}></Route>
-                    <Route path="wstable" component={WsTable}></Route>
-                    <Route path="map" component={Map}></Route>
-                    <Route path="selector" component={Selector}></Route>
-                    <Route path="apps" component={Apps}></Route>
-                    <Route path="chart" component={Chart}></Route>
-                </Route>
-            </Router>
-
-        );
-    }
-}
-
-ReactDOM.render(<Pages/>, document.getElementById('appContainer'));
+ReactDOM.render(<App/>, document.getElementById('appContainer'));

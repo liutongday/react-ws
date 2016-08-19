@@ -20,6 +20,7 @@ import {
     Title
 } from '../../src/index';
 import CheckboxGroup from '../../demo/component/CheckboxGroup';
+import Table from '../component/wsTableCol4';
 import LeftNavigation from '../component/LeftNavigation';
 
 export default class Content extends React.Component {
@@ -41,8 +42,10 @@ export default class Content extends React.Component {
                     <Title icon="app-user" name="APP活跃用户总排行"/>
                     <Apps />
 
+
                     <Title icon="app-part" name="APP分类排行"/>
                     <CheckboxGroup />
+                     <Table />
                     
                 </div>
 

@@ -1,3 +1,16 @@
+/**
+ *
+ * <p>Title: BONC - React </p>
+ *
+ * <p>Description: 界面上四列table基本组件封装 wsTableCol4.js </p>
+ *
+ * <p>Copyright: Copyright BONC(c) 2013 - 2025 </p>
+ *
+ * <p>Company: 北京东方国信科技股份有限公司 </p>
+ *
+ * @author Yelj
+ * @version 1.0.0
+ */
 import React ,{PropTypes,Component} from 'react';
 import Column from './column';
 
@@ -168,7 +181,7 @@ const renderTds = (data, entry, columns, rowIndex) => (
             >
                 {showImage?<img src={contentImg} width={30}/>:null}
                 {contentText||content}
-                {showInput?<img src={state} width={20}/>:null}
+                {showInput?<img src={state} width={16}/>:null}
             </td>
         );
     })
@@ -190,6 +203,7 @@ function Table(props) {
     const { children, data, className } = props;
     const columns = findAllByType(children, Column);
     const aStyle={
+        width:'380px',
         display:'block',
         textAlign:'right',
         color:'#999C9f',
