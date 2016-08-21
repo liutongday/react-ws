@@ -35,6 +35,7 @@ export default class Page extends React.Component {
                 <Header />
                 <Content />
                 <Footer />
+
             </div>
 
         );

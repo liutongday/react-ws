@@ -16,17 +16,19 @@ import 'gm-bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import {
-    Flex,
     Storage,
-    HelloWorld,
     Selector,
+    Weixin,
 } from '../src/index';
 import _ from 'underscore';
-
+import Hello from './component/hell';
 import Layout from './component/layout';
 import Form from './component/form';
+import Head from './component/head';
 import LeftNavigation from './component/LeftNavigation';
-import NavigationWrap from './component/NavigationWrap';
+import WsTable from './component/table-ws';
+import Apps from './component/apps';
+import Titles from './component/titles';
 
 window.Storage = Storage;
 
@@ -49,7 +51,12 @@ function initNav() {
 class App extends React.Component {
     render() {
         return (
-          /*  <div className="HolyGril">
+
+            <div className="HolyGrail">
+                <header>Unicom Test</header>
+
+                <Head />
+
                 <div className="HolyGrail-body">
 
                     <nav className="HolyGrail-nav">
@@ -57,14 +64,19 @@ class App extends React.Component {
                     </nav>
 
                     <div className="HolyGrail-content">
-                        <Layout />
+
+                       {/* <Layout />
                         <Form />
+                        <WsTable />
+                        <Hello />*/}
+                        <Selector />
+                       {/* <Titles/>
+                        <Apps/>*/}
                     </div>
+
                 </div>
-            </div>*/
+            </div>
 
-
-            <Selector/>
 
         );
     }
@@ -75,5 +87,3 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App/>, document.getElementById('appContainer'));
-/*
-ReactDOM.render(<HelloWorld/>,document.getElementById('test'));*/

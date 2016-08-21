@@ -1,0 +1,86 @@
+.xuhao{
+    margin-left:12px;
+    margin-top:30px;
+    width: 98px;
+    height: 98px;
+    border: 1px solid #ddd;
+    color: black;
+    position:relative;
+}
+.shuzi{
+    width: 20px;
+    position:absolute;
+    top: 2px;
+    left: 2px;
+    border: 0px;
+    background-color:transparent;
+}
+.order(@url:url('/src/images/u2824.png') no-repeat,@width:36px,@height:36px,@border:0px){
+  background: @url;
+  height:@height;
+  width:@width;
+  border:@border;
+}
+.qian{
+    .order;
+}
+.hou{
+  .order(url('/src/images/u2833.png') no-repeat,36px,36px,0px);
+}
+.common(@url:url('/src/images/u110.png') no-repeat,@height:13px,@width:18px,@border-color:transparent,@position:relative,@bottom:-14px,@right:-20px){
+  background: @url;
+  height:@height;
+  width:@width;
+  border-color: @border-color;
+  position:@position;
+  bottom: @bottom;
+  right: @right;
+}
+.red{
+  .common;
+}
+.ping{
+  .common(url('/src/images/u673.png') no-repeat,13px,18px,transparent,relative,-14px,-20px);
+}
+.green{
+  .common(url('/src/images/u116.png') no-repeat,13px,18px,transparent,relative,-14px,-20px);
+}
+.name{
+    text-align: center;
+    position:relative;
+    width: 100px;
+    height: 17px;
+    bottom: -14px;
+    border: 0px;
+    background-color: transparent;
+}
+.weixin{
+    position:relative;
+    top: 10px;
+    text-align: center;
+    vertical-align: middle;
+    left: -5px;
+    width: 39px;
+    height: 39px;
+}
+.paixu{
+    width: 33px;
+    height: 33px;
+    //background-image:url('/demo/images/u2822.png');
+}
+.jiantou{
+    width:30px;
+    height: 22px;
+    position:relative;
+    bottom: 0px;
+    right: 0px;
+    border-color:transparent;
+}
+.usenumber{
+    width: 50px;
+    position:relative;
+    left: 6px;
+    bottom: -15px;
+    border: 0px;
+    background-color: transparent;
+}
