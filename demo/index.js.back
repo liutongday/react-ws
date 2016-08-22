@@ -120,6 +120,7 @@ const Root = React.createClass({
             <Router history={hashHistory}>
                 <Route path="/" component={App}>
                     <IndexRoute component={Home}></IndexRoute>
+                     <Route path="signIn" component={SignIn}/>
                 </Route>
             </Router>
         );

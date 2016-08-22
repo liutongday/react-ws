@@ -16,6 +16,8 @@ import {
     Validate,
     ValidateMixin,
     Switch,
+    HelloWorld,
+    Selector,
 } from '../../src/index';
 
 var FormerDom = React.createClass({
@@ -71,6 +73,8 @@ const Component = React.createClass({
                 <h2 id="former">Form</h2>
                 <FormerDom/>
                 <h2 id="switch">Switch</h2>
+
+
                 <div>
                     <div>目前Switch的长度有限，所以checkedChildren unCheckedChildren 不能太多字</div>
                     <Switch
@@ -87,6 +91,11 @@ const Component = React.createClass({
                         checkedChildren={"YES"}
                         unCheckedChildren={"NO"}/>
                 </div>
+                <h2 id="hello">HelloWorld</h2>
+                <div>一个测试</div>
+                <HelloWorld/>
+                <h2 id="selector">Selector</h2>
+                <Selector/>
             </div>
         );
     },

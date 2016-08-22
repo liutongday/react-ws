@@ -1,3 +1,16 @@
+/**
+ *
+ * Title: BONC - React
+ *
+ * Description:  </p>
+ *
+ * Copyright: Copyright BONC(c) 2013 - 2025
+ *
+ * Company: 北京东方国信科技股份有限公司
+ *
+ * @author luli
+ * @date 2016/8/22
+ */
 import React from 'react';
 import moment from 'moment';
 import {Popover, OverlayTrigger} from 'react-bootstrap';

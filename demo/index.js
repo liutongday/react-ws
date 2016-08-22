@@ -1,35 +1,41 @@
 /**
  *
- * <p>Title: BONC - React </p>
+ * Title: BONC - React
  *
- * <p>Description: 单页面应用的构建文件 index.js </p>
+ * Description:  </p>
  *
- * <p>Copyright: Copyright BONC(c) 2013 - 2025 </p>
+ * Copyright: Copyright BONC(c) 2013 - 2025
  *
- * <p>Company: 北京东方国信科技股份有限公司 </p>
+ * Company: 北京东方国信科技股份有限公司
  *
- * @author panxw
- * @version 1.0.0
+ * @author luli
+ * @date 2016/8/16
  */
 import './index.less';
 import 'gm-bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Router, Route, IndexRoute, hashHistory, Link} from 'react-router';
 import {
-    Flex,
     Storage,
     Calendar,
     DatePicker,
 } from '../src/index';
 import _ from 'underscore';
-
 import Layout from './component/layout';
 import Form from './component/form';
+import Head from './component/head';
 import LeftNavigation from './component/LeftNavigation';
-import NavigationWrap from './component/NavigationWrap';
+import WsTable1 from './component/wsTableCol4';
+import WsTable2 from './component/wsTableCol3';
+import Apps from './component/apps';
+import Chart from './component/chart';
+import Map from './component/map';
+import CheckboxGroup from './component/CheckboxGroup';
+
+
 
 window.Storage = Storage;
-
 
 function initNav() {
     let div = document.createElement('div');
@@ -53,6 +59,8 @@ class App extends React.Component {
             <div className="HolyGrail">
                 <header>Unicom Test</header>
 
+                <Head />
+
                 <div className="HolyGrail-body">
 
                     <nav className="HolyGrail-nav">
@@ -60,16 +68,15 @@ class App extends React.Component {
                     </nav>
 
                     <div className="HolyGrail-content">
-                        <Layout />
-                        <Layout/>
                         <Layout/>
                         <Calendar />
                         <DatePicker />
                         <Form />
                     </div>
-                </div>
-            </div>
 
+                </div>
+
+            </div>
 
         );
     }

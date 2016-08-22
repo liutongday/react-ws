@@ -8,6 +8,12 @@
 @import "../css/footer.less";
 @import "../css/LeftNavigation.less";
 
+/*
+body{
+  overflow-x:hidden;
+}
+*/
+
 .HolyGrail {
   display: flex;
   min-height: 100vh;
@@ -29,12 +35,12 @@
 }
 header,
 footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   flex: 1;
 }
-
-@screen-sm-min = "768px";
-@screen-md-min = "992px";
-@screen-lg-min = "1200px";
 
 @media (max-width: 768px) {
   .HolyGrail-body {
@@ -45,10 +51,6 @@ footer {
   .HolyGrail-ads,
   .HolyGrail-content {
     flex: auto;
-  }
-
-  .ws-toc {
-    display: none;
   }
 }
 
