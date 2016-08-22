@@ -19,7 +19,8 @@ import Table from '../../demo/component/table-ws';
 import Form from '../../demo/component/form';
 import LeftNavigation from '../component/LeftNavigation';
 import {
-    ModulePartition
+    ModulePartition,
+    TabHost
 } from '../../src/index';
 
 export default class Content extends React.Component {
@@ -40,10 +41,9 @@ export default class Content extends React.Component {
                     <ModulePartition name="App排行榜" en_name="App Ranking List"/>
                     <Titles/>
                     <Apps />
-
+                    <TabHost/>
 
                 </div>
-
             </div>
         );
     }

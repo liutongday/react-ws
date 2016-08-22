@@ -20,6 +20,7 @@ var ModulePartition=React.createClass(
         //         chinese:"APP排行榜",
         //         english:"App Ranking List"
         //     };
+
         // },
         render:function () {
             var chinese_module_title=this.props.name;

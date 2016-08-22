@@ -19,6 +19,9 @@ import Selector from './component/selector';
 import Weixin from './component/weixin';
 import Title from './component/title';
 import ModulePartition from './component/ModulePartition';
+import Tab from './component/tab';
+import TabContent from './component/tabcontent';
+import TabHost from './component/tabhost';
 
 import './index.less';
 
@@ -40,5 +43,6 @@ module.exports = {
     Selector,
     Weixin,
     Title,
-    ModulePartition
+    ModulePartition,
+    TabHost
 };
