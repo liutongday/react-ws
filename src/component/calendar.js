@@ -71,19 +71,21 @@ var Calendar = React.createClass({
         var month = m.month();
         return (
             <div className="ws-calendar-head text-center clearfix">
-                <a href="javascript:;" className="ws-calendar-head-pre pull-left"
-                   onClick={this.handleChangeMonth.bind(this, month - 1)}>
-                    <i className="glyphicon glyphicon-chevron-left"></i>
-                </a>
-                    <span className="ws-calendar-head-title">
-                        <span className="ws-calendar-head-month"
-                              onClick={this.handleSelectMonth}>{month + 1}月</span>
-                        <span>&nbsp;&nbsp;{m.year()}</span>
-                    </span>
-                <a href="javascript:;" className="ws-calendar-head-next pull-right"
-                   onClick={this.handleChangeMonth.bind(this, month + 1)}>
-                    <i className="glyphicon glyphicon-chevron-right"></i>
-                </a>
+                <div className="ws-calendar-head-top">
+                    <a href="javascript:;" className="ws-calendar-head-pre pull-left"
+                       onClick={this.handleChangeMonth.bind(this, month - 1)}>
+                        <i className="glyphicon glyphicon-chevron-left"></i>
+                    </a>
+                        <span className="ws-calendar-head-title">
+                            <span className="ws-calendar-head-month"
+                                  onClick={this.handleSelectMonth}>{month + 1}月</span>
+                            <span>&nbsp;&nbsp;{m.year()}</span>
+                        </span>
+                    <a href="javascript:;" className="ws-calendar-head-next pull-right"
+                       onClick={this.handleChangeMonth.bind(this, month + 1)}>
+                        <i className="glyphicon glyphicon-chevron-right"></i>
+                    </a>
+                </div>
             </div>
         );
     },

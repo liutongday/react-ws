@@ -61,6 +61,8 @@ class App extends React.Component {
 
                     <div className="HolyGrail-content">
                         <Layout />
+                        <Layout/>
+                        <Layout/>
                         <Calendar />
                         <DatePicker />
                         <Form />
