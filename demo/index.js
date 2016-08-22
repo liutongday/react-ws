@@ -18,6 +18,8 @@ import ReactDOM from 'react-dom';
 import {
     Flex,
     Storage,
+    Calendar,
+    DatePicker,
 } from '../src/index';
 import _ from 'underscore';
 
@@ -59,6 +61,8 @@ class App extends React.Component {
 
                     <div className="HolyGrail-content">
                         <Layout />
+                        <Calendar />
+                        <DatePicker />
                         <Form />
                     </div>
                 </div>
