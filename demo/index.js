@@ -15,22 +15,25 @@ import './index.less';
 import 'gm-bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Router, Route, IndexRoute, hashHistory, Link} from 'react-router';
 import {
     Storage,
-    Selector,
-    Weixin,
+    Calendar,
+    DatePicker,
 } from '../src/index';
 import _ from 'underscore';
-import Hello from './component/hell';
 import Layout from './component/layout';
 import Form from './component/form';
 import Head from './component/head';
 import LeftNavigation from './component/LeftNavigation';
-import WsTable from './component/WsTableCol4';
+import WsTable1 from './component/wsTableCol4';
+import WsTable2 from './component/wsTableCol3';
 import Apps from './component/apps';
 import Chart from './component/chart';
 import Map from './component/map';
-import Titles from './component/titles';
+import CheckboxGroup from './component/CheckboxGroup';
+
+
 
 window.Storage = Storage;
 
@@ -53,7 +56,6 @@ function initNav() {
 class App extends React.Component {
     render() {
         return (
-
             <div className="HolyGrail">
                 <header>Unicom Test</header>
 
@@ -66,21 +68,37 @@ class App extends React.Component {
                     </nav>
 
                     <div className="HolyGrail-content">
-
+                        <Apps />
                         <Layout />
+                        <Calendar />
+                        <DatePicker />
                         <Form />
-                        <WsTable />
+<WsTable />
+                        <Hello />
+                        <Selector />
+                        <Titles/>
+                        <Apps/>
+                        <Chart/>
+                        <Map/><<<<<<< .mine
                         <Hello />
                         <Selector />
                         <Titles/>
                         <Apps/>
                         <Chart/>
                         <Map/>
+=======
+
+
+
+
+
+
+>>>>>>> .theirs
                     </div>
 
                 </div>
-            </div>
 
+            </div>
 
         );
     }
