@@ -3,6 +3,7 @@ import moment from 'moment';
 import {Popover, OverlayTrigger} from 'react-bootstrap';
 import Calendar from './calendar.js';
 
+
 class DatePicker extends React.Component {
     constructor(props) {
         super(props);
@@ -27,10 +28,12 @@ class DatePicker extends React.Component {
         } else {
             this.props.target().click();
         }
+
         this.props.onChange(date);
     }
 
     handleChange(event) {
+        console.log("this is the date"+event.target.value);
         // 只允许合法的指传递出去
         if (/\d\d\d\d-\d\d-\d\d/.test(event.target.value)) {
             this.props.onChange(moment(event.target.value).toDate());
@@ -46,14 +49,15 @@ class DatePicker extends React.Component {
                     {this.props.children ? this.props.children :
                         <input type="text" className={this.props.inputClassName} placeholder={this.props.placeholder}
                                ref="target"
-                               value={this.props.date && moment(this.props.date).format('YYYY-MM-DD')}
-                               onChange={this.handleChange}/>}
+                               value={this.props.date }
+                               onChange={this.handleChange}
+                               {...this.props}/>}
+
                 </OverlayTrigger>
             </div>
         );
     }
 }
-
 DatePicker.propTypes = {
     date: PropTypes.object,
     onChange: PropTypes.func.isRequired,
@@ -62,4 +66,4 @@ DatePicker.propTypes = {
     placeholder: PropTypes.string
 };
 
-export default DatePicker;
+module.exports = DatePicker;

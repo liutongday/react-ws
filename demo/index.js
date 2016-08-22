@@ -18,8 +18,8 @@ import ReactDOM from 'react-dom';
 import {Router, Route, IndexRoute, hashHistory, Link} from 'react-router';
 import {
     Storage,
-    Selector,
-    Weixin,
+    Calendar,
+    DatePicker,
 } from '../src/index';
 import _ from 'underscore';
 import Layout from './component/layout';
@@ -69,7 +69,10 @@ class App extends React.Component {
 
                     <div className="HolyGrail-content">
                         <Apps />
-
+                        <Layout />
+                        <Calendar />
+                        <DatePicker />
+                        <Form />
                     </div>
 
                 </div>
