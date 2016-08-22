@@ -16,6 +16,7 @@ import React from 'react';
 import Titles from '../component/titles';
 import Apps from '../component/apps';
 import Table1 from '../component/wsTableCol4';
+import Table2 from '../component/wsTableCol3';
 import Form from '../../demo/component/form';
 import LeftNavigation from '../component/LeftNavigation';
 
@@ -36,6 +37,7 @@ export default class Content extends React.Component {
                     <Titles/>
                     <Apps />
                     <Table1 />
+                    <Table2 />
 
                 </div>
 

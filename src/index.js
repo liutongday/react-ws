@@ -11,6 +11,7 @@ import Validate from './component/validate';
 import ValidateMixin from './component/validate.mixin';
 import Table1 from './component/tableCol4';
 import Table2 from './component/tableCol3';
+import Table3 from './component/tableCol5';
 import Column from './component/column';
 import NowTime from './component/nowtime';
 import Calendar from './component/calendar';
@@ -33,6 +34,7 @@ module.exports = {
     ValidateMixin,
     Table1,
     Table2,
+    Table3,
     Column,
     NowTime,
     Calendar,
