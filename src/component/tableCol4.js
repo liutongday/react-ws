@@ -107,6 +107,7 @@ const renderThs = (columns) => (
                 arr=name.split(",");
                 contentImg=arr[0];
                 contentText=arr[1];
+                className='type';
             }
         }
 
@@ -116,7 +117,7 @@ const renderThs = (columns) => (
                 style={getStyle(col.props)}
                 className={`-ws-th col-${index} col-${dataKey} ${className || ''} `}
             >
-                {showImg?<img src={contentImg} width={50}/>:null}
+                {showImg?<img src={contentImg} style={{marginRight:"10px"}} width={50}/>:null}
                  {contentText||content}
             </th>
         );
@@ -179,7 +180,7 @@ const renderTds = (data, entry, columns, rowIndex) => (
                 style={getStyle(col.props)}
                 className={`ws-td col-${index} col-${dataKey} ${className || ''}  `}
             >
-                {showImage?<img src={contentImg} width={30}/>:null}
+                {showImage?<img src={contentImg} style={{marginRight:'15px'}} width={30}/>:null}
                 {contentText||content}
                 {showInput?<img src={state} width={16}/>:null}
             </td>
