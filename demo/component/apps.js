@@ -72,7 +72,7 @@ var Apps= React.createClass({
             },
                 //body:param
                 body:JSON.stringify(param)
-                //body: JSON.parse(str)
+                //body: JSON.parse(str)u
                 //body: JSON.stringify(str)
                 //body:"{name:'Hubot',login:'hubot'}"
         })
