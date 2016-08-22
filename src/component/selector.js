@@ -63,9 +63,9 @@ var Selector = React.createClass({
                     <img className="sel_img3" src="/src/images/u354.png"/>
                     {data1.map(function (pro,i) {
                         return(
-                        <div className="sel_inner2_div1" style={{left:10+i%4*65,top:10+Math.floor(i/4)*35}}>
+                        <div className="sel_inner2_div1" key={i} style={{left:10+i%4*65,top:10+Math.floor(i/4)*35}}>
 
-                            <span className="sel_span" title={pro.proId} onClick={this.selectedProv.bind(this,i)}>
+                            <span className="sel_span" title={pro.proId} key={i} onClick={this.selectedProv.bind(this,i)}>
                                 {pro.proName}
                             </span>
                         </div>

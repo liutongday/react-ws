@@ -19,6 +19,8 @@ import {
     Storage,
     Selector,
     Weixin,
+    Calendar,
+    DatePicker,
 } from '../src/index';
 import _ from 'underscore';
 import Hello from './component/hell';
@@ -70,6 +72,8 @@ class App extends React.Component {
                         <WsTable />
                         <Hello />*/}
                         <Selector />
+                        <Calendar />
+                        <DatePicker/>
                        {/* <Titles/>
                         <Apps/>*/}
                     </div>
