@@ -65,10 +65,10 @@ var Weixin = React.createClass({
         return(
             <div className="main">
                 <div className="xuhao">
-                    <input disabled="disabled" className={this.state.tupian} change={this.changeTupian}></input>
+                    <input disabled="disabled" className={this.state.tupian} change={this.changeTupian}/>
                     <p className="shuzi">{data.id}</p>
                     <img className="weixin" src={chart}/>
-                    <input disabled="disabled" className="name" value={name} ></input>
+                    <input disabled="disabled" className="name" value={name} />
                     <input disabled="disabled" className="usenumber" value={data.number}/>
                     <input className={this.state.arrow} change={this.changeHandle}/>
                 </div>

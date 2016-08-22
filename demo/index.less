@@ -2,7 +2,10 @@
 @import "../node_modules/gm-bootstrap/less/mixins.less";
 @import "../node_modules/gm-bootstrap/less/custom.less";
 @import "../src/css/variables.less";
+@import "./css/head.less";
+@import "../src/css/nowtime.less";
 @import "./css/LeftNavigation.less";
+
 .HolyGrail {
   display: flex;
   min-height: 100vh;
@@ -27,11 +30,8 @@ footer {
   flex: 1;
 }
 
-@screen-sm-min = "768px";
-@screen-md-min = "992px";
-@screen-lg-min = "1200px";
 
-@media (max-width: @screen-sm-min) {
+@media (max-width: 768px) {
   .HolyGrail-body {
     flex-direction: column;
     flex: 1;
@@ -43,7 +43,7 @@ footer {
   }
 }
 
-@media (max-width: @screen-md-min) {
+@media (max-width: 992px) {
   .HolyGrail-body {
     flex-direction: column;
     flex: 1;

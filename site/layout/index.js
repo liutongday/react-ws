@@ -34,7 +34,6 @@ export default class Page extends React.Component {
             <div className="HolyGrail">
                 <Header />
                 <Content />
-
                 <Footer />
 
             </div>
