@@ -74,12 +74,8 @@ class App extends React.Component {
                         <Selector />
                         <Titles/>
                         <Apps/>
-<Chart/>
-                        <Map/><<<<<<< .mine
+                        <Chart/>
                         <Map/>
-=======
-
->>>>>>> .theirs
                     </div>
 
                 </div>

@@ -19,18 +19,30 @@ import echarts from 'echarts/src/echarts';
 //import 'echarts/src/chart/wordCloud';
 var Map = React.createClass({
 
-    /*getInitialState: function() {
-        var dataSet=[0,2, 1, 0, 3, 1, 0];
+    getInitialState: function() {
+        var dataSet=[
+            {name : '天津', value : 234},
+            {name : '爱奇艺', value : 234,x: 180, y: 310},
+            {name : '淘宝', value : 103},
+            {
+                name : '我的奇妙男友',
+                symbol: 'image://images/u250.png',     // 自定义标签图形的样式
+                symbolSize: 21,
+                value:111,
+                x: 250,
+                y: 260
+            }
+        ];
         return {
             data: dataSet
         };
-    },*/
+    },
     componentDidMount:function(){
         //debugger
         //console.log(this.state.data);
-        this.drawMap();
+        this.drawMap(this.state.data);
     },
-    drawMap:function(){
+    drawMap:function(dataSet){
         var myMap = echarts.init(document.getElementById('maps'));
         // 指定图表的配置项和数据
         function randomData() {
@@ -101,19 +113,7 @@ var Map = React.createClass({
                                 }
                             }
                         },
-                        data : [
-                            {name : '天津', value : 234},
-                            {name : '爱奇艺', value : 234,x: 180, y: 310},
-                            {name : '淘宝', value : 103},
-                            {
-                                name : '我的奇妙男友',
-                                symbol: 'image://images/u250.png',     // 自定义标签图形的样式
-                                symbolSize: 21,
-                                value:111,
-                                x: 250,
-                                y: 260
-                            }
-                        ]
+                        data :dataSet,
                     },
                     geoCoord: {
                         '淘宝': [121.4648,31.2891],
