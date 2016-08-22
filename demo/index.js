@@ -20,6 +20,7 @@ import {
     Storage,
     Calendar,
     DatePicker,
+    Title,
 } from '../src/index';
 import _ from 'underscore';
 import Layout from './component/layout';
@@ -32,8 +33,6 @@ import Apps from './component/apps';
 import Chart from './component/chart';
 import Map from './component/map';
 import CheckboxGroup from './component/CheckboxGroup';
-
-
 
 window.Storage = Storage;
 
@@ -73,27 +72,10 @@ class App extends React.Component {
                         <Calendar />
                         <DatePicker />
                         <Form />
-<WsTable />
-                        <Hello />
-                        <Selector />
-                        <Titles/>
-                        <Apps/>
-                        <Chart/>
-                        <Map/><<<<<<< .mine
-                        <Hello />
-                        <Selector />
-                        <Titles/>
+                        <Title/>
                         <Apps/>
                         <Chart/>
                         <Map/>
-=======
-
-
-
-
-
-
->>>>>>> .theirs
                     </div>
 
                 </div>
