@@ -1,5 +1,6 @@
 /**
- * Created by Administrator on 2016/8/13.
+ * Created by zhangixnjing on 2016/8/13.
+ * descprition：标题组件
  */
 import React from 'react';
 import '../css/title.less';
@@ -15,11 +16,9 @@ var Title = React.createClass({
         this.changeHandle(name);
     },*/
     render:function () {
-        var data = this.props.role;
-        //var data = {tupian:'u797.png',name:'微信'};
-        var chart ="/src/images/"+data.tupian;
-        var name = data.name;
-        //var chart ="/demo/images/u797.png";
+        let icon = this.props.icon;
+        let chart ="/site/images/title/"+icon+".png";
+        let name = this.props.name;
         return(
             <div className="title">
                 <img className="chart" src={chart}/>

@@ -15,13 +15,13 @@ import './index.less';
 import 'gm-bootstrap/dist/css/bootstrap.css';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Router, Route, IndexRoute, hashHistory, Link} from 'react-router';
 import {
     Storage,
-    Selector,
-    Weixin,
+    Calendar,
+    DatePicker,
 } from '../src/index';
 import _ from 'underscore';
-import Hello from './component/hell';
 import Layout from './component/layout';
 import Form from './component/form';
 import Head from './component/head';
@@ -30,7 +30,11 @@ import WsTable1 from './component/wsTableCol4';
 import WsTable2 from './component/wsTableCol3';
 import WsTable3 from './component/waTableCol5';
 import Apps from './component/apps';
-import Titles from './component/titles';
+import Chart from './component/chart';
+import Map from './component/map';
+import CheckboxGroup from './component/CheckboxGroup';
+
+
 
 window.Storage = Storage;
 
@@ -53,7 +57,6 @@ function initNav() {
 class App extends React.Component {
     render() {
         return (
-
             <div className="HolyGrail">
                 <header>Unicom Test</header>
 
@@ -66,22 +69,19 @@ class App extends React.Component {
                     </nav>
 
                     <div className="HolyGrail-content">
-
+                        <Apps />
                         <Layout />
+                        <Calendar />
+                        <DatePicker />
                         <Form />
                         <WsTable1 />
                         <WsTable2/>
                         <WsTable3/>
-                        <Hello />
-                        <Selector />
-                        <Titles/>
-                        <Apps/>
-
                     </div>
 
                 </div>
-            </div>
 
+            </div>
 
         );
     }

@@ -13,11 +13,17 @@
  */
 
 import React from 'react';
-import Titles from '../component/titles';
 import Apps from '../component/apps';
+import {
+    Selector,
+    DatePicker,
+    Title,
+    ModulePartition
+} from '../../src/index';
+import CheckboxGroup from '../../demo/component/CheckboxGroup';
+import HotEvent from '../component/HotEvent';
 import Table1 from '../component/wsTableCol4';
 import Table2 from '../component/wsTableCol3';
-import Form from '../../demo/component/form';
 import LeftNavigation from '../component/LeftNavigation';
 
 export default class Content extends React.Component {
@@ -33,10 +39,18 @@ export default class Content extends React.Component {
                     <LeftNavigation />
                 </nav>
                 <div className="HolyGrail-content">
-                    <Form />
-                    <Titles/>
+
+                    <ModulePartition id="app_module" name="App排行榜" en_name="App Ranking List"/>
+                    <Title icon="app-user" name="APP活跃用户总排行"/>
                     <Apps />
-                    <Table1 />
+
+                    <Title icon="app-part" name="APP分类排行"/>
+                    <CheckboxGroup />
+                     <Table1 />
+
+                    <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
+                    <Title icon="new-hot-event" name="事件热度趋势"/>
+                    <HotEvent />
                     <Table2 />
 
                 </div>
