@@ -22,10 +22,14 @@ import {
     DatePicker,
 } from '../src/index';
 
-import Layout from './component/layout';
+import LeftNavigation from './component/LeftNavigation';
+import Map from './component/map';
 import Head from './component/head';
 import Apps from './component/apps';
 import Chart from './component/chart';
+import Form from './component/form';
+import WsTable1 from './component/wsTableCol4';
+import CheckboxGroup from './component/CheckboxGroup';
 
 window.Storage = Storage;
 
@@ -39,20 +43,18 @@ class App extends React.Component {
                 <div className="HolyGrail-body">
 
                     <nav className="HolyGrail-nav">
-                        <nav>
-                            <Link to="/apps">Apps</Link>
-                            <Link to="/chart">Chart</Link>
-                        </nav>
+                        <LeftNavigation />
                     </nav>
 
                     <div className="HolyGrail-content">
                         {this.props.children}
+
+                        //下面也可以排列组件
                     </div>
 
                 </div>
-
+                
             </div>
-
         );
     }
 
@@ -65,13 +67,16 @@ class Pages extends React.Component {
         return (
             <Router history={hashHistory}>
                 <Route path="/" component={App}>
-                    <IndexRoute component={Layout}></IndexRoute>
+                    <IndexRoute component={CheckboxGroup}></IndexRoute>
                     <Route path="apps" component={Apps}></Route>
                     <Route path="chart" component={Chart}></Route>
+                    <Route path="form" component={Form}></Route>
+                    <Route path="table" component={WsTable1}></Route>
+                    <Route path="calendar" component={Calendar}></Route>
                 </Route>
             </Router>
         );
     }
 }
 
-ReactDOM.render(<Pages/>, document.getElementById('appContainer'));
+ReactDOM.render(<Pages></Pages>, document.getElementById('appContainer'));

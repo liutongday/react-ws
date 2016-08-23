@@ -63,27 +63,27 @@ class Head extends  React.Component {
                                    
                                     <ul>
                                         <li class="active">
-                                            <Link to="/form" id="logo">
+                                            <Link to="/apps" id="logo">
                                                 <span>基础业务分析</span>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/wstable" >
+                                            <Link to="/chart" >
                                                 <span>创新业务分析</span>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/map" >
+                                            <Link to="/form" >
                                                 <span>成本效益分析</span>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/selector" >
+                                            <Link to="/table" >
                                                 <span>重点区域分析</span>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/4" >
+                                            <Link to="/calendar" >
                                                 <span>数据查询</span>
                                             </Link>
                                         </li>
