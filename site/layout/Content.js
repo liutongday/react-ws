@@ -15,7 +15,7 @@
 import React from 'react';
 import Apps from '../component/apps';
 import {
-    TabHost
+    TabHost,
     Title,
     ModulePartition
 } from '../../src/index';
