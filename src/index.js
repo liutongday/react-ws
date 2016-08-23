@@ -9,7 +9,8 @@ import Storage from './component/storage';
 import Switch from './component/switch';
 import Validate from './component/validate';
 import ValidateMixin from './component/validate.mixin';
-import Table from './component/table';
+import Table1 from './component/tableCol4';
+import Table2 from './component/tableCol3';
 import Column from './component/column';
 import NowTime from './component/nowtime';
 import Calendar from './component/calendar';
@@ -34,7 +35,8 @@ module.exports = {
     Switch,
     Validate,
     ValidateMixin,
-    Table,
+    Table1,
+    Table2,
     Column,
     NowTime,
     Calendar,

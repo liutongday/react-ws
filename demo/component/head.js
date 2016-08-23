@@ -2,6 +2,7 @@
  * Created by zhan on 2016/8/5.
  */
 import React from 'react';
+import { Link } from 'react-router';
 import classNames from 'classnames';
 import * as ReactDOM from 'react-dom';
 
@@ -57,14 +58,35 @@ class Head extends  React.Component {
                                 <div id="head_down_left">
                                     <img src="/demo/images/head/head_down_left.png" />
                                     <span>统一数据分析系统</span>
-                                    </div>
+                                </div>
                                 <div id="head_down_right">
+                                   
                                     <ul>
-                                        <li class="active"><a href="#">基础业务分析</a></li>
-                                        <li><a href="#">创新业务分析</a></li>
-                                        <li><a href="#">成本效益分析</a></li>
-                                        <li><a href="#">重点区域分析</a></li>
-                                        <li><a href="#">数据查询</a></li>
+                                        <li class="active">
+                                            <Link to="/form" id="logo">
+                                                <span>基础业务分析</span>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/wstable" >
+                                                <span>创新业务分析</span>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/map" >
+                                                <span>成本效益分析</span>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/selector" >
+                                                <span>重点区域分析</span>
+                                            </Link>
+                                        </li>
+                                        <li>
+                                            <Link to="/4" >
+                                                <span>数据查询</span>
+                                            </Link>
+                                        </li>
                                     </ul>
 
                                 </div>

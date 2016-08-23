@@ -24,7 +24,6 @@ export default class Header extends React.Component {
         super(props);
     }
     render() {
-
         const list = [
                             {"id":"data-query","text":"数据查询"},
                              {"id":"key-areas","text":"重点区域分析"},
@@ -38,19 +37,16 @@ export default class Header extends React.Component {
             return (
                 <li key={site.id}>
                     <a href={`#${site.id}`}  >{content}</a>
-
-
                 </li>
             );
         });
         return(
             <header className="ws-header-color">
-                <Flex row >
+                <Flex row  id="ws-head">
                             <div id="head" className="u-lof10"  >
                                 <NowTime  />
                             </div>
                             <div id="head_top" className="Grid-cell u-lof4" >
-
                                             <div id="head_top_left">
                                                 <img  src="/site/images/head/head_top_left.png"      />
                                                 <span id="head_top_left_span1">张三</span>
@@ -72,7 +68,7 @@ export default class Header extends React.Component {
                                             </div>
                             </div>
                 </Flex>
-                <Flex row >
+                <Flex row  id="ws-down">
                                     <div id="head_down_left" className="u-lof5">
                                         <img src="/site/images/head/head_down_left.png" />
                                         <span>统一数据分析系统</span>
@@ -90,8 +86,6 @@ export default class Header extends React.Component {
                                         {/*</ul>*/}
                                     </div>
                 </Flex>
-
-
             </header>
         );
     }
