@@ -85,8 +85,8 @@ class Screen extends  React.Component {
                                     <span> <label htmlFor=" 团购"> 团购</label></span>
                                 </td>
                                  <td>
-                                    <input type="checkbox" name="app" id=" 摄影影像"/>
-                                     <span> <label htmlFor=" 摄影影像"> 摄影影像</label></span>
+                                    <input type="checkbox" name="app" id=" 摄影摄像"/>
+                                     <span> <label htmlFor=" 摄影摄像"> 摄影摄像</label></span>
                                 </td>
                                 <td>
                                     <input type="checkbox" name="app" id=" 阅读"/>
@@ -181,4 +181,5 @@ class Component extends React.Component{
         );
     }
 }
+
 export default Component;

@@ -30,9 +30,9 @@ module.exports = {
     Switch,
     Validate,
     ValidateMixin,
-<<<<<<< HEAD
+
     Screen,
-=======
+
     Table,
     Column,
     NowTime,
@@ -42,5 +42,5 @@ module.exports = {
     Selector,
     Weixin,
     Title
->>>>>>> 8cf3cbe78d5bdb6dc287898aa92a1882b316904a
+
 };

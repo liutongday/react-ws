@@ -18,26 +18,26 @@ import ReactDOM from 'react-dom';
 
 import {
     Storage,
-<<<<<<< HEAD
 
-=======
+
+
     Selector,
     Weixin,
->>>>>>> 8cf3cbe78d5bdb6dc287898aa92a1882b316904a
+
 } from '../src/index';
 import _ from 'underscore';
 import Hello from './component/hell';
 import Layout from './component/layout';
 import Form from './component/form';
-<<<<<<< HEAD
+
 import Screen from './component/screen';
-=======
+
 import Head from './component/head';
 import LeftNavigation from './component/LeftNavigation';
 import WsTable from './component/table-ws';
 import Apps from './component/apps';
 import Titles from './component/titles';
->>>>>>> 8cf3cbe78d5bdb6dc287898aa92a1882b316904a
+
 
 window.Storage = Storage;
 
@@ -61,11 +61,8 @@ class App extends React.Component {
     render() {
         return (
 
-<<<<<<< HEAD
-			    {/*<Layout />*/}
-			    {/*<Form />*/}
-                <Screen/>
-=======
+
+
             <div className="HolyGrail">
                 <header>Unicom Test</header>
 
@@ -79,18 +76,19 @@ class App extends React.Component {
 
                     <div className="HolyGrail-content">
 
-                        <Layout />
-                        <Form />
+                        {/*<Layout />*/}
+                        {/*<Form />*/}
                         <WsTable />
                         <Hello />
                         <Selector />
                         <Titles/>
                         <Apps/>
+                        <Screen/>
 
                     </div>
 
                 </div>
->>>>>>> 8cf3cbe78d5bdb6dc287898aa92a1882b316904a
+
             </div>
 
 
