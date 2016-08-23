@@ -9,7 +9,8 @@ import Storage from './component/storage';
 import Switch from './component/switch';
 import Validate from './component/validate';
 import ValidateMixin from './component/validate.mixin';
-import Table from './component/table';
+import Table1 from './component/tableCol4';
+import Table2 from './component/tableCol3';
 import Column from './component/column';
 import NowTime from './component/nowtime';
 import Calendar from './component/calendar';
@@ -18,6 +19,7 @@ import HelloWorld from './component/hellworld';
 import Selector from './component/selector';
 import Weixin from './component/weixin';
 import Title from './component/title';
+import ModulePartition from './component/ModulePartition';
 
 import './index.less';
 
@@ -30,10 +32,15 @@ module.exports = {
     Switch,
     Validate,
     ValidateMixin,
+<<<<<<< HEAD
 
     Screen,
 
     Table,
+=======
+    Table1,
+    Table2,
+>>>>>>> f5f4d1ec712bce5fd9cd230717bf3bdb5e2cd26a
     Column,
     NowTime,
     Calendar,
@@ -41,6 +48,11 @@ module.exports = {
     HelloWorld,
     Selector,
     Weixin,
+<<<<<<< HEAD
     Title
 
+=======
+    Title,
+    ModulePartition
+>>>>>>> f5f4d1ec712bce5fd9cd230717bf3bdb5e2cd26a
 };

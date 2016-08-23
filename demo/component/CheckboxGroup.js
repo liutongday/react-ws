@@ -15,18 +15,13 @@
 import React from 'react';
 import classNames from 'classnames';
 import * as ReactDOM from 'react-dom';
+import "../css/CheckboxGroup.less";
 
-class Screen extends  React.Component {
+class CheckboxGroup extends  React.Component {
     render() {
                 return (
                     <div id="screen">
-                        <div id="screen_top">
-                            <img src="/demo/images/u8019.png"/>
-                            <span>APP分类排行</span>
-                        </div>
-                        <div id="screen_mid">
-                            <img src="/demo/images/u229_line.png"/>
-                        </div>
+
                         <div id="screen_down">
                             <table>
                             <td> 筛选分类：</td>
@@ -176,7 +171,7 @@ class Component extends React.Component{
     render(){
         return (
             <div>
-              <Screen/>
+              <CheckboxGroup/>
             </div>
         );
     }

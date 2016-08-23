@@ -37,7 +37,7 @@ var Apps= React.createClass({
         var param = {
             name:"Hubot",
             login:"hubot"
-        }
+        };
         var rolesListData = [{id :'1',tupian:'u797.png',name:'微信',number:'222222',jiantou:'1'},
             {id :'2',tupian:'u825.png',name:'QQ',number:'33333',jiantou:'0'},
             {id :'3',tupian:'u715.png',name:'腾讯视频',number:'44444',jiantou:'-1'},
@@ -59,8 +59,11 @@ var Apps= React.createClass({
             {id :'19',tupian:'u8007.png',name:'360手机卫士',number:'55555',jiantou:'1'},
             {id :'20',tupian:'u8011.png',name:'QQ空间',number:'55555',jiantou:'-1'},];
 
-        console.log(JSON.stringify(param));
-            fetch('http://10.0.94.34:8080/api/testredis',{
+        self.setState({
+            data: rolesListData});
+        
+        //console.log(JSON.stringify(param));
+            /*fetch('http://10.0.94.34:8080/api/testredis',{
             credentials:'same-origin',
             method: 'POST',
             //method: 'GET',
@@ -92,11 +95,8 @@ var Apps= React.createClass({
                 self.setState({
                     data: rolesListData});
             })
-        /*fetch("http://blog.parryqiu.com", {
-         method: 'GET',
-         mode: 'no-cors',
-         cache: 'default'
-         }).then(function(response){console.log(response)})*/
+     */
+
     },
     componentDidMount: function() {
         this.getCommonListData();
@@ -114,14 +114,14 @@ var Apps= React.createClass({
                 return (
                     <Weixin role={role} key={index}/>
                 );
-            })
+            });
             return (
                 <div className="app">
                     <Flex ws-flex row wrap>
                         {rolesListDatainfo}
                     </Flex>
-                    <span className="biaoshi">></span>
-                    <p className="more">更多</p>
+                    <p className="biaoshi">></p>
+                    <p className="more">展开</p>
                 </div>
             );
         } else {
