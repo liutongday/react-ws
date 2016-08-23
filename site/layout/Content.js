@@ -16,8 +16,6 @@ import React from 'react';
 import Apps from '../component/apps';
 import {
     TabHost
-    Selector,
-    DatePicker,
     Title,
     ModulePartition
 } from '../../src/index';
