@@ -19,12 +19,12 @@ import "../css/CheckboxGroup.less";
 
 class CheckboxGroup extends  React.Component {
     render() {
-                return (
-                    <div id="screen">
+            return (
+                <div id="screen_down">
+                    <table>
+                            <tr>
 
-                        <div id="screen_down">
-                            <table>
-                            <td> 筛选分类：</td>
+                                <td  rowSpan="3"  id="checkboxgroup-left"> 筛选分类：</td>
                                 <td>
                                     <input type="checkbox" name="app" id=" 全选"/>
                                     <strong><span> <label htmlFor=" 全选"> 全选</label></span></strong>
@@ -69,8 +69,9 @@ class CheckboxGroup extends  React.Component {
                                     <input type="checkbox" name="app" id=" 网银支付"/>
                                     <span> <label htmlFor=" 网银支付"> 网银支付</label></span>
                                 </td>
+                            </tr>
                             <tr>
-                                <td></td>
+
                                 <td>
                                     <input type="checkbox" name="app" id=" 美食快餐"/>
                                     <span> <label htmlFor=" 美食快餐"> 美食快餐</label></span>
@@ -117,7 +118,7 @@ class CheckboxGroup extends  React.Component {
                                 </td>
                             </tr>
                             <tr>
-                                <td></td>
+
                                 <td>
                                     <input type="checkbox" name="app" id=" 安全杀毒"/>
                                     <span> <label htmlFor=" 安全杀毒"> 安全杀毒</label></span>
@@ -159,11 +160,10 @@ class CheckboxGroup extends  React.Component {
                                     <span> <label htmlFor=" 用车软件"> 用车软件</label></span>
                                 </td>
                             </tr>
-                            </table>
+                    </table>
+                </div>
 
-                        </div>
-                    </div>
-               )
+            )
            }
 
 }
