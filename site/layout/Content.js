@@ -15,15 +15,11 @@
 import React from 'react';
 import Apps from '../component/apps';
 import {
-<<<<<<< HEAD
-    ModulePartition,
     TabHost
-=======
     Selector,
     DatePicker,
     Title,
     ModulePartition
->>>>>>> master
 } from '../../src/index';
 import CheckboxGroup from '../../demo/component/CheckboxGroup';
 import HotEvent from '../component/HotEvent';
@@ -47,9 +43,7 @@ export default class Content extends React.Component {
                     <ModulePartition id="app_module" name="App排行榜" en_name="App Ranking List"/>
                     <Title icon="app-user" name="APP活跃用户总排行"/>
                     <Apps />
-<<<<<<< HEAD
                     <TabHost/>
-=======
 
                     <Title icon="app-part" name="APP分类排行"/>
                     <CheckboxGroup />
@@ -58,7 +52,6 @@ export default class Content extends React.Component {
                     <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
                     <Title icon="new-hot-event" name="事件热度趋势"/>
                     <HotEvent />
->>>>>>> master
 
                 </div>
             </div>
