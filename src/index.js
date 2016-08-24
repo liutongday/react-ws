@@ -21,6 +21,7 @@ import Weixin from './component/weixin';
 import Title from './component/title';
 import Video from './component/video';
 import ModulePartition from './component/ModulePartition';
+import AppCol from './component/appCol';
 
 import './index.less';
 
@@ -44,5 +45,8 @@ module.exports = {
     Weixin,
     Title,
     Video,
-    ModulePartition
+    ModulePartition,
+    ModulePartition,
+    AppCol
+
 };

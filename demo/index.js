@@ -18,10 +18,16 @@ import ReactDOM from 'react-dom';
 import {Router, Route, IndexRoute, hashHistory, Link} from 'react-router';
 import {
     Storage,
+    Selector,
+    Weixin,
     Calendar,
     DatePicker,
+
     Title,
     Video,
+
+    AppCol
+
 } from '../src/index';
 import _ from 'underscore';
 import Layout from './component/layout';
@@ -62,17 +68,13 @@ class App extends React.Component {
                 <header>Unicom Test</header>
 
                 <Head />
-
                 <div className="HolyGrail-body">
 
-                    <nav className="HolyGrail-nav">
+
+                   <nav className="HolyGrail-nav">
                         <LeftNavigation />
                     </nav>
-
                     <div className="HolyGrail-content">
-                        <Apps />
-                        <Calendar />
-                        <DatePicker />
                         <Form />
                         <Title icon="u10340.png" name="APP分类排行"/>
                         <Apps/>
@@ -81,11 +83,9 @@ class App extends React.Component {
                         <HotWord/>
                         <Videoes/>
                     </div>
-
                 </div>
 
             </div>
-
         );
     }
 

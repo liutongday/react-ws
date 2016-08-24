@@ -10,12 +10,12 @@ var DatePicker = React.createClass({
         inputClassName: React.PropTypes.string,
         target: React.PropTypes.func
     },
-
     getInitialState: function () {
         return {
             id: '_ws_datepicker_id' + (Math.random() + '').slice(2)
         };
     },
+
     renderPopover: function () {
         return (
             <Popover id={this.state.id} className="ws-datepicker-popover">
