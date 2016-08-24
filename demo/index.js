@@ -1,15 +1,15 @@
 /**
  *
- * <p>Title: BONC - React </p>
+ * Title: BONC - React
  *
- * <p>Description: 单页面应用的构建文件 index.js </p>
+ * Description:  </p>
  *
- * <p>Copyright: Copyright BONC(c) 2013 - 2025 </p>
+ * Copyright: Copyright BONC(c) 2013 - 2025
  *
- * <p>Company: 北京东方国信科技股份有限公司 </p>
+ * Company: 北京东方国信科技股份有限公司
  *
- * @author panxw
- * @version 1.0.0
+ * @author luli
+ * @date 2016/8/16
  */
 import './index.less';
 import 'gm-bootstrap/dist/css/bootstrap.css';
@@ -91,6 +91,7 @@ class App extends React.Component {
                         <WsTable3/>
                         <WsTable4/>
                         <WsTable5/>
+
                     </div>
                 </div>
 
