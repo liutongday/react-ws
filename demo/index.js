@@ -18,8 +18,11 @@ import ReactDOM from 'react-dom';
 import {Router, Route, IndexRoute, hashHistory, Link} from 'react-router';
 import {
     Storage,
+    Selector,
+    Weixin,
     Calendar,
     DatePicker,
+    AppCol
 } from '../src/index';
 
 import LeftNavigation from './component/LeftNavigation';
@@ -39,19 +42,18 @@ class App extends React.Component {
             <div className="HolyGrail">
                 <header>Unicom Test</header>
                 <Head />
-
                 <div className="HolyGrail-body">
 
-                    <nav className="HolyGrail-nav">
+
+                   <nav className="HolyGrail-nav">
                         <LeftNavigation />
                     </nav>
-
                     <div className="HolyGrail-content">
                         {this.props.children}
                         
                         //下面也可以排列组件
+                        <Form />
                     </div>
-
                 </div>
                 
             </div>
@@ -80,3 +82,4 @@ class Pages extends React.Component {
 }
 
 ReactDOM.render(<Pages></Pages>, document.getElementById('appContainer'));
+

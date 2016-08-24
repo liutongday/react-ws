@@ -20,6 +20,7 @@ import Selector from './component/selector';
 import Weixin from './component/weixin';
 import Title from './component/title';
 import ModulePartition from './component/ModulePartition';
+import AppCol from './component/appCol';
 
 import './index.less';
 
@@ -42,5 +43,7 @@ module.exports = {
     Selector,
     Weixin,
     Title,
-    ModulePartition
+    ModulePartition,
+    AppCol
+
 };

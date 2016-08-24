@@ -5,30 +5,50 @@ import Calendar from './calendar.js';
 
 
 class DatePicker extends React.Component {
+    static propTypes = {
+        date: PropTypes.object,
+        onChange: PropTypes.func.isRequired,
+        inputClassName: PropTypes.string,
+        target: PropTypes.func,
+        placeholder: PropTypes.string
+    };
+
     constructor(props) {
         super(props);
+
         this.state = {
-            id: '_ws_datepicker_id' + (Math.random() + '').slice(2)
+            id: '_ws_datepicker_id' + (Math.random() + '').slice(2),
+            date: moment()
         };
         this.handleSelect = ::this.handleSelect;
         this.handleChange = ::this.handleChange;
     }
 
     renderPopover() {
+
         return (
             <Popover id={this.state.id} className="ws-datepicker-popover">
-                <Calendar selected={this.props.date} onSelect={this.handleSelect}/>
+                <Calendar selected={this.state.date} onSelect={this.handleSelect}/>
             </Popover>
+
+
         );
     }
 
     handleSelect(date) {
+        console.log('this is this.date'+this.state.date);
+        console.log('this is the date'+date);
         if (this.refs.target) {
             this.refs.target.click();
         } else {
             this.props.target().click();
         }
+        this.setState({date:date});
+        /*       debugger;*/
+    }
 
+    handleChange(event) {
+        console.log(event);
         this.props.onChange(date);
     }
 
@@ -38,7 +58,7 @@ class DatePicker extends React.Component {
         if (/\d\d\d\d-\d\d-\d\d/.test(event.target.value)) {
             this.props.onChange(moment(event.target.value).toDate());
         } else {
-            this.props.onChange(null);
+            this.onChange(null);
         }
     }
 
@@ -49,21 +69,13 @@ class DatePicker extends React.Component {
                     {this.props.children ? this.props.children :
                         <input type="text" className={this.props.inputClassName} placeholder={this.props.placeholder}
                                ref="target"
-                               value={this.props.date }
-                               onChange={this.handleChange}
-                               {...this.props}/>}
+                               value={this.state.date && moment(this.state.date).format('YYYY-MM-DD')}
+                               onChange={this.handleChange}/>}
 
                 </OverlayTrigger>
             </div>
         );
     }
 }
-DatePicker.propTypes = {
-    date: PropTypes.object,
-    onChange: PropTypes.func.isRequired,
-    inputClassName: PropTypes.string,
-    target: PropTypes.func,
-    placeholder: PropTypes.string
-};
 
 module.exports = DatePicker;
