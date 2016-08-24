@@ -28,7 +28,9 @@ import Head from './component/head';
 import LeftNavigation from './component/LeftNavigation';
 import WsTable1 from './component/wsTableCol4';
 import WsTable2 from './component/wsTableCol3';
-import WsTable3 from './component/waTableCol5';
+import WsTable3 from './component/wsTableCol5';
+import WsTable4 from './component/wsSimpleT4';
+import WsTable5 from './component/wsST4Area';
 import Apps from './component/apps';
 import Chart from './component/chart';
 import Map from './component/map';
@@ -76,6 +78,8 @@ class App extends React.Component {
                         <WsTable1 />
                         <WsTable2/>
                         <WsTable3/>
+                        <WsTable4/>
+                        <WsTable5/>
                     </div>
 
                 </div>

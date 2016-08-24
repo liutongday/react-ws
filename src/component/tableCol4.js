@@ -103,11 +103,18 @@ const renderThs = (columns) => (
                 content = name || '';
                 showImg=false;
             }else {
-                showImg=true;
-                arr=name.split(",");
-                contentImg=arr[0];
-                contentText=arr[1];
-                className='type';
+                let ind=name.indexOf(',');
+                if(ind!=-1){
+                    showImg=true;
+                    arr=name.split(",");
+                    contentImg=arr[0];
+                    contentText=arr[1];
+                    className='type';
+                }else{
+                    content = name || '';
+                    showImg=false;
+                }
+
             }
         }
 
@@ -147,11 +154,18 @@ const renderTds = (data, entry, columns, rowIndex) => (
             className = td.name;
         } else {
             if (index==1){
-                arr=value.split(",");
-                contentImg=arr[0];
-                contentText=arr[1];
-                showImage=true;
+                let ind=value.indexOf(',');
                 showInput=false;
+                if(ind!=-1){
+                    arr=value.split(",");
+                    contentImg=arr[0];
+                    contentText=arr[1];
+                    showImage=true;
+                }else{
+                    showImage=false;
+                    content=value;
+                }
+
             }else if(index==3){
                 showImage=false;
                 showInput=true;
@@ -166,11 +180,18 @@ const renderTds = (data, entry, columns, rowIndex) => (
                         state='/src/images/u114.png';
                         break;
                 }
-            } else {
+            } else if(index==0){
                 content = value;
                 showImage=false;
                 showInput=false;
+                if(content==1||content==2||content==3){
+                    className='top'
+                }
 
+            }else{
+                content = value;
+                showImage=false;
+                showInput=false;
             }
         }
 
@@ -203,21 +224,10 @@ const renderRows = (data, columns) => {
 function Table(props) {
     const { children, data, className } = props;
     const columns = findAllByType(children, Column);
-    const aStyle={
-        width:'380px',
-        display:'block',
-        textAlign:'right',
-        color:'#999C9f',
-        backgroundColor:'#fBfBfB',
-        height:'26px',
-        fontSize:'12px',
-    };
-    const pstyle={
-        marginRight:'18px',
-    };
+
     return (
         <div className={`ws-table-container ${className || ''} `} >
-            <a style={aStyle}><span style={pstyle}>更多></span></a>
+
             <table className="ws-table">
                 {hasNames(columns) && (
                     <thead className="ws-table-thead">

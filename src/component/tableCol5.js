@@ -122,6 +122,8 @@ const renderTds = (data, entry, columns, rowIndex) => (
 
         let content;
         let className;
+        let bgImage;
+        let bgClass;
 
         if (React.isValidElement(td)) {
             content = React.cloneElement(td, props);
@@ -130,8 +132,17 @@ const renderTds = (data, entry, columns, rowIndex) => (
             content = td(props);
             className = td.name;
         } else {
+            if(index==0){
+                bgImage=true;
                 content = value;
+                if(content==1||content==2||content==3){
+                    bgClass='bgRed';
+                }else{bgClass='bgGrey';}
 
+            }else{
+                bgImage=false;
+                content = value;
+            }
         }
         return (
             <td
@@ -139,7 +150,7 @@ const renderTds = (data, entry, columns, rowIndex) => (
                 style={getStyle(col.props)}
                 className={`ws-table3-td col-${index} col-${dataKey} ${className || ''}`}
             >
-                {content}
+                {bgImage?<span className={bgClass}> {content}</span>:content}
             </td>
         );}
     })
@@ -171,7 +182,7 @@ const renderRowTd = (data, entry, columns, rowIndex) => (
                     className={`ws-table3-td col-${index} col-${dataKey} ${className || ''}`}
                     colSpan="5"
                 >
-                    {content}
+                   <span className="longtext"> </span>{content}
                 </td>
             );}
     })
@@ -209,7 +220,6 @@ function Table(props) {
                 )}
                 {renderRows(data, columns)}
             </table>
-
         </div>
     );
 }
