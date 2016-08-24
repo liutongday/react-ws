@@ -51,6 +51,7 @@ export default class Content extends React.Component {
                     <Title icon="new-hot-event" name="事件热度趋势"/>
                     <HotEvent />
 
+
                 </div>
 
             </div>
