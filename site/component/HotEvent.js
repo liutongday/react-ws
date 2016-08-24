@@ -91,11 +91,8 @@ var Chart = React.createClass({
                                 <div className="background1">
                                     <div className="background2">
 
-
-
-
-
-
+                                        <div id="charts" >
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -106,8 +103,7 @@ var Chart = React.createClass({
                             </div>
                             <div className="x">
                             </div>
-                            <div id="charts" >
-                            </div>
+
                         </div>
 
             )
