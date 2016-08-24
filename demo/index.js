@@ -18,40 +18,34 @@ import ReactDOM from 'react-dom';
 import {Router, Route, IndexRoute, hashHistory, Link} from 'react-router';
 import {
     Storage,
-<<<<<<< HEAD
+
 
 
 
     Selector,
     Weixin,
 
-=======
+
     Calendar,
     DatePicker,
->>>>>>> f5f4d1ec712bce5fd9cd230717bf3bdb5e2cd26a
+
 } from '../src/index';
 import _ from 'underscore';
 import Layout from './component/layout';
 import Form from './component/form';
-<<<<<<< HEAD
-
-import Screen from './component/screen';
-
-=======
->>>>>>> f5f4d1ec712bce5fd9cd230717bf3bdb5e2cd26a
 import Head from './component/head';
 import LeftNavigation from './component/LeftNavigation';
 import WsTable1 from './component/wsTableCol4';
 import WsTable2 from './component/wsTableCol3';
 import Apps from './component/apps';
-<<<<<<< HEAD
+
 import Titles from './component/titles';
-=======
+
 import Chart from './component/chart';
 import Map from './component/map';
 import CheckboxGroup from './component/CheckboxGroup';
 
->>>>>>> f5f4d1ec712bce5fd9cd230717bf3bdb5e2cd26a
+
 
 
 window.Storage = Storage;
@@ -75,12 +69,6 @@ function initNav() {
 class App extends React.Component {
     render() {
         return (
-<<<<<<< HEAD
-
-
-
-=======
->>>>>>> f5f4d1ec712bce5fd9cd230717bf3bdb5e2cd26a
             <div className="HolyGrail">
                 <header>Unicom Test</header>
 
@@ -93,7 +81,7 @@ class App extends React.Component {
                     </nav>
 
                     <div className="HolyGrail-content">
-<<<<<<< HEAD
+
 
                         {/*<Layout />*/}
                         {/*<Form />*/}
@@ -102,14 +90,7 @@ class App extends React.Component {
                         <Selector />
                         <Titles/>
                         <Apps/>
-                        <Screen/>
-
-                    </div>
-
-                </div>
-
-            </div>
-=======
+                        <CheckboxGroup/>
                         <Apps />
                         <Calendar />
                         <DatePicker />
@@ -117,9 +98,10 @@ class App extends React.Component {
                     </div>
 
                 </div>
->>>>>>> f5f4d1ec712bce5fd9cd230717bf3bdb5e2cd26a
 
             </div>
+
+
 
         );
     }

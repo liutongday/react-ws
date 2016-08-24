@@ -20,7 +20,7 @@ import Selector from './component/selector';
 import Weixin from './component/weixin';
 import Title from './component/title';
 import ModulePartition from './component/ModulePartition';
-
+// import CheckboxGroup from './component/CheckboxGroup';
 import './index.less';
 
 module.exports = {
@@ -31,16 +31,16 @@ module.exports = {
     Storage,
     Switch,
     Validate,
+
     ValidateMixin,
-<<<<<<< HEAD
 
-    Screen,
+    // CheckboxGroup,
 
-    Table,
-=======
+    // Table,
+
     Table1,
     Table2,
->>>>>>> f5f4d1ec712bce5fd9cd230717bf3bdb5e2cd26a
+
     Column,
     NowTime,
     Calendar,
@@ -48,11 +48,11 @@ module.exports = {
     HelloWorld,
     Selector,
     Weixin,
-<<<<<<< HEAD
-    Title
 
-=======
     Title,
+
+
+    // Title,
     ModulePartition
->>>>>>> f5f4d1ec712bce5fd9cd230717bf3bdb5e2cd26a
+
 };
