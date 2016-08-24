@@ -21,6 +21,7 @@ import {
     Calendar,
     DatePicker,
     Title,
+    Video,
 } from '../src/index';
 import _ from 'underscore';
 import Layout from './component/layout';
@@ -30,8 +31,10 @@ import LeftNavigation from './component/LeftNavigation';
 import WsTable1 from './component/wsTableCol4';
 import WsTable2 from './component/wsTableCol3';
 import Apps from './component/apps';
+import Videoes from './component/videoes';
 import Chart from './component/chart';
 import Map from './component/map';
+import HotWord from './component/hotword';
 import CheckboxGroup from './component/CheckboxGroup';
 
 window.Storage = Storage;
@@ -71,10 +74,12 @@ class App extends React.Component {
                         <Calendar />
                         <DatePicker />
                         <Form />
-                        <Title/>
+                        <Title icon="u10340.png" name="APP分类排行"/>
                         <Apps/>
                         <Chart/>
                         <Map/>
+                        <HotWord/>
+                        <Videoes/>
                     </div>
 
                 </div>

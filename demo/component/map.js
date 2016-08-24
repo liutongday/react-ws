@@ -21,28 +21,31 @@ var Map = React.createClass({
 
     getInitialState: function() {
         var dataSet=[
-            {name : '天津', value : 234},
+            {name : '鹿晗退出跑男录制', value : 234,symbolSize:[50,10]},
             {name : '爱奇艺', value : 234,x: 180, y: 310},
             {name : '淘宝', value : 103},
             {
                 name : '我的奇妙男友',
-                symbol: 'image://images/u250.png',     // 自定义标签图形的样式
+                symbol: 'image://images/map-label.png',     // 自定义标签图形的样式
                 symbolSize: 21,
                 value:111,
                 x: 250,
                 y: 260
             }
         ];
+        var geo={
+            '淘宝': [121.4648,31.2891],
+            '鹿晗退出跑男录制': [117.4219,39.4189]
+        };
         return {
-            data: dataSet
+            data: dataSet,
+            location:geo
         };
     },
     componentDidMount:function(){
-        //debugger
-        //console.log(this.state.data);
-        this.drawMap(this.state.data);
+        this.drawMap(this.state.data,this.state.location);
     },
-    drawMap:function(dataSet){
+    drawMap:function(dataSet,geo){
         var myMap = echarts.init(document.getElementById('maps'));
         // 指定图表的配置项和数据
         function randomData() {
@@ -99,12 +102,12 @@ var Map = React.createClass({
                         itemStyle : {
                             normal:{
                                 textStyle: {
-                                    color: 'black'
+                                    color: '#6C6767'
                                 },
                                 color:'#F8FAFB',//标签颜色
                                 label:{
                                     textStyle: {//标签内字体设置
-                                        color: 'black'//标签字体颜色
+                                        color: '#6C6767'//标签字体颜色
                                     },
                                     formatter: function (data,name) {    //n name   v->value
                                         //debugger;
@@ -115,10 +118,7 @@ var Map = React.createClass({
                         },
                         data :dataSet,
                     },
-                    geoCoord: {
-                        '淘宝': [121.4648,31.2891],
-                        '天津': [117.4219,39.4189]
-                    }
+                    geoCoord: geo
                 }
             ]
         };

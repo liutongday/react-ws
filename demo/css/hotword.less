@@ -1,0 +1,61 @@
+.hotword{
+  position:relative;
+  width:60%;
+  height: 500px;
+}
+.hotword-background1{
+  position:relative;
+  width: 601px;
+  height: 501px;
+  background:url('/demo/images/hotword-background-blue.png') no-repeat;
+}
+.hotword-background2{
+  position:relative;
+  width:600px;
+  height: 500px;
+  background:url('/demo/images/hotword-background.png') no-repeat;
+
+}
+.keyword(@url:url('/demo/images/cloud1.png') no-repeat,@position:relative,@left:20px,@top:0px,@width:70px,@height:40px,@border:0px,@text-align:center){
+  position:@position;
+  left:@left;
+  top: @top;
+  width:@width;
+  height: @height;
+  border: @border;
+  background:@url;
+  text-align: @text-align;
+}
+.keyword-one{
+  .keyword;
+}
+.keyword-two{
+  .keyword(url('/demo/images/cloud1.png') no-repeat,relative,250px,0px,70px,40px,0px,center);
+}
+.keyword-three{
+  .keyword(url('/demo/images/u6848.png') no-repeat,relative,300px,20px,120px,125px,0px,center);
+  background-size:99% 99%;//图片缩放
+}
+.keyword-four{
+  .keyword(url('/demo/images/u6852.png') no-repeat,relative,-250px,110px,110px,120px,0px,center);
+  background-size:99% 99%;//图片缩放
+}
+.keyword-five{
+  .keyword(url('/demo/images/cloud2.png') no-repeat,relative,-210px,110px,100px,60px,0px,center);
+}
+.keyword-six{
+  .keyword(url('/demo/images/cloud2.png') no-repeat,relative,-80px,110px,100px,60px,0px,center);
+}
+.keyword-seven{
+  .keyword(url('/demo/images/cloudmiddle.png') no-repeat,relative,40px,150px,100px,60px,0px,center);
+}
+.keyword-eight{
+  .keyword(url('/demo/images/black.png') no-repeat,relative,140px,120px,150px,160px,0px,center);
+  background-size:99% 99%;//图片缩放
+}
+.keyword-nine{
+  .keyword(url('/demo/images/cloudmiddle.png') no-repeat,relative,140px,180px,100px,60px,0px,center);
+}
+.keyword-ten{
+  .keyword(url('/demo/images/cloud1.png') no-repeat,relative,150px,100px,70px,40px,0px,center);
+}
