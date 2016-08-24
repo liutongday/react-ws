@@ -83,14 +83,15 @@ class App extends React.Component {
                         <AppCol name="搜狐视频" col={1}/>
                         <Calendar />
                         <DatePicker />
-
-
                         <Form />
                         <WsTable1 />
                         <WsTable2/>
                         <WsTable3/>
                         <WsTable4/>
                         <WsTable5/>
+
+
+                        
 
                     </div>
                 </div>
