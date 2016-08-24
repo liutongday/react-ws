@@ -16,10 +16,12 @@ import 'gm-bootstrap/dist/css/bootstrap.css';
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {Router, Route, IndexRoute, hashHistory} from 'react-router';
 
 import Header from './Header';
 import Footer from './Footer';
 import Content from './Content';
+import WsTable1 from '../component/wsTableCol4';
 
 export default class Page extends React.Component {
 
@@ -33,7 +35,7 @@ export default class Page extends React.Component {
 
             <div className="HolyGrail">
                 <Header />
-                <Content />
+                {this.props.children}
                 <Footer />
 
             </div>
@@ -42,4 +44,18 @@ export default class Page extends React.Component {
     }
 }
 
-ReactDOM.render(<Page />, document.getElementById('pageContainer'));
+class Pages extends React.Component {
+    render() {
+        return (
+            <Router history={hashHistory}>
+                <Route path="/" component={Page}>
+                    <IndexRoute component={Content}></IndexRoute>
+                    <Route path="content1" component={Content}></Route>
+                    <Route path="content2" component={WsTable1}></Route>
+                </Route>
+            </Router>
+        );
+    }
+}
+
+ReactDOM.render(<Pages></Pages>, document.getElementById('pageContainer'));

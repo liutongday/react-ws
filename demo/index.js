@@ -48,7 +48,7 @@ class App extends React.Component {
 
                     <div className="HolyGrail-content">
                         {this.props.children}
-
+                        
                         //下面也可以排列组件
                     </div>
 
