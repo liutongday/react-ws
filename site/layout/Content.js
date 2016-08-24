@@ -52,6 +52,7 @@ export default class Content extends React.Component {
                     <HotEvent />
                     <Table2 />
 
+
                 </div>
             </div>
         );

@@ -72,7 +72,7 @@ var Apps= React.createClass({
             },
                 //body:param
                 body:JSON.stringify(param)
-                //body: JSON.parse(str)
+                //body: JSON.parse(str)u
                 //body: JSON.stringify(str)
                 //body:"{name:'Hubot',login:'hubot'}"
         })
@@ -116,13 +116,16 @@ var Apps= React.createClass({
             });
 
             return (
-                <div className="app">
-                    <Flex ws-flex row wrap>
-                        {rolesListDatainfo}
-                    </Flex>
+                <div className="total">
+                    <div className="app">
+                        <Flex ws-flex row wrap>
+                            {rolesListDatainfo}
+                        </Flex>
+                    </div>
                     <p className="biaoshi">></p>
                     <p className="more">展开</p>
                 </div>
+
             );
         } else {
             return(

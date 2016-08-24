@@ -23,6 +23,8 @@ import {
     Calendar,
     DatePicker,
     AppCol
+    Title,
+    Video
 } from '../src/index';
 import _ from 'underscore';
 import Layout from './component/layout';
@@ -37,11 +39,11 @@ import WsTable5 from './component/wsST4Area';
 import Apps from './component/apps';
 
 import Titles from './component/titles';
-
+import Videoes from './component/videoes';
 import Chart from './component/chart';
 import Map from './component/map';
+import HotWord from './component/hotword';
 import CheckboxGroup from './component/CheckboxGroup';
-
 
 window.Storage = Storage;
 
@@ -89,14 +91,17 @@ class App extends React.Component {
                         <WsTable3/>
                         <WsTable4/>
                         <WsTable5/>
-
-
+                        <Title icon="u10340.png" name="APP分类排行"/>
+                        <Chart/>
+                        <Map/>
+                        <HotWord/>
+                        <Videoes/>
+                    </div>
 
 
                     </div>
                 </div>
 
-            </div>
 
         );
     }

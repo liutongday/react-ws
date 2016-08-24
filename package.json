@@ -59,6 +59,7 @@
   },
   "dependencies": {
     "antd": "^1.10.0",
+    "echarts": "^2.2.7-beta7",
     "node-fetch": "^1.6.0"
   }
 }
