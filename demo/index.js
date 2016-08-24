@@ -82,7 +82,7 @@ class App extends React.Component {
                         <DatePicker />
 
 
-                        
+
                         <Form />
                     </div>
                 </div>
