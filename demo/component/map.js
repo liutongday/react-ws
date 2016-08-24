@@ -22,12 +22,12 @@ var Map = React.createClass({
     getInitialState: function() {
         var dataSet=[
             {name : '鹿晗退出跑男录制', value : 234,symbolSize:[50,10]},
-            {name : '爱奇艺', value : 234,x: 180, y: 310},
+            {name : '爱奇艺', value : 234,symbol: 'image://images/map-label.png',x: 180, y: 310},
             {name : '淘宝', value : 103},
             {
                 name : '我的奇妙男友',
                 symbol: 'image://images/map-label.png',     // 自定义标签图形的样式
-                symbolSize: 41,
+                symbolSize:[40,10],
                 value:111,
                 x: 250,
                 y: 260
