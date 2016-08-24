@@ -22,7 +22,8 @@ import {
 } from '../../src/index';
 import CheckboxGroup from '../../demo/component/CheckboxGroup';
 import HotEvent from '../component/HotEvent';
-import Table from '../component/wsTableCol4';
+import Table1 from '../component/wsTableCol4';
+import Table2 from '../component/wsTableCol3';
 import LeftNavigation from '../component/LeftNavigation';
 
 export default class Content extends React.Component {
@@ -44,11 +45,12 @@ export default class Content extends React.Component {
                     <Apps />
                     <Title icon="app-part" name="APP分类排行"/>
                     <CheckboxGroup />
-                     <Table />
+                     <Table1 />
 
                     <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
                     <Title icon="new-hot-event" name="事件热度趋势"/>
                     <HotEvent />
+                    <Table2 />
 
                 </div>
 

@@ -2,7 +2,7 @@
  *
  * <p>Title: BONC - React </p>
  *
- * <p>Description: 界面上四列table基本组件封装 wsTableCol4.js </p>
+ * <p>Description: 特殊表格 行列穿插</p>
  *
  * <p>Copyright: Copyright BONC(c) 2013 - 2025 </p>
  *
@@ -11,7 +11,7 @@
  * @author Yelj
  * @version 1.0.0
  */
-import React ,{PropTypes,Component} from 'react';
+import React,{PropTypes} from 'react';
 import Column from './column';
 
 const propTypes = {
@@ -82,69 +82,48 @@ const isFunction = (value) => {
 
 const renderThs = (columns) => (
     columns.map((col, index) => {
-        const { name, dataKey, th } = col.props;
-        const props = { name, dataKey, colIndex: index };
-        let content;
-        let className;
-        let arr;
-        let contentText;
-        let contentImg;
-        let showImg;
+        if(index !=5){
+            const { name, dataKey, th } = col.props;
+            const props = { name, dataKey, colIndex: index };
+            let content;
+            let className;
 
-        if (React.isValidElement(th)) {
-            content = React.cloneElement(th, props);
-            className = getDisplayName(th);
-        } else if (isFunction(th)) {
-            content = th(props);
-            className = th.name;
-        } else {
-
-            if (index!=1){
+            if (React.isValidElement(th)) {
+                content = React.cloneElement(th, props);
+                className = getDisplayName(th);
+            } else if (isFunction(th)) {
+                content = th(props);
+                className = th.name;
+            } else {
                 content = name || '';
-                showImg=false;
-            }else {
-                let ind=name.indexOf(',');
-                if(ind!=-1){
-                    showImg=true;
-                    arr=name.split(",");
-                    contentImg=arr[0];
-                    contentText=arr[1];
-                    className='type';
-                }else{
-                    content = name || '';
-                    showImg=false;
-                }
-
             }
+
+            return (
+                <th
+                    key={`th-${index}`}
+                    style={getStyle(col.props)}
+                    className={`ws-table3-th col-${index} col-${dataKey} ${className || ''}`}
+                >
+                    {content}
+                </th>
+            );
         }
 
-        return (
-            <th
-                key={`th-${index}`}
-                style={getStyle(col.props)}
-                className={`-ws-th col-${index} col-${dataKey} ${className || ''} `}
-            >
-                {showImg?<img src={contentImg} style={{marginRight:"10px"}} width={50}/>:null}
-                 {contentText||content}
-            </th>
-        );
     })
 );
 
+
 const renderTds = (data, entry, columns, rowIndex) => (
     columns.map((col, index) => {
+        if(index !=5){
         const { dataKey, td } = col.props;
         const value = entry[dataKey];
         const props = { data, rowData: entry, tdValue: value, dataKey, rowIndex, colIndex: index };
 
         let content;
         let className;
-        let arr;
-        let contentText;
-        let contentImg;
-        let showImage;
-        let showInput;
-        let state;
+        let bgImage;
+        let bgClass;
 
         if (React.isValidElement(td)) {
             content = React.cloneElement(td, props);
@@ -153,59 +132,59 @@ const renderTds = (data, entry, columns, rowIndex) => (
             content = td(props);
             className = td.name;
         } else {
-            if (index==1){
-                let ind=value.indexOf(',');
-                showInput=false;
-                if(ind!=-1){
-                    arr=value.split(",");
-                    contentImg=arr[0];
-                    contentText=arr[1];
-                    showImage=true;
-                }else{
-                    showImage=false;
-                    content=value;
-                }
-
-            }else if(index==3){
-                showImage=false;
-                showInput=true;
-                switch (value) {
-                    case '1':
-                        state='/src/images/u108.png';
-                        break;
-                    case '0':
-                       state='/src/images/u671.png';
-                        break;
-                    case '-1':
-                        state='/src/images/u114.png';
-                        break;
-                }
-            } else if(index==0){
+            if(index==0){
+                bgImage=true;
                 content = value;
-                showImage=false;
-                showInput=false;
                 if(content==1||content==2||content==3){
-                    className='top'
-                }
+                    bgClass='bgRed';
+                }else{bgClass='bgGrey';}
 
             }else{
+                bgImage=false;
                 content = value;
-                showImage=false;
-                showInput=false;
             }
         }
-
         return (
             <td
                 key={`td-${index}`}
                 style={getStyle(col.props)}
-                className={`ws-td col-${index} col-${dataKey} ${className || ''}  `}
+                className={`ws-table3-td col-${index} col-${dataKey} ${className || ''}`}
             >
-                {showImage?<img src={contentImg} style={{marginRight:'15px'}} width={30}/>:null}
-                {contentText||content}
-                {showInput?<img src={state} width={16}/>:null}
+                {bgImage?<span className={bgClass}> {content}</span>:content}
             </td>
-        );
+        );}
+    })
+);
+const renderRowTd = (data, entry, columns, rowIndex) => (
+    columns.map((col, index) => {
+        if(index==5){
+            const { dataKey, td } = col.props;
+            const value = entry[dataKey];
+            const props = { data, rowData: entry, tdValue: value, dataKey, rowIndex, colIndex: index };
+
+            let content;
+            let className;
+
+            if (React.isValidElement(td)) {
+                content = React.cloneElement(td, props);
+                className = getDisplayName(td);
+            } else if (isFunction(td)) {
+                content = td(props);
+                className = td.name;
+            } else {
+                content = value;
+
+            }
+            return (
+                <td
+                    key={`td-${index}`}
+                    style={getStyle(col.props)}
+                    className={`ws-table3-td col-${index} col-${dataKey} ${className || ''}`}
+                    colSpan="5"
+                >
+                   <span className="longtext"> </span>{content}
+                </td>
+            );}
     })
 );
 
@@ -214,9 +193,14 @@ const renderRows = (data, columns) => {
 
     return data.map((entry, index) => (
         (
-            <tr key={`tr-${index}`} className="ws-table-tr">
+            <tbody>
+            <tr key={`tr-${index}`} className="ws-table3-tr">
                 {renderTds(data, entry, columns, index)}
             </tr>
+            <tr>
+                {renderRowTd(data, entry, columns, index)}
+            </tr>
+            </tbody>
         )
     ));
 };
@@ -224,21 +208,17 @@ const renderRows = (data, columns) => {
 function Table(props) {
     const { children, data, className } = props;
     const columns = findAllByType(children, Column);
-
     return (
-        <div className={`ws-table-container ${className || ''} `} >
-
-            <table className="ws-table">
+        <div className={`ws-table3-container ${className || ''} `} >
+            <table className="ws-table3">
                 {hasNames(columns) && (
-                    <thead className="ws-table-thead">
-                    <tr className="ws-table-tr">
+                    <thead className="ws-table3-thead">
+                    <tr className="ws-table3-tr">
                         {renderThs(columns)}
                     </tr>
                     </thead>
                 )}
-                <tbody className="ws-table-tbody">
                 {renderRows(data, columns)}
-                </tbody>
             </table>
         </div>
     );
