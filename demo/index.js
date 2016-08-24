@@ -71,17 +71,7 @@ class App extends React.Component {
                     </nav>
 
                     <div className="HolyGrail-content">
-                        <ChangeTitle/>
-
-                       {/* <Selector />
-                        <AppCol name="京东" col={0}/>*/}
-
-                        {/* <Apps />
-                         <Layout />
-                         <Calendar />
-                         <DatePicker />
-                         <Form />*/}
-                    </div>
+                        <Form />                    </div>
                 </div>
 
             </div>
