@@ -22,8 +22,7 @@ import {
     Weixin,
     Calendar,
     DatePicker,
-    AppCol,
-    ChangeTitle
+    AppCol
 } from '../src/index';
 import _ from 'underscore';
 import Layout from './component/layout';
@@ -66,12 +65,13 @@ class App extends React.Component {
                 <Head />
                 <div className="HolyGrail-body">
 
-                    <nav className="HolyGrail-nav">
+
+                   <nav className="HolyGrail-nav">
                         <LeftNavigation />
                     </nav>
-
                     <div className="HolyGrail-content">
-                        <Form />                    </div>
+                        <Form />
+                    </div>
                 </div>
 
             </div>

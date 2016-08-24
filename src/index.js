@@ -21,7 +21,6 @@ import Weixin from './component/weixin';
 import Title from './component/title';
 import ModulePartition from './component/ModulePartition';
 import AppCol from './component/appCol';
-import ChangeTitle from './component/changeTitle';
 
 import './index.less';
 
@@ -45,7 +44,6 @@ module.exports = {
     Weixin,
     Title,
     ModulePartition,
-    AppCol,
-    ChangeTitle
+    AppCol
 
 };
