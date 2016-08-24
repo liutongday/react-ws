@@ -42,11 +42,13 @@ class CheckboxGroup extends  React.Component {
 
 
     render() {
-                return (
-                    <div id="screen">
-                        <div id="screen_down">
-                            <table>
-                            <td> 筛选分类：</td>
+
+            return (
+                <div id="screen_down">
+                    <table>
+                            <tr>
+
+                                <td  rowSpan="3"  id="checkboxgroup-left"> 筛选分类：</td>
                                 <td>
                                     <input type="checkbox" name="select" value=" 全选" onclick="selectAll()"id=" 全选"/>
                                     <strong><span> <label htmlFor=" 全选"> 全选</label></span></strong>
@@ -92,8 +94,10 @@ class CheckboxGroup extends  React.Component {
                                     <input type="checkbox" name="checkbox1" value="layer10"onclick="singleSelectparent('checkbox_v1', 'checkbox1')" id=" 网银支付"/>
                                     <span> <label htmlFor=" 网银支付"> 网银支付</label></span>
                                 </td>
-                             <tr>
-                                <td></td>
+
+                            </tr>
+                            <tr>
+
                                 <td>
                                     <input type="checkbox" name="checkbox1" value="layer11"onclick="singleSelectparent('checkbox_v1', 'checkbox1')" id=" 美食快餐"/>
                                     <span> <label htmlFor=" 美食快餐"> 美食快餐</label></span>
@@ -141,7 +145,7 @@ class CheckboxGroup extends  React.Component {
                               </tr>
 
                             <tr>
-                                <td></td>
+
                                 <td>
                                     <input type="checkbox" name="checkbox1" value="layer22" onclick="singleSelectparent('checkbox_v1', 'checkbox1')"id=" 安全杀毒"/>
                                     <span> <label htmlFor=" 安全杀毒"> 安全杀毒</label></span>
@@ -185,11 +189,10 @@ class CheckboxGroup extends  React.Component {
                                 </td>
                             </tr>
 
-                            </table>
+                    </table>
+                </div>
 
-                        </div>
-                    </div>
-               )
+            )
            }
 
 }

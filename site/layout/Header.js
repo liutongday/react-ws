@@ -42,11 +42,11 @@ export default class Header extends React.Component {
         });
         return(
             <header className="ws-header-color">
-                <Flex row  id="ws-head">
-                            <div id="head" className="u-lof10"  >
+                <div class="row" id="ws-head">
+                            <div id="head" className=".col-md-1 .col-lg-1"  >
                                 <NowTime  />
                             </div>
-                            <div id="head_top" className="Grid-cell u-lof4" >
+                            <div id="head_top" className=".col-md-4 .col-lg-4" >
                                             <div id="head_top_left">
                                                 <img  src="/site/images/head/head_top_left.png"      />
                                                 <span id="head_top_left_span1">张三</span>
@@ -67,13 +67,13 @@ export default class Header extends React.Component {
                                                 <span id="head_top_right2">退出</span>
                                             </div>
                             </div>
-                </Flex>
-                <Flex row  id="ws-down">
-                                    <div id="head_down_left" className="u-lof5">
+                </div>
+                <div  class="row"  id="ws-down">
+                                    <div id="head_down_left" className=".col-md-2 .col-lg-2">
                                         <img src="/site/images/head/head_down_left.png" />
                                         <span>统一数据分析系统</span>
                                     </div>
-                                    <div id="head_down_right" className="Grid-cell u-lof4">
+                                    <div id="head_down_right" className=".col-md-4 .col-lg-4">
                                         <ul  >
                                             {jumper}
                                         </ul>
@@ -85,7 +85,7 @@ export default class Header extends React.Component {
                                             {/*<li><a href="#">数据查询</a></li>*/}
                                         {/*</ul>*/}
                                     </div>
-                </Flex>
+                </div>
             </header>
         );
     }
