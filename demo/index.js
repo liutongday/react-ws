@@ -22,7 +22,7 @@ import {
     Weixin,
     Calendar,
     DatePicker,
-    AppCol
+    AppCol,
     Title,
     Video
 } from '../src/index';
@@ -112,3 +112,4 @@ class App extends React.Component {
 }
 
 ReactDOM.render(<App/>, document.getElementById('appContainer'));
+
