@@ -8,6 +8,12 @@
 @import "../css/footer.less";
 @import "../css/LeftNavigation.less";
 
+/*
+body{
+  overflow-x:hidden;
+}
+*/
+
 .HolyGrail {
   display: flex;
   min-height: 100vh;
@@ -29,6 +35,10 @@
 }
 header,
 footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   flex: 1;
 }
 
@@ -41,10 +51,6 @@ footer {
   .HolyGrail-ads,
   .HolyGrail-content {
     flex: auto;
-  }
-
-  .ws-toc {
-    display: none;
   }
 }
 

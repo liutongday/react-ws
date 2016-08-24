@@ -1,37 +1,104 @@
 .container table{
 
 }
-.react-ws-table-container{
+//无滚动条四列表格样式
+.ws-table-container{
     width: 380px;
+    overflow-y:scroll;
+    height: 200px;
 }
-.react-ws-table {
-    background-color:#f2f2f2;
+
+.ws-table-container::-webkit-scrollbar{
+    background-color: #f2f2f2;
+}
+::-webkit-scrollbar-button:increment{
+    background-image: url('/demo/images/arrowDown.png') ;
+}
+::-webkit-scrollbar-button:decrement{
+    background-image: url('/demo/images/arrowUp.png') ;
+}
+::-webkit-scrollbar-thumb:vertical{
+    -webkit-border-image: url("/demo/images/u1096.png") 0 13 0 13;
+    border-color: transparent;
+    border-width: 0 13px;
+    min-width: 20px;
+}
+.ws-table {
     width: 100%;
 }
 
-.react-ws-table-thead th {
+.ws-table-thead th {
+    background-color: #f2f2f2;
     width:20%;
     font-size: 12px;
     font-weight: 400;
     color: #999C9f;
-    height: 27px;
+    height: 45px;
 }
 
-.react-ws-td{
+.ws-table-tr:nth-of-type(odd){
+    background-color: #fBfBfB;
+}
+.ws-table-tr:nth-of-type(even){
+    background-color: #f2f2f2;
+}
+
+
+.ws-td{
     width:20%;
     font-size: 13px;
     color: #999C9f;
-    height: 27px;
+    height: 45px;
 }
-.react-ws-td.col-1{
+.ws-td.col-1{
     width:35%;
-    font-size: 13px;
-    color: #999C9f;
-    height: 27px;
 }
-.react-ws-td.col-2{
+.ws-td.col-2{
     width:25%;
 }
-.react-ws-td.col-3{
+.ws-td.col-3{
     width:20%;
+}
+
+//三列表格样式
+.ws-table2-container{
+    width: 400px;
+}
+.ws-table2 {
+    width: 100%;
+    border-right: #F2F2F2 solid 1px;
+    border-bottom: #f2f2f2 solid 1px;
+}
+.ws-table2-thead th {
+    background-color: #FF6050;
+    color: #FFFFFF;
+    height: 40px;
+    text-align: center;
+}
+.ws-table2-tr:hover{
+    background-color: #f2f2f2;
+}
+.ws-table2-td{
+    width:25%;
+    font-size: 13px;
+    color: #999C9f;
+    height: 45px;
+}
+.ws-table2-td.col-1 {
+    width: 55%;
+}
+.ws-table2-td.col-2 {
+    width: 20%;
+    text-align: right;
+}
+.top3{
+    color: red;
+}
+.button{
+    width: 131px;
+    height: 25px;
+    font-size: 12px;
+    color: #999C9f;
+    padding-top: 2px;
+    border-radius: 5px;
 }

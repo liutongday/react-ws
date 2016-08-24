@@ -28,8 +28,9 @@ import ReactDOM from 'react-dom';
 var Selector = React.createClass({
 
     getInitialState:function () {
-      return{active:true,
-            pro:{proId:'111',proName:'全国'},
+      return{
+          active:true,
+          pro:{proId:'111',proName:'全国'},
       };
     },
     selectedProv:function (i) {

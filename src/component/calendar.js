@@ -1,8 +1,8 @@
-import React from 'react';
+import React,{PropTypes} from 'react';
 import moment from 'moment';
 
 var Day = React.createClass({
-    render: function () {
+        render: function () {
         var now = this.props.nowMoment;
         var m = this.props.moment;
         var selected = this.props.selected;
@@ -81,7 +81,7 @@ var Calendar = React.createClass({
                     <i className="glyphicon glyphicon-chevron-left">
                     </i>
                 </a>
-                <span className="ws-calendar-head-title">
+                    <span className="ws-calendar-head-title">
                         <span className="ws-calendar-head-month"
                               onClick={this.handleSelectMonth}>{month + 1}月</span>
                         <span>&nbsp;&nbsp;{m.year()}</span>
