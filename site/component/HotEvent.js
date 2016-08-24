@@ -74,7 +74,7 @@ var Chart = React.createClass({
                         data: [
                             {type: 'max', name: '最大值'}
                         ]
-                    },
+                    }
                 }
             ]
         };
@@ -84,28 +84,31 @@ var Chart = React.createClass({
     /*注意return后面的js有自动加;的习惯*/
     render: function() {
         return(
-        <div className="line">
-            <div className="background0">
-                <div className="whit"></div>
-                <div className="background1">
-                    <div className="background2">
-                        <div id="charts" >
 
+                        <div className="line">
+                            <div className="background0">
+                                <div className="whit"></div>
+                                <div className="background1">
+                                    <div className="background2">
+
+
+
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                            <button className="left" ></button>
+                            <button className="right"></button>
+                            <div className="shownow">
+                                <input disabled="disabled" className="showtime"value={this.state.time}/>
+                            </div>
+                            <div className="x">
+                            </div>
+                            <div id="charts" >
+                            </div>
                         </div>
-                    </div>
-                </div>
-            </div>
-            <button className="left" ></button>
-            <button className="right"></button>
-            <div className="shownow">
-                <input disabled="disabled" className="showtime"value={this.state.time}/>
-            </div>
-            <div className="x">
-
-            </div>
-
-        </div>
-
 
             )
     }
