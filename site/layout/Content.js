@@ -15,8 +15,7 @@
 import React from 'react';
 import Apps from '../component/apps';
 import {
-    Selector,
-    DatePicker,
+    TabHost,
     Title,
     ModulePartition
 } from '../../src/index';
@@ -43,6 +42,7 @@ export default class Content extends React.Component {
                     <ModulePartition id="app_module" name="App排行榜" en_name="App Ranking List"/>
                     <Title icon="app-user" name="APP活跃用户总排行"/>
                     <Apps />
+                    <TabHost/>
                     <Title icon="app-part" name="APP分类排行"/>
                     <CheckboxGroup />
                      <Table1 />
@@ -53,7 +53,6 @@ export default class Content extends React.Component {
                     <Table2 />
 
                 </div>
-
             </div>
         );
     }

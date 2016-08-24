@@ -21,7 +21,11 @@ import Selector from './component/selector';
 import Weixin from './component/weixin';
 import Title from './component/title';
 import ModulePartition from './component/ModulePartition';
+
 import AppCol from './component/appCol';
+import Tab from './component/tab';
+import TabContent from './component/tabcontent';
+import TabHost from './component/tabhost';
 
 
 // import CheckboxGroup from './component/CheckboxGroup';
@@ -58,9 +62,5 @@ module.exports = {
 
     ModulePartition,
     AppCol,
-
-    // Title,
-    ModulePartition
-
-
+    TabHost
 };
