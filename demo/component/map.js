@@ -27,7 +27,7 @@ var Map = React.createClass({
             {
                 name : '我的奇妙男友',
                 symbol: 'image://images/map-label.png',     // 自定义标签图形的样式
-                symbolSize: 40,
+                symbolSize: 41,
                 value:111,
                 x: 250,
                 y: 260
