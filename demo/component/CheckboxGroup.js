@@ -19,48 +19,36 @@ import "../css/CheckboxGroup.less";
 
 
 class CheckboxGroup extends  React.Component {
-    allSelect(check_v, checkname) {
-    var v_item = document.getElementsByName(check_v);
-    var items = document.getElementsByName(checkname);
-    for (var i = 0; i < items.length; ++i) {
-        if (v_item[0].checked) {
-            items[i].checked = true;
-        }
-        else {
-            items[i].checked = false;
+
+ selectAll(check_v, checkname) {
+    var el = document.getElementsByName('input');
+    var len = el.length;
+    for(var i=0; i<len; i++) {
+        if((el[i].type=="checkbox") && (el[i].name==name)) {
+            el[i].checked = true;
         }
     }
 }
 
-    singleSelectparent(check_v, checkname)
-{
-    var v_item = document.getElementsByName(check_v);
-    var items = document.getElementsByName(checkname);
-    var childStatus = true;
-    for (var i = 0; i < items.length; ++i)
-    {
-        childStatus = (childStatus && items[i].checked);
-    }
-    if (childStatus)
-    {
-        v_item[0].checked = true;
-    }
-    else
-    {
-        v_item[0].checked = false;
+ singleSelectparent(check_v, checkname) {
+    var el = document.getElementsByName('input');
+    var len = el.length;
+    for(var i=0; i<len; i++) {
+        if((el[i].type=="checkbox") && (el[i].name==name)) {
+            el[i].checked = false;
+        }
     }
 }
+
 
     render() {
                 return (
                     <div id="screen">
-
                         <div id="screen_down">
                             <table>
                             <td> 筛选分类：</td>
                                 <td>
-
-                                    <input type="checkbox" name="checkbox_v1" value="version" onclick="allSelect('checkbox_v1', 'checkbox1')"id=" 全选"/>
+                                    <input type="checkbox" name="select" value=" 全选" onclick="selectAll()"id=" 全选"/>
                                     <strong><span> <label htmlFor=" 全选"> 全选</label></span></strong>
                                 </td>
 
