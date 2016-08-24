@@ -22,6 +22,8 @@ import Title from './component/title';
 import ModulePartition from './component/ModulePartition';
 import AppCol from './component/appCol';
 
+
+// import CheckboxGroup from './component/CheckboxGroup';
 import './index.less';
 
 module.exports = {
@@ -32,9 +34,16 @@ module.exports = {
     Storage,
     Switch,
     Validate,
+
     ValidateMixin,
+
+    // CheckboxGroup,
+
+    // Table,
+
     Table1,
     Table2,
+
     Column,
     NowTime,
     Calendar,
@@ -42,8 +51,14 @@ module.exports = {
     HelloWorld,
     Selector,
     Weixin,
+
     Title,
+
     ModulePartition,
-    AppCol
+    AppCol,
+
+    // Title,
+    ModulePartition
+
 
 };

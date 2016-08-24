@@ -4,7 +4,7 @@
  * descprition：事件热度趋势折线图
  */
 import React from 'react';
-import echarts from 'echarts'
+import echarts from 'echarts';
 import '../css/HotEvent.less';
 var Chart = React.createClass({
     getInitialState: function() {

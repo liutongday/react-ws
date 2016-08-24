@@ -32,10 +32,12 @@ import LeftNavigation from './component/LeftNavigation';
 import WsTable1 from './component/wsTableCol4';
 import WsTable2 from './component/wsTableCol3';
 import Apps from './component/apps';
+
+import Titles from './component/titles';
+
 import Chart from './component/chart';
 import Map from './component/map';
 import CheckboxGroup from './component/CheckboxGroup';
-
 
 
 window.Storage = Storage;
@@ -70,11 +72,23 @@ class App extends React.Component {
                         <LeftNavigation />
                     </nav>
                     <div className="HolyGrail-content">
+                        <Selector />
+                        <Titles/>
+                        <Apps/>
+                        <CheckboxGroup/>
+                        <Apps />
+                        <AppCol/>
+                        <Calendar />
+                        <DatePicker />
+
+
+                        
                         <Form />
                     </div>
                 </div>
 
             </div>
+
         );
     }
 
