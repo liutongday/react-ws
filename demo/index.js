@@ -20,6 +20,7 @@ import {
     Storage,
     Calendar,
     DatePicker,
+    Selector,
 } from '../src/index';
 import _ from 'underscore';
 import Layout from './component/layout';
@@ -69,6 +70,7 @@ class App extends React.Component {
 
                     <div className="HolyGrail-content">
                         <DatePicker />
+                        <Selector />
                     </div>
 
                 </div>

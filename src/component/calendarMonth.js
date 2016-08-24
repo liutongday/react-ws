@@ -2,7 +2,7 @@ import React,{PropTypes} from 'react';
 import moment from 'moment';
 
 var Day = React.createClass({
-        render: function () {
+    render: function () {
         var now = this.props.nowMoment;
         var m = this.props.moment;
         var selected = this.props.selected;
@@ -25,7 +25,7 @@ var Day = React.createClass({
     }
 });
 
-var Calendar = React.createClass({
+var CalendarMonth = React.createClass({
     propTypes: {
         selected: React.PropTypes.object,
         onSelect: React.PropTypes.func
@@ -52,13 +52,10 @@ var Calendar = React.createClass({
             });
         }
     },
-    handleChangeMonth: function (month) {
+    handleChangeYear: function (year) {
         this.setState({
-            moment: this.state.moment.month(month),
-        });
-    },
-    handleSelectMonth: function () {
-        this.setState({
+            moment: this.state.moment.year(year),
+            isSelectMonth: false
         });
     },
     handleSelectDay: function (m) {
@@ -67,20 +64,20 @@ var Calendar = React.createClass({
     renderHead: function () {
         var m = moment(this.state.moment);
         var month = m.month();
+        var year = m.year();
         return (
             <div className="ws-calendar-head text-center clearfix">
                 <div className="ws-calendar-head-top">
                     <a href="javascript:;" className="ws-calendar-head-pre pull-left"
-                       onClick={this.handleChangeMonth.bind(this, month - 1)}>
+                       onClick={this.handleChangeYear.bind(this, year - 1)}>
                         <i className="glyphicon glyphicon-chevron-left"></i>
                     </a>
-                        <span className="ws-calendar-head-title">
-                            <span className="ws-calendar-head-month"
-                                  onClick={this.handleSelectMonth}>{month + 1}月</span>
+                    <span className="ws-calendar-head-title">
+                            <span className="ws-calendar-head-month">{month + 1}月</span>
                             <span>&nbsp;&nbsp;{m.year()}</span>
                         </span>
                     <a href="javascript:;" className="ws-calendar-head-next pull-right"
-                       onClick={this.handleChangeMonth.bind(this, month + 1)}>
+                       onClick={this.handleChangeYear.bind(this, year + 1)}>
                         <i className="glyphicon glyphicon-chevron-right"></i>
                     </a>
                 </div>
@@ -131,12 +128,11 @@ var Calendar = React.createClass({
         return (
             <div className="ws-calendar">
                 {t.renderHead()}
-                {t.renderWeek()}
                 {t.renderContent()}
-                {t.state.isSelectMonth ? t.renderMonth() : undefined}
+                {t.renderMonth()}
             </div>
         );
     }
 });
 
-export default Calendar;
+export default CalendarMonth;
