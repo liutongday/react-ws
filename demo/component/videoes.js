@@ -95,7 +95,6 @@ var Videoes= React.createClass({
             var reciveData = self.state.data;
             //debugger
             var rolesListDatainfo = reciveData.map(function (role, index) {
-                console.log(role);
                 return (
                     <Video role={role} key={index}/>
                 );

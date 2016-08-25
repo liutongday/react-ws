@@ -59,7 +59,7 @@ class DatePicker extends React.Component {
         if (/\d\d\d\d-\d\d-\d\d/.test(event.target.value)) {
             this.props.onChange(moment(event.target.value).toDate());
         } else {
-            this.onChange(null);
+            this.props.onChange(null);
         }
     }
     render() {

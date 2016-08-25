@@ -32,7 +32,7 @@ var Apps= React.createClass({
             data: null
         };
     },
-    getCommonListData: function(){
+    /*getCommonListData: function(){
         var self = this;
         //传送数据
         var param = {
@@ -93,21 +93,20 @@ var Apps= React.createClass({
                 self.setState({
                     data: rolesListData});
             })
-        /*fetch("http://blog.parryqiu.com", {
+        /!*fetch("http://blog.parryqiu.com", {
          method: 'GET',
          mode: 'no-cors',
          cache: 'default'
-         }).then(function(response){console.log(response)})*/
+         }).then(function(response){console.log(response)})*!/
     },
     componentDidMount: function() {
         this.getCommonListData();
-    },
+    },*/
     render() {
-        //debugger
-        if (this.state.data) {
-            var self = this;
-            var reciveData = self.state.data;
-            //debugger
+        console.info("&&&&&&&&&&&&");
+        console.info(this.props.returendata);
+        var reciveData = this.props.returendata;
+        if (reciveData != null) {
             var rolesListDatainfo = reciveData.map(function (role, index) {
                 console.log(role);
                 return (
@@ -125,7 +124,6 @@ var Apps= React.createClass({
                     <p className="biaoshi">></p>
                     <p className="more">展开</p>
                 </div>
-
             );
         } else {
             return(

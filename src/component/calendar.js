@@ -6,7 +6,6 @@ var Day = React.createClass({
         var now = this.props.nowMoment;
         var m = this.props.moment;
         var selected = this.props.selected;
-
         var className = ['gm-calendar-day'];
         if (now.month() > m.month()) {
             className.push('gm-calendar-day-old');
