@@ -95,7 +95,7 @@ const Component = React.createClass({
                 <div>一个测试</div>
                 <HelloWorld/>
                 <h2 id="selector">Selector</h2>
-                <Selector/>
+
             </div>
         );
     },

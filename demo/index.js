@@ -22,12 +22,9 @@ import {
     Weixin,
     Calendar,
     DatePicker,
-
     Title,
     Video,
-
     AppCol
-
 } from '../src/index';
 import _ from 'underscore';
 import Layout from './component/layout';
@@ -61,37 +58,48 @@ function initNav() {
     document.body.appendChild(div);
 }
 
-class App extends React.Component {
+var App=React.createClass({
+    getInitialState: function () {
+    return {
+        data: null
+    };
+},
+    onChildChanged: function (newState) {
+        console.info("############");
+        console.info(newState);
+        //debugger;
+        this.setState({
+            data: newState
+        });
+},
     render() {
+        console.info("############");
+        console.info(this.state.data);
         return (
             <div className="HolyGrail">
                 <header>Unicom Test</header>
-
                 <Head />
                 <div className="HolyGrail-body">
-
-
                    <nav className="HolyGrail-nav">
                         <LeftNavigation />
                     </nav>
                     <div className="HolyGrail-content">
                         <Form />
+                        <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
                         <Title icon="u10340.png" name="APP分类排行"/>
-                        <Apps/>
+                        <Apps returendata={this.state.data}/>
                         <Chart/>
                         <Map/>
                         <HotWord/>
                         <Videoes/>
                     </div>
                 </div>
-
             </div>
         );
-    }
-
+    },
     componentDidMount() {
         //initNav();
     }
-}
+});
 
 ReactDOM.render(<App/>, document.getElementById('appContainer'));
