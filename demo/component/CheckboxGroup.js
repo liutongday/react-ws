@@ -23,7 +23,8 @@ class CheckboxGroup extends  React.Component {
  selectAll() {
 
      var checklist = document.getElementsByName ("checkbox1");
-     if(document.getElementsById ("controlAll").checked)
+     if(document.getElementById ("controlAll").checked)
+
      {
          for(var i=0;i<checklist.length;i++)
          {
