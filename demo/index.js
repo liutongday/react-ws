@@ -43,7 +43,7 @@ import Titles from './component/titles';
 
 import Chart from './component/chart';
 import Map from './component/map';
-import CheckboxGroup from './component/CheckboxGroup';
+// import CheckboxGroup from '../site/component/CheckboxGroup';
 
 
 
@@ -83,7 +83,7 @@ class App extends React.Component {
                     <div className="HolyGrail-content">
                         <Selector />
                         <Titles/>
-                        <CheckboxGroup/>
+                        {/*<CheckboxGroup/>*/}
                         <Apps />
                         <Calendar />
                         <DatePicker />
