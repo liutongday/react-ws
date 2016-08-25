@@ -23,7 +23,7 @@ class CheckboxGroup extends  React.Component {
  selectAll() {
 
      var checklist = document.getElementsByName ("checkbox1");
-     if(document.getElementsByName ("controlAll").checked)
+     if(document.getElementsById ("controlAll").checked)
      {
          for(var i=0;i<checklist.length;i++)
          {
@@ -44,7 +44,7 @@ class CheckboxGroup extends  React.Component {
                             <table>
                             <td> 筛选分类：</td>
                                 <td>
-                                    <input type="checkbox" name ="controlAll" value=" 全选" onClick={this.selectAll} />
+                                    <input type="checkbox" id ="controlAll" value=" 全选" onClick={this.selectAll} />
                                     <strong><span> <label htmlFor=" 全选"> 全选</label></span></strong>
                                 </td>
                                 <td>
