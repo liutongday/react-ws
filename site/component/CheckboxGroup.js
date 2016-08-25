@@ -21,10 +21,9 @@ import "../css/CheckboxGroup.less";
 class CheckboxGroup extends  React.Component {
 
  selectAll() {
-     console.info("selectALL");
 
      var checklist = document.getElementsByName ("checkbox1");
-     if(document.getElementById("controlAll").checked)
+     if(document.getElementsByName ("controlAll").checked)
      {
          for(var i=0;i<checklist.length;i++)
          {
@@ -38,29 +37,18 @@ class CheckboxGroup extends  React.Component {
      }
  }
 
- singleSelectparent() {
-    console.info("singleSelectparent");
-
-    var el = document.getElementsByName("checkbox1");
-    var len = el.length;
-    for(var i=0; i<len; i++) {
-        if((el[i].type=="checkbox") && (el[i].name==name)) {
-            el[i].checked = false;
-        }
-    }
-}
-    render() {
+ render() {
                 return (
                     <div id="screen">
                         <div id="screen_down">
                             <table>
                             <td> 筛选分类：</td>
                                 <td>
-                                    <input type="checkbox" name="controlAll" value=" 全选" onClick={this.selectAll} id=" 全选"/>
+                                    <input type="checkbox" name ="controlAll" value=" 全选" onClick={this.selectAll} />
                                     <strong><span> <label htmlFor=" 全选"> 全选</label></span></strong>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="checkbox1"value="layer1" id=" 社交"/>
+                                    <input type="checkbox" name="checkbox1"value="layer1" onClick={this.singleSelectparent}id=" 社交"/>
                                     <span> <label htmlFor=" 社交"> 社交</label></span>
                                 </td>
                                 <td>
