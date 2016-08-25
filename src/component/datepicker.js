@@ -12,6 +12,7 @@ class DatePicker extends React.Component {
 
         this.state = {
             id: '_ws_datepicker_id' + (Math.random() + '').slice(2),
+            nowDate:moment(),
             date: moment(),
             sel:true,
         };
@@ -20,11 +21,11 @@ class DatePicker extends React.Component {
     }
 
     selectDay(){
-        this.setState({sel:true,});
+        this.setState({sel:true,date:this.state.nowDate,});
     }
 
     selectMonth(){
-        this.setState({sel:false,});
+        this.setState({sel:false,date:this.state.nowDate,});
     }
 
     renderPopover() {
@@ -76,9 +77,9 @@ class DatePicker extends React.Component {
                                    value={this.state.date && moment(this.state.date).format('YYYY-MM-DD')}
                                    onChange={this.handleChange}/>:
                             <input type="text" className="ws-datepicker-date"
-                            ref="target"
-                            value={this.state.date && moment(this.state.date).format('YYYY-MM')}
-                            onChange={this.handleChange}/>}
+                                   ref="target"
+                                   value={this.state.date && moment(this.state.date).format('YYYY-MM')}
+                                   onChange={this.handleChange}/>}
                     </OverlayTrigger>
                 </div>
             </div>
