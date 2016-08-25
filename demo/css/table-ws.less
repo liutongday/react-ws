@@ -1,24 +1,6 @@
 //无滚动条四列表格样式
 .ws-table-container.basic{
     width: 380px;
-    overflow-y:scroll;
-    height: 200px;
-}
-
-.ws-table-container::-webkit-scrollbar{
-    background-color: #f2f2f2;
-}
-::-webkit-scrollbar-button:increment{
-    background-image: url('/demo/images/arrowDown.png') ;
-}
-::-webkit-scrollbar-button:decrement{
-    background-image: url('/demo/images/arrowUp.png') ;
-}
-::-webkit-scrollbar-thumb:vertical{
-    -webkit-border-image: url("/demo/images/u1096.png") 0 13 0 13;
-    border-color: transparent;
-    border-width: 0 13px;
-    min-width: 20px;
 }
 .ws-table {
     width: 100%;
@@ -208,4 +190,121 @@
 }
 .wsSimpleT4 td.top{
     color: red;
+}
+
+//无图片带滚动条四列表格
+.ws-table-container.wsT4text{
+    width: 380px;
+}
+.wsT4text table{
+    width: 100%;
+}
+.wsT4text tr{
+    height: 47px;
+}
+.wsT4text tbody tr:hover{
+    border: dotted red 1px;
+}
+.wsT4text thead{
+    display: block;
+}
+.wsT4text th.col-0{
+    width: 50px;
+}
+.wsT4text th.col-1{
+    width: 160px;
+}
+.wsT4text th.col-2{
+    width: 90px;
+}
+.wsT4text th.col-3{
+    width: 80px;
+}
+.wsT4text td.col-0{
+    width: 53px;
+}
+.wsT4text td.col-1{
+    width: 168px;
+}
+.wsT4text td.col-2{
+    width: 88px;
+}
+.wsT4text td.col-3{
+    width: 53px;
+}
+.wsT4text tbody{
+    display: block;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 100%;
+    height: 465px;
+}
+.wsT4text td.top{
+    color: red;
+}
+
+.wsT4text tbody::-webkit-scrollbar{
+    background-color: #f2f2f2;
+}
+::-webkit-scrollbar-button:increment{
+    background-image: url('/demo/images/arrowDown.png') ;
+}
+::-webkit-scrollbar-button:decrement{
+    background-image: url('/demo/images/arrowUp.png') ;
+}
+.wsT4text tbody::-webkit-scrollbar-thumb{
+    background-color:#C9C9C9;
+    outline-offset:-2px;
+
+    outline:2px solid #fff;
+
+    -webkit-border-radius:6px;
+
+    /*border: 1px solid #fff;*/
+
+}
+
+//热门视频排行四列表格样式
+.ws-table-container.wsT4text.tv{
+    width: 286px;
+}
+.wsT4text.tv th{
+    text-align: center;
+}
+.wsT4text.tv td{
+    font-size: 12px;
+}
+.wsT4text.tv td.col-0{
+    width: 38px;
+}
+.wsT4text.tv td.col-1{
+    width: 136px;
+}
+.wsT4text.tv td.col-2{
+    width: 64px;
+}
+.wsT4text.tv td.col-3{
+    width: 30px;
+}
+.wsT4text.tv td.col-1 img{
+    width: 26px;
+    height: 26px;
+}
+
+//热门频道排行四列表格样式
+.wsT4text.tv.che td.col-0{
+    width: 38px;
+}
+.wsT4text.tv.che td.col-1{
+    width: 110px;
+}
+.wsT4text.tv.che td.col-2{
+    width: 90px;
+}
+.wsT4text.tv.che td.col-3{
+    width: 30px;
+}
+//app排行四列表格
+.wsT4text.app th{
+    text-align: center;
 }

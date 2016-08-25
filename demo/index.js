@@ -31,6 +31,10 @@ import WsTable2 from './component/wsTableCol3';
 import WsTable3 from './component/wsTableCol5';
 import WsTable4 from './component/wsSimpleT4';
 import WsTable5 from './component/wsST4Area';
+import WsTable6 from './component/wsT4text';
+import WsTable7 from './component/wsT4tv';
+import WsTable8 from './component/wsT4chennel';
+import WsTable9 from './component/wsT4app';
 import Apps from './component/apps';
 import Chart from './component/chart';
 import Map from './component/map';
@@ -80,6 +84,10 @@ class App extends React.Component {
                         <WsTable3/>
                         <WsTable4/>
                         <WsTable5/>
+                        <WsTable6/>
+                        <WsTable7/>
+                        <WsTable8/>
+                        <WsTable9/>
                     </div>
 
                 </div>
