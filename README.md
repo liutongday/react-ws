@@ -17,4 +17,5 @@ https://github.com/panxianwen/react-ws
 2、新增Flex布局样式
 3、在start项目之前，先在Terminal中执行: webpack --config webpack.config.dev.js
 4、正式项目的访问路径为: http://localhost:3000/site/
+5.test
 
