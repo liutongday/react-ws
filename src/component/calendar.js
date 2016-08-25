@@ -55,10 +55,12 @@ var Calendar = React.createClass({
     handleChangeMonth: function (month) {
         this.setState({
             moment: this.state.moment.month(month),
+            isSelectMonth: false
         });
     },
     handleSelectMonth: function () {
         this.setState({
+            isSelectMonth: !this.state.isSelectMonth
         });
     },
     handleSelectDay: function (m) {
