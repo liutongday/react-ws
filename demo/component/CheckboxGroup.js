@@ -20,22 +20,28 @@ import "../css/CheckboxGroup.less";
 
 class CheckboxGroup extends  React.Component {
 
- selectAll(check_v, checkname) {
+ selectAll() {
      console.info("selectALL");
 
-    var el = document.getElementsByName('input');
-    var len = el.length;
-    for(var i=0; i<len; i++) {
-        if((el[i].type=="checkbox") && (el[i].name==name)) {
-            el[i].checked = true;
-        }
-    }
-}
+     var checklist = document.getElementsByName ("checkbox1");
+     if(document.getElementById("controlAll").checked)
+     {
+         for(var i=0;i<checklist.length;i++)
+         {
+             checklist[i].checked = 1;
+         }
+     }else{
+         for(var j=0;j<checklist.length;j++)
+         {
+             checklist[j].checked = 0;
+         }
+     }
+ }
 
- singleSelectparent(check_v, checkname) {
-     console.info("singleSelectparent");
+ singleSelectparent() {
+    console.info("singleSelectparent");
 
-    var el = document.getElementsByName('input');
+    var el = document.getElementsByName("checkbox1");
     var len = el.length;
     for(var i=0; i<len; i++) {
         if((el[i].type=="checkbox") && (el[i].name==name)) {
@@ -50,11 +56,11 @@ class CheckboxGroup extends  React.Component {
                             <table>
                             <td> 筛选分类：</td>
                                 <td>
-                                    <input type="checkbox" name="select" value=" 全选" onClick={this.selectAll} id=" 全选"/>
+                                    <input type="checkbox" name="controlAll" value=" 全选" onClick={this.selectAll} id=" 全选"/>
                                     <strong><span> <label htmlFor=" 全选"> 全选</label></span></strong>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="checkbox1"value="layer1" onClick={this.singleSelectparent}id=" 社交"/>
+                                    <input type="checkbox" name="checkbox1"value="layer1" id=" 社交"/>
                                     <span> <label htmlFor=" 社交"> 社交</label></span>
                                 </td>
                                 <td>

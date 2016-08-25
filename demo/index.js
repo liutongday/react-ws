@@ -83,7 +83,6 @@ class App extends React.Component {
                     <div className="HolyGrail-content">
                         <Selector />
                         <Titles/>
-                        <Apps/>
                         <CheckboxGroup/>
                         <Apps />
                         <Calendar />
