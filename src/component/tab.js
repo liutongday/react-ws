@@ -3,7 +3,7 @@
  */
 import React from 'react';
 import '../css/tab.less';
-import 'bootstrap/dist/css/bootstrap.css';
+
 
 var Tab = React.createClass({
     getInitialState:function () {
