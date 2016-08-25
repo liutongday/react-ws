@@ -25,12 +25,12 @@ export default class Header extends React.Component {
     }
     render() {
         const list = [
-                {"id":"data-query","to":"/content1","text":"数据查询"},
-                {"id":"key-areas","to":"/content2","text":"重点区域分析"},
-                {"id":"cost-effectiveness","to":"/content3","text":"成本效益分析"},
-                {"id":"innovative-business","to":"/content4","text":"创新业务分析"},
-                {"id":"basic-business","to":"/content5","text":"基础业务分析"},
-              ];
+            {"id":"basic-business","to":"/content1","text":"基础业务分析"},
+            {"id":"innovative-business","to":"/content2","text":"创新业务分析"},
+            {"id":"cost-effectiveness","to":"/content3","text":"成本效益分析"},
+            {"id":"key-areas","to":"/content4","text":"重点区域分析"},
+            {"id":"data-query","to":"/content5","text":"数据查询"},
+        ];
         //循环遍历需要的标签
         const jumper = _.map(list, (site) => {
             const link = site.to;
@@ -81,13 +81,6 @@ export default class Header extends React.Component {
                         <ul  >
                             {jumper}
                         </ul>
-                        {/*<ul>*/}
-                            {/*<li class="active"><a href="#">基础业务分析</a></li>*/}
-                            {/*<li><a href="#">创新业务分析</a></li>*/}
-                            {/*<li><a href="#">成本效益分析</a></li>*/}
-                            {/*<li><a href="#">重点区域分析</a></li>*/}
-                            {/*<li><a href="#">数据查询</a></li>*/}
-                        {/*</ul>*/}
                     </div>
                 </Flex>
             </header>
