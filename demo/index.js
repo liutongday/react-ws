@@ -26,49 +26,30 @@ import {
     Title,
     Video
 } from '../src/index';
-import _ from 'underscore';
-import Layout from './component/layout';
-import Form from './component/form';
-import Head from './component/head';
+
 import LeftNavigation from './component/LeftNavigation';
 import WsTable1 from './component/wsTableCol4';
 import WsTable2 from './component/wsTableCol3';
 import WsTable3 from './component/wsTableCol5';
 import WsTable4 from './component/wsSimpleT4';
 import WsTable5 from './component/wsST4Area';
+import Map from './component/map';
+import Head from './component/head';
 import Apps from './component/apps';
-
 import Titles from './component/titles';
 import Videoes from './component/videoes';
 import Chart from './component/chart';
-import Map from './component/map';
 import HotWord from './component/hotword';
+import Form from './component/form';
 import CheckboxGroup from './component/CheckboxGroup';
 
 window.Storage = Storage;
-
-function initNav() {
-    let div = document.createElement('div');
-    div.className = 'doc-nav';
-
-    let html = '';
-    _.each(document.getElementsByTagName('h1'), ele => {
-        html += '<a class="doc-nav-title" href="#' + ele.id + '">' + ele.innerHTML + '</a>';
-        _.each(ele.parentNode.getElementsByTagName('h2'), e => {
-            html += '<a href="#' + e.id + '">' + e.innerHTML + '</a>';
-        });
-    });
-
-    div.innerHTML = html;
-    document.body.appendChild(div);
-}
 
 class App extends React.Component {
     render() {
         return (
             <div className="HolyGrail">
                 <header>Unicom Test</header>
-
                 <Head />
                 <div className="HolyGrail-body">
 
@@ -85,6 +66,9 @@ class App extends React.Component {
                         <AppCol name="搜狐视频" col={1}/>
                         <Calendar />
                         <DatePicker />
+                        {this.props.children}
+                        
+                        //下面也可以排列组件
                         <Form />
                         <WsTable1 />
                         <WsTable2/>
@@ -102,14 +86,28 @@ class App extends React.Component {
                     </div>
                 </div>
 
-
         );
     }
 
     componentDidMount() {
-        //initNav();
+    }
+}
+class Pages extends React.Component {
+    render() {
+        return (
+            <Router history={hashHistory}>
+                <Route path="/" component={App}>
+                    <IndexRoute component={CheckboxGroup}></IndexRoute>
+                    <Route path="apps" component={Apps}></Route>
+                    <Route path="chart" component={Chart}></Route>
+                    <Route path="form" component={Form}></Route>
+                    <Route path="table" component={WsTable1}></Route>
+                    <Route path="calendar" component={Calendar}></Route>
+                </Route>
+            </Router>
+        );
     }
 }
 
-ReactDOM.render(<App/>, document.getElementById('appContainer'));
+ReactDOM.render(<Pages></Pages>, document.getElementById('appContainer'));
 
