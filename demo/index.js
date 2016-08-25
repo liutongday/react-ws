@@ -41,7 +41,7 @@ import Videoes from './component/videoes';
 import Chart from './component/chart';
 import HotWord from './component/hotword';
 import Form from './component/form';
-import CheckboxGroup from './component/CheckboxGroup';
+import CheckboxGroup from '../site/component/CheckboxGroup';
 
 window.Storage = Storage;
 
@@ -79,8 +79,6 @@ var App=React.createClass({
 },
 >>>>>>> origin/zhangxinjing*/
     render() {
-        console.info("############");
-        console.info(this.state.data);
         return (
             <div className="HolyGrail">
                 <header>Unicom Test</header>
@@ -92,8 +90,7 @@ var App=React.createClass({
                     <div className="HolyGrail-content">
                         <Selector />
                         <Titles/>
-                        <Apps/>
-                        <CheckboxGroup/>
+                        {/*<CheckboxGroup/>*/}
                         <Apps />
                         <AppCol name="搜狐视频" col={1}/>
                         <Calendar />
@@ -102,16 +99,14 @@ var App=React.createClass({
                         
                         //下面也可以排列组件
                         <Form />
-                        <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
+                     {/*   <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>*/}
                         <Title icon="u10340.png" name="APP分类排行"/>
-                        <Apps returendata={this.state.data}/>
+                       {/* <Apps returendata={this.state.data}/>*/}
                         <Chart/>
                         <Map/>
                         <HotWord/>
                         <Videoes/>
                     </div>
-
-
                     </div>
                 </div>
         );
