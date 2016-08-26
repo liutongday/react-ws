@@ -30,7 +30,7 @@ export default class ECommerceHotWordsChart extends React.Component {
     render() {
         return (
             <div className="E-Commerce-Hot-Words-Chart">
-                <ModulePartition id="new_module" name="电商热词风云榜" en_name="E-Commerce  Hot  Words  Chart"/>
+                <ModulePartition id="e-commerce_module" name="电商热词风云榜" en_name="E-Commerce  Hot  Words  Chart"/>
                 <Title icon="e-commerce-hot-word" name="电商热词"/>
                 <HotWord/>
 

@@ -15,6 +15,7 @@ import Table3 from './component/tableCol5';
 import Column from './component/column';
 import NowTime from './component/nowtime';
 import Calendar from './component/calendar';
+import CalendarMonth from './component/calendarMonth';
 import DatePicker from './component/datepicker';
 import HelloWorld from './component/hellworld';
 import Selector from './component/selector';
@@ -60,7 +61,7 @@ module.exports = {
     Weixin,
 
     Title,
-
+    CalendarMonth,
     ModulePartition,
     AppCol,
     TabHost,
