@@ -63,6 +63,15 @@ class DatePicker extends React.Component {
         }
     }
 
+    handleChangeMonth(event) {
+        // 只允许合法的指传递出去
+        if (/\d\d\d\d-\d\d/.test(event.target.value)) {
+            this.props.onChange(moment(event.target.value).toDate());
+        } else {
+            this.onChange(null);
+        }
+    }
+
     render() {
         return (
             <div className="ws-datepicker">
@@ -80,7 +89,7 @@ class DatePicker extends React.Component {
                             <input type="text" className="ws-datepicker-date"
                                    ref="target"
                                    value={this.state.date && moment(this.state.date).format('YYYY-MM')}
-                                   onChange={this.handleChange}/>}
+                                   onChange={this.handleChangeMonth}/>}
                     </OverlayTrigger>
                 </div>
             </div>
