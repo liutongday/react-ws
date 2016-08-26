@@ -12,7 +12,7 @@
  * @date 2016/8/25
  */
 import React from 'react';
-import Apps from '../component/apps';
+import Map from '../component/map';
 import {
     Selector,
     DatePicker,
@@ -23,19 +23,16 @@ import CheckboxGroup from '../../demo/component/CheckboxGroup';
 import HotEvent from '../component/HotEvent';
 import Table from '../component/wsTableCol4';
 import LeftNavigation from '../component/LeftNavigation';
-export default class WeChatOfficialAccountsChart extends React.Component {
+export default class RegionalWeathervane extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
         return (
-
-            <div className="WeChat-Official-Accounts-Chart">
-                <ModulePartition id="new_module" name="微信公众号排行榜" en_name="WeChat  Official  Accounts  Chart"/>
-                <Title icon="wechart-official-account-chart" name="微信公众号关注度排行榜"/>
-                <Apps />
-                <Title icon="wechart-official-read" name="微信公众号文章阅读量排行榜"/>
-                <Apps />
+            <div className="Regional-Weather-vane">
+                <ModulePartition id="new_module" name="地域风向标" en_name="Regional  Weather-vane"/>
+                <Title icon="regional-weather-vane" name="地域热搜"/>
+                <Map/>
             </div>
         );
     }

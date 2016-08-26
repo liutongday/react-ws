@@ -18,6 +18,7 @@ import HotNews from './HotNews'
 import ECommerceHotWordsChart from './ECommerceHotWordsChart'
 import VideoHotWordsChart from './VideoHotWordsChart'
 import WeChatOfficialAccountsChart from './WeChatOfficialAccountsChart'
+import RegionalWeathervane from './RegionalWeathervane'
 import Apps from '../component/apps';
 import {
     Selector,
@@ -45,6 +46,7 @@ export default class Content extends React.Component {
                     <ECommerceHotWordsChart/>
                     <VideoHotWordsChart/>
                     <WeChatOfficialAccountsChart/>
+                    <RegionalWeathervane/>
                     {/*<ModulePartition id="app_module" name="App排行榜" en_name="App Ranking List"/>
                     <Title icon="app-user" name="APP活跃用户总排行"/>
                     <Apps />

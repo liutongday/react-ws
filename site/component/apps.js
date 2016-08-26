@@ -120,14 +120,15 @@ var Apps= React.createClass({
                             {rolesListDatainfo}
                         </Flex>
                     </div>
-                    <p className="biaoshi">></p>
-                    <p className="more">展开</p>
                 </div>
             );
         } else {
-            return(
-            <div className="app"/>
-            )
+
+            return (
+                <div className="total">
+
+                </div>
+            );
         }
 
     }

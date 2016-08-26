@@ -103,9 +103,9 @@ var Selector = React.createClass({
             })
             .catch(function(e) {
                 console.log("fetch fail",e.toString());
-                /*self.setState({
+                self.setState({
                     data: rolesListData});
-                self.props.callbackParent(rolesListData);*/
+                self.props.callbackParent(rolesListData);
             })
 
         /*fetch("http://blog.parryqiu.com", {
