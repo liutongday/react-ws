@@ -13,26 +13,26 @@
  */
 import React from 'react';
 import ReactDOM from 'react-dom';
-    var data1=[{proId:"111",proName:"全国"}, {proId:"036",proName:"浙江"}, {proId:"011",proName:"北京"},
-        {proId:"031",proName:"上海"}, {proId:"013",proName:"天津"}, {proId:"083",proName:"重庆"},
-        {proId:"097",proName:"黑龙江"}, {proId:"090",proName:"吉林"}, {proId:"091",proName:"辽宁"},
-        {proId:"010",proName:"内蒙古"}, {proId:"089",proName:"新疆"}, {proId:"087",proName:"甘肃"},
-        {proId:"070",proName:"青海"}, {proId:"088",proName:"宁夏"}, {proId:"084",proName:"陕西"},
-        {proId:"019",proName:"山西"}, {proId:"017",proName:"山东"}, {proId:"018",proName:"河北"},
-        {proId:"076",proName:"河南"}, {proId:"030",proName:"安徽"}, {proId:"034",proName:"江苏"},
-        {proId:"071",proName:"湖北"}, {proId:"074",proName:"湖南"}, {proId:"075",proName:"江西"},
-        {proId:"051",proName:"广东"}, {proId:"059",proName:"广西"}, {proId:"081",proName:"四川"},
-        {proId:"086",proName:"云南"}, {proId:"085",proName:"贵州"}, {proId:"038",proName:"福建"},
-        {proId:"050",proName:"海南"}, {proId:"079",proName:"西藏"}];
+var data1=[{proId:"111",proName:"全国"}, {proId:"036",proName:"浙江"}, {proId:"011",proName:"北京"},
+    {proId:"031",proName:"上海"}, {proId:"013",proName:"天津"}, {proId:"083",proName:"重庆"},
+    {proId:"097",proName:"黑龙江"}, {proId:"090",proName:"吉林"}, {proId:"091",proName:"辽宁"},
+    {proId:"010",proName:"内蒙古"}, {proId:"089",proName:"新疆"}, {proId:"087",proName:"甘肃"},
+    {proId:"070",proName:"青海"}, {proId:"088",proName:"宁夏"}, {proId:"084",proName:"陕西"},
+    {proId:"019",proName:"山西"}, {proId:"017",proName:"山东"}, {proId:"018",proName:"河北"},
+    {proId:"076",proName:"河南"}, {proId:"030",proName:"安徽"}, {proId:"034",proName:"江苏"},
+    {proId:"071",proName:"湖北"}, {proId:"074",proName:"湖南"}, {proId:"075",proName:"江西"},
+    {proId:"051",proName:"广东"}, {proId:"059",proName:"广西"}, {proId:"081",proName:"四川"},
+    {proId:"086",proName:"云南"}, {proId:"085",proName:"贵州"}, {proId:"038",proName:"福建"},
+    {proId:"050",proName:"海南"}, {proId:"079",proName:"西藏"}];
 
 var Selector = React.createClass({
 
     getInitialState:function () {
-      return{
-          returndata:null,
-          active:true,
-          pro:{proId:'111',proName:'全国'},
-      };
+        return{
+            returndata:null,
+            active:true,
+            pro:{proId:'111',proName:'全国'},
+        };
     },
     selectedProv:function (i) {
         console.log('i is selected!!');
@@ -68,10 +68,10 @@ var Selector = React.createClass({
             {id :'19',tupian:'u8007.png',name:'360手机卫士',number:'55555',jiantou:'1'},
             {id :'20',tupian:'u8011.png',name:'QQ空间',number:'55555',jiantou:'-1'},];
         /*self.setState({
-            returndata: rolesListData});
-        console.info("############");
-        console.info(self.state.returndata);
-        self.props.callbackParent(rolesListData);*/
+         returndata: rolesListData});
+         console.info("############");
+         console.info(self.state.returndata);
+         self.props.callbackParent(rolesListData);*/
         //fectch请求
         fetch('http://10.0.94.37:8080/api/testredis',{
             credentials:'same-origin',
@@ -103,9 +103,9 @@ var Selector = React.createClass({
             })
             .catch(function(e) {
                 console.log("fetch fail",e.toString());
-                /*self.setState({
+                self.setState({
                     data: rolesListData});
-                self.props.callbackParent(rolesListData);*/
+                self.props.callbackParent(rolesListData);
             })
 
         /*fetch("http://blog.parryqiu.com", {
@@ -115,8 +115,8 @@ var Selector = React.createClass({
          }).then(function(response){console.log(response)})*/
     },
     /*componentDidMount: function() {
-        this.getCommonListData();
-    }*/
+     this.getCommonListData();
+     }*/
     render() {
         return (
             <div className="sel_outer_div">
@@ -138,12 +138,12 @@ var Selector = React.createClass({
                     <img className="sel_img3" src="/src/images/u354.png"/>
                     {data1.map(function (pro,i) {
                         return(
-                        <div className="sel_inner2_div1" key={i} style={{left:10+i%4*65,top:10+Math.floor(i/4)*35}}>
+                            <div className="sel_inner2_div1" key={i} style={{left:10+i%4*65,top:10+Math.floor(i/4)*35}}>
 
                             <span className="sel_span" title={pro.proId} key={i} onClick={this.selectedProv.bind(this,i)}>
                                 {pro.proName}
                             </span>
-                        </div>
+                            </div>
 
                         );
                     },this)
