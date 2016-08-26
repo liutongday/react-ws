@@ -12,7 +12,6 @@
  * @date 2016/8/25
  */
 import React from 'react';
-import HotWord from '../../component/hotword';
 import {
     Selector,
     DatePicker,
@@ -23,17 +22,16 @@ import CheckboxGroup from '../../../demo/component/CheckboxGroup';
 import HotEvent from '../../component/HotEvent';
 import Table from '../../component/wsTableCol4';
 import LeftNavigation from '../../component/LeftNavigation';
-export default class ECommerceHotWordsChart extends React.Component {
+export default class WeChatOfficialAccountsChart extends React.Component {
     constructor(props) {
         super(props);
     }
     render() {
         return (
-            <div className="E-Commerce-Hot-Words-Chart">
-                <ModulePartition id="new_module" name="电商热词风云榜" en_name="E-Commerce  Hot  Words  Chart"/>
-                <Title icon="e-commerce-hot-word" name="电商热词"/>
-                <HotWord/>
 
+            <div className="WeChat-Official-Accounts-Chart">
+                <ModulePartition id="new_module" name="微信公众号排行榜" en_name="WeChat  Official  Accounts  Chart"/>
+                <Title icon="wechart-official-account-chart" name="微信公众号关注度排行榜"/>
             </div>
         );
     }

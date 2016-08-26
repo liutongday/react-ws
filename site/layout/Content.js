@@ -13,11 +13,11 @@
  */
 
 import React from 'react';
-import AppRankingList from './AppRankingList'
-import HotNews from './HotNews'
-import ECommerceHotWordsChart from './ECommerceHotWordsChart'
-import VideoHotWordsChart from './VideoHotWordsChart'
-import WeChatOfficialAccountsChart from './WeChatOfficialAccountsChart'
+import AppRankingList from './Content/AppRankingList'
+import HotNews from './Content/HotNews'
+import ECommerceHotWordsChart from './Content/ECommerceHotWordsChart'
+import VideoHotWordsChart from './Content/VideoHotWordsChart'
+import WeChatOfficialAccountsChart from './Content/WeChatOfficialAccountsChart'
 import Apps from '../component/apps';
 import {
     TabHost,
