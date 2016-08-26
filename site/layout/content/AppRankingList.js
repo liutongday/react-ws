@@ -12,44 +12,42 @@
  * @date 2016/8/25
  */
 import React from 'react';
-import Apps from '../component/apps';
-import Selector from '../component/selector';
+import Apps from '../../component/apps';
+import Selector from '../../component/selector';
 import {
     DatePicker,
     Title,
     ModulePartition
-} from '../../src/index';
-import CheckboxGroup from '../../demo/component/CheckboxGroup';
-import HotEvent from '../component/HotEvent';
-import Table from '../component/wsTableCol4';
-import LeftNavigation from '../component/LeftNavigation';
+} from '../../../src/index';
+import CheckboxGroup from '../../component/CheckboxGroup';
+import HotEvent from '../../component/HotEvent';
+import Table from '../../component/wsTableCol4';
+import LeftNavigation from '../../component/LeftNavigation';
 
-var AppRankingList=React.createClass({
-
-    getInitialState: function () {
-        return {
-            data: null
-        };
-    },
-    onChildChanged: function (newState) {
+export default class AppRankingList extends React.Component {
+    constructor(props) {
+        super(props);
+    }
+    state = {
+        data: null
+    }
+    onChildChanged(newState) {
         console.info("############");
         console.info(newState);
         //debugger;
-        this.setState({
-            data: newState
-        });
-    },
+        this.setState({data: newState});
+    }
     render() {
         return (
             <div className="App-Ranking-List">
                 <ModulePartition id="app_module" name="App排行榜" en_name="App Ranking List"/>
-                <Selector/>
+                <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
                 <Title icon="app-user" name="APP活跃用户总排行"/>
-                <Apps />
                 <Title icon="app-part" name="APP分类排行"/>
+                <Apps returendata={this.state.data}/>
                 <CheckboxGroup />
                 <Table />
             </div>
         );
     }
-});
+}

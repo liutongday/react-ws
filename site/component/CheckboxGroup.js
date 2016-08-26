@@ -38,7 +38,14 @@ class CheckboxGroup extends  React.Component {
      }
  }
 
+<<<<<<< HEAD
  render () {
+=======
+
+ render() {
+
+
+>>>>>>> 97eccdd987b03656128dff8ccc6c868e46232032
                 return (
                     <div id="screen">
                         <div id="screen_down">
