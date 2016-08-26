@@ -38,7 +38,12 @@ class CheckboxGroup extends  React.Component {
      }
  }
 
+<<<<<<< HEAD
  render () {
+=======
+ render() {
+
+>>>>>>> e182b9a9889488633caf313760d3f0d42d41cc0b
                 return (
                     <div id="screen">
                         <div id="screen_down">
@@ -88,8 +93,9 @@ class CheckboxGroup extends  React.Component {
                                     <input type="checkbox" name="checkbox1" value="layer10"onClick={this.singleSelectparent} id=" 网银支付"/>
                                     <span> <label htmlFor=" 网银支付"> 网银支付</label></span>
                                 </td>
-                             <tr>
-                                <td></td>
+
+                            <tr>
+
                                 <td>
                                     <input type="checkbox" name="checkbox1" value="layer11"onClick={this.singleSelectparent} id=" 美食快餐"/>
                                     <span> <label htmlFor=" 美食快餐"> 美食快餐</label></span>
@@ -136,7 +142,7 @@ class CheckboxGroup extends  React.Component {
                                 </td>
                               </tr>
                             <tr>
-                                <td></td>
+
                                 <td>
                                     <input type="checkbox" name="checkbox1" value="layer22" onClick={this.singleSelectparent}id=" 安全杀毒"/>
                                     <span> <label htmlFor=" 安全杀毒"> 安全杀毒</label></span>
@@ -181,7 +187,7 @@ class CheckboxGroup extends  React.Component {
                             </tr>
                             </table>
                         </div>
-                    </div>
+                        </div>
                )
            }
 }
@@ -194,4 +200,5 @@ class Component extends React.Component{
         );
     }
 }
+
 export default Component;

@@ -37,7 +37,7 @@ module.exports = {
             test: /\.(css|less)$/,
             loader: 'style!css!postcss!less'
         },{
-            test: /\.(jpg|png)$/,
+            test: /\.(jpg|png|woff|svg|eot|ttf)$/,
             loader: "url?limit=8192"
         }]
     },
