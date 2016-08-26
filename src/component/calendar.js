@@ -131,7 +131,7 @@ var Calendar = React.createClass({
     render: function () {
         var t = this;
         return (
-            <div className="ws-calendar">
+            <div className="ws-calendar" id="ws-calendar-div">
                 {t.renderHead()}
                 {t.renderWeek()}
                 {t.renderContent()}
