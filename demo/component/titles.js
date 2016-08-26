@@ -15,10 +15,8 @@ var Titles= React.createClass({
         };
     },
     render() {
-        //debugger
-        var rolesListData = [{tupian:'u10340.png',name:'APP活跃用户总排行'},];
+        var rolesListData = [{icon:'u10340.png',name:'APP活跃用户总排行'},];
         var rolesListDatainfo = rolesListData.map(function (role,index){
-            console.info(role);
             return(
                 <Title role = {role} key={index}/>
             );

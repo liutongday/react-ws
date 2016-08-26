@@ -70,7 +70,7 @@ var Weixin = React.createClass({
                     <img className="weixin" src={chart}/>
                     <input disabled="disabled" className="name" value={name} />
                     <input disabled="disabled" className="usenumber" value={data.number}/>
-                    <input className={this.state.arrow} change={this.changeHandle}/>
+                    <input disabled="disabled" className={this.state.arrow} change={this.changeHandle}/>
                 </div>
             </div>
         )

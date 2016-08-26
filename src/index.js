@@ -20,8 +20,16 @@ import HelloWorld from './component/hellworld';
 import Selector from './component/selector';
 import Weixin from './component/weixin';
 import Title from './component/title';
+import Video from './component/video';
 import ModulePartition from './component/ModulePartition';
 
+import AppCol from './component/appCol';
+import Tab from './component/tab';
+import TabContent from './component/tabcontent';
+import TabHost from './component/tabhost';
+
+
+// import CheckboxGroup from './component/CheckboxGroup';
 import './index.less';
 
 module.exports = {
@@ -32,10 +40,17 @@ module.exports = {
     Storage,
     Switch,
     Validate,
+
     ValidateMixin,
+
+    // CheckboxGroup,
+
+    // Table,
     Table1,
     Table2,
+
     Table3,
+
     Column,
     NowTime,
     Calendar,
@@ -43,6 +58,11 @@ module.exports = {
     HelloWorld,
     Selector,
     Weixin,
+
     Title,
-    ModulePartition
+
+    ModulePartition,
+    AppCol,
+    TabHost,
+    Video,
 };
