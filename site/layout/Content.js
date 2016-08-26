@@ -46,15 +46,17 @@ export default class Content extends React.Component {
                     <VideoHotWordsChart/>
                     <WeChatOfficialAccountsChart/>
 
-                    <ModulePartition id="app_module" name="App排行榜" en_name="App Ranking List"/>
-                    <Title icon="app-user" name="APP活跃用户总排行"/>
-                    <Apps />
-                    <TabHost/>
-                    <Title icon="app-part" name="APP分类排行"/>
-                    <CheckboxGroup />
-                    <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
-                    <Title icon="new-hot-event" name="事件热度趋势"/>
-                    <HotEvent />
+
+
+                    {/*<ModulePartition id="app_module" name="App排行榜" en_name="App Ranking List"/>*/}
+                    {/*<Title icon="app-user" name="APP活跃用户总排行"/>*/}
+                    {/*<Apps />*/}
+                    {/*<TabHost/>*/}
+                    {/*<Title icon="app-part" name="APP分类排行"/>*/}
+                    {/*<CheckboxGroup />*/}
+                    {/*<ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>*/}
+                    {/*<Title icon="new-hot-event" name="事件热度趋势"/>*/}
+                    {/*<HotEvent />*/}
                 </div>
 
 
