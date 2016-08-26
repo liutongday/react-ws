@@ -18,6 +18,7 @@ import HotNews from './HotNews'
 import ECommerceHotWordsChart from './ECommerceHotWordsChart'
 import VideoHotWordsChart from './VideoHotWordsChart'
 import WeChatOfficialAccountsChart from './WeChatOfficialAccountsChart'
+import RegionalWeathervane from './RegionalWeathervane'
 import Apps from '../component/apps';
 import {
     TabHost,
@@ -47,17 +48,23 @@ export default class Content extends React.Component {
                     <LeftNavigation />
                 </nav>
                 <div className="HolyGrail-content">
+<<<<<<< HEAD
 
                   {/* <AppRankingList/>*/}
+=======
+                    <AppRankingList/>
+>>>>>>> origin/zhangxinjing
                     <HotNews/>
                     <ECommerceHotWordsChart/>
                     <VideoHotWordsChart/>
                     <WeChatOfficialAccountsChart/>
+<<<<<<< HEAD
+=======
+                    <RegionalWeathervane/>
+
+>>>>>>> origin/zhangxinjing
                 </div>
-
-
-                
             </div>
-        );
+        )
     }
 }
