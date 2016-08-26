@@ -103,10 +103,18 @@ const renderThs = (columns) => (
                 content = name || '';
                 showImg=false;
             }else {
-                showImg=true;
-                arr=name.split(",");
-                contentImg=arr[0];
-                contentText=arr[1];
+                let ind=name.indexOf(',');
+                if(ind!=-1){
+                    showImg=true;
+                    arr=name.split(",");
+                    contentImg=arr[0];
+                    contentText=arr[1];
+                    className='type';
+                }else{
+                    content = name || '';
+                    showImg=false;
+                }
+
             }
         }
 
@@ -116,7 +124,7 @@ const renderThs = (columns) => (
                 style={getStyle(col.props)}
                 className={`-ws-th col-${index} col-${dataKey} ${className || ''} `}
             >
-                {showImg?<img src={contentImg} width={50}/>:null}
+                {showImg?<img src={contentImg} style={{marginRight:"10px"}} width={50}/>:null}
                  {contentText||content}
             </th>
         );
@@ -146,11 +154,18 @@ const renderTds = (data, entry, columns, rowIndex) => (
             className = td.name;
         } else {
             if (index==1){
-                arr=value.split(",");
-                contentImg=arr[0];
-                contentText=arr[1];
-                showImage=true;
+                let ind=value.indexOf(',');
                 showInput=false;
+                if(ind!=-1){
+                    arr=value.split(",");
+                    contentImg=arr[0];
+                    contentText=arr[1];
+                    showImage=true;
+                }else{
+                    showImage=false;
+                    content=value;
+                }
+
             }else if(index==3){
                 showImage=false;
                 showInput=true;
@@ -165,11 +180,18 @@ const renderTds = (data, entry, columns, rowIndex) => (
                         state='/src/images/u114.png';
                         break;
                 }
-            } else {
+            } else if(index==0){
                 content = value;
                 showImage=false;
                 showInput=false;
+                if(content==1||content==2||content==3){
+                    className='top'
+                }
 
+            }else{
+                content = value;
+                showImage=false;
+                showInput=false;
             }
         }
 
@@ -179,7 +201,7 @@ const renderTds = (data, entry, columns, rowIndex) => (
                 style={getStyle(col.props)}
                 className={`ws-td col-${index} col-${dataKey} ${className || ''}  `}
             >
-                {showImage?<img src={contentImg} width={30}/>:null}
+                {showImage?<img src={contentImg} style={{marginRight:'15px'}} width={30}/>:null}
                 {contentText||content}
                 {showInput?<img src={state} width={16}/>:null}
             </td>
@@ -202,21 +224,10 @@ const renderRows = (data, columns) => {
 function Table(props) {
     const { children, data, className } = props;
     const columns = findAllByType(children, Column);
-    const aStyle={
-        width:'380px',
-        display:'block',
-        textAlign:'right',
-        color:'#999C9f',
-        backgroundColor:'#fBfBfB',
-        height:'26px',
-        fontSize:'12px',
-    };
-    const pstyle={
-        marginRight:'18px',
-    };
+
     return (
         <div className={`ws-table-container ${className || ''} `} >
-            <a style={aStyle}><span style={pstyle}>更多></span></a>
+
             <table className="ws-table">
                 {hasNames(columns) && (
                     <thead className="ws-table-thead">

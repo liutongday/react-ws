@@ -16,8 +16,7 @@
 
 import React, { PropTypes } from 'react';
 import {Table1,Column,Flex} from '../../src/index';
-import styles from '../css/table-ws.less';
-import  _ from 'underscore';
+import '../css/table-ws.less';
 
 const data = [
     {排名: '1', "/src/images/u8852.png,网银支付": '/src/images/weixin.png,微信', 活跃用户数: 57639,变化: '1'},
@@ -36,8 +35,22 @@ function WsTable1() {
 
     const talbleType1=dataArr.map(data=>{
         const keys = Object.keys(data[0]);
+        const aStyle={
+            width:'380px',
+            display:'block',
+            textAlign:'right',
+            color:'#999C9f',
+            backgroundColor:'#fBfBfB',
+            height:'26px',
+            fontSize:'12px',
+        };
+        const pstyle={
+            marginRight:'18px',
+        };
         return (
-            <Table1 data={data} className={styles.container}>
+            <div>
+            <a style={aStyle}><span style={pstyle}>更多></span></a>
+            <Table1 data={data} className={'basic'}>
                 <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
                 <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} />
                 <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'} align='center'/>
@@ -55,6 +68,7 @@ function WsTable1() {
                  )
                  }*/}
             </Table1>
+            </div>
         );
 
     });
