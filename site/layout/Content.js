@@ -13,7 +13,6 @@
  */
 
 import React from 'react';
-import AppRankingList from './AppRankingList'
 import HotNews from './HotNews'
 import ECommerceHotWordsChart from './ECommerceHotWordsChart'
 import VideoHotWordsChart from './VideoHotWordsChart'
@@ -24,7 +23,7 @@ import {
     Title,
     ModulePartition
 } from '../../src/index';
-import CheckboxGroup from '../../demo/component/CheckboxGroup';import CheckboxGroup from '../component/CheckboxGroup';
+import CheckboxGroup from '../component/CheckboxGroup';
 import HotEvent from '../component/HotEvent';
 import Table1 from '../component/wsTableCol4';
 import Table2 from '../component/wsTableCol3';
