@@ -4,8 +4,9 @@
  * descprition：事件热度趋势折线图
  */
 import React from 'react';
-import echarts from 'echarts'
-import '../css/HotEvent.less';
+//import echarts from 'echarts'
+import echarts from 'echarts/src/echarts';
+import 'echarts/src/chart/line';
 var Chart = React.createClass({
     getInitialState: function() {
         var dataSet=[0,2, 1, 0, 3, 1, 0];
@@ -19,22 +20,15 @@ var Chart = React.createClass({
         console.log(this.state.data);
         this.drawCharts(this.state.data);
     },
-
     drawCharts:function(dataSet){
         var myChart = echarts.init(document.getElementById('charts'));
         // 指定图表的配置项和数据
         var option = {
-
-            tooltip : {
-                trigger: 'axis'
-            },
-           
-            calculable : true,
             xAxis : [
                 {
                     type : 'category',
                     boundaryGap : false,
-                    data : ['20160514','20160515','20160514','20160516','20160517','20160518','20160519','20160520','20160521']
+                    data : ['20150514','20150515','20150514','20150516','20150517','20150518','20150519','20150520','20150521']
                 }
             ],
             yAxis : [
@@ -46,14 +40,15 @@ var Chart = React.createClass({
                     }
                 }
             ],
-            axisLine:{show: false},
+
+            calculable : true,
             series : [
                 {
                     symbol:'none',//折线上的圆点去掉
                     smooth:true,//光滑折线
-                    name:'热度趋势',
+                    name:'最低气温',
                     type:'line',
-                    data:dataSet,
+
                     //折线的样式（颜色）
                     itemStyle:{
                         normal:{
@@ -64,16 +59,19 @@ var Chart = React.createClass({
                     },
                     //标记点的样式
                     markPoint: {
-                        label:{
-                            normal:{
-                                show:false,
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    show: false//设置标签文字不显示value（注意：必须在itemStyle中的label设置）
+                                }
                             }
                         },
                         symbol:'circle',
-                        symbolSize:'20',
+                        symbolSize:'30',
                         data: [
                             {type: 'max', name: '最大值'}
                         ]
+
                     }
                 }
             ]
