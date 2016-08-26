@@ -12,17 +12,17 @@
  * @date 2016/8/25
  */
 import React from 'react';
-import Apps from '../../component/apps';
-import Selector from '../../component/selector';
+import Apps from '../component/apps';
+import Selector from '../component/selector';
 import {
     DatePicker,
     Title,
     ModulePartition
-} from '../../../src/index';
-import CheckboxGroup from '../../../demo/component/CheckboxGroup';
-import HotEvent from '../../component/HotEvent';
-import Table from '../../component/wsTableCol4';
-import LeftNavigation from '../../component/LeftNavigation';
+} from '../../src/index';
+import CheckboxGroup from '../../demo/component/CheckboxGroup';
+import HotEvent from '../component/HotEvent';
+import Table from '../component/wsTableCol4';
+import LeftNavigation from '../component/LeftNavigation';
 
 var AppRankingList=React.createClass({
 

@@ -17,7 +17,7 @@ import {
     DatePicker,
     Title,
     ModulePartition
-} from '../../../src/index';
+} from '../../src/index';
 import CheckboxGroup from '../../demo/component/CheckboxGroup';
 import HotEvent from '../component/HotEvent';
 import Table from '../component/wsTableCol4';

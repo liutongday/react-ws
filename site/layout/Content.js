@@ -13,11 +13,11 @@
  */
 
 import React from 'react';
-import AppRankingList from './Content/AppRankingList'
-import HotNews from './Content/HotNews'
-import ECommerceHotWordsChart from './Content/ECommerceHotWordsChart'
-import VideoHotWordsChart from './Content/VideoHotWordsChart'
-import WeChatOfficialAccountsChart from './Content/WeChatOfficialAccountsChart'
+import AppRankingList from './AppRankingList'
+import HotNews from './HotNews'
+import ECommerceHotWordsChart from './ECommerceHotWordsChart'
+import VideoHotWordsChart from './VideoHotWordsChart'
+import WeChatOfficialAccountsChart from './WeChatOfficialAccountsChart'
 import Apps from '../component/apps';
 import {
     TabHost,
@@ -45,16 +45,6 @@ export default class Content extends React.Component {
                     <ECommerceHotWordsChart/>
                     <VideoHotWordsChart/>
                     <WeChatOfficialAccountsChart/>
-
-                    <ModulePartition id="app_module" name="App排行榜" en_name="App Ranking List"/>
-                    <Title icon="app-user" name="APP活跃用户总排行"/>
-                    <Apps />
-                    <TabHost/>
-                    <Title icon="app-part" name="APP分类排行"/>
-                    <CheckboxGroup />
-                    <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
-                    <Title icon="new-hot-event" name="事件热度趋势"/>
-                    <HotEvent />
                 </div>
 
 
