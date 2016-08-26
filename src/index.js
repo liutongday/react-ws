@@ -15,6 +15,7 @@ import Table3 from './component/tableCol5';
 import Column from './component/column';
 import NowTime from './component/nowtime';
 import Calendar from './component/calendar';
+import CalendarMonth from './component/calendarMonth';
 import DatePicker from './component/datepicker';
 import DatePickerMonth from './component/calendarMonth';
 import HelloWorld from './component/hellworld';
@@ -28,11 +29,8 @@ import AppCol from './component/appCol';
 import Tab from './component/tab';
 import TabContent from './component/tabcontent';
 import TabHost from './component/tabhost';
-
-
 // import CheckboxGroup from './component/CheckboxGroup';
 import './index.less';
-
 module.exports = {
 	Util,
     Flex,
@@ -54,8 +52,8 @@ module.exports = {
     HelloWorld,
     Selector,
     Weixin,
-    DatePickerMonth,
     Title,
+    CalendarMonth,
     ModulePartition,
     AppCol,
     TabHost,

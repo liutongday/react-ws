@@ -30,7 +30,7 @@ export default class VideoHotWordsChart extends React.Component {
     render() {
         return (
             <div className="Video-Hot-Words-Chart">
-                <ModulePartition id="new_module" name="视频热词风云榜" en_name="Video Hot Words  Chart"/>
+                <ModulePartition id="video_module" name="视频热词风云榜" en_name="Video Hot Words  Chart"/>
                 <Title icon="video-hot-word" name="热门视频"/>
                 <Videoes/>
             </div>

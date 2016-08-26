@@ -30,7 +30,7 @@ export default class RegionalWeathervane extends React.Component {
     render() {
         return (
             <div className="Regional-Weather-vane">
-                <ModulePartition id="new_module" name="地域风向标" en_name="Regional  Weather-vane"/>
+                <ModulePartition id="regional_module" name="地域风向标" en_name="Regional  Weather-vane"/>
                 <Title icon="regional-weather-vane" name="地域热搜"/>
                 <Map/>
             </div>

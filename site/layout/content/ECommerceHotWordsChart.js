@@ -21,10 +21,8 @@ import {
     ModulePartition,
     AppCol
 } from '../../../src/index';
-import CheckboxGroup from '../../component/CheckboxGroup';
 import WsTable6 from '../../component/wsT4text';
 import WsTable4 from '../../component/wsSimpleT4';
-import LeftNavigation from '../../component/LeftNavigation';
 export default class ECommerceHotWordsChart extends React.Component {
     constructor(props) {
         super(props);

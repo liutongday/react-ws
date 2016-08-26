@@ -19,25 +19,57 @@ import {
     Calendar,
     CalenarMonth,
     Title,
+    CalendarMonth,
     ModulePartition
 } from '../../../src/index';
 import CheckboxGroup from '../../component/CheckboxGroup';
 import HotEvent from '../../component/HotEvent';
-import Table from '../../component/wsTableCol4';
+import WsTable2 from '../../component/wsTableCol3';
+import WsTable3 from '../../component/wsTableCol5';
 import LeftNavigation from '../../component/LeftNavigation';
+import '../css/hotnews.less';
+var HotNews =React.createClass({
+    getInitialState: function () {
 
-export default class HotNews extends React.Component {
-    constructor(props) {
-        super(props);
-    }
+        return {
+            data: null
+        };
+    },
+    onChildChanged: function (newState) {
+        console.info("############");
+        console.info(newState);
+
+        this.setState({
+            data: newState
+        });
+    },
     render() {
         return (
             <div className="Hot-News">
                 <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
-                <Title icon="new-hot-event" name="事件热度趋势"/>
-
+                <div className="date-hot-new">
+                    <DatePicker/>
+                </div>
+                {/*<Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>*/}
+                <div className="hot-title">
+                    <div className="title-new-hot-event">
+                        <Title icon="new-hot-event" name="热点新闻事件"/>
+                    </div>
+                    <div className="title-new-relative-event">
+                        <Title icon="new-relative-event" name="相关新闻"/>
+                    </div>
+                </div>
+                <div className="hot-event">
+                    <div className="hot-event-left">
+                        <WsTable2/>
+                    </div>
+                    <div className="hot-event-right">
+                        <WsTable3/>
+                    </div>
+                </div>
                 <Chart/>
             </div>
         );
     }
-}
+});
+export default HotNews;
