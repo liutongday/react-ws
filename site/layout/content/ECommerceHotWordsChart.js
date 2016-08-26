@@ -44,6 +44,8 @@ export default class ECommerceHotWordsChart extends React.Component {
                 <WsTable6/>
 
 
+
+
             </div>
         );
     }
