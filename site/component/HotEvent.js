@@ -5,7 +5,7 @@
  */
 import React from 'react';
 //import echarts from 'echarts'
-import echarts from 'echarts/src/echarts';
+//import echarts from 'echarts/src/echarts';
 import 'echarts/src/chart/line';
 var Chart = React.createClass({
     getInitialState: function() {
@@ -104,7 +104,6 @@ var Chart = React.createClass({
                             </div>
 
                         </div>
-
             )
     }
 });

@@ -52,13 +52,7 @@ export default class Content extends React.Component {
                     <TabHost/>
                     <Title icon="app-part" name="APP分类排行"/>
                     <CheckboxGroup />
-                    <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
-                    <Title icon="new-hot-event" name="事件热度趋势"/>
-                    <HotEvent />
                 </div>
-
-
-                
             </div>
         );
     }
