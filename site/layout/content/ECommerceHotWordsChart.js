@@ -16,12 +16,14 @@ import HotWord from '../../component/hotword';
 import {
     Selector,
     DatePicker,
+    DatePickerMonth,
     Title,
-    ModulePartition
+    ModulePartition,
+    AppCol
 } from '../../../src/index';
 import CheckboxGroup from '../../component/CheckboxGroup';
-import HotEvent from '../../component/HotEvent';
-import Table from '../../component/wsTableCol4';
+import WsTable6 from '../../component/wsT4text';
+import WsTable4 from '../../component/wsSimpleT4';
 import LeftNavigation from '../../component/LeftNavigation';
 export default class ECommerceHotWordsChart extends React.Component {
     constructor(props) {
@@ -30,9 +32,21 @@ export default class ECommerceHotWordsChart extends React.Component {
     render() {
         return (
             <div className="E-Commerce-Hot-Words-Chart">
-                <ModulePartition id="new_module" name="电商热词风云榜" en_name="E-Commerce  Hot  Words  Chart"/>
+
+                <ModulePartition id="new_module" name="电商热词风云榜" en_name="E-Commerce Hot Words Chart"/>
+                <Selector className="ec-sel"/>
                 <Title icon="e-commerce-hot-word" name="电商热词"/>
-                <HotWord/>
+                <WsTable4 className="ec-wsTable4"/>
+                <HotWord className="ec-hotword"/>
+                <Title icon="vs" name="电商热词横向对标"/>
+                <AppCol name="京东" col={0}/>
+                <AppCol name="天猫" col={0}/>
+                <AppCol name="淘宝" col={0}/>
+                <WsTable6/>
+
+
+
+
 
             </div>
         );

@@ -16,6 +16,7 @@ import Column from './component/column';
 import NowTime from './component/nowtime';
 import Calendar from './component/calendar';
 import DatePicker from './component/datepicker';
+import DatePickerMonth from './component/calendarMonth';
 import HelloWorld from './component/hellworld';
 import Selector from './component/selector';
 import Weixin from './component/weixin';
@@ -40,17 +41,12 @@ module.exports = {
     Storage,
     Switch,
     Validate,
-
     ValidateMixin,
-
     // CheckboxGroup,
-
     // Table,
     Table1,
     Table2,
-
     Table3,
-
     Column,
     NowTime,
     Calendar,
@@ -58,9 +54,8 @@ module.exports = {
     HelloWorld,
     Selector,
     Weixin,
-
+    DatePickerMonth,
     Title,
-
     ModulePartition,
     AppCol,
     TabHost,

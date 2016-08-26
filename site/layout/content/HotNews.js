@@ -16,6 +16,8 @@ import Chart from '../../component/chart';
 import {
     Selector,
     DatePicker,
+    Calendar,
+    CalenarMonth,
     Title,
     ModulePartition
 } from '../../../src/index';
@@ -31,7 +33,6 @@ export default class HotNews extends React.Component {
     render() {
         return (
             <div className="Hot-News">
-
                 <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
                 <Title icon="new-hot-event" name="事件热度趋势"/>
 
