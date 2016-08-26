@@ -1,15 +1,15 @@
 /**
  *
- * Title: BONC - React
+ * <p>Title: BONC - React </p>
  *
- * Description:  </p>
+ * <p>Description: 单页面应用的构建文件 index.js </p>
  *
- * Copyright: Copyright BONC(c) 2013 - 2025
+ * <p>Copyright: Copyright BONC(c) 2013 - 2025 </p>
  *
- * Company: 北京东方国信科技股份有限公司
+ * <p>Company: 北京东方国信科技股份有限公司 </p>
  *
- * @author luli
- * @date 2016/8/16
+ * @author panxw
+ * @version 1.0.0
  */
 import './index.less';
 import 'gm-bootstrap/dist/css/bootstrap.css';
@@ -22,12 +22,13 @@ import {
     Weixin,
     Calendar,
     DatePicker,
-    AppCol,
     Title,
-    Video
+    Video,
+    AppCol
 } from '../src/index';
-
-import LeftNavigation from './component/LeftNavigation';
+import _ from 'underscore';
+import Layout from './component/layout';
+import Form from './component/form';
 import WsTable1 from './component/wsTableCol4';
 import WsTable2 from './component/wsTableCol3';
 import WsTable3 from './component/wsTableCol5';
@@ -35,19 +36,38 @@ import WsTable4 from './component/wsSimpleT4';
 import WsTable5 from './component/wsST4Area';
 import Map from './component/map';
 import Head from './component/head';
+import WsTable6 from './component/wsT4text';
+import WsTable7 from './component/wsT4tv';
+import WsTable8 from './component/wsT4chennel';
+import WsTable9 from './component/wsT4app';
 import Apps from './component/apps';
-import Titles from './component/titles';
 import Videoes from './component/videoes';
 import Chart from './component/chart';
 import HotWord from './component/hotword';
-import Form from './component/form';
-import CheckboxGroup from '../site/component/CheckboxGroup';
+import Day from './component/calendar';
+//import DatePicker from './component/datepicker';
+import CheckboxGroup from './component/CheckboxGroup';
+import LeftNavigation from '../site/component/LeftNavigation';
+
 
 window.Storage = Storage;
 
 class App extends React.Component {
 
+    state = {
+        data: null
+    }
+    onChildChanged (newState) {
+        console.info("############");
+        console.info(newState);
+        //debugger;
+        this.setState({
+            data: newState
+        });
+    }
+
     render() {
+
         return (
             <div className="HolyGrail">
                 <header>Unicom Test</header>
@@ -55,30 +75,30 @@ class App extends React.Component {
                 <div className="HolyGrail-body">
                    <nav className="HolyGrail-nav">
                         <LeftNavigation />
-                    </nav>
+                   </nav>
                     <div className="HolyGrail-content">
+
+                        {this.props.children}
                         <Selector />
-                        <Titles/>
                         {/*<CheckboxGroup/>*/}
                         <Apps />
                         <AppCol name="搜狐视频" col={1}/>
                         <Calendar />
                         <DatePicker />
-                        {this.props.children}
-                        
-                        <Form />
                         <Title icon="u10340.png" name="APP分类排行"/>
-                        <Chart/>
+                        <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
+                        <Title icon="u10340.png" name="APP分类排行"/>
+                        <Apps returendata={this.state.data}/>
                         <Map/>
                         <HotWord/>
                         <Videoes/>
                     </div>
-                    </div>
                 </div>
+
+            </div>
         );
     }
-    componentDidMount() {
-    }
+
 }
 class Pages extends React.Component {
     render() {
@@ -93,7 +113,7 @@ class Pages extends React.Component {
                     <Route path="calendar" component={Calendar}></Route>
                 </Route>
             </Router>
-        );
+        )
     }
 }
 

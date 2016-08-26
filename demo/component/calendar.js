@@ -6,16 +6,15 @@ var Day = React.createClass({
         var now = this.props.nowMoment;
         var m = this.props.moment;
         var selected = this.props.selected;
-
-        var className = ['ws-calendar-day'];
+        var className = ['gm-calendar-day'];
         if (now.month() > m.month()) {
-            className.push('ws-calendar-day-old');
+            className.push('gm-calendar-day-old');
         } else if (now.month() < m.month()) {
-            className.push('ws-calendar-day-new');
+            className.push('gm-calendar-day-new');
         }
 
         if (+selected.startOf('day') === +m.startOf('day')) {
-            className.push('ws-calendar-active');
+            className.push('gm-calendar-active');
         }
 
         return (<span className={className.join(' ')} onClick={this.handleClick}>{m.date()}</span>);
@@ -91,9 +90,9 @@ var Calendar = React.createClass({
     },
     renderWeek: function () {
         return (
-            <div className="ws-calendar-week">
+            <div className="gm-calendar-week">
                 {this.state.weekDays.map(function (v, i) {
-                    return (<span key={i} className="ws-calendar-day-name">{v}</span>);
+                    return (<span key={i} className="gm-calendar-day-name">{v}</span>);
                 })}
             </div>
         );
@@ -101,14 +100,14 @@ var Calendar = React.createClass({
     renderMonth: function () {
         var month = this.state.moment.month();
         var months = [];
-        var className = 'ws-calendar-month';
+        var className = 'gm-calendar-month';
         for (var i = 0; i < 12; i++) {
             months.push((
-                <span key={i} className={i === month ? className + " ws-calendar-active": className}
+                <span key={i} className={i === month ? className + " gm-calendar-active": className}
                       onClick={this.handleChangeMonth.bind(this, i)}>{i + 1}月</span>));
         }
         return (
-            <div className="ws-calendar-months">
+            <div className="gm-calendar-months">
                 {months}
             </div>
         );
@@ -123,7 +122,7 @@ var Calendar = React.createClass({
         }
 
         return (
-            <div className="ws-calendar-content">
+            <div className="gm-calendar-content">
                 {days}
             </div>
         );
@@ -131,7 +130,7 @@ var Calendar = React.createClass({
     render: function () {
         var t = this;
         return (
-            <div className="ws-calendar" id="ws-calendar-div">
+            <div className="gm-calendar">
                 {t.renderHead()}
                 {t.renderWeek()}
                 {t.renderContent()}

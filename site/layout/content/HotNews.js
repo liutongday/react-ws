@@ -12,17 +12,17 @@
  * @date 2016/8/25
  */
 import React from 'react';
-import Chart from '../component/chart';
+import Chart from '../../component/chart';
 import {
     Selector,
     DatePicker,
     Title,
     ModulePartition
-} from '../../src/index';
-import CheckboxGroup from '../../demo/component/CheckboxGroup';
-import HotEvent from '../component/HotEvent';
-import Table from '../component/wsTableCol4';
-import LeftNavigation from '../component/LeftNavigation';
+} from '../../../src/index';
+import CheckboxGroup from '../../component/CheckboxGroup';
+import HotEvent from '../../component/HotEvent';
+import Table from '../../component/wsTableCol4';
+import LeftNavigation from '../../component/LeftNavigation';
 
 export default class HotNews extends React.Component {
     constructor(props) {
