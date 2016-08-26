@@ -21,6 +21,7 @@ import {
     ModulePartition,
     AppCol
 } from '../../../src/index';
+import '../css/ECommerceHotWordsChart.less';
 import WsTable6 from '../../component/wsT4text';
 import WsTable4 from '../../component/wsSimpleT4';
 export default class ECommerceHotWordsChart extends React.Component {
@@ -41,9 +42,6 @@ export default class ECommerceHotWordsChart extends React.Component {
                 <AppCol name="天猫" col={0}/>
                 <AppCol name="淘宝" col={0}/>
                 <WsTable6/>
-
-
-
 
 
             </div>
