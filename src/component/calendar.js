@@ -6,11 +6,7 @@ var Day = React.createClass({
         var now = this.props.nowMoment;
         var m = this.props.moment;
         var selected = this.props.selected;
-
-
         var className = ['gm-calendar-day'];
-        var className = ['ws-calendar-day'];
-        console.log('&&&&&&&&&&'+selected);
         if (now.month() > m.month()) {
             className.push('gm-calendar-day-old');
         } else if (now.month() < m.month()) {
@@ -49,7 +45,6 @@ var Calendar = React.createClass({
         };
     },
     componentWillReceiveProps: function (nextProps) {
-        console.log('this is the nextprops'+nextProps);
         if (nextProps.selected) {
             this.setState({
                 selected: nextProps.selected
@@ -57,41 +52,39 @@ var Calendar = React.createClass({
         }
     },
     handleChangeMonth: function (month) {
-        console.log('this is month'+month);
         this.setState({
             moment: this.state.moment.month(month),
             isSelectMonth: false
         });
     },
     handleSelectMonth: function () {
-
         this.setState({
             isSelectMonth: !this.state.isSelectMonth
         });
     },
     handleSelectDay: function (m) {
-        console.log('this is m'+m);
         this.props.onSelect(m.toDate());
     },
     renderHead: function () {
         var m = moment(this.state.moment);
         var month = m.month();
         return (
-            <div className="gm-calendar-head text-center clearfix">
-                <a href="javascript:;" className="gm-calendar-head-pre pull-left"
-                   onClick={this.handleChangeMonth.bind(this, month - 1)}>
-                    <i className="glyphicon glyphicon-chevron-left">
-                    </i>
-                </a>
-                    <span className="ws-calendar-head-title">
-                        <span className="ws-calendar-head-month"
-                              onClick={this.handleSelectMonth}>{month + 1}月</span>
-                        <span>&nbsp;&nbsp;{m.year()}</span>
-                    </span>
-                <a href="javascript:;" className="gm-calendar-head-next pull-right"
-                   onClick={this.handleChangeMonth.bind(this, month + 1)}>
-                    <i className="glyphicon glyphicon-chevron-right"></i>
-                </a>
+            <div className="ws-calendar-head text-center clearfix">
+                <div className="ws-calendar-head-top">
+                    <a href="javascript:;" className="ws-calendar-head-pre pull-left"
+                       onClick={this.handleChangeMonth.bind(this, month - 1)}>
+                        <i className="glyphicon glyphicon-chevron-left"></i>
+                    </a>
+                        <span className="ws-calendar-head-title">
+                            <span className="ws-calendar-head-month"
+                                  onClick={this.handleSelectMonth}>{month + 1}月</span>
+                            <span>&nbsp;&nbsp;{m.year()}</span>
+                        </span>
+                    <a href="javascript:;" className="ws-calendar-head-next pull-right"
+                       onClick={this.handleChangeMonth.bind(this, month + 1)}>
+                        <i className="glyphicon glyphicon-chevron-right"></i>
+                    </a>
+                </div>
             </div>
         );
     },
@@ -124,10 +117,8 @@ var Calendar = React.createClass({
         var days = [];
 
         for (var i = 0; i < 42; i++) {
-            days.push(
-                <Day key={i} selected={moment(this.state.selected)} nowMoment={this.state.moment}
-                           moment={moment(m.add(1, 'day'))} onClick={this.handleSelectDay}>
-            </Day>);
+            days.push(<Day key={i} selected={moment(this.state.selected)} nowMoment={this.state.moment}
+                           moment={moment(m.add(1, 'day'))} onClick={this.handleSelectDay}></Day>);
         }
 
         return (

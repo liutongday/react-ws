@@ -112,7 +112,8 @@ var Apps= React.createClass({
                 return (
                     <Weixin role={role} key={index}/>
                 );
-            })
+            });
+
             return (
                 <div className="total">
                     <div className="app">

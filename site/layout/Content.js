@@ -21,14 +21,14 @@ import WeChatOfficialAccountsChart from './WeChatOfficialAccountsChart'
 import RegionalWeathervane from './RegionalWeathervane'
 import Apps from '../component/apps';
 import {
-    Selector,
-    DatePicker,
+    TabHost,
     Title,
     ModulePartition
 } from '../../src/index';
-import CheckboxGroup from '../../demo/component/CheckboxGroup';
+import CheckboxGroup from '../component/CheckboxGroup';
 import HotEvent from '../component/HotEvent';
-import Table from '../component/wsTableCol4';
+import Table1 from '../component/wsTableCol4';
+import Table2 from '../component/wsTableCol3';
 import LeftNavigation from '../component/LeftNavigation';
 export default class Content extends React.Component {
     constructor(props) {
@@ -41,22 +41,28 @@ export default class Content extends React.Component {
                     <LeftNavigation />
                 </nav>
                 <div className="HolyGrail-content">
-                    <AppRankingList/>
+                  {/* <AppRankingList/>*/}
                     <HotNews/>
                     <ECommerceHotWordsChart/>
                     <VideoHotWordsChart/>
                     <WeChatOfficialAccountsChart/>
-                    <RegionalWeathervane/>
+<RegionalWeathervane/><<<<<<< .mine
                     {/*<ModulePartition id="app_module" name="App排行榜" en_name="App Ranking List"/>
+=======
+                    <ModulePartition id="app_module" name="App排行榜" en_name="App Ranking List"/>
+>>>>>>> .theirs
                     <Title icon="app-user" name="APP活跃用户总排行"/>
                     <Apps />
+                    <TabHost/>
                     <Title icon="app-part" name="APP分类排行"/>
                     <CheckboxGroup />
-                     <Table />
                     <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
                     <Title icon="new-hot-event" name="事件热度趋势"/>
-                    <HotEvent />*/}
+                    <HotEvent />
                 </div>
+
+
+                
             </div>
         );
     }

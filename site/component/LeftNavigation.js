@@ -13,7 +13,6 @@
  */
 import * as React from 'react';
 import {
-    Flex,
     Affix
 } from '../../src/index';
 import _ from 'underscore';
