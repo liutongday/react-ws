@@ -67,6 +67,7 @@ var HotNews =React.createClass({
                         <WsTable3/>
                     </div>
                 </div>
+                <Title icon="title-hot-event" name="事件热度趋势"/>
                 <Chart/>
             </div>
         );
