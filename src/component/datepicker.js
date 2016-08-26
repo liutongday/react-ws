@@ -79,7 +79,10 @@ class DatePicker extends React.Component {
                 </div>
                 <div className={"ws-datepicker-decide-month"+(this.state.sel?'':'-change')} onClick={this.selectMonth.bind(this)}>月
                 </div>
-                <div>
+                <div className="ws-datepicker-dateDiv">
+                    <p className="ws-datepicker-dateFont">日期</p>
+                </div>
+                <div className="ws-datepicker-input">
                     <OverlayTrigger trigger="click" rootClose placement="bottom" overlay={this.state.sel?this.renderPopover():this.renderPopoverMonth()}>
                         {this.state.sel ?
                             <input type="text" className="ws-datepicker-date"
