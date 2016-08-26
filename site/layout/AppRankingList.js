@@ -41,9 +41,8 @@ export default class AppRankingList extends React.Component {
         return (
             <div className="App-Ranking-List">
                 <ModulePartition id="app_module" name="App排行榜" en_name="App Ranking List"/>
-                <Selector  callbackParent={this.onChildChanged}/>
-                <Title icon="app-user" name="APP活跃用户总排行"/>
                 <Selector initialState={this.state.data} callbackParent={this.onChildChanged.bind(this)}/>
+                <Title icon="app-user" name="APP活跃用户总排行"/>
                 <Title icon="app-part" name="APP分类排行"/>
                 <Apps returendata={this.state.data}/>
                 <CheckboxGroup />
