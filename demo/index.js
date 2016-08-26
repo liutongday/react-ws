@@ -46,38 +46,7 @@ import CheckboxGroup from '../site/component/CheckboxGroup';
 window.Storage = Storage;
 
 class App extends React.Component {
-/*=======
-function initNav() {
-    let div = document.createElement('div');
-    div.className = 'doc-nav';
 
-    let html = '';
-    _.each(document.getElementsByTagName('h1'), ele => {
-        html += '<a class="doc-nav-title" href="#' + ele.id + '">' + ele.innerHTML + '</a>';
-        _.each(ele.parentNode.getElementsByTagName('h2'), e => {
-            html += '<a href="#' + e.id + '">' + e.innerHTML + '</a>';
-        });
-    });
-
-    div.innerHTML = html;
-    document.body.appendChild(div);
-}
-
-var App=React.createClass({
-    getInitialState: function () {
-    return {
-        data: null
-    };
-},
-    onChildChanged: function (newState) {
-        console.info("############");
-        console.info(newState);
-        //debugger;
-        this.setState({
-            data: newState
-        });
-},
->>>>>>> origin/zhangxinjing*/
     render() {
         return (
             <div className="HolyGrail">
@@ -97,11 +66,8 @@ var App=React.createClass({
                         <DatePicker />
                         {this.props.children}
                         
-                        //下面也可以排列组件
                         <Form />
-                     {/*   <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>*/}
                         <Title icon="u10340.png" name="APP分类排行"/>
-                       {/* <Apps returendata={this.state.data}/>*/}
                         <Chart/>
                         <Map/>
                         <HotWord/>
