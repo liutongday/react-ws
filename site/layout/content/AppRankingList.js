@@ -12,17 +12,17 @@
  * @date 2016/8/25
  */
 import React from 'react';
-import Apps from '../component/apps';
-import Selector from '../component/selector';
+import Apps from '../../component/apps';
+import Selector from '../../component/selector';
 import {
     DatePicker,
     Title,
     ModulePartition
-} from '../../src/index';
-import CheckboxGroup from '../../demo/component/CheckboxGroup';
-import HotEvent from '../component/HotEvent';
-import Table from '../component/wsTableCol4';
-import LeftNavigation from '../component/LeftNavigation';
+} from '../../../src/index';
+import CheckboxGroup from '../../component/CheckboxGroup';
+import HotEvent from '../../component/HotEvent';
+import Table from '../../component/wsTableCol4';
+import LeftNavigation from '../../component/LeftNavigation';
 
 export default class AppRankingList extends React.Component {
     constructor(props) {
@@ -41,7 +41,7 @@ export default class AppRankingList extends React.Component {
         return (
             <div className="App-Ranking-List">
                 <ModulePartition id="app_module" name="App排行榜" en_name="App Ranking List"/>
-                <Selector initialState={this.state.data} callbackParent={this.onChildChanged.bind(this)}/>
+                <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
                 <Title icon="app-user" name="APP活跃用户总排行"/>
                 <Title icon="app-part" name="APP分类排行"/>
                 <Apps returendata={this.state.data}/>
