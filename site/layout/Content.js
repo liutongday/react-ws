@@ -13,22 +13,13 @@
  */
 
 import React from 'react';
-import AppRankingList from './AppRankingList'
-import HotNews from './HotNews'
-import ECommerceHotWordsChart from './ECommerceHotWordsChart'
-import VideoHotWordsChart from './VideoHotWordsChart'
-import WeChatOfficialAccountsChart from './WeChatOfficialAccountsChart'
-import RegionalWeathervane from './RegionalWeathervane'
-import Apps from '../component/apps';
-import {
-    TabHost,
-    Title,
-    ModulePartition
-} from '../../src/index';
-import CheckboxGroup from '../component/CheckboxGroup';
-import HotEvent from '../component/HotEvent';
-import Table1 from '../component/wsTableCol4';
-import Table2 from '../component/wsTableCol3';
+import AppRankingList from './content/AppRankingList'
+import HotNews from './content/HotNews'
+import ECommerceHotWordsChart from './content/ECommerceHotWordsChart'
+import VideoHotWordsChart from './content/VideoHotWordsChart'
+import WeChatOfficialAccountsChart from './content/WeChatOfficialAccountsChart'
+import RegionalWeathervane from './content/RegionalWeathervane'
+
 import LeftNavigation from '../component/LeftNavigation';
 export default class Content extends React.Component {
     constructor(props) {
