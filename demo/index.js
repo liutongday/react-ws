@@ -35,6 +35,10 @@ import WsTable4 from './component/wsSimpleT4';
 import WsTable5 from './component/wsST4Area';
 import Map from './component/map';
 import Head from './component/head';
+import WsTable6 from './component/wsT4text';
+import WsTable7 from './component/wsT4tv';
+import WsTable8 from './component/wsT4chennel';
+import WsTable9 from './component/wsT4app';
 import Apps from './component/apps';
 import Titles from './component/titles';
 import Videoes from './component/videoes';
@@ -107,6 +111,7 @@ var App=React.createClass({
                         <HotWord/>
                         <Videoes/>
                     </div>
+
                     </div>
                 </div>
         );
@@ -127,8 +132,7 @@ class Pages extends React.Component {
                     <Route path="calendar" component={Calendar}></Route>
                 </Route>
             </Router>
-        );
+        )
     }
 }
-
 ReactDOM.render(<Pages></Pages>, document.getElementById('appContainer'));
