@@ -48,21 +48,12 @@ export default class Content extends React.Component {
                     <LeftNavigation />
                 </nav>
                 <div className="HolyGrail-content">
-<<<<<<< HEAD
-
-                  {/* <AppRankingList/>*/}
-=======
                     <AppRankingList/>
->>>>>>> origin/zhangxinjing
                     <HotNews/>
                     <ECommerceHotWordsChart/>
                     <VideoHotWordsChart/>
                     <WeChatOfficialAccountsChart/>
-<<<<<<< HEAD
-=======
                     <RegionalWeathervane/>
-
->>>>>>> origin/zhangxinjing
                 </div>
             </div>
         )
