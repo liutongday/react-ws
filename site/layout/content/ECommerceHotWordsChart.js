@@ -42,7 +42,7 @@ var ECommerceHotWordsChart=React.createClass({
     render(){
         return (
             <div className="ECommerce-Hot-Words-Chart">
-                <ModulePartition id="new_module" name="电商热词风云榜" en_name="E-Commerce Hot Words Chart"/>
+                <ModulePartition id="busi_module" name="电商热词风云榜" en_name="E-Commerce Hot Words Chart"/>
                 <DatePicker/>
                 <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
                 <Title icon="e-commerce-hot-word" name="电商热词"/>

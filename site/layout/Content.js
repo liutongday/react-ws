@@ -33,7 +33,7 @@ export default class Content extends React.Component {
         return (
             <div className="HolyGrail-body">
                 <nav className="HolyGrail-nav">
-                    {/*<LeftNavigation />*/}
+                    <LeftNavigation />
                 </nav>
                 <div className="HolyGrail-content">
                     <AppRankingList/>
