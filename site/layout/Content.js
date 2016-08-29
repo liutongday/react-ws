@@ -13,47 +13,33 @@
  */
 
 import React from 'react';
-import Apps from '../component/apps';
-import {
-    Selector,
-    DatePicker,
-    Title,
-    ModulePartition
-} from '../../src/index';
-import CheckboxGroup from '../../demo/component/CheckboxGroup';
-import HotEvent from '../component/HotEvent';
-import Table from '../component/wsTableCol4';
-import LeftNavigation from '../component/LeftNavigation';
 
+import AppRankingList from './content/AppRankingList'
+import HotNews from './content/HotNews'
+import ECommerceHotWordsChart from './content/ECommerceHotWordsChart'
+import VideoHotWordsChart from './content/VideoHotWordsChart'
+import WeChatOfficialAccountsChart from './content/WeChatOfficialAccountsChart'
+import RegionalWeathervane from './content/RegionalWeathervane'
+import LeftNavigation from '../component/LeftNavigation';
 export default class Content extends React.Component {
     constructor(props) {
         super(props);
     }
-
     render() {
         return (
             <div className="HolyGrail-body">
-
                 <nav className="HolyGrail-nav">
                     <LeftNavigation />
                 </nav>
                 <div className="HolyGrail-content">
-
-                    <ModulePartition id="app_module" name="App排行榜" en_name="App Ranking List"/>
-                    <Title icon="app-user" name="APP活跃用户总排行"/>
-                    <Apps />
-
-                    <Title icon="app-part" name="APP分类排行"/>
-                    <CheckboxGroup />
-                     <Table />
-
-                    <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
-                    <Title icon="new-hot-event" name="事件热度趋势"/>
-                    <HotEvent />
-
+                    <AppRankingList/>
+                    <HotNews/>
+                    <ECommerceHotWordsChart/>
+                    <VideoHotWordsChart/>
+                    <WeChatOfficialAccountsChart/>
+                    <RegionalWeathervane/>
                 </div>
-
             </div>
-        );
+        )
     }
 }

@@ -31,7 +31,7 @@ var Apps= React.createClass({
             data: null
         };
     },
-    getCommonListData: function(){
+/*    getCommonListData: function(){
         var self = this;
         //var str = '{"name":"huangxiaojian","age":"23"}'
         var param = {
@@ -63,7 +63,7 @@ var Apps= React.createClass({
             data: rolesListData});
         
         //console.log(JSON.stringify(param));
-            /*fetch('http://10.0.94.34:8080/api/testredis',{
+            /!*fetch('http://10.0.94.34:8080/api/testredis',{
             credentials:'same-origin',
             method: 'POST',
             //method: 'GET',
@@ -95,39 +95,51 @@ var Apps= React.createClass({
                 self.setState({
                     data: rolesListData});
             })
-     */
+     *!/
 
     },
     componentDidMount: function() {
         this.getCommonListData();
-    },
+    },*/
     render() {
         //debugger
-        if (this.state.data) {
-            var self = this;
-            var reciveData = self.state.data;
-            console.log(reciveData);
-            //debugger
-
+        console.info("&&&&&&&&&&&&");
+        console.info(this.props.returendata);
+        var reciveData = this.props.returendata;
+        if (reciveData != null) {
             var rolesListDatainfo = reciveData.map(function (role, index) {
                 console.log(role);
                 return (
-                    <Weixin role={role} key={index}/>
+                    <div className="col-xs-4 col-customer-1">
+                        <Weixin role={role} key={index}/>
+                    </div>
+
                 );
-            });
+            })
             return (
-                <div className="app">
-                    <Flex ws-flex row wrap>
-                        {rolesListDatainfo}
-                    </Flex>
-                    <p className="biaoshi">></p>
-                    <p className="more">展开</p>
+                <div className="total">
+                    <div className="app container-fluid">
+                        <div className="row">
+                            {rolesListDatainfo}
+                        </div>
+                        <div className="more-div">
+                            <p className="biaoshi">></p>
+                            <p className="more">展开</p>
+                        </div>
+
+                        {/*<Flex ws-flex row wrap>*/}
+                            {/*{rolesListDatainfo}*/}
+                        {/*</Flex>*/}
+                    </div>
                 </div>
             );
         } else {
-            return(
-            <div className="app"/>
-            )
+
+            return (
+                <div className="total">
+
+                </div>
+            );
         }
 
     }

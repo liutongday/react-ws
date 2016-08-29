@@ -13,10 +13,10 @@
  */
 import * as React from 'react';
 import {
-    Flex,
     Affix
 } from '../../src/index';
 import _ from 'underscore';
+import "../css/LeftNavigation.less";
 
 class Navigator extends React.Component {
     constructor(props) {
@@ -48,7 +48,7 @@ class Navigator extends React.Component {
                 <div>
                     <div>
                         <li >
-                            <a onMouseOver={this.overLine.bind(this,id)} className={demo.id} href={`#${demo.id}`}>
+                            <a onMouseOver={this.overLine.bind(this,id)}  href={`#${demo.id}`}>
                                 <img src={`${demo.img_url}`+'.png'} className="img-size"/>
                             </a>
                             <div onMouseOut={this.outLine.bind(this,id)}  id={`${demo.id}`} className="row display_n ws-left-lab-bg">
@@ -74,11 +74,14 @@ export default class LeftNavigation extends React.Component{
     render(){
 
         return (
-            <Affix offsetTop={65}>
+            <Affix offsetTop={105}>
                <Navigator />
             </Affix>
         );
     }
 }
+
+
+
 
 

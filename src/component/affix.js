@@ -119,7 +119,8 @@ export default class Affix extends React.Component{
 	        position: 'fixed',
 	        top: offsetTop,
 	        left: elemOffset.left,
-	        width: affixNode.offsetWidth,
+			height: '400px',
+	        width: '40px',
 	      });
 	      this.setPlaceholderStyle(e, {
 	        width: affixNode.offsetWidth,

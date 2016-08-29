@@ -1,15 +1,15 @@
 /**
  *
- * Title: BONC - React
+ * <p>Title: BONC - React </p>
  *
- * Description:  </p>
+ * <p>Description: 单页面应用的构建文件 index.js </p>
  *
- * Copyright: Copyright BONC(c) 2013 - 2025
+ * <p>Copyright: Copyright BONC(c) 2013 - 2025 </p>
  *
- * Company: 北京东方国信科技股份有限公司
+ * <p>Company: 北京东方国信科技股份有限公司 </p>
  *
- * @author luli
- * @date 2016/8/16
+ * @author panxw
+ * @version 1.0.0
  */
 import './index.less';
 import 'gm-bootstrap/dist/css/bootstrap.css';
@@ -18,76 +18,88 @@ import ReactDOM from 'react-dom';
 import {Router, Route, IndexRoute, hashHistory, Link} from 'react-router';
 import {
     Storage,
+    Selector,
+    Weixin,
     Calendar,
     DatePicker,
-    Selector,
+    Title,
+    Video,
+    AppCol,
+    DatePickerCS,
 } from '../src/index';
 import _ from 'underscore';
 import Layout from './component/layout';
 import Form from './component/form';
-import Head from './component/head';
-import LeftNavigation from './component/LeftNavigation';
 import WsTable1 from './component/wsTableCol4';
 import WsTable2 from './component/wsTableCol3';
-import Apps from './component/apps';
-import Chart from './component/chart';
+import WsTable3 from './component/wsTableCol5';
+import WsTable4 from './component/wsSimpleT4';
+import WsTable5 from './component/wsST4Area';
 import Map from './component/map';
+import Head from './component/head';
+import WsTable6 from './component/wsT4text';
+import WsTable7 from './component/wsT4tv';
+import WsTable8 from './component/wsT4chennel';
+import WsTable9 from './component/wsT4app';
+import Apps from './component/apps';
+import Videoes from './component/videoes';
+import Chart from './component/chart';
+import HotWord from './component/hotword';
+import Day from './component/calendar';
+//import DatePicker from './component/datepicker';
 import CheckboxGroup from './component/CheckboxGroup';
-
-
-
+import LeftNavigation from '../site/component/LeftNavigation';
 window.Storage = Storage;
 
-function initNav() {
-    let div = document.createElement('div');
-    div.className = 'doc-nav';
-
-    let html = '';
-    _.each(document.getElementsByTagName('h1'), ele => {
-        html += '<a class="doc-nav-title" href="#' + ele.id + '">' + ele.innerHTML + '</a>';
-        _.each(ele.parentNode.getElementsByTagName('h2'), e => {
-            html += '<a href="#' + e.id + '">' + e.innerHTML + '</a>';
-        });
-    });
-
-    div.innerHTML = html;
-    document.body.appendChild(div);
-}
-
 class App extends React.Component {
+    state = {
+        data: null
+    }
+    onChildChanged (newState) {
+        console.info("############");
+        console.info(newState);
+        //debugger;
+        this.setState({
+            pro: pro
+        });
+    }
+
     render() {
+
         return (
             <div className="HolyGrail">
                 <header>Unicom Test</header>
-
                 <Head />
-
                 <div className="HolyGrail-body">
-
-                    <nav className="HolyGrail-nav">
+                   <nav className="HolyGrail-nav">
                         <LeftNavigation />
-                    </nav>
-
+                   </nav>
                     <div className="HolyGrail-content">
-<<<<<<< HEAD
-=======
-                        <Apps />
-                        <Calendar />
->>>>>>> 66dfcbe51cc801e78c5570b40f6b5ca7aa0a2968
-                        <DatePicker />
+{/*                        <DatePicker />*/}
                         <Selector />
                     </div>
-
                 </div>
 
             </div>
-
         );
     }
 
-    componentDidMount() {
-        //initNav();
+}
+class Pages extends React.Component {
+    render() {
+        return (
+            <Router history={hashHistory}>
+                <Route path="/" component={App}>
+                    <IndexRoute component={CheckboxGroup}></IndexRoute>
+                    <Route path="apps" component={Apps}></Route>
+                    <Route path="chart" component={Chart}></Route>
+                    <Route path="form" component={Form}></Route>
+                    <Route path="table" component={WsTable1}></Route>
+                    <Route path="calendar" component={Calendar}></Route>
+                </Route>
+            </Router>
+        )
     }
 }
 
-ReactDOM.render(<App/>, document.getElementById('appContainer'));
+ReactDOM.render(<Pages></Pages>, document.getElementById('appContainer'));

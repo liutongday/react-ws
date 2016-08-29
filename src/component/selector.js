@@ -29,6 +29,7 @@ var Selector = React.createClass({
 
     getInitialState:function () {
       return{
+          returndata:null,
           active:true,
           pro:{proId:'111',proName:'全国'},
       };
@@ -37,12 +38,16 @@ var Selector = React.createClass({
         console.log('i is selected!!');
         this.setState({active: !this.state.active});
         this.setState({pro:data1[i]});
+        this.props.callbackParent(data1[i]);
     },
-    lProvList:function () {
+    ProvList:function () {
         console.log("this is the provinces!!");
         this.setState({active:!this.state.active});
     },
 
+    /*componentDidMount: function() {
+        this.getCommonListData();
+    }*/
     render() {
         return (
             <div className="sel_outer_div">

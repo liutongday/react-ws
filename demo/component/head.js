@@ -56,34 +56,36 @@ class Head extends  React.Component {
                         </div>
                         <div id="head_down">
                                 <div id="head_down_left">
-                                    <img src="/demo/images/head/head_down_left.png" />
+                                    <Link to="/">
+                                        <img src="/demo/images/head/head_down_left.png" />
+                                    </Link>
                                     <span>统一数据分析系统</span>
                                 </div>
                                 <div id="head_down_right">
                                    
                                     <ul>
                                         <li class="active">
-                                            <Link to="/form" id="logo">
+                                            <Link to="/apps" id="logo">
                                                 <span>基础业务分析</span>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/wstable" >
+                                            <Link to="/calendar" >
                                                 <span>创新业务分析</span>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/map" >
+                                            <Link to="/form" >
                                                 <span>成本效益分析</span>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/selector" >
+                                            <Link to="/table" >
                                                 <span>重点区域分析</span>
                                             </Link>
                                         </li>
                                         <li>
-                                            <Link to="/4" >
+                                            <Link to="/chart" >
                                                 <span>数据查询</span>
                                             </Link>
                                         </li>

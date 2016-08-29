@@ -1,4 +1,7 @@
 .ws-datepicker {
+  position: relative;
+  left: 7px;
+  top: 49px;
   display: inline-block;
 }
 
@@ -38,11 +41,13 @@
   background-color: white;
   color: black;
   text-align: center;
-  border: ridge;
 }
 
 .ws-datepicker-input{
   float: left;
+  top:0px;
+  position: absolute;
+  left: 480px;
 }
 
 .ws-datepicker-decide-day {
@@ -71,9 +76,32 @@
 
 .ws-datepicker-dateDiv{
   float: left;
+  position: absolute;
+  left: 405px;
+  width: auto;
+  height: 30px;
+
+  top: 6px;
+  width: 85px;
+  word-wrap: break-word;
+  font-family: '微软雅黑 Regular', '微软雅黑',serif;
+  color: #666666;
+  text-align: center;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: normal;
 }
 
 .ws-datepicker-dateFont{
+  word-wrap: break-word;
+  font-family: '微软雅黑 Regular', '微软雅黑',serif;
+  color: #666666;
+  text-align: center;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  line-height: normal;
   margin-top: 8px;
   margin-left: 20px;
   margin-right: 20px;
@@ -101,4 +129,106 @@
   text-align: center;
   line-height: 45px;
   font-size: large;
+}
+
+.ws-datepicker-pull {
+  position: absolute;
+  cursor: pointer;
+  left: 214px;
+  top: 13px;
+  width: 7px;
+  height: 5px;
+  color: #666666;
+}
+
+.ws-datepicker-context{
+  position: absolute;
+  left: 480px;
+  top: 29px;
+  width: 250px;
+  height: 297px;
+  font-family: "Arial Normal", 'Arial', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  color: #333333;
+  text-align: center;
+  line-height: normal;
+  visibility: hidden;
+}
+
+.ws-datepicker-context-change{
+  position: absolute;
+  left: 480px;
+  top: 29px;
+  width: 250px;
+  height: 297px;
+  font-family: 'Arial Normal', 'Arial', serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  color: #333333;
+  text-align: center;
+  line-height: normal;
+  visibility: visible;
+}
+
+.ws-datepicker-img1{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 158px;
+  height: 30px;
+  color: #666666;
+  font-family: 'Arial Normal', 'Arial',serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  text-align: center;
+  line-height: normal;
+}
+
+.ws-datepicker-inputDiv{
+  top: 6px;
+  padding-top: 2px;
+  transform-origin: 77px 9px 0;
+  position: absolute;
+  left: 2px;
+  width: 154px;
+  height: 18px;
+  word-wrap: break-word;
+  color: #666666;
+  font-family: 'Arial Normal', 'Arial',serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  text-align: center;
+  line-height: normal;
+}
+
+.ws-datepicker-selected-change{
+  color: #ffffff;
+}
+
+.ws-datepicker-img2{
+  position: absolute;
+  left: 400px;
+  top: 0px;
+  width: 7px;
+  height: 5px;
+  cursor: pointer;
+}
+
+.ws-datepicker-outer-div{
+  position: relative;
+  left: 0;
+  z-index: 999;
+  //top: 276px;
+  font-family: 'Arial Normal', 'Arial',serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  color: #333333;
+  text-align: center;
+  line-height: normal;
 }
