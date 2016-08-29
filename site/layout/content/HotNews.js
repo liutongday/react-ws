@@ -38,7 +38,6 @@ var HotNews = React.createClass({
     onChildChanged: function (newState) {
         console.info("############");
         console.info(newState);
-
         this.setState({
             data: newState
         });
