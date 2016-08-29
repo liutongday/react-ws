@@ -69,6 +69,11 @@ class App extends React.Component {
                     </nav>
 
                     <div className="HolyGrail-content">
+<<<<<<< HEAD
+=======
+                        <Apps />
+                        <Calendar />
+>>>>>>> 66dfcbe51cc801e78c5570b40f6b5ca7aa0a2968
                         <DatePicker />
                         <Selector />
                     </div>
