@@ -35,7 +35,7 @@ var TabHost = React.createClass({
         return (
             <div>
                     <Tab onClick={this.handleClick} data={data}/>
-                    <TabContent data={this.state.contentData} />
+                   {/* <TabContent data={this.state.contentData} />*/}
 
             </div>
         );

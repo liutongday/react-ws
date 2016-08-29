@@ -16,7 +16,7 @@
 
 import React, { PropTypes } from 'react';
 import {Table1,Column,Flex} from '../../src/index';
-import styles from '../css/table-ws.less';
+import '../css/table-ws.less';
 
 const data = [
     {排名: '1', "/site/images/table/u8216.png,社交": '/site/images/table/weixin.png,微信', 活跃用户数: 57639,变化: '0'},
@@ -209,26 +209,32 @@ function WsTable1() {
 
     const talbleType1=dataArr.map(data=>{
         const keys = Object.keys(data[0]);
-        console.log('hello'+dataArr.indexOf(data));
+        const aStyle={
+            width:'380px',
+            display:'block',
+            textAlign:'right',
+            color:'#999C9f',
+            backgroundColor:'#fBfBfB',
+            height:'26px',
+            fontSize:'12px',
+        };
+        const pstyle={
+            marginRight:'18px',
+        };
+        const tableDivStyle={
+            marginTop:'30px',
+        };
         return (
-            <Table1 data={data} className={styles.container}>
+            <div className="col-xs-6 col-md-4 col-customer-4" style={tableDivStyle}>
+            <a style={aStyle}><span style={pstyle}>更多></span></a>
+            <Table1 data={data} className={'basic'}>
                 <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
                 <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} />
                 <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'} align='center'/>
                 <Column dataKey={keys[3]} name={keys[3]} key={'col-{keys[3]}'} align='center'/>
-                {/* {
-                 keys.map(entry => {
-                 console.log(entry);
-                 let alignTd='center';
-                 if (entry=='网银支付'){
-                 alignTd='left';
-                 }
 
-                 return( <Column dataKey={entry} name={entry} key={`col-${entry}`} align={alignTd}/>)
-                 }
-                 )
-                 }*/}
             </Table1>
+            </div>
         );
 
     });
@@ -237,10 +243,13 @@ function WsTable1() {
 
 
     return (
-        <div >
-        <Flex ws-flex row wrap>
-            {talbleType1}
-        </Flex>
+        <div className="container-fluid">
+            <div className="row">
+                {talbleType1}
+            </div>
+        {/*<Flex ws-flex row wrap>*/}
+            {/*{talbleType1}*/}
+        {/*</Flex>*/}
         </div>
     );
 }

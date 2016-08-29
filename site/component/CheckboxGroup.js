@@ -28,18 +28,18 @@ class CheckboxGroup extends  React.Component {
      {
          for(var i=0;i<checklist.length;i++)
          {
-             checklist[i].checked = 1;
+             checklist[i].checked = true;
          }
      }else{
          for(var j=0;j<checklist.length;j++)
          {
-             checklist[j].checked = 0;
+             checklist[j].checked = false;
          }
      }
  }
 
- render() {
 
+ render () {
                 return (
 
                     <div id="screen_down">

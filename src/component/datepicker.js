@@ -15,6 +15,7 @@ class DatePicker extends React.Component {
             nowDate:moment(),
             date: moment(),
             sel:true,
+            selInput:false,
         };
         this.handleSelect = ::this.handleSelect;
         this.handleChange = ::this.handleChange;
@@ -62,6 +63,26 @@ class DatePicker extends React.Component {
             this.props.onChange(null);
         }
     }
+
+    handleChangeMonth(event) {
+        // 只允许合法的指传递出去
+        if (/\d\d\d\d-\d\d/.test(event.target.value)) {
+            this.props.onChange(moment(event.target.value).toDate());
+        } else {
+            this.onChange(null);
+        }
+    }
+
+    clickInput(){
+        if(document.getElementById("ws-calendar-div")!=undefined){
+            this.setState({selInput:false,});
+        }
+        else{
+            this.setState({selInput:true,});
+        }
+
+    }
+
     render() {
         return (
             <div className="ws-datepicker">
@@ -69,17 +90,28 @@ class DatePicker extends React.Component {
                 </div>
                 <div className={"ws-datepicker-decide-month"+(this.state.sel?'':'-change')} onClick={this.selectMonth.bind(this)}>月
                 </div>
-                <div>
+                <div className="ws-datepicker-dateDiv">
+                    <p className="ws-datepicker-dateFont">日期</p>
+                </div>
+                <div className="ws-datepicker-input">
                     <OverlayTrigger trigger="click" rootClose placement="bottom" overlay={this.state.sel?this.renderPopover():this.renderPopoverMonth()}>
                         {this.state.sel ?
-                            <input type="text" className="ws-datepicker-date"
+                            <input type="text"
+                                   className={"ws-datepicker-date"+(this.state.selInput?'-click':'')}
+                                   readOnly="readOnly"
+                                   onBlur={this.clickInput.bind(this)}
                                    ref="target"
+                                   onClick={this.clickInput.bind(this)}
                                    value={this.state.date && moment(this.state.date).format('YYYY-MM-DD')}
                                    onChange={this.handleChange}/>:
-                            <input type="text" className="ws-datepicker-date"
+                            <input type="text"
+                                   readOnly="readOnly"
+                                   className={"ws-datepicker-date"+(this.state.selInput?'-click':'')}
+                                   onBlur={this.clickInput.bind(this)}
                                    ref="target"
+                                   onClick={this.clickInput.bind(this)}
                                    value={this.state.date && moment(this.state.date).format('YYYY-MM')}
-                                   onChange={this.handleChange}/>}
+                                   onChange={this.handleChangeMonth}/>}
                     </OverlayTrigger>
                 </div>
             </div>

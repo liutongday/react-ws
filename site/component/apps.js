@@ -110,24 +110,36 @@ var Apps= React.createClass({
             var rolesListDatainfo = reciveData.map(function (role, index) {
                 console.log(role);
                 return (
-                    <Weixin role={role} key={index}/>
+                    <div className="col-xs-4 col-customer-1">
+                        <Weixin role={role} key={index}/>
+                    </div>
+
                 );
             })
             return (
                 <div className="total">
-                    <div className="app">
-                        <Flex ws-flex row wrap>
+                    <div className="app container-fluid">
+                        <div className="row">
                             {rolesListDatainfo}
-                        </Flex>
+                        </div>
+                        <div className="more-div">
+                            <p className="biaoshi">></p>
+                            <p className="more">展开</p>
+                        </div>
+
+                        {/*<Flex ws-flex row wrap>*/}
+                            {/*{rolesListDatainfo}*/}
+                        {/*</Flex>*/}
                     </div>
-                    <p className="biaoshi">></p>
-                    <p className="more">展开</p>
                 </div>
             );
         } else {
-            return(
-            <div className="app"/>
-            )
+
+            return (
+                <div className="total">
+
+                </div>
+            );
         }
 
     }
