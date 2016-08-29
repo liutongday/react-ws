@@ -16,8 +16,9 @@ import Chart from '../../component/chart';
 import {
     Selector,
     DatePicker,
-    Title,
     Calendar,
+    CalenarMonth,
+    Title,
     CalendarMonth,
     ModulePartition
 } from '../../../src/index';
@@ -46,10 +47,8 @@ var HotNews =React.createClass({
         return (
             <div className="Hot-News">
                 <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
-                <div className="date-hot-new">
-                    <DatePicker/>
-                </div>
-                {/*<Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>*/}
+                <DatePicker/>
+                <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
                 <div className="hot-title">
                     <div className="title-new-hot-event">
                         <Title icon="new-hot-event" name="热点新闻事件"/>

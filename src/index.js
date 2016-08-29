@@ -17,6 +17,7 @@ import NowTime from './component/nowtime';
 import Calendar from './component/calendar';
 import CalendarMonth from './component/calendarMonth';
 import DatePicker from './component/datepicker';
+import DatePickerMonth from './component/calendarMonth';
 import HelloWorld from './component/hellworld';
 import Selector from './component/selector';
 import Weixin from './component/weixin';
@@ -28,11 +29,8 @@ import AppCol from './component/appCol';
 import Tab from './component/tab';
 import TabContent from './component/tabcontent';
 import TabHost from './component/tabhost';
-
-
 // import CheckboxGroup from './component/CheckboxGroup';
 import './index.less';
-
 module.exports = {
 	Util,
     Flex,
@@ -41,17 +39,12 @@ module.exports = {
     Storage,
     Switch,
     Validate,
-
     ValidateMixin,
-
     // CheckboxGroup,
-
     // Table,
     Table1,
     Table2,
-
     Table3,
-
     Column,
     NowTime,
     Calendar,
@@ -59,7 +52,6 @@ module.exports = {
     HelloWorld,
     Selector,
     Weixin,
-
     Title,
     CalendarMonth,
     ModulePartition,
