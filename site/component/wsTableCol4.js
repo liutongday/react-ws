@@ -232,16 +232,10 @@ function WsTable1() {
                 <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} />
                 <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'} align='center'/>
                 <Column dataKey={keys[3]} name={keys[3]} key={'col-{keys[3]}'} align='center'/>
-
             </Table1>
             </div>
         );
-
     });
-
-
-
-
     return (
         <div className="container-fluid">
             <div className="row">

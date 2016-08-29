@@ -2,7 +2,7 @@
  *
  * <p>Title: BONC - React </p>
  *
- * <p>Description:  </p>
+ * <p>Description: 页面的第一个模块 </p>
  *
  * <p>Copyright: Copyright BONC(c) 2013 - 2025 </p>
  *
@@ -66,7 +66,6 @@ var AppRankingList =React.createClass({
                 <DatePicker/>
                 <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
                 <Title icon="app-user" name="APP活跃用户总排行"/>
-
                 <Apps returendata={rolesListData}/>{/*{this.state.data}*/}
                 <Title icon="app-part" name="APP分类排行"/>
                 <CheckboxGroup />
