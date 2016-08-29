@@ -70,15 +70,12 @@ var Selector = React.createClass({
                     {data1.map(function (pro,i) {
                         return(
                         <div className="sel_inner2_div1" key={i} style={{left:10+i%4*65,top:10+Math.floor(i/4)*35}}>
-
                             <span className="sel_span" title={pro.proId} key={i} onClick={this.selectedProv.bind(this,i)}>
                                 {pro.proName}
                             </span>
                         </div>
-
                         );
                     },this)
-
                     }
                 </div>
             </div>

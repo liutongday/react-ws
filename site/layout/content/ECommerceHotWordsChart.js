@@ -117,9 +117,7 @@ var ECommerceHotWordsChart=React.createClass({
                         </div>
                     </div>
                 </div>
-
             </div>
-
         );
     }
 });
