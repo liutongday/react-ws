@@ -24,7 +24,8 @@ import {
     DatePicker,
     Title,
     Video,
-    AppCol
+    AppCol,
+    DatePickerCS,
 } from '../src/index';
 import _ from 'underscore';
 import Layout from './component/layout';
