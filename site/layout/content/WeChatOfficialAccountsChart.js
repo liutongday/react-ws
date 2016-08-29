@@ -141,7 +141,7 @@ var WeChatOfficialAccountsChart=React.createClass ({
             {id :'20',tupian:'u8011.png',name:'QQ空间',number:'55555',jiantou:'-1'},];
         return (
             <div className="WeChat-Official-Accounts-Chart">
-                <ModulePartition id="wechat_module" name="微信公众号排行榜" en_name="WeChat  Official  Accounts  Chart"/>
+                <ModulePartition id="weixinpic_module" name="微信公众号排行榜" en_name="WeChat  Official  Accounts  Chart"/>
                 <DatePicker/>
                 <Selector initialState={this.state.data} callbackParent={this.onProChanged}/>
                 <Title icon="wechart-official-account-chart" name="微信公众号关注度排行榜"/>
