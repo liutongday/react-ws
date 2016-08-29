@@ -16,19 +16,47 @@ import React from 'react';
 import classNames from 'classnames';
 import * as ReactDOM from 'react-dom';
 import "../css/CheckboxGroup.less";
-
-
-class CheckboxGroup extends  React.Component {
-
- selectAll() {
-
-
-
-
-
-
+// var MyContainer = React.createClass({
+//     getInitialState: function () {
+//         return {
+//             checked: false
+//         };
+//     },
+//     onChildChange: function (newState) {
+//         this.setState({
+//             checked: newState
+//         });
+//     },render: function() {
+//         var isChecked = this.state.checked ;
+//         return (
+//             <div>
+//                 <div type="hidden">Are you checked: {isChecked}</div>
+//                 <ToggleButton text="Toggle me"
+//                               initialChecked={this.state.checked}
+//                               callbackParent={this.onChildChanged}
+//                 />
+//             </div>
+//         );
+//     }
+//
+// });
+var CheckboxGroup = React.createClass({
+//     getInitialState: function () {
+//     return {
+//         checked: this.props.initialChecked
+//     };
+// },
+//     onTextChange: function () {
+//     var newState = !this.state.checked;
+//     this.setState({
+//         checked: newState
+//     });
+//     // 这里要注意：setState 是一个异步方法，所以需要操作缓存的当前值
+//     this.props.callbackParent(newState);
+// },
+     selectAll() {
      var checklist = document.getElementsByName ("checkbox1");
-     if(document.getElementById ("controlAll").checked)
+     if(document.getElementsByName("controlAll").checked)
 
      {
          for(var i=0;i<checklist.length;i++)
@@ -36,43 +64,39 @@ class CheckboxGroup extends  React.Component {
              checklist[i].checked = true;
          }
      }else{
-
-
-
-
          for(var j=0;j<checklist.length;j++)
          {
              checklist[j].checked = false;
          }
      }
- }
-    onTextChange() {
-        console.info("onTextChange");
-        console.info ("var newState = document.getElementsByTagName()");
-        for(var i=0;i<inputs.length;i++){
-            var obj = inputs[i];
-            if(obj.type=='checkbox'){
-                if(obj.checked==true){
-                    sign=1;
-                    alert(obj.value);
-                }
-            }
-        }
-        if(sign==0)//没有被选择项
-        {
-            alert("未选择");
-        }
-    }
+ },
+    // onTextChange() {
+    //     var newState = document.getElementsByTagName("input");
+    //     for(var i=0;i<inputs.length;i++){
+    //         var obj = inputs[i];
+    //         if(obj.type=='checkbox'){
+    //             if(obj.checked==true){
+    //                 sign=1;
+    //
+    //             }
+    //         }
+    //     }
+    //     if(sign==0)//没有被选择项
+    //     {
+    //
+    //     }
+    // },
  render () {
+     // var text = this.props.text;
+     // // 组件自身的状态数据
+     // var checked = this.state.checked;
                 return (
-
-
                     <div id="screen_down">
                         <table>
                                 <tr>
                                         <td  rowSpan="3"  id="checkboxgroup-left"> 筛选分类：</td>
                                         <td>
-                                            <input type="checkbox" id ="controlAll" value=" 全选" onClick={this.selectAll} />
+                                            <input type="checkbox" name ="controlAll" value=" 全选"  onClick={this.selectAll}id=" 全选" />
                                             <strong><span> <label htmlFor=" 全选"> 全选</label></span></strong>
                                         </td>
                                         <td>
@@ -211,7 +235,7 @@ class CheckboxGroup extends  React.Component {
 
                )
            }
-}
+});
 class Component extends React.Component{
     render(){
         return (

@@ -74,10 +74,6 @@ class App extends React.Component {
                         <LeftNavigation />
                    </nav>
                     <div className="HolyGrail-content">
-
-
-
-
                         {this.props.children}
                         <Selector />
                         <Apps />
