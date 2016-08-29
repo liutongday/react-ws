@@ -18,7 +18,6 @@ import Calendar from './component/calendar';
 import CalendarMonth from './component/calendarMonth';
 import DatePicker from './component/datepicker';
 import DatePickerMonth from './component/calendarMonth';
-import HelloWorld from './component/hellworld';
 import Selector from './component/selector';
 import Weixin from './component/weixin';
 import Title from './component/title';
@@ -49,7 +48,6 @@ module.exports = {
     NowTime,
     Calendar,
     DatePicker,
-    HelloWorld,
     Selector,
     Weixin,
     Title,
