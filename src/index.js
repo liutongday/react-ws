@@ -29,6 +29,8 @@ import AppCol from './component/appCol';
 import Tab from './component/tab';
 import TabContent from './component/tabcontent';
 import TabHost from './component/tabhost';
+import RegionalSelector from './component/regionalselector';
+import BigTabHost from './component/bigtabhost';
 // import CheckboxGroup from './component/CheckboxGroup';
 import './index.less';
 module.exports = {
@@ -58,4 +60,6 @@ module.exports = {
     AppCol,
     TabHost,
     Video,
+    RegionalSelector,
+    BigTabHost
 };
