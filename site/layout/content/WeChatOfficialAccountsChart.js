@@ -31,7 +31,7 @@ export default class WeChatOfficialAccountsChart extends React.Component {
         return (
 
             <div className="WeChat-Official-Accounts-Chart">
-                <ModulePartition id="new_module" name="微信公众号排行榜" en_name="WeChat  Official  Accounts  Chart"/>
+                <ModulePartition id="wechat_module" name="微信公众号排行榜" en_name="WeChat  Official  Accounts  Chart"/>
                 <Title icon="wechart-official-account-chart" name="微信公众号关注度排行榜"/>
                 <Apps />
                 <Title icon="wechart-official-read" name="微信公众号文章阅读量排行榜"/>

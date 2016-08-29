@@ -23,13 +23,14 @@ var Chart = React.createClass({
     },
     drawCharts:function(dataSet){
         var myChart = echarts.init(document.getElementById('charts'));
+
         // 指定图表的配置项和数据
         var option = {
             xAxis : [
                 {
                     type : 'category',
                     boundaryGap : false,
-                    data : ['20150514','20150515','20150514','20150516','20150517','20150518','20150519','20150520','20150521']
+                    data : ['20150514','20150515','20150514','20150516','20150517','20150518','20150519','20150520','20150521','20150522','20150523','20150524']
                 }
             ],
             yAxis : [
@@ -48,7 +49,6 @@ var Chart = React.createClass({
                     smooth:true,//光滑折线
                     name:'最低气温',
                     type:'line',
-
                     //折线的样式（颜色）
                     itemStyle:{
                         normal:{
@@ -78,6 +78,8 @@ var Chart = React.createClass({
         };
         // 使用刚指定的配置项和数据显示图表
         myChart.setOption(option);
+        //echarts 随div 变化自适应
+        window.onresize = myChart.resize;
     },
     /*注意return后面的js有自动加;的习惯*/
     render: function() {
@@ -87,7 +89,7 @@ var Chart = React.createClass({
                 <div className="whit"></div>
                 <div className="background1">
                     <div className="background2">
-                        <div id="charts" >
+                        <div id="charts"  >
                         </div>
                     </div>
                 </div>
@@ -98,7 +100,6 @@ var Chart = React.createClass({
                 <input disabled="disabled" className="showtime"value={this.state.time}/>
             </div>
             <div className="x">
-
             </div>
 
         </div>
