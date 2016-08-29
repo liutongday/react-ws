@@ -75,34 +75,26 @@ class App extends React.Component {
                    </nav>
                     <div className="HolyGrail-content">
 
+
+
+
                         {this.props.children}
                         <Selector />
-                        {/*<CheckboxGroup/>*/}
                         <Apps />
                         <AppCol name="搜狐视频" col={1}/>
                         <Calendar />
                         <DatePicker />
-                        <Title icon="u10340.png" name="APP分类排行"/>
                         <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
                         <Title icon="u10340.png" name="APP分类排行"/>
-                        <Apps returendata={this.state.data}/>
-<<<<<<< HEAD
-                        <Chart/>
                         <CheckboxGroup/>
-=======
->>>>>>> 50a06efce779c4011af61cd6faff4d0c0ad71533
+                        <Apps returendata={this.state.data}/>
+                        <Chart/>
                         <Map/>
                         <HotWord/>
                         <Videoes/>
                     </div>
-<<<<<<< HEAD
-
                     </div>
-=======
->>>>>>> 50a06efce779c4011af61cd6faff4d0c0ad71533
                 </div>
-
-            </div>
         );
     }
 
@@ -121,6 +113,10 @@ class Pages extends React.Component {
                 </Route>
             </Router>
         )
+
+
+
+
     }
 }
 
