@@ -14,10 +14,11 @@
 import React from 'react';
 //import echarts from 'echarts'
 import '../css/map.less';
-import 'echarts/src/chart/map';
+//import 'echarts/src/chart/map';
 import echarts from 'echarts/src/echarts';
-//import 'echarts/src/chart/wordCloud';
+import 'echarts/src/chart/wordCloud';
 var Map = React.createClass({
+
 
     getInitialState: function() {
         var dataSet=[
