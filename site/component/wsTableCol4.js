@@ -206,7 +206,6 @@ function WsTable1() {
     for(let i=0;i<data.length;i+=5){
         dataArr.push(data.slice(i,i+5));
     }
-
     const talbleType1=dataArr.map(data=>{
         const keys = Object.keys(data[0]);
         const aStyle={

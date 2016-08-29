@@ -100,7 +100,7 @@ var App=React.createClass({
             {id :'19',tupian:'u8007.png',name:'360手机卫士',number:'55555',jiantou:'1'},
             {id :'20',tupian:'u8011.png',name:'QQ空间',number:'55555',jiantou:'-1'},];
         //fectch请求
-        fetch('http://10.0.94.37:8080/api/testredis',{
+        fetch('http://10.0.94.103:8080/api/testredis',{
             credentials:'same-origin',
             method: 'POST',
             //method: 'GET',
