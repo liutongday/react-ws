@@ -41,7 +41,6 @@ import WsTable6 from './component/wsT4text';
 import WsTable7 from './component/wsT4tv';
 import WsTable8 from './component/wsT4chennel';
 import WsTable9 from './component/wsT4app';
->>>>>>> Temporary merge branch 2
 import Apps from './component/apps';
 import Videoes from './component/videoes';
 import Chart from './component/chart';
