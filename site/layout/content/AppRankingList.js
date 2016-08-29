@@ -39,6 +39,12 @@ var AppRankingList =React.createClass({
             data: newState
         });
     },
+    checkboxChanged:function (newState) {
+        this.setState({
+            data: newState
+        });
+        this.getCommonListData(this.newState);
+    },
     render() {
         var rolesListData = [{id :'1',tupian:'u797.png',name:'微信',number:'222222',jiantou:'1'},
             {id :'2',tupian:'u825.png',name:'QQ',number:'33333',jiantou:'0'},
@@ -69,7 +75,7 @@ var AppRankingList =React.createClass({
 
                 <Apps returendata={rolesListData}/>{/*{this.state.data}*/}
                 <Title icon="app-part" name="APP分类排行"/>
-                <CheckboxGroup />
+                <CheckboxGroup callbackParent={this.checkboxChange}/>
                 <Table />
             </div>
         );
