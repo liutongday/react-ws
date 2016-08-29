@@ -44,10 +44,6 @@ var Selector = React.createClass({
         console.log("this is the provinces!!");
         this.setState({active:!this.state.active});
     },
-
-    /*componentDidMount: function() {
-        this.getCommonListData();
-    }*/
     render() {
         return (
             <div className="sel_outer_div">

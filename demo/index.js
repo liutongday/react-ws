@@ -48,7 +48,7 @@ import HotWord from './component/hotword';
 import Day from './component/calendar';
 //import DatePicker from './component/datepicker';
 import CheckboxGroup from './component/CheckboxGroup';
-
+import moment from 'moment';
 window.Storage = Storage;
 
 function initNav() {
@@ -66,16 +66,17 @@ function initNav() {
     div.innerHTML = html;
     document.body.appendChild(div);
 }
-
 var App=React.createClass({
     getInitialState: function () {
     return {
-        pro: null,
-        date: null
+        pro:'111',
+        date: moment()
     };
 },
     getCommonListData: function(param){
         var self = this;
+        console.info("33333");
+        console.info(param);
         //缓存数据
         var rolesListData = [{id :'1',tupian:'u797.png',name:'微信',number:'222222',jiantou:'1'},
             {id :'2',tupian:'u825.png',name:'QQ',number:'33333',jiantou:'0'},
@@ -97,11 +98,6 @@ var App=React.createClass({
             {id :'18',tupian:'u8003.png',name:'京东',number:'55555',jiantou:'1'},
             {id :'19',tupian:'u8007.png',name:'360手机卫士',number:'55555',jiantou:'1'},
             {id :'20',tupian:'u8011.png',name:'QQ空间',number:'55555',jiantou:'-1'},];
-        /*self.setState({
-         returndata: rolesListData});
-         console.info("############");
-         console.info(self.state.returndata);
-         self.props.callbackParent(rolesListData);*/
         //fectch请求
         fetch('http://10.0.94.37:8080/api/testredis',{
             credentials:'same-origin',
@@ -145,23 +141,26 @@ var App=React.createClass({
          }).then(function(response){console.log(response)})*/
     },
     onProChanged: function (pro) {
-        console.info("############");
-        console.info(newState);
-        //debugger;
+        console.info("11111");
+        console.info(pro);
         this.setState({
-            pro: pro
+            pro: pro.proId
         });
+        this.getCommonListData(this.state);
 },
     onDateChanged: function (date) {
-        console.info("############");
-        console.info(newState);
-        //debugger;
+        console.info("22222");
+        console.info(date);
         this.setState({
             date: date
         });
+        this.getCommonListData(this.state);
     },
+    componentDidMount: function() {
+        debugger;
+     this.getCommonListData(this.state);
+     },
     render() {
-
         return (
             <div className="HolyGrail">
                 <header>Unicom Test</header>
@@ -177,20 +176,11 @@ var App=React.createClass({
                         <Title icon="u10340.png" name="APP分类排行"/>
                         <Apps returendata={this.state.data}/>
                         <Chart/>
-                        <Map/>
-                        <HotWord/>
-                        <Videoes/>
                     </div>
-
                     </div>
-
                 </div>
         );
     },
-    componentDidMount() {
-        //initNav();
-    },
-
 });
 class Pages extends React.Component {
     render() {

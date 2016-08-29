@@ -6,7 +6,7 @@
  *
  * <p>Title: BONC - React </p>
  *
- * <p>Description: 单页面应用的构建文件 index.js </p>
+ * <p>Description: 通过数据渲染app </p>
  *
  * <p>Copyright: Copyright BONC(c) 2013 - 2025 </p>
  *
@@ -103,8 +103,6 @@ var Apps= React.createClass({
         this.getCommonListData();
     },*/
     render() {
-        console.info("&&&&&&&&&&&&");
-        console.info(this.props.returendata);
         var reciveData = this.props.returendata;
         if (reciveData != null) {
             var rolesListDatainfo = reciveData.map(function (role, index) {

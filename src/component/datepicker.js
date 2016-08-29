@@ -50,6 +50,7 @@ class DatePicker extends React.Component {
             this.props.target().click();
         }
         this.setState({date:date});
+        this.props.callbackParent(date);
         /*       debugger;*/
     }
 

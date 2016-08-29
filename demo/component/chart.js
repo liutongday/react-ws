@@ -79,6 +79,7 @@ var Chart = React.createClass({
         };
         // 使用刚指定的配置项和数据显示图表
         myChart.setOption(option);
+        window.onresize = myChart.resize;
     },
     /*注意return后面的js有自动加;的习惯*/
     render: function() {
