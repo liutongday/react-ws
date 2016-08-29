@@ -37,15 +37,26 @@ class CheckboxGroup extends  React.Component {
          }
      }
  }
+    onTextChange() {
+        console.info("onTextChange");
+        console.info ("var newState = document.getElementsByTagName()");
+        for(var i=0;i<inputs.length;i++){
+            var obj = inputs[i];
+            if(obj.type=='checkbox'){
+                if(obj.checked==true){
+                    sign=1;
+                    alert(obj.value);
 
-<<<<<<< HEAD
- render () {
-=======
 
- render() {
-
-
->>>>>>> 97eccdd987b03656128dff8ccc6c868e46232032
+                }
+            }
+        }
+        if(sign==0)//没有被选择项
+        {
+            alert("未选择");
+        }
+    }
+    render () {
                 return (
                     <div id="screen">
                         <div id="screen_down">
@@ -56,62 +67,62 @@ class CheckboxGroup extends  React.Component {
                                     <strong><span> <label htmlFor=" 全选"> 全选</label></span></strong>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="checkbox1"value="layer1" onClick={this.singleSelectparent}id=" 社交"/>
+                                    <input type="checkbox" name="checkbox1"value="layer1" id=" 社交" onChange={this.onTextChange} />
                                     <span> <label htmlFor=" 社交"> 社交</label></span>
                                 </td>
                                 <td>
-                                    <input type="checkbox"   name="checkbox1" value="layer2"onClick={this.singleSelectparent}id=" 视频"/>
+                                    <input type="checkbox"   name="checkbox1" value="layer2"id=" 视频"/>
                                     <span> <label htmlFor=" 视频"><span> 视频</span></label></span>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="checkbox1"value="layer3" onClick={this.singleSelectparent} id=" 购物"/>
+                                    <input type="checkbox" name="checkbox1"value="layer3"  id=" 购物"/>
                                     <span> <label htmlFor=" 购物"> 购物</label></span>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="checkbox1" value="layer4"onClick={this.singleSelectparent} id=" 音乐"/>
+                                    <input type="checkbox" name="checkbox1" value="layer4"id=" 音乐"/>
                                     <span> <label htmlFor=" 音乐"> 音乐</label></span>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="checkbox1" value="layer5"onClick={this.singleSelectparent} id=" 地图导航"/>
+                                    <input type="checkbox" name="checkbox1" value="layer5"id=" 地图导航"/>
                                     <span> <label htmlFor=" 地图导航"> 地图导航</label></span>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="checkbox1" value="layer6"onClick={this.singleSelectparent} id=" 浏览器"/>
+                                    <input type="checkbox" name="checkbox1" value="layer6" id=" 浏览器"/>
                                     <span> <label htmlFor=" 浏览器"> 浏览器</label></span>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="checkbox1" value="layer7"onClick={this.singleSelectparent}id=" 新闻资讯"/>
+                                    <input type="checkbox" name="checkbox1" value="layer7"id=" 新闻资讯"/>
                                     <span> <label htmlFor=" 新闻资讯"> 新闻资讯</label></span>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="checkbox1" value="layer8"onClick={this.singleSelectparent}id=" 输入法"/>
+                                    <input type="checkbox" name="checkbox1" value="layer8"id=" 输入法"/>
                                     <span> <label htmlFor=" 输入法"> 输入法</label></span>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="checkbox1" value="layer9"onClick={this.singleSelectparent} id=" 搜索引擎"/>
+                                    <input type="checkbox" name="checkbox1" value="layer9"id=" 搜索引擎"/>
                                     <span> <label htmlFor=" 搜索引擎"> 搜索引擎</label></span>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="checkbox1" value="layer10"onClick={this.singleSelectparent} id=" 网银支付"/>
+                                    <input type="checkbox" name="checkbox1" value="layer10" id=" 网银支付"/>
                                     <span> <label htmlFor=" 网银支付"> 网银支付</label></span>
                                 </td>
 
                             <tr>
 
                                 <td>
-                                    <input type="checkbox" name="checkbox1" value="layer11"onClick={this.singleSelectparent} id=" 美食快餐"/>
+                                    <input type="checkbox" name="checkbox1" value="layer11"id=" 美食快餐"/>
                                     <span> <label htmlFor=" 美食快餐"> 美食快餐</label></span>
                                  </td>
                                 <td>
-                                    <input type="checkbox" name="checkbox1" value="layer12"onClick={this.singleSelectparent} id=" 团购"/>
+                                    <input type="checkbox" name="checkbox1" value="layer12"id=" 团购"/>
                                     <span> <label htmlFor=" 团购"> 团购</label></span>
                                 </td>
                                  <td>
-                                    <input type="checkbox" name="checkbox1" value="layer13"onClick={this.singleSelectparent} id=" 摄影摄像"/>
+                                    <input type="checkbox" name="checkbox1" value="layer13"id=" 摄影摄像"/>
                                      <span> <label htmlFor=" 摄影摄像"> 摄影摄像</label></span>
                                 </td>
                                 <td>
-                                    <input type="checkbox" name="checkbox1" value="layer14"onClick={this.singleSelectparent} id=" 阅读"/>
+                                    <input type="checkbox" name="checkbox1" value="layer14" id=" 阅读"/>
                                     <span> <label htmlFor=" 阅读"> 阅读</label></span>
                                 </td>
                                 <td>
@@ -202,5 +213,9 @@ class Component extends React.Component{
         );
     }
 }
-
 export default Component;
+
+
+
+
+

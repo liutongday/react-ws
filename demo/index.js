@@ -97,13 +97,13 @@ var App=React.createClass({
                         <Title icon="u10340.png" name="APP分类排行"/>
                         <Apps returendata={this.state.data}/>
                         <Chart/>
+                        <CheckboxGroup/>
                         <Map/>
                         <HotWord/>
                         <Videoes/>
                     </div>
 
                     </div>
-
                 </div>
         );
     },
