@@ -195,9 +195,9 @@ var App=React.createClass({
                         <Selector initialState={this.state.data} callbackParent={this.onProChanged}/>
 
                         <Title icon="u10340.png" name="APP分类排行"/>
-<<<<<<< HEAD
+
                         <CheckboxGroup/>
-=======
+
                         <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
                         <WsTable1 data={tableData} />
                         <WsTable2/>
@@ -209,7 +209,7 @@ var App=React.createClass({
                         <WsTable8/>
                         <WsTable9/>
                         <Title icon="u10340.png" name="APP分类排行"/>
->>>>>>> 833590c538fab81f2cb23369743f5a6f36973fea
+
                         <Apps returendata={this.state.data}/>
 
                         <Chart/>

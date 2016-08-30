@@ -329,11 +329,12 @@ var AppRankingList =React.createClass({
                 <Title icon="app-part" name="APP分类排行"/>
                 <CheckboxGroup callbackParent={this.checkboxChanged}/>
                 <Table tabledata={tabledata}/>
-
-                <CheckboxGroup />
-                <Table data={tabledata}/>
-
             </div>
+
+
+
+
+
         );
     }
 });

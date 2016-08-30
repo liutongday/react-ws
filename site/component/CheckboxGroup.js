@@ -102,7 +102,7 @@ var CheckboxGroup = React.createClass({
                                 <tr>
                                         <td  rowSpan="3"  id="checkboxgroup-left"> 筛选分类：</td>
                                         <td>
-                                            <input type="checkbox" id ="controlAll" value=" 全选"  onClick={this.selectAll}onChange={this.onTextChange} />
+                                            <input type="checkbox" id ="controlAll" value=" 全选"  onClick={this.selectAll}/>
                                             <strong><span> <label htmlFor=" 全选"> 全选</label></span></strong>
                                         </td>
                                         <td>
