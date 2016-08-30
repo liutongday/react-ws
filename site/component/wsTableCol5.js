@@ -50,7 +50,8 @@ function WsTable3() {
             <Column dataKey={keys[4]} name={keys[4]} key={'col-{keys[4]}'} align='center' />
             <Column dataKey={keys[5]} name={keys[5]} key={'col-{keys[5]}'} align='left'/>
         </Table3>
-        <a style={aStyle}><span style={pstyle}>更多></span></a>
+            <p style={pstyle}><a style={aStyle}>更多></a></p>
+
         </div>
     );
 }

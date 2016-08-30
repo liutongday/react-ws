@@ -29,7 +29,11 @@ import WsTable3 from '../../component/wsTableCol5';
 import LeftNavigation from '../../component/LeftNavigation';
 import '../css/hotnews.less';
 var HotNews = React.createClass({
+
+
+
     getInitialState: function () {
+
 
         return {
             data: null
@@ -43,6 +47,7 @@ var HotNews = React.createClass({
         });
     },
     render() {
+
         return (
             <div className="Hot-News">
                 <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
