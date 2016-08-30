@@ -53,7 +53,7 @@ window.Storage = Storage;
 class App extends React.Component {
     state = {
         data: null
-    }
+    };
     onChildChanged (newState) {
         console.info("############");
         console.info(newState);
@@ -64,7 +64,14 @@ class App extends React.Component {
     }
 
     render() {
+        var tableData=[
+            {排名: '1', "/src/images/u8852.png,网银支付": '/src/images/weixin.png,微信', 活跃用户数: 57639,变化: '1'},
+            {排名: '2', "/src/images/u8852.png,网银支付": '/src/images/qq.png,QQ',   活跃用户数: 53958,变化: '0'},
+            {排名: '3', "/src/images/u8852.png,网银支付": '/src/images/weibo.png,新浪微博', 活跃用户数: 10184,变化: '0'},
+            {排名: '4', "/src/images/u8852.png,网银支付": '/src/images/qqkj.png,QQ空间', 活跃用户数: 8643,变化: '0'},
+            {排名: '5', "/src/images/u8852.png,网银支付": '/src/images/zhfb.png,支付宝', 活跃用户数: 6689,变化: '0'},
 
+        ];
         return (
             <div className="HolyGrail">
                 <header>Unicom Test</header>
@@ -85,7 +92,7 @@ class App extends React.Component {
                         <DatePicker />
                         <Title icon="u10340.png" name="APP分类排行"/>
                         <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
-                        <WsTable1 />
+                        <WsTable1 data={tableData} />
                         <WsTable2/>
                         <WsTable3/>
                         <WsTable4/>
@@ -125,4 +132,4 @@ class Pages extends React.Component {
     }
 }
 
-ReactDOM.render(<Pages></Pages>, document.getElementById('appContainer'));
+ReactDOM.render(<Pages> </Pages>, document.getElementById('appContainer'));
