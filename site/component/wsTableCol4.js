@@ -206,6 +206,7 @@ function WsTable1() {
     for(let i=0;i<data.length;i+=5){
         dataArr.push(data.slice(i,i+5));
     }
+
     const talbleType1=dataArr.map(data=>{
         const keys = Object.keys(data[0]);
         const aStyle={
@@ -220,11 +221,8 @@ function WsTable1() {
         const pstyle={
             marginRight:'18px',
         };
-        const tableDivStyle={
-            marginTop:'30px',
-        };
         return (
-            <div className="col-xs-6 col-md-4 col-customer-3" style={tableDivStyle}>
+            <div>
             <a style={aStyle}><span style={pstyle}>更多></span></a>
             <Table1 data={data} className={'basic'}>
                 <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
@@ -236,13 +234,10 @@ function WsTable1() {
         );
     });
     return (
-        <div className="container-fluid">
-            <div className="row">
-                {talbleType1}
-            </div>
-        {/*<Flex ws-flex row wrap>*/}
-            {/*{talbleType1}*/}
-        {/*</Flex>*/}
+        <div >
+        <Flex ws-flex row wrap>
+            {talbleType1}
+        </Flex>
         </div>
     );
 }

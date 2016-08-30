@@ -22,11 +22,8 @@ import {
     CalendarMonth,
     ModulePartition
 } from '../../../src/index';
-import CheckboxGroup from '../../component/CheckboxGroup';
-import HotEvent from '../../component/HotEvent';
 import WsTable2 from '../../component/wsTableCol3';
 import WsTable3 from '../../component/wsTableCol5';
-import LeftNavigation from '../../component/LeftNavigation';
 import '../css/hotnews.less';
 var HotNews = React.createClass({
     getInitialState: function () {
@@ -61,16 +58,8 @@ var HotNews = React.createClass({
                         </div>
                     </div>
                 </div>
-                {/*<div className="hot-event">*/}
-                {/*<div className="hot-event-left">*/}
-                {/*<WsTable2/>*/}
-                {/*</div>*/}
-                {/*<div className="hot-event-right">*/}
-                {/*<WsTable3/>*/}
-                {/*</div>*/}
-                {/*</div>*/}
-                {/*<Title icon="title-hot-event" name="事件热度趋势"/>*/}
-                {/*<Chart/>*/}
+               <Title icon="title-hot-event" name="事件热度趋势"/>
+                <Chart/>
             </div>
         );
     }
