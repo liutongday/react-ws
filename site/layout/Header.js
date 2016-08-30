@@ -45,7 +45,6 @@ export default class Header extends React.Component {
         });
         return(
             <header className="ws-header-color">
-
                 <Flex row  id="ws-head">
                     <div id="head" className="u-lof10"  >
                         <NowTime  />

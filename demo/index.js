@@ -163,6 +163,14 @@ var App=React.createClass({
      this.getCommonListData(this.state);
      },
     render() {
+        var tableData=[
+            {排名: '1', "/src/images/u8852.png,网银支付": '/src/images/weixin.png,微信', 活跃用户数: 57639,变化: '1'},
+            {排名: '2', "/src/images/u8852.png,网银支付": '/src/images/qq.png,QQ',   活跃用户数: 53958,变化: '0'},
+            {排名: '3', "/src/images/u8852.png,网银支付": '/src/images/weibo.png,新浪微博', 活跃用户数: 10184,变化: '0'},
+            {排名: '4', "/src/images/u8852.png,网银支付": '/src/images/qqkj.png,QQ空间', 活跃用户数: 8643,变化: '0'},
+            {排名: '5', "/src/images/u8852.png,网银支付": '/src/images/zhfb.png,支付宝', 活跃用户数: 6689,变化: '0'},
+
+        ];
         return (
             <div className="HolyGrail">
                 <header>Unicom Test</header>
@@ -187,7 +195,21 @@ var App=React.createClass({
                         <Selector initialState={this.state.data} callbackParent={this.onProChanged}/>
 
                         <Title icon="u10340.png" name="APP分类排行"/>
+<<<<<<< HEAD
                         <CheckboxGroup/>
+=======
+                        <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
+                        <WsTable1 data={tableData} />
+                        <WsTable2/>
+                        <WsTable3/>
+                        <WsTable4/>
+                        <WsTable5/>
+                        <WsTable6/>
+                        <WsTable7/>
+                        <WsTable8/>
+                        <WsTable9/>
+                        <Title icon="u10340.png" name="APP分类排行"/>
+>>>>>>> 833590c538fab81f2cb23369743f5a6f36973fea
                         <Apps returendata={this.state.data}/>
 
                         <Chart/>

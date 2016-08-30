@@ -18,23 +18,26 @@ import React, { PropTypes } from 'react';
 import {Table1,Column,Flex} from '../../src/index';
 import '../css/table-ws.less';
 
-const data = [
+/*const data = [
     {排名: '1', "/src/images/u8852.png,网银支付": '/src/images/weixin.png,微信', 活跃用户数: 57639,变化: '1'},
     {排名: '2', "/src/images/u8852.png,网银支付": '/src/images/qq.png,QQ',   活跃用户数: 53958,变化: '0'},
     {排名: '3', "/src/images/u8852.png,网银支付": '/src/images/weibo.png,新浪微博', 活跃用户数: 10184,变化: '0'},
     {排名: '4', "/src/images/u8852.png,网银支付": '/src/images/qqkj.png,QQ空间', 活跃用户数: 8643,变化: '0'},
     {排名: '5', "/src/images/u8852.png,网银支付": '/src/images/zhfb.png,支付宝', 活跃用户数: 6689,变化: '0'},
 
-];
+];*/
 
-function WsTable1() {
+function WsTable1(data) {
+    console.log(data);
     const dataArr=[];
     for(let i=0;i<1;i++){
         dataArr.push(data);
     }
-
+    console.log(dataArr);
     const talbleType1=dataArr.map(data=>{
-        const keys = Object.keys(data[0]);
+        console.log(data.data[0]);
+        const keys = Object.keys(data.data[0]);
+
         const aStyle={
             width:'380px',
             display:'block',
@@ -50,7 +53,7 @@ function WsTable1() {
         return (
             <div>
             <a style={aStyle}><span style={pstyle}>更多></span></a>
-            <Table1 data={data} className={'basic'}>
+            <Table1 data={data.data} className={'basic'}>
                 <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
                 <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} />
                 <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'} align='center'/>

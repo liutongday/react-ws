@@ -30,7 +30,7 @@ var Chart = React.createClass({
                 {
                     type : 'category',
                     boundaryGap : false,
-                    data : ['20150514','20150515','20150514','20150516','20150517','20150518','20150519','20150520','20150521','20150522','20150523','20150524']
+                    data : ['20150514','20150515','20150514','20150516','20150517','20150518','20150519','20150520','20150521','20150522','20150523']
                 }
             ],
             yAxis : [
@@ -94,14 +94,12 @@ var Chart = React.createClass({
                     </div>
                 </div>
             </div>
-            <button className="left" ></button>
-            <button className="right"></button>
             <div className="shownow">
                 <input disabled="disabled" className="showtime"value={this.state.time}/>
             </div>
-            <div className="x">
-            </div>
-
+            <div className="x"></div>
+            <button className="left" ></button>
+            <button className="right"></button>
         </div>
 
 
