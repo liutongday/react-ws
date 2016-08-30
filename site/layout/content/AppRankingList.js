@@ -151,7 +151,7 @@ var AppRankingList =React.createClass({
                 <Apps returendata={this.state.data}/>{/*{this.state.data}*/}
                 <Title icon="app-part" name="APP分类排行"/>
                 <CheckboxGroup />
-                <Table tabledata={tabledata}/>
+                <Table apptabledata={tabledata}/>
             </div>
         );
     }
