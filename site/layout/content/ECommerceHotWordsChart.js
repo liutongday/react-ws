@@ -39,6 +39,30 @@ var ECommerceHotWordsChart=React.createClass({
         });
     },
     render(){
+        var bigHotData= [
+            {排名: '1', 热搜词: '雀氏纸尿裤', 热度: 9394748,变化: '1'},
+            {排名: '2', 热搜词: '宜家',   热度: 9394748,变化: '-1'},
+            {排名: '3', 热搜词: '女装', 热度: 9394748,变化: '0'},
+            {排名: '4', 热搜词: '巧克力', 热度: 9394748,变化: '0'},
+            {排名: '5', 热搜词: 'macbook', 热度: 9394748,变化: '0'},
+            {排名: '6', 热搜词: '苹果', 热度: 9394748,变化: '1'},
+            {排名: '7', 热搜词: '防晒霜',   热度: 9394748,变化: '-1'},
+            {排名: '8', 热搜词: '凉鞋', 热度: 9394748,变化: '0'},
+            {排名: '9', 热搜词: '汽车', 热度: 9394748,变化: '0'},
+            {排名: '10', 热搜词: '小米', 热度: 9394748,变化: '0'},
+
+        ];
+        var itemHotData=[
+            {排名: '1', 热搜词: '雀氏纸尿裤', 热度: 57639320,变化: '1'},
+            {排名: '2', 热搜词: '宜家',   热度: 57639320,变化: '-1'},
+            {排名: '3', 热搜词: '女装', 热度:57639320,变化: '0'},
+            {排名: '4', 热搜词: '巧克力', 热度: 57639320,变化: '0'},
+            {排名: '5', 热搜词: 'macbook', 热度: 57639320,变化: '0'},
+            {排名: '6', 热搜词: '苹果', 热度: 57639320,变化: '1'},
+            {排名: '7', 热搜词: '防晒霜',   热度: 57639320,变化: '-1'},
+            {排名: '8', 热搜词: '凉鞋', 热度: 57639320,变化: '0'},
+            {排名: '9', 热搜词: '汽车', 热度: 57639320,变化: '0'},
+            {排名: '10', 热搜词: '小米', 热度: 57639320,变化: '0'},];
         return (
             <div className="ECommerce-Hot-Words-Chart">
                 <ModulePartition id="busi_module" name="电商热词风云榜" en_name="E-Commerce Hot Words Chart"/>
@@ -50,7 +74,7 @@ var ECommerceHotWordsChart=React.createClass({
                         <HotWord/>
                     </div>
                     <div className="ec-wsTable4">
-                        <WsTable4/>
+                        <WsTable4 data={bigHotData}/>
                     </div>
 
                 </div>
@@ -59,19 +83,19 @@ var ECommerceHotWordsChart=React.createClass({
                     <div className="ec-col-tabl1">
                         <AppCol name="京东" col={0}/>
                         <div className="ec-col-table-WsTable6" >
-                            <WsTable6/>
+                            <WsTable6 data={itemHotData}/>
                         </div>
                     </div>
                     <div className="ec-col-table2">
                         <AppCol name="天猫" col={0}/>
                         <div className="ec-col-table-WsTable6">
-                            <WsTable6/>
+                            <WsTable6 data={itemHotData}/>
                         </div>
                     </div>
                    <div className="ec-col-table3">
                        <AppCol name="淘宝" col={0}/>
                        <div className="ec-col-table-WsTable6">
-                           <WsTable6/>
+                           <WsTable6 data={itemHotData}/>
                        </div>
                    </div>
                 </div>
@@ -80,19 +104,19 @@ var ECommerceHotWordsChart=React.createClass({
                     <div className="ec-col-tabl1">
                         <AppCol name="京东" col={0}/>
                         <div className="ec-col-table-WsTable6" >
-                            <WsTable6/>
+                            <WsTable6 data={itemHotData}/>
                         </div>
                     </div>
                     <div className="ec-col-table2">
                         <AppCol name="天猫" col={0}/>
                         <div className="ec-col-table-WsTable6">
-                            <WsTable6/>
+                            <WsTable6 data={itemHotData}/>
                         </div>
                     </div>
                     <div className="ec-col-table3">
                         <AppCol name="淘宝" col={0}/>
                         <div className="ec-col-table-WsTable6">
-                            <WsTable6/>
+                            <WsTable6 data={itemHotData}/>
                         </div>
                     </div>
                 </div>
@@ -101,19 +125,19 @@ var ECommerceHotWordsChart=React.createClass({
                     <div className="ec-col-tabl1">
                         <AppCol name="京东" col={0}/>
                         <div className="ec-col-table-WsTable6" >
-                            <WsTable6/>
+                            <WsTable6 data={itemHotData}/>
                         </div>
                     </div>
                     <div className="ec-col-table2">
                         <AppCol name="天猫" col={0}/>
                         <div className="ec-col-table-WsTable6">
-                            <WsTable6/>
+                            <WsTable6 data={itemHotData}/>
                         </div>
                     </div>
                     <div className="ec-col-table3">
                         <AppCol name="淘宝" col={0}/>
                         <div className="ec-col-table-WsTable6">
-                            <WsTable6/>
+                            <WsTable6 data={itemHotData}/>
                         </div>
                     </div>
                 </div>
