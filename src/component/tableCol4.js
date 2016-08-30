@@ -117,14 +117,21 @@ const renderThs = (columns) => (
 
             }
         }
-
+        const imgStyle={
+            position:'relative',
+            marginRight:"5px",
+            zIndex:'10px',
+            bottom:'10px',
+            width:'55px',
+            height:'55px',
+        };
         return (
             <th
                 key={`th-${index}`}
                 style={getStyle(col.props)}
                 className={`-ws-th col-${index} col-${dataKey} ${className || ''} `}
             >
-                {showImg?<img src={contentImg} style={{marginRight:"10px"}} width={50}/>:null}
+                {showImg?<img src={contentImg} style={imgStyle} width={50}/>:null}
                  {contentText||content}
             </th>
         );
