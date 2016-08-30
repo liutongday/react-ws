@@ -91,11 +91,6 @@ function WsTable7(tvTableData) {
             {/*</Flex>*/}
         </div>
     );
-
-
-
-
-
 }
 
 

@@ -102,8 +102,11 @@ var ECommerceHotWordsChart=React.createClass({
                 <WsTable6 />
                 <Title icon="hot-class" name="热门品类"/>
                 <WsTable6 />
-
             </div>
+
+
+
+            
         );
     }
 });
