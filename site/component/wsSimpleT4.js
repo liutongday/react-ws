@@ -14,7 +14,7 @@
 import React, { PropTypes } from 'react';
 import {Table1,Column,Flex} from '../../src/index';
 import '../css/table-ws.less';
-const data = [
+/*const data = [
     {排名: '1', 热搜词: '雀氏纸尿裤', 热度: 9394748,变化: '1'},
     {排名: '2', 热搜词: '宜家',   热度: 9394748,变化: '-1'},
     {排名: '3', 热搜词: '女装', 热度: 9394748,变化: '0'},
@@ -26,10 +26,10 @@ const data = [
     {排名: '9', 热搜词: '汽车', 热度: 9394748,变化: '0'},
     {排名: '10', 热搜词: '小米', 热度: 9394748,变化: '0'},
 
-];
+];*/
 
-function WsTable4() {
-
+function WsTable4(bigHotData) {
+        const data=bigHotData.data;
         const keys = Object.keys(data[0]);
 
         return (
