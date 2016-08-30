@@ -173,7 +173,7 @@ var App=React.createClass({
                         <LeftNavigation />
                     </nav>
                     <div className="HolyGrail-content">
-<<<<<<< HEAD
+
                         {this.props.children}
                         <Selector />
                         <Apps />
@@ -181,22 +181,22 @@ var App=React.createClass({
                         <Calendar />
                         <DatePicker />
                         <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
-=======
+
                         <Form />
                         <DatePicker callbackParent={this.onDateChanged}/>
                         <Selector initialState={this.state.data} callbackParent={this.onProChanged}/>
->>>>>>> f9ca839a657e29cc86605fc7ef20519d210542ed
+
                         <Title icon="u10340.png" name="APP分类排行"/>
                         <CheckboxGroup/>
                         <Apps returendata={this.state.data}/>
-<<<<<<< HEAD
+
                         <Chart/>
                         <Map/>
                         <HotWord/>
                         <Videoes/>
-=======
+
                     </div>
->>>>>>> f9ca839a657e29cc86605fc7ef20519d210542ed
+
                     </div>
                     </div>
                 </div>
