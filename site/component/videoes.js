@@ -2,7 +2,7 @@
  *
  * <p>Title: BONC - React </p>
  *
- * <p>Description:  </p>
+ * <p>Description: 热度视频列表 </p>
  *
  * <p>Copyright: Copyright BONC(c) 2013 - 2025 </p>
  *
@@ -102,11 +102,13 @@ var Videoes= React.createClass({
 
             return (
                 <div className="video-total">
-                    <div className="videos">
-                        <Flex ws-flex row wrap>
-                            {rolesListDatainfo}
-                        </Flex>
-                    </div>
+                    <div className="app container-fluid">
+                            <div className="videos">
+                                <Flex ws-flex row wrap>
+                                    {rolesListDatainfo}
+                                </Flex>
+                            </div>
+                     </div>
                 </div>
 
             );

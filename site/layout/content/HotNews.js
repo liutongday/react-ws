@@ -22,13 +22,10 @@ import {
     CalendarMonth,
     ModulePartition
 } from '../../../src/index';
-import CheckboxGroup from '../../component/CheckboxGroup';
-import HotEvent from '../../component/HotEvent';
 import WsTable2 from '../../component/wsTableCol3';
 import WsTable3 from '../../component/wsTableCol5';
-import LeftNavigation from '../../component/LeftNavigation';
 import '../css/hotnews.less';
-var HotNews =React.createClass({
+var HotNews = React.createClass({
     getInitialState: function () {
 
         return {
@@ -38,7 +35,6 @@ var HotNews =React.createClass({
     onChildChanged: function (newState) {
         console.info("############");
         console.info(newState);
-
         this.setState({
             data: newState
         });
@@ -49,23 +45,20 @@ var HotNews =React.createClass({
                 <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
                 <DatePicker/>
                 <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
-                <div className="hot-title">
-                    <div className="title-new-hot-event">
-                        <Title icon="new-hot-event" name="热点新闻事件"/>
-                    </div>
-                    <div className="title-new-relative-event">
-                        <Title icon="new-relative-event" name="相关新闻"/>
-                    </div>
-                </div>
-                <div className="hot-event">
-                    <div className="hot-event-left">
-                        <WsTable2/>
-                    </div>
-                    <div className="hot-event-right">
-                        <WsTable3/>
+                <div     id="new-fluid"    className="container-fluid">
+                    <div  className="row">
+                        <div className=" col-xs-12 col-md-4 col-lg-4">
+                            <Title icon="new-hot-event" name="热点新闻事件"/>
+                            <WsTable2/>
+
+                        </div>
+                        <div className=" col-xs-12 col-md-8 col-lg-8">
+                            <Title icon="new-relative-event" name="相关新闻"/>
+                            <WsTable3/>
+                        </div>
                     </div>
                 </div>
-                <Title icon="title-hot-event" name="事件热度趋势"/>
+               <Title icon="title-hot-event" name="事件热度趋势"/>
                 <Chart/>
             </div>
         );

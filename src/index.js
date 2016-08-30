@@ -18,7 +18,6 @@ import Calendar from './component/calendar';
 import CalendarMonth from './component/calendarMonth';
 import DatePicker from './component/datepicker';
 import DatePickerMonth from './component/calendarMonth';
-import HelloWorld from './component/hellworld';
 import Selector from './component/selector';
 import Weixin from './component/weixin';
 import Title from './component/title';
@@ -29,6 +28,8 @@ import AppCol from './component/appCol';
 import Tab from './component/tab';
 import TabContent from './component/tabcontent';
 import TabHost from './component/tabhost';
+import RegionalSelector from './component/regionalselector';
+import BigTabHost from './component/bigtabhost';
 // import CheckboxGroup from './component/CheckboxGroup';
 import './index.less';
 module.exports = {
@@ -49,7 +50,6 @@ module.exports = {
     NowTime,
     Calendar,
     DatePicker,
-    HelloWorld,
     Selector,
     Weixin,
     Title,
@@ -58,4 +58,6 @@ module.exports = {
     AppCol,
     TabHost,
     Video,
+    RegionalSelector,
+    BigTabHost
 };

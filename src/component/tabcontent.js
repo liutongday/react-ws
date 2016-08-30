@@ -2,8 +2,8 @@
  * Created by Administrator on 2016/8/21 0021.
  */
 import React from 'react';
-
-
+import Video from './video'
+import Flex from './flex'
 var TabContent = React.createClass({
     render(){
         const divStyle={
@@ -13,11 +13,24 @@ var TabContent = React.createClass({
             fontSize:18,
             marginLeft:'50px'
         };
+
         var content_data=this.props.data;
+
+        var rolesListDatainfo = content_data.map(function (role, index) {
+            return (
+                <Video role={role} key={index}/>
+            );
+        })
+
         return (
-            <div style={divStyle}>
-                {content_data.name }
+            <div className="video-total">
+                <div className="videos">
+                    <Flex ws-flex row wrap>
+                        {rolesListDatainfo}
+                    </Flex>
+                </div>
             </div>
+
         );
     }
 });
