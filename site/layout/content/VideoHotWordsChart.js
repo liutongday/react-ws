@@ -48,7 +48,7 @@ var VideoHotWordsChart=React.createClass({
                 <Videoes/>
                 <Title icon="vs" name="热门视频横向对标"/>
                 <TabHost/>
-                <div className="vh-col-table">
+                {/*<div className="vh-col-table">
                     <div className="vh-col-table1">
                         <AppCol name="搜狐视频" col={1}/>
                       <div className="vh-col-table-Wstable7">
@@ -74,9 +74,10 @@ var VideoHotWordsChart=React.createClass({
                         </div>
                     </div>
 
-                </div>
+                </div>*/}
+                <WsTable7/>
                 <Title icon="hot-video" name="热门频道"/>
-                <div className="vh-col-table">
+                {/*<div className="vh-col-table">
                     <div className="vh-col-table1">
                         <AppCol name="搜狐视频" col={1}/>
                         <div className="vh-col-table-Wstable7">
@@ -101,7 +102,8 @@ var VideoHotWordsChart=React.createClass({
                             <WsTable7/>
                         </div>
                     </div>
-                </div>
+                </div>*/}
+                <WsTable7/>
             </div>
         );
     }
