@@ -52,14 +52,11 @@ var CheckboxGroup = React.createClass({
     };
 },
     onTextChange1: function () {
-
-   this.setState({checked: !this.state.checked});
-        console.info("22222S");
+        this.setState({checked: !this.state.checked});
         console.info(document.getElementById("layer1").value);
-    this.props.callbackParent(document.getElementById("layer1").value);
+        this.props.callbackParent(document.getElementById("layer1").value);
 },
     onTextChange2: function () {
-
         this.setState({checked: !this.state.checked});
         console.info(document.getElementById("layer2").value);
         this.props.callbackParent(document.getElementById("layer2").value);
