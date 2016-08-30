@@ -123,7 +123,7 @@ var AppRankingList =React.createClass({
          mode: 'no-cors',
          cache: 'default'
          }).then(function(response){console.log(response)})*/
-    },
+    }
     onProChanged: function (proId) {
         console.info("11111");
         console.info(proId);
@@ -131,7 +131,7 @@ var AppRankingList =React.createClass({
             pro:proId
         });
         this.getCommonListData(proId,this.state.date);
-    },
+    }
     onDateChanged: function (date) {
         console.info("22222");
         console.info(date);
