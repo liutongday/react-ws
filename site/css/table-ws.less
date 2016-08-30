@@ -18,8 +18,6 @@
 .ws-table {
     width: 100%;
 }
-
-
 .ws-table-thead th {
     background-color: #f2f2f2;
     width:20%;
@@ -28,15 +26,12 @@
     color: #999C9f;
     height: 45px;
 }
-
 .ws-table-tr:nth-of-type(odd){
     background-color: #fBfBfB;
 }
 .ws-table-tr:nth-of-type(even){
     background-color: #f2f2f2;
 }
-
-
 .ws-td{
     width:20%;
     font-size: 13px;
@@ -52,10 +47,10 @@
 .ws-td.col-3{
     width:20%;
 }
-
 //三列表格样式
 .ws-table2-container{
-    width: 400px;
+    width: 100%;
+    float: left;
 }
 .ws-table2 {
     width: 100%;
@@ -79,6 +74,7 @@
 }
 .ws-table2-td.col-1 {
     width: 55%;
+
 }
 .ws-table2-td.col-2 {
     width: 20%;
@@ -94,6 +90,9 @@
     color: #999C9f;
     padding-top: 2px;
     border-radius: 5px;
+
+
+
 }
 .-ws-th.col-1.type{
     font-family: '微软雅黑 Bold', '微软雅黑';
@@ -103,7 +102,8 @@
 }
 //五列表格样式
 .ws-table3-container{
-    width:758px;
+    width:auto;
+    float: left;
 }
 .ws-table3 {
     width: 100%;
@@ -326,14 +326,19 @@
 .wsT4text.app th{
     text-align: center;
 }
-.col-customer-4{
+.col-customer-3{
     position: relative;
     min-height: 1px;
     padding-right: 15px;
     padding-left: 15px;
 }
 @media (min-width: 1400px) {
-    .col-customer-4 {
+    .col-customer-3 {
         width: 25%;
     }
+}
+.app-table-with-selector{
+    width: auto;
+    height: 560px;
+    margin-top: 10px;
 }

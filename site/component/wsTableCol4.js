@@ -222,8 +222,7 @@ function WsTable1() {
             marginRight:'18px',
         };
         return (
-            <div>
-            <a style={aStyle}><span style={pstyle}>更多></span></a>
+<div className="col-xs-6 col-md-4 col-customer-3" style={tableDivStyle}>            <a style={aStyle}><span style={pstyle}>更多></span></a>
             <Table1 data={data} className={'basic'}>
                 <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
                 <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} />
