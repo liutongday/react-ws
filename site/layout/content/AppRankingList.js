@@ -337,10 +337,13 @@ var AppRankingList =React.createClass({
                 <DatePicker callbackParent={this.onDateChanged}/>
                 <Selector  callbackParent={this.onProChanged}/>
                 <Title icon="app-user" name="APP活跃用户总排行"/>
-                <Apps returendata={this.state.data}/>{/*{this.state.data}*/}
+                {/*<Apps returendata={this.state.data}/>*/}{/*{this.state.data}*/}
                 <Title icon="app-part" name="APP分类排行"/>
                 <CheckboxGroup />
                 <Table data={tabledata}/>
+{/*=======
+                <Table apptabledata={tabledata}/>
+>>>>>>> origin/zhangxinjing */}
             </div>
         );
     }

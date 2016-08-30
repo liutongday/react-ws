@@ -28,9 +28,18 @@ var Chart = React.createClass({
         var option = {
             xAxis : [
                 {
+                   /* axisTick:{
+                        show:false,
+                    },*/
+                    axisLine:{
+                        show:false,
+                    },
+                    splitLine:{
+                        show:false,
+                    },
                     type : 'category',
                     boundaryGap : false,
-                    data : ['20150514','20150515','20150514','20150516','20150517','20150518','20150519','20150520','20150521','20150522','20150523']
+                    data : ['20150514','20150515','20150514','20150516','20150517','20150518','20150519','20150520']
                 }
             ],
             yAxis : [
@@ -42,6 +51,9 @@ var Chart = React.createClass({
                     }
                 }
             ],
+            grid:{//设置echart边框
+                borderWidth:0
+            },
             calculable : true,
             series : [
                 {
@@ -86,20 +98,16 @@ var Chart = React.createClass({
         return(
         <div className="line">
             <div className="background0">
-                <div className="whit"></div>
-                <div className="background1">
-                    <div className="background2">
-                        <div id="charts"  >
-                        </div>
-                    </div>
-                </div>
+                <div id="charts"></div>
             </div>
             <div className="shownow">
-                <input disabled="disabled" className="showtime"value={this.state.time}/>
+                <input disabled="disabled" className="showtime" value={this.state.time}/>
             </div>
-            <div className="x"></div>
-            <button className="left" ></button>
-            <button className="right"></button>
+            <div className="x">
+                <button className="left" ></button>
+                <button className="right"></button>
+            </div>
+
         </div>
 
 
