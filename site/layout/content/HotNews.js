@@ -38,7 +38,6 @@ var HotNews = React.createClass({
     onChildChanged: function (newState) {
         console.info("############");
         console.info(newState);
-
         this.setState({
             data: newState
         });
@@ -49,8 +48,8 @@ var HotNews = React.createClass({
                 <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
                 <DatePicker/>
                 <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
-                <div className="container-fluid">
-                    <div className="row">
+                <div     id="new-fluid"    className="container-fluid">
+                    <div  className="row">
                         <div className=" col-xs-12 col-md-4 col-lg-4">
                             <Title icon="new-hot-event" name="热点新闻事件"/>
                             <WsTable2/>

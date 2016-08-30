@@ -31,7 +31,6 @@ var VideoHotWordsChart=React.createClass({
         };
     },
     onChildChanged: function (newState) {
-        console.info("############");
         console.info(newState);
         this.setState({
             data: newState
@@ -45,7 +44,6 @@ var VideoHotWordsChart=React.createClass({
                 <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
                 <Title icon="video-hot-word" name="热门视频"/>
                 <TabHost/>
-                <Videoes/>
                 <Title icon="vs" name="热门视频横向对标"/>
                 <TabHost/>
                 <div className="vh-col-table">
