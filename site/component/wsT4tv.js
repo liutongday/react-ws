@@ -68,7 +68,7 @@ function WsTable7() {
         return (
             <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="wst4text-with-appcol">
-                    <AppCol name={data.tvName} col={0}/>
+                    <AppCol name={data.tvName} col={1}/>
                     <div className="wst4text-div">
                         <Table1 data={data.content} className={'wsT4text tv'}>
                             <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>

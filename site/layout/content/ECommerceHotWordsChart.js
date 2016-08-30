@@ -45,14 +45,6 @@ var ECommerceHotWordsChart=React.createClass({
                 <DatePicker/>
                 <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
                 <Title icon="e-commerce-hot-word" name="电商热词"/>
-                {/*<div className="ec-word-table">
-                    <div className="ec-hotword">
-                        <HotWord/>
-                    </div>
-                    <div className="ec-wsTable4">
-                        <WsTable4/>
-                    </div>
-                </div>*/}
                 <div className="container-fluid">
                     <div className="row ec-hotword">
                         <div className="col-md-6"><HotWord/></div>
@@ -60,85 +52,12 @@ var ECommerceHotWordsChart=React.createClass({
                     </div>
                 </div>
                 <Title icon="vs" name="电商热词横向对标"/>
-            {/*   <div className="ec-col-table">
-                    <div className="ec-col-tabl1">
-                        <AppCol name="京东" col={0}/>
-                        <div className="ec-col-table-WsTable6" >
-                            <WsTable6/>
-                        </div>
-                    </div>
-                    <div className="ec-col-table2">
-                        <AppCol name="天猫" col={0}/>
-                        <div className="ec-col-table-WsTable6">
-                            <WsTable6/>
-                        </div>
-                    </div>
-                   <div className="ec-col-table3">
-                       <AppCol name="淘宝" col={0}/>
-                       <div className="ec-col-table-WsTable6">
-                           <WsTable6/>
-                       </div>
-                   </div>
-                </div>*/}
-
-                {/*<div className="container-fluid">
-                    <div className="row">
-                        <div className="col-md-4"><AppCol name="京东" col={0}/></div>
-                        <div className="col-md-4"><AppCol name="天猫" col={0}/></div>
-                        <div className="col-md-4"><AppCol name="淘宝" col={0}/></div>
-                    </div>
-                </div>*/}
                 <WsTable6/>
                <Title icon="hot-commodity" name="热门商品"/>
                 <WsTable6/>
                 <Title icon="hot-class" name="热门品类"/>
                 <WsTable6/>
-                {/* <div className="ec-col-table">
-                    <div className="ec-col-tabl1">
-                        <AppCol name="京东" col={0}/>
-                        <div className="ec-col-table-WsTable6" >
-                            <WsTable6/>
-                        </div>
-                    </div>
-                    <div className="ec-col-table2">
-                        <AppCol name="天猫" col={0}/>
-                        <div className="ec-col-table-WsTable6">
-                            <WsTable6/>
-                        </div>
-                    </div>
-                    <div className="ec-col-table3">
-                        <AppCol name="淘宝" col={0}/>
-                        <div className="ec-col-table-WsTable6">
-                            <WsTable6/>
-                        </div>
-                    </div>
-                </div>
-                <Title icon="hot-class" name="热门品类"/>
-                <div className="ec-col-table">
-                    <div className="ec-col-tabl1">
-                        <AppCol name="京东" col={0}/>
-                        <div className="ec-col-table-WsTable6" >
-                            <WsTable6/>
-                        </div>
-                    </div>
-                    <div className="ec-col-table2">
-                        <AppCol name="天猫" col={0}/>
-                        <div className="ec-col-table-WsTable6">
-                            <WsTable6/>
-                        </div>
-                    </div>
-                    <div className="ec-col-table3">
-                        <AppCol name="淘宝" col={0}/>
-                        <div className="ec-col-table-WsTable6">
-                            <WsTable6/>
-                        </div>
-                    </div>
-<<<<<<< HEAD
-                </div>
-=======
-                </div>*/}
 
->>>>>>> origin/wangpei
             </div>
         );
     }

@@ -45,62 +45,8 @@ var VideoHotWordsChart=React.createClass({
                 <Title icon="video-hot-word" name="热门视频"/>
                 <TabHost/>
                 <Title icon="vs" name="热门视频横向对标"/>
-                <TabHost/>
-                {/*<div className="vh-col-table">
-                    <div className="vh-col-table1">
-                        <AppCol name="搜狐视频" col={1}/>
-                      <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table2">
-                        <AppCol name="爱奇艺" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table3">
-                        <AppCol name="乐视视频" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table4">
-                        <AppCol name="腾讯视频" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-
-                </div>*/}
                 <WsTable7/>
                 <Title icon="hot-video" name="热门频道"/>
-                {/*<div className="vh-col-table">
-                    <div className="vh-col-table1">
-                        <AppCol name="搜狐视频" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table2">
-                        <AppCol name="爱奇艺" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table3">
-                        <AppCol name="乐视视频" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table4">
-                        <AppCol name="腾讯视频" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                </div>*/}
                 <WsTable7/>
             </div>
         );
