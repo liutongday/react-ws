@@ -330,11 +330,6 @@ var AppRankingList =React.createClass({
                 <CheckboxGroup callbackParent={this.checkboxChanged}/>
                 <Table tabledata={tabledata}/>
             </div>
-
-
-
-
-
         );
     }
 });
