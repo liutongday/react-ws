@@ -37,6 +37,7 @@ function WsTable1(tabledata) {
         };
         const pstyle={
             marginRight:'18px',
+            marginTop:'10px',
         };
         return (
             <div>
