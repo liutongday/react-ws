@@ -96,28 +96,27 @@ var Videoes= React.createClass({
             //debugger
             var rolesListDatainfo = reciveData.map(function (role, index) {
                 return (
-                    <Video role={role} key={index}/>
+                    <div className="col-xs-6 col-sm-4 videos-col-customer-2 videos-col-customer-1">
+                        <Video role={role} key={index}/>
+                    </div>
+
                 );
-            })
-
+            });
             return (
-                <div className="video-total">
-                    <div className="app container-fluid">
-                            <div className="videos">
-                                <Flex ws-flex row wrap>
-                                    {rolesListDatainfo}
-                                </Flex>
-                            </div>
-                     </div>
+                <div className="container-fluid video-total">
+                    <div className="row videos">
+                        {rolesListDatainfo}
+                        {/*<Flex ws-flex row wrap>*/}
+                            {/*{rolesListDatainfo}*/}
+                        {/*</Flex>*/}
+                    </div>
                 </div>
-
             );
         } else {
             return(
                 <div className="video-total"/>
             )
         }
-
     }
 });
 export default Videoes;

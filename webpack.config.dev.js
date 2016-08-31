@@ -10,7 +10,8 @@ module.exports = {
         'index': [
             './demo/index'
         ],
-        'site': './site/layout/index'
+        'site': './site/layout/index',
+        'portal':'./portal/layout/index'
     },
     output: {
         path: path.join(__dirname, 'build'),

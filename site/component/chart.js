@@ -102,7 +102,7 @@ var Chart = React.createClass({
                 <div id="charts"></div>
             </div>
             <div className="shownow">
-                <input disabled="disabled" className="showtime"value={this.state.time}/>
+                <input disabled="disabled" className="showtime" value={this.state.time}/>
             </div>
             <div className="x">
                 <button className="left" ></button>

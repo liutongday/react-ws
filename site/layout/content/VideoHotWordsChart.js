@@ -124,6 +124,47 @@ var VideoHotWordsChart=React.createClass({
         this.getCommonListData(this.state);
     },
     render(){
+        var tvTableData=[{tvName:'搜狐视频',content:[{排名: '1', 热门视频: '/demo/images/u4070.png,父亲的身份', 热度: 57639,变化: '1'},
+            {排名: '2', 热门视频: '/demo/images/u4085.png,欢乐颂',   热度: 57639,变化: '-1'},
+            {排名: '3', 热门视频: '/demo/images/u4183.png,太阳的后裔', 热度:57639,变化: '0'},
+            {排名: '4', 热门视频: '/demo/images/u4113.png,绝命卦师', 热度: 57639,变化: '0'},
+            {排名: '5', 热门视频: '/demo/images/u4099.png,金水桥边', 热度: 57639,变化: '0'},
+            {排名: '6', 热门视频: '/demo/images/u4141.png,奇妙的时光之旅', 热度: 57639,变化: '1'},
+            {排名: '7', 热门视频: '/demo/images/u4155.png,情迷睡美人',   热度: 57639,变化: '-1'},
+            {排名: '8', 热门视频: '/demo/images/u4169.png,山海经', 热度: 57639,变化: '0'},
+            {排名: '9', 热门视频: '/demo/images/u4127.png,柠檬初上', 热度: 57639,变化: '0'},
+            {排名: '10', 热门视频: '/demo/images/u4197.png,最好的我们', 热度: 57639,变化: '0'}]},
+            {tvName:'爱奇艺',content:[{排名: '1', 热门视频: '/demo/images/u4070.png,父亲的身份', 热度: 57639,变化: '1'},
+                {排名: '2', 热门视频: '/demo/images/u4085.png,欢乐颂',   热度: 57639,变化: '-1'},
+                {排名: '3', 热门视频: '/demo/images/u4183.png,太阳的后裔', 热度:57639,变化: '0'},
+                {排名: '4', 热门视频: '/demo/images/u4113.png,绝命卦师', 热度: 57639,变化: '0'},
+                {排名: '5', 热门视频: '/demo/images/u4099.png,金水桥边', 热度: 57639,变化: '0'},
+                {排名: '6', 热门视频: '/demo/images/u4141.png,奇妙的时光之旅', 热度: 57639,变化: '1'},
+                {排名: '7', 热门视频: '/demo/images/u4155.png,情迷睡美人',   热度: 57639,变化: '-1'},
+                {排名: '8', 热门视频: '/demo/images/u4169.png,山海经', 热度: 57639,变化: '0'},
+                {排名: '9', 热门视频: '/demo/images/u4127.png,柠檬初上', 热度: 57639,变化: '0'},
+                {排名: '10', 热门视频: '/demo/images/u4197.png,最好的我们', 热度: 57639,变化: '0'}]},
+            {tvName:'乐视视频',content:[{排名: '1', 热门视频: '/demo/images/u4070.png,父亲的身份', 热度: 57639,变化: '1'},
+                {排名: '2', 热门视频: '/demo/images/u4085.png,欢乐颂',   热度: 57639,变化: '-1'},
+                {排名: '3', 热门视频: '/demo/images/u4183.png,太阳的后裔', 热度:57639,变化: '0'},
+                {排名: '4', 热门视频: '/demo/images/u4113.png,绝命卦师', 热度: 57639,变化: '0'},
+                {排名: '5', 热门视频: '/demo/images/u4099.png,金水桥边', 热度: 57639,变化: '0'},
+                {排名: '6', 热门视频: '/demo/images/u4141.png,奇妙的时光之旅', 热度: 57639,变化: '1'},
+                {排名: '7', 热门视频: '/demo/images/u4155.png,情迷睡美人',   热度: 57639,变化: '-1'},
+                {排名: '8', 热门视频: '/demo/images/u4169.png,山海经', 热度: 57639,变化: '0'},
+                {排名: '9', 热门视频: '/demo/images/u4127.png,柠檬初上', 热度: 57639,变化: '0'},
+                {排名: '10', 热门视频: '/demo/images/u4197.png,最好的我们', 热度: 57639,变化: '0'}]},
+            {tvName:'腾讯视频',content:[{排名: '1', 热门视频: '/demo/images/u4070.png,父亲的身份', 热度: 57639,变化: '1'},
+                {排名: '2', 热门视频: '/demo/images/u4085.png,欢乐颂',   热度: 57639,变化: '-1'},
+                {排名: '3', 热门视频: '/demo/images/u4183.png,太阳的后裔', 热度:57639,变化: '0'},
+                {排名: '4', 热门视频: '/demo/images/u4113.png,绝命卦师', 热度: 57639,变化: '0'},
+                {排名: '5', 热门视频: '/demo/images/u4099.png,金水桥边', 热度: 57639,变化: '0'},
+                {排名: '6', 热门视频: '/demo/images/u4141.png,奇妙的时光之旅', 热度: 57639,变化: '1'},
+                {排名: '7', 热门视频: '/demo/images/u4155.png,情迷睡美人',   热度: 57639,变化: '-1'},
+                {排名: '8', 热门视频: '/demo/images/u4169.png,山海经', 热度: 57639,变化: '0'},
+                {排名: '9', 热门视频: '/demo/images/u4127.png,柠檬初上', 热度: 57639,变化: '0'},
+                {排名: '10', 热门视频: '/demo/images/u4197.png,最好的我们', 热度: 57639,变化: '0'}]}
+        ];
         return (
             <div className="Video-Hot-Words-Chart">
                 <ModulePartition id="video_module" name="视频热词风云榜" en_name="Video Hot Words  Chart"/>
@@ -132,61 +173,9 @@ var VideoHotWordsChart=React.createClass({
                 <Title icon="video-hot-word" name="热门视频"/>
                 <TabHost/>
                 <Title icon="vs" name="热门视频横向对标"/>
-                <TabHost/>
-                <div className="vh-col-table">
-                    <div className="vh-col-table1">
-                        <AppCol name="搜狐视频" col={1}/>
-                      <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table2">
-                        <AppCol name="爱奇艺" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table3">
-                        <AppCol name="乐视视频" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table4">
-                        <AppCol name="腾讯视频" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-
-                </div>
+                <WsTable7 data={tvTableData}/>
                 <Title icon="hot-video" name="热门频道"/>
-                <div className="vh-col-table">
-                    <div className="vh-col-table1">
-                        <AppCol name="搜狐视频" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table2">
-                        <AppCol name="爱奇艺" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table3">
-                        <AppCol name="乐视视频" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table4">
-                        <AppCol name="腾讯视频" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                </div>
+                <WsTable7 data={tvTableData}/>
             </div>
         );
     }
