@@ -10,12 +10,13 @@ import 'echarts/src/chart/line';
 import '../css/chart.less';
 var Chart = React.createClass({
     getInitialState: function() {
-        var dataSet=[0,2, 1, 0, 3, 1, 0];
+        var dataSet=[0,2, 1, 0, 5, 1, 0];
         return {
             time:'20160517',
             data: dataSet
         };
     },
+
     componentDidMount:function(){
         //debugger
         console.log(this.state.data);
@@ -107,10 +108,7 @@ var Chart = React.createClass({
                 <button className="left" ></button>
                 <button className="right"></button>
             </div>
-
         </div>
-
-
             )
     }
 });

@@ -100,9 +100,7 @@ var Wechartconcern= React.createClass({
      },*/
     render() {
         //debugger
-        console.info("&&&&&&&&&&&&");
-        console.info(this.props.returendata);
-        var reciveData = this.props.returendata;
+        var reciveData = this.props.data;
         if (reciveData != null) {
             var rolesListDatainfo = reciveData.map(function (role, index) {
                 console.log(role);
