@@ -29,7 +29,7 @@ function WsTable7(tvTableData) {
         return (
             <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="wst4text-with-appcol">
-                    <AppCol name={tvName} col={1}/>
+                    <AppCol name={data.tvName} col={1}/>
                     <div className="wst4text-div">
                         <Table1 data={contentData} className={'wsT4text tv'}>
                             <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
@@ -52,6 +52,4 @@ function WsTable7(tvTableData) {
         </div>
     );
 }
-
-
 export default WsTable7;
