@@ -56,15 +56,15 @@ var RegionalSelector = React.createClass({
                     {/*<span className="sel_title">地域</span>*/}
                 {/*</div>*/}
                 <div className="regional_sel_inner_div2">
-                    <img className="regional_sel_img1" src={"/src/images/"+(this.state.active?'u271.png':'u284.png')}/>
+                    <img className="regional_sel_img1" src="/src/images/u284.png"/>
                     <div className="regional_sel_inner_div3">
-                        <span className={"regional_sel_selected"+(this.state.active?'':'_change')}>
+                        <span className="regional_sel_selected_change">
                             {this.state.pro.proName}
                         </span>
                     </div>
                 </div>
                 <div className="regional_sel_inner_div4">
-                    <img className="regional_sel_img2" src={"/src/images/"+(this.state.active?'u273.png':'u352.png')} onClick={this.ProvList}/>
+                    <img className="regional_sel_img2" src="/src/images/u352.png" onClick={this.ProvList}/>
                 </div>
                 <div className={"regional_sel_inner_div5"+(this.state.active?'':'_change')}>
                     <img className="sel_img3" src="/src/images/u354.png"/>
