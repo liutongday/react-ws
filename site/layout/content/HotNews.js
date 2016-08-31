@@ -66,16 +66,6 @@ var HotNews = React.createClass({
                         </div>
                     </div>
                 </div>
-                {/*<div className="hot-event">*/}
-                {/*<div className="hot-event-left">*/}
-                {/*<WsTable2/>*/}
-                {/*</div>*/}
-                {/*<div className="hot-event-right">*/}
-                {/*<WsTable3/>*/}
-                {/*</div>*/}
-                {/*</div>*/}
-                {/*<Title icon="title-hot-event" name="事件热度趋势"/>*/}
-                {/*<Chart/>*/}
             </div>
         );
     }
