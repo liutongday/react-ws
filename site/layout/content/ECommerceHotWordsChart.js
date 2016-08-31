@@ -22,7 +22,7 @@ import {
     ModulePartition,
     AppCol
 } from '../../../src/index';
-import WsTable6 from '../../component/baseTextTable';
+import WsTable6 from '../../component/wsT4text';
 import WsTable4 from '../../component/wsSimpleT4';
 import '../css/ECommerceHotWordsChart.less';
 var ECommerceHotWordsChart=React.createClass({
@@ -38,10 +38,9 @@ var ECommerceHotWordsChart=React.createClass({
         var param={
             proId:proId,
             date:date
-        }
+        };
         var self = this;
         console.info("33333");
-        console.info(param);
         //缓存数据
         var rolesListData = [{id :'1',tupian:'u797.png',name:'微信',number:'222222',jiantou:'1'},
             {id :'2',tupian:'u825.png',name:'QQ',number:'33333',jiantou:'0'},
@@ -97,7 +96,7 @@ var ECommerceHotWordsChart=React.createClass({
                 /*self.setState({
                  data: rolesListData});
                  self.props.callbackParent(rolesListData);*/
-            })
+            });
 
         /*fetch("http://blog.parryqiu.com", {
          method: 'GET',
@@ -139,18 +138,6 @@ var ECommerceHotWordsChart=React.createClass({
 
         ];
         var itemHotData=[
-<<<<<<< HEAD
-            {排名: '1', 热搜词: '雀氏纸尿裤', 热度: 57639320,变化: '1'},
-            {排名: '2', 热搜词: '宜家',   热度: 57639320,变化: '-1'},
-            {排名: '3', 热搜词: '女装', 热度:57639320,变化: '0'},
-            {排名: '4', 热搜词: '巧克力', 热度: 57639320,变化: '0'},
-            {排名: '5', 热搜词: 'macbook', 热度: 57639320,变化: '0'},
-            {排名: '6', 热搜词: '苹果', 热度: 57639320,变化: '1'},
-            {排名: '7', 热搜词: '防晒霜',   热度: 57639320,变化: '-1'},
-            {排名: '8', 热搜词: '凉鞋', 热度: 57639320,变化: '0'},
-            {排名: '9', 热搜词: '汽车', 热度: 57639320,变化: '0'},
-            {排名: '10', 热搜词: '小米', 热度: 57639320,变化: '0'},];
-=======
                 {regionalName:'天猫',content:[{排名: '1', 热搜词: '雀氏纸尿裤', 热度: 57639320,变化: '1'},
                     {排名: '2', 热搜词: '宜家',   热度: 57639320,变化: '-1'},
                     {排名: '3', 热搜词: '女装', 热度:57639320,变化: '0'},
@@ -182,7 +169,6 @@ var ECommerceHotWordsChart=React.createClass({
                     {排名: '9', 热搜词: '汽车', 热度: 57639320,变化: '0'},
                     {排名: '10', 热搜词: '小米', 热度: 57639320,变化: '0'}]}
     ];
->>>>>>> c1eb2f9e7ea78054ee4f1451926b4124f8779b1f
         return (
             <div className="ECommerce-Hot-Words-Chart">
                 <ModulePartition id="busi_module" name="电商热词风云榜" en_name="E-Commerce Hot Words Chart"/>
@@ -193,93 +179,15 @@ var ECommerceHotWordsChart=React.createClass({
                     <div className="row ec-hotword">
                         <div className="col-md-6"><HotWord/></div>
                         <div className="col-md-5"><WsTable4 data={bigHotData}/></div>
-{/*=======
-                <div className="ec-word-table">
-                    <div className="ec-hotword">
-                        <HotWord echotword={this.state.echotword}/>
-                    </div>
-                    <div className="ec-wsTable4">
-<<<<<<< HEAD
-                        <WsTable4 data={bigHotData}/>
-=======
-                        <WsTable4 ectable={this.state.ectable}/>
->>>>>>> origin/zhangxinjing*/}
->>>>>>> c1eb2f9e7ea78054ee4f1451926b4124f8779b1f
                     </div>
                 </div>
                 <Title icon="vs" name="电商热词横向对标"/>
-<<<<<<< HEAD
-               <div className="ec-col-table">
-                    <div className="ec-col-tabl1">
-                        <AppCol name="京东" col={0}/>
-                        <div className="ec-col-table-WsTable6" >
-                            <WsTable6 data={itemHotData}/>
-                        </div>
-                    </div>
-                    <div className="ec-col-table2">
-                        <AppCol name="天猫" col={0}/>
-                        <div className="ec-col-table-WsTable6">
-                            <WsTable6 data={itemHotData}/>
-                        </div>
-                    </div>
-                   <div className="ec-col-table3">
-                       <AppCol name="淘宝" col={0}/>
-                       <div className="ec-col-table-WsTable6">
-                           <WsTable6 data={itemHotData}/>
-                       </div>
-                   </div>
-                </div>
+                <WsTable6 data={itemHotData} />
                 <Title icon="hot-commodity" name="热门商品"/>
-                <div className="ec-col-table">
-                    <div className="ec-col-tabl1">
-                        <AppCol name="京东" col={0}/>
-                        <div className="ec-col-table-WsTable6" >
-                            <WsTable6 data={itemHotData}/>
-                        </div>
-                    </div>
-                    <div className="ec-col-table2">
-                        <AppCol name="天猫" col={0}/>
-                        <div className="ec-col-table-WsTable6">
-                            <WsTable6 data={itemHotData}/>
-                        </div>
-                    </div>
-                    <div className="ec-col-table3">
-                        <AppCol name="淘宝" col={0}/>
-                        <div className="ec-col-table-WsTable6">
-                            <WsTable6 data={itemHotData}/>
-                        </div>
-                    </div>
-                </div>
+                <WsTable6 data={itemHotData}/>
                 <Title icon="hot-class" name="热门品类"/>
-                <div className="ec-col-table">
-                    <div className="ec-col-tabl1">
-                        <AppCol name="京东" col={0}/>
-                        <div className="ec-col-table-WsTable6" >
-                            <WsTable6 data={itemHotData}/>
-                        </div>
-                    </div>
-                    <div className="ec-col-table2">
-                        <AppCol name="天猫" col={0}/>
-                        <div className="ec-col-table-WsTable6">
-                            <WsTable6 data={itemHotData}/>
-                        </div>
-                    </div>
-                    <div className="ec-col-table3">
-                        <AppCol name="淘宝" col={0}/>
-                        <div className="ec-col-table-WsTable6">
-                            <WsTable6 data={itemHotData}/>
-                        </div>
-                    </div>
-                </div>
-=======
-                <WsTable6 />
-               <Title icon="hot-commodity" name="热门商品"/>
-                <WsTable6 />
-                <Title icon="hot-class" name="热门品类"/>
-                <WsTable6 />
->>>>>>> c1eb2f9e7ea78054ee4f1451926b4124f8779b1f
+                <WsTable6 data={itemHotData}/>
             </div>
-
 
 
 

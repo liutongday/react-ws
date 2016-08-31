@@ -52,13 +52,8 @@ const data = [
 
 ];
 
-function WsTable6() {
 function WsTable6(itemHotData) {
     const items=itemHotData.data;
-    const dataArr=[];
-    for(let i=0;i<data.length;i+=10){
-        dataArr.push(data.slice(i,i+10));
-    }
     const dataArr=[];
     for(let i=0;i<items.length;i+=10){
         dataArr.push(items.slice(i,i+10));
@@ -66,9 +61,6 @@ function WsTable6(itemHotData) {
 
     const talbleType2=dataArr.map(data=>{
         const keys = Object.keys(data[0]);
-
-
-
         return (
 
             <Table1 data={data} className={'wsT4text'}>
@@ -79,31 +71,11 @@ function WsTable6(itemHotData) {
 
             </Table1>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
         );
     });
     return (
-        <div >
-            <Flex ws-flex row wrap>
-                {talbleType2}
-            </Flex>
-
-
-
-
-
+        <div className="container-fluid" >
+            <div className="row">{talbleType2}</div>
         </div>
     );
 
