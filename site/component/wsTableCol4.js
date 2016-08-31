@@ -19,6 +19,10 @@ import {Table1,Column,Flex} from '../../src/index';
 import '../css/table-ws.less';
 
 function WsTable1(tabledata) {
+    console.log("&&&&&&&&&&&&&&&"+tabledata.data);
+
+
+
     const items=tabledata.data;
     const dataArr=[];
     for(let i=0;i<items.length;i+=5){

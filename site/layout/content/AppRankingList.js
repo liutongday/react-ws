@@ -51,7 +51,7 @@ var AppRankingList =React.createClass({
                 {id :'19',tupian:'u8007.png',name:'360手机卫士',number:'55555',jiantou:'1'},
                 {id :'20',tupian:'u8011.png',name:'QQ空间',number:'55555',jiantou:'-1'},],
             pro:'111',
-            date: moment()
+            date:moment(),
         };
     },
     getCommonListData: function(proId,date){
@@ -114,9 +114,9 @@ var AppRankingList =React.createClass({
             })
             .catch(function(e) {
                 console.log("fetch fail",e.toString());
-                /*self.setState({
+                self.setState({
                     data: rolesListData});
-                self.props.callbackParent(rolesListData);*/
+                //self.props.callbackParent(rolesListData);
             })
 
         /*fetch("http://blog.parryqiu.com", {
@@ -330,7 +330,6 @@ var AppRankingList =React.createClass({
             {排名: '5', "/site/images/table/fund.png,投资理财": '/site/images/table/u785.png,蘑菇街', 活跃用户数: 3932,变化: '0'},
 
         ];
-
         return (
             <div className="App-Ranking-List">
                 <ModulePartition id="app_module" name="App排行榜" en_name="App Ranking List"/>
