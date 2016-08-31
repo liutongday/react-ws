@@ -19,6 +19,7 @@ import {
     Title,
     ModulePartition,
     TabHost,
+    HVHTabHost,
     AppCol
 } from '../../../src/index';
 import WsTable7 from '../../component/wsT4tv';
@@ -45,7 +46,7 @@ var VideoHotWordsChart=React.createClass({
                 <Title icon="video-hot-word" name="热门视频"/>
                 <TabHost/>
                 <Title icon="vs" name="热门视频横向对标"/>
-                <TabHost/>
+                <HVHTabHost/>
                 {/*<div className="vh-col-table">
                     <div className="vh-col-table1">
                         <AppCol name="搜狐视频" col={1}/>

@@ -18,6 +18,7 @@ import {
     DatePicker,
     Title,
     TabHost,
+    RHBTabHost,
     ModulePartition,
     BigTabHost
 } from '../../../src/index';
@@ -69,7 +70,7 @@ var RegionalWeathervane=React.createClass(
                     </div>
                     <Title icon="regional-horizontal-benchmarking" name="地域横向对标"/>
                     <BigTabHost/>
-                    <TabHost/>
+                    <RHBTabHost/>
                     <WsTable9/>
                 </div>
             );

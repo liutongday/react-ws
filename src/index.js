@@ -30,6 +30,8 @@ import TabContent from './component/tabcontent';
 import TabHost from './component/tabhost';
 import RegionalSelector from './component/regionalselector';
 import BigTabHost from './component/bigtabhost';
+import HVHTabHost from './component/hvhtabhost';
+import RHBTabHost from './component/rhbtabhost';
 // import CheckboxGroup from './component/CheckboxGroup';
 import './index.less';
 module.exports = {
@@ -59,5 +61,7 @@ module.exports = {
     TabHost,
     Video,
     RegionalSelector,
-    BigTabHost
+    BigTabHost,
+    HVHTabHost,
+    RHBTabHost
 };
