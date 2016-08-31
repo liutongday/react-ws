@@ -337,7 +337,11 @@ var AppRankingList =React.createClass({
                 <DatePicker callbackParent={this.onDateChanged}/>
                 <Selector  callbackParent={this.onProChanged}/>
                 <Title icon="app-user" name="APP活跃用户总排行"/>
+<<<<<<< HEAD
                {/* <Apps returendata={this.state.returendata}/>*/}{/*{this.state.data}*/}
+=======
+                {/*<Apps returendata={this.state.data}/>/!*{this.state.data}*!/*/}
+>>>>>>> b70c3127842228fe0692f84bdd9670a48014aa82
                 <Title icon="app-part" name="APP分类排行"/>
                 <CheckboxGroup />
                 <Table data={tabledata}/>
