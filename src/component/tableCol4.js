@@ -210,7 +210,7 @@ const renderTds = (data, entry, columns, rowIndex) => (
             >
                 {showImage?<img src={contentImg} style={{marginRight:'15px'}} width={30}/>:null}
                 {contentText||content}
-                {showInput?<img src={state} width={16}/>:null}
+                {showInput?<img src={state} width={16} height={11.58}/>:null}
             </td>
         );
     })

@@ -3,7 +3,7 @@
  */
 import React from 'react';
 
-import Apps from '../../site/component/apps';
+import Apps from '../../site/component/app';
 var BigTabContent = React.createClass({
     render(){
         var content_data=this.props.data;

@@ -12,7 +12,6 @@
  * @date 2016/8/25
  */
 import React from 'react';
-import Apps from '../../component/apps';
 import {
     Selector,
     DatePicker,
