@@ -203,8 +203,6 @@ var CheckboxGroup = React.createClass({
         console.info(document.getElementById("layer31").value);
         this.props.callbackParent(document.getElementById("layer31").value);
     },
-
-
      selectAll() {
      var checklist = document.getElementsByName ("checkbox1");
      if(document.getElementById("controlAll").checked)
@@ -220,22 +218,6 @@ var CheckboxGroup = React.createClass({
          }
      }
  },
-    // onTextChange() {
-    //     var newState = document.getElementsByTagName("input");
-    //     for(var i=0;i<inputs.length;i++){
-    //         var obj = inputs[i];
-    //         if(obj.type=='checkbox'){
-    //             if(obj.checked==true){
-    //                 sign=1;
-    //
-    //             }
-    //         }
-    //     }
-    //     if(sign==0)//没有被选择项
-    //     {
-    //
-    //     }
-    // },
  render () {
      var text = this.props.text;
      // 组件自身的状态数据
