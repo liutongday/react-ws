@@ -1,4 +1,3 @@
-
 /**
  *
  * <p>Title: BONC - React </p>
@@ -14,47 +13,48 @@
  */
 
 
-import React, { PropTypes } from 'react';
-import {Table1,Column,Flex} from '../../src/index';
+import React, {PropTypes} from 'react';
+import {Table1, Column, Flex} from '../../src/index';
 import '../css/table-ws.less';
 
 function WsTable1(tabledata) {
-    const items=tabledata.data;
-    const dataArr=[];
-    for(let i=0;i<items.length;i+=5){
-        dataArr.push(items.slice(i,i+5));
+    const items = tabledata.data;
+    const dataArr = [];
+    for (let i = 0; i < items.length; i += 5) {
+        dataArr.push(items.slice(i, i + 5));
     }
-    const talbleType1=dataArr.map(data=>{
+    const talbleType1 = dataArr.map(data=> {
         const keys = Object.keys(data[0]);
-        const aStyle={
-            width:'380px',
-            display:'block',
-            textAlign:'right',
-            color:'#999C9f',
-            backgroundColor:'#fBfBfB',
-            height:'26px',
-            fontSize:'12px',
+        const aStyle = {
+            width: '380px',
+            display: 'block',
+            textAlign: 'right',
+            color: '#999C9f',
+            backgroundColor: '#fBfBfB',
+            height: '26px',
+            fontSize: '12px',
         };
-        const pstyle={
-            marginRight:'18px',
+        const pstyle = {
+            marginRight: '18px',
         };
         return (
-            <div>
-            <a style={aStyle}><span style={pstyle}>更多></span></a>
-            <Table1 data={data} className={'basic'}>
-                <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
-                <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} />
-                <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'} align='center'/>
-                <Column dataKey={keys[3]} name={keys[3]} key={'col-{keys[3]}'} align='center'/>
-            </Table1>
+            <div className="col-xs-12 col-md-4 col-lg-4">
+                    <a style={aStyle}><span style={pstyle}>更多></span></a>
+                    <Table1 data={data} className={'basic'}>
+                        <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
+                        <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'}/>
+                        <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'} align='center'/>
+                        <Column dataKey={keys[3]} name={keys[3]} key={'col-{keys[3]}'} align='center'/>
+                    </Table1>
             </div>
         );
     });
     return (
-        <div >
-        <Flex ws-flex row wrap>
-            {talbleType1}
-        </Flex>
+        <div className="container-fluid">
+          
+            <div className="row">
+                {talbleType1}
+            </div>
         </div>
     );
 }

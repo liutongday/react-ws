@@ -18,7 +18,10 @@ var TabContent = React.createClass({
 
         var rolesListDatainfo = content_data.map(function (role, index) {
             return (
-                <Video role={role} key={index}/>
+                <div className="col-md-2">
+                    <Video role={role} key={index}/>
+                </div>
+
             );
         })
 

@@ -173,10 +173,10 @@ var HotNews = React.createClass({
                     </div>
                 </div>
 
-
+                <div>
                <Title icon="title-hot-event" name="事件热度趋势"/>
                 <Chart/>
-
+                </div>
             </div>
         );
     }

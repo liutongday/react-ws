@@ -341,9 +341,7 @@ var AppRankingList =React.createClass({
                 <Title icon="app-part" name="APP分类排行"/>
                 <CheckboxGroup />
                 <Table data={tabledata}/>
-{/*=======
-                <Table apptabledata={tabledata}/>
->>>>>>> origin/zhangxinjing */}
+
             </div>
         );
     }
