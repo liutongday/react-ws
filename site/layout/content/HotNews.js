@@ -13,7 +13,8 @@
  */
 import React from 'react';
 import moment from 'moment';
-import Chart from '../../component/chart';
+ import Chart from '../../component/chart';
+
 import {
     Selector,
     DatePicker,
