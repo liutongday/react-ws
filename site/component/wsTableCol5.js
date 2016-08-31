@@ -57,70 +57,53 @@ const data = [
         热度: '39888',
         brief: '日前，家住河南省某县城的张先生向本台记者透露，昨日下午由于儿子放学未及时回家处于担心张先生在大街上找到儿子，并教育了一顿，没想到，被路人拍摄下来并发到了网上，还有醒目的标题“父亲虐待儿子”。张先生很是无奈，本来是一件小事...'
     },
+    function WsTable3(newsData) {
+        const data = newsData.data;
+        const keys = Object.keys(data[0]);
 
-
-
-function WsTable3(newsData) {
-    const data=newsData.data;
-    const keys = Object.keys(data[0]);
-
-    const aStyle = {
-        width: '758px',
-        display: 'block',
-        textAlign: 'right',
-        color: '#999C9f',
-        backgroundColor: '#fBfBfB',
-        height: '43px',
-        fontSize: '12px',
-        paddingTop: '10px',
-    };
-    const pstyle = {
-        marginRight: '18px',
-    };
-    return (
-        <div>
+        const aStyle = {
+            width: '758px',
+            display: 'block',
+            textAlign: 'right',
+            color: '#999C9f',
+            backgroundColor: '#fBfBfB',
+            height: '43px',
+            fontSize: '12px',
+            paddingTop: '10px',
+        };
+        const pstyle = {
+            marginRight: '18px',
+        };
+        return (
             <div>
-                <Table3 data={data} className={styles.container}>
-                    <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
-                    <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} align='left'/>
-                    <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'} align='center'/>
-                    <Column dataKey={keys[3]} name={keys[3]} key={'col-{keys[3]}'} align='center'/>
-                    <Column dataKey={keys[4]} name={keys[4]} key={'col-{keys[4]}'} align='center'/>
-                    <Column dataKey={keys[5]} name={keys[5]} key={'col-{keys[5]}'} align='left'/>
-                </Table3>
-            </div>
-            <div>
-               <a style={aStyle}>更多></a>
-            </div>
+                <div>
+                    <Table3 data={data} className={styles.container}>
+                        <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
+                        <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} align='left'/>
+                        <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'} align='center'/>
+                        <Column dataKey={keys[3]} name={keys[3]} key={'col-{keys[3]}'} align='center'/>
+                        <Column dataKey={keys[4]} name={keys[4]} key={'col-{keys[4]}'} align='center'/>
+                        <Column dataKey={keys[5]} name={keys[5]} key={'col-{keys[5]}'} align='left'/>
+                    </Table3>
+                </div>
+                <div>
+                    <a style={aStyle}>更多></a>
+                </div>
 
-    const aStyle={
-        width:'836px',
-        display:'block',
-        textAlign:'right',
-        color:'#999C9f',
-        backgroundColor:'#fBfBfB',
-        height:'43px',
-        fontSize:'12px',
-        paddingTop:'10px',
-    };
-    const pstyle={
-      marginRight:'1px',
 
-    };
-    return (
-        <div>
-        <Table3 data={data} className={styles.container}>
-            <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
-            <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} align='left'/>
-            <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'} align='center'/>
-            <Column dataKey={keys[3]} name={keys[3]} key={'col-{keys[3]}'} align='center'/>
-            <Column dataKey={keys[4]} name={keys[4]} key={'col-{keys[4]}'} align='center' />
-            <Column dataKey={keys[5]} name={keys[5]} key={'col-{keys[5]}'} align='left'/>
-        </Table3>
-            <span style={pstyle}><a style={aStyle}> 更多></a></span>
+                return (
+                <div>
+                    <Table3 data={data} className={styles.container}>
+                        <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
+                        <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} align='left'/>
+                        <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'} align='center'/>
+                        <Column dataKey={keys[3]} name={keys[3]} key={'col-{keys[3]}'} align='center'/>
+                        <Column dataKey={keys[4]} name={keys[4]} key={'col-{keys[4]}'} align='center'/>
+                        <Column dataKey={keys[5]} name={keys[5]} key={'col-{keys[5]}'} align='left'/>
+                    </Table3>
+                    <span style={pstyle}><a style={aStyle}> 更多></a></span>
 
-        </div>
-    );
-}
-
-export default WsTable3;
+                </div>
+                );
+                }
+                export default WsTable3;
