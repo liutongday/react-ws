@@ -108,11 +108,16 @@ var Apps= React.createClass({
         var reciveData = this.props.returendata;
         if (reciveData != null) {
             var rolesListDatainfo = reciveData.map(function (role, index) {
-                console.log(role);
+                console.log("%%%%%%%%%%%%%%%%"+role);
+
+
                 return (
                     <div className="col-xs-4 col-customer-1">
                         <Weixin role={role} key={index}/>
                     </div>
+
+
+
 
                 );
             });

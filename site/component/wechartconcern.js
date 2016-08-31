@@ -112,7 +112,7 @@ var Wechartconcern= React.createClass({
                     </div>
 
                 );
-            })
+            });
             return (
                 <div className="total">
                     <div className="app container-fluid">
