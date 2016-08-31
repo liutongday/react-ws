@@ -142,6 +142,8 @@ var AppRankingList =React.createClass({
         this.getCommonListData(this.state.pro,date);
     },
     checkboxChanged: function (value) {
+        console.info("12345");
+        console.info(value);
         this.setState({
             value: value
         });
