@@ -56,7 +56,8 @@ const datas = [{tvName:'搜狐视频',content:[{排名: '1', 热门视频: '/dem
         {排名: '10', 热门视频: '/demo/images/u4197.png,最好的我们', 热度: 57639,变化: '0'}]}
 ];
 
-function WsTable7() {
+function WsTable7(tvTableData) {
+    const items=tvTableData.data;
     const dataArr=[];
     // for(let i=0;i<data.length;i+=10){
     //     dataArr.push(data.slice(i,i+10));
@@ -68,7 +69,7 @@ function WsTable7() {
         return (
             <div className="col-xs-12 col-sm-6 col-md-3">
                 <div className="wst4text-with-appcol">
-                    <AppCol name={data.tvName} col={0}/>
+                    <AppCol name={data.tvName} col={1}/>
                     <div className="wst4text-div">
                         <Table1 data={data.content} className={'wsT4text tv'}>
                             <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
@@ -90,7 +91,6 @@ function WsTable7() {
             {/*</Flex>*/}
         </div>
     );
-
 }
 
 

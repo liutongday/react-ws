@@ -15,6 +15,7 @@ import React, { PropTypes } from 'react';
 import {Table2,Column,Flex} from '../../src/index';
 import styles from '../css/table-ws.less';
 
+/*
 const data = [
     {排名: '1', 热点新闻事件标题: '教育儿子被认虐童!,1', 热度: '539958,1'},
     {排名: '2', 热点新闻事件标题: '陈德容长成照曝光...,1', 热度: '53958,1'},
@@ -27,10 +28,10 @@ const data = [
     {排名: '9', 热点新闻事件标题: '男子驾铲车装向无辜...,1',  热度: '2742,1'},
     {排名: '10', 热点新闻事件标题: '男子驾铲车装向无辜...,1',  热度: '1738,-1'},
 
-];
+];*/
 
-function WsTable2() {
-
+function WsTable2(eventData) {
+        const data=eventData.data;
         const keys = Object.keys(data[0]);
         return (
             <Table2 data={data} className={styles.container}>

@@ -15,20 +15,20 @@ import React, { PropTypes } from 'react';
 import {Table3,Column,Flex} from '../../src/index';
 import styles from '../css/table-ws.less';
 
-const data = [
+/*const data = [
     {排名: '1', 热点新闻事件标题: '教育儿子被认虐童', 媒体:'腾讯新闻',发表时间:"2016/05/18",热度: '39888',brief:'日前，家住河南省某县城的张先生向本台记者透露，昨日下午由于儿子放学未及时回家处于担心张先生在大街上找到儿子，并教育了一顿，没想到，被路人拍摄下来并发到了网上，还有醒目的标题“父亲虐待儿子”。张先生很是无奈，本来是一件小事...'},
     {排名: '2', 热点新闻事件标题: '教育儿子被认虐童', 媒体:'腾讯新闻',发表时间:"2016/05/18",热度: '39888',brief:'日前，家住河南省某县城的张先生向本台记者透露，昨日下午由于儿子放学未及时回家处于担心张先生在大街上找到儿子，并教育了一顿，没想到，被路人拍摄下来并发到了网上，还有醒目的标题“父亲虐待儿子”。张先生很是无奈，本来是一件小事...'},
     {排名: '3', 热点新闻事件标题: '教育儿子被认虐童', 媒体:'腾讯新闻',发表时间:"2016/05/18",热度: '39888',brief:'日前，家住河南省某县城的张先生向本台记者透露，昨日下午由于儿子放学未及时回家处于担心张先生在大街上找到儿子，并教育了一顿，没想到，被路人拍摄下来并发到了网上，还有醒目的标题“父亲虐待儿子”。张先生很是无奈，本来是一件小事...'},
     {排名: '4', 热点新闻事件标题: '教育儿子被认虐童', 媒体:'腾讯新闻',发表时间:"2016/05/18",热度: '39888',brief:'日前，家住河南省某县城的张先生向本台记者透露，昨日下午由于儿子放学未及时回家处于担心张先生在大街上找到儿子，并教育了一顿，没想到，被路人拍摄下来并发到了网上，还有醒目的标题“父亲虐待儿子”。张先生很是无奈，本来是一件小事...'},
     {排名: '5', 热点新闻事件标题: '教育儿子被认虐童', 媒体:'腾讯新闻',发表时间:"2016/05/18",热度: '39888',brief:'日前，家住河南省某县城的张先生向本台记者透露，昨日下午由于儿子放学未及时回家处于担心张先生在大街上找到儿子，并教育了一顿，没想到，被路人拍摄下来并发到了网上，还有醒目的标题“父亲虐待儿子”。张先生很是无奈，本来是一件小事...'},
 
-];
+];*/
 
-function WsTable3() {
-
+function WsTable3(newsData) {
+    const data=newsData.data;
     const keys = Object.keys(data[0]);
     const aStyle={
-        width:'758px',
+        width:'836px',
         display:'block',
         textAlign:'right',
         color:'#999C9f',
@@ -38,7 +38,8 @@ function WsTable3() {
         paddingTop:'10px',
     };
     const pstyle={
-        marginRight:'18px',
+      marginRight:'1px',
+
     };
     return (
         <div>
@@ -50,7 +51,7 @@ function WsTable3() {
             <Column dataKey={keys[4]} name={keys[4]} key={'col-{keys[4]}'} align='center' />
             <Column dataKey={keys[5]} name={keys[5]} key={'col-{keys[5]}'} align='left'/>
         </Table3>
-        <a style={aStyle}><span style={pstyle}>更多></span></a>
+            <span style={pstyle}><a style={aStyle}> 更多></a></span>
         </div>
     );
 }

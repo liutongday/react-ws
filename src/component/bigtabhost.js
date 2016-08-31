@@ -8,12 +8,12 @@ import BigTabContent from './bigtabcontent'
 var BigTabHost = React.createClass({
     getInitialState:function () {
         return {data:[
-            { title: 'App排行榜', content: {name:'总排行内容' }},
-            { title: '热点新闻', content: {name:'电视剧内容' }},
-            { title: '电商热词', content: {name:'电影内容' }},
-            { title: '视频热词', content: {name:'综艺内容' }},
-            { title: '微信公众号', content: {name:'动漫内容' }},
-        ],contentData:{name:'App排行榜' }};
+            { title: 'App排行榜', content: {name:'1' }},
+            { title: '热点新闻', content: {name:'2' }},
+            { title: '电商热词', content: {name:'3' }},
+            { title: '视频热词', content: {name:'4' }},
+            { title: '微信公众号', content: {name:'5' }},
+        ],contentData:{name:'1' }};
 
     },
     handleClick:function(index){
@@ -28,7 +28,7 @@ var BigTabHost = React.createClass({
         return (
             <div>
                     <BigTab onClick={this.handleClick} data={data}/>
-                   {/* <TabContent data={this.state.contentData} />*/}
+                    <BigTabContent data={this.state.contentData} />
 
             </div>
         );
