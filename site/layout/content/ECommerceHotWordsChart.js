@@ -38,10 +38,9 @@ var ECommerceHotWordsChart=React.createClass({
         var param={
             proId:proId,
             date:date
-        }
+        };
         var self = this;
         console.info("33333");
-        console.info(param);
         //缓存数据
         var rolesListData = [{id :'1',tupian:'u797.png',name:'微信',number:'222222',jiantou:'1'},
             {id :'2',tupian:'u825.png',name:'QQ',number:'33333',jiantou:'0'},
@@ -97,7 +96,7 @@ var ECommerceHotWordsChart=React.createClass({
                 /*self.setState({
                  data: rolesListData});
                  self.props.callbackParent(rolesListData);*/
-            })
+            });
 
         /*fetch("http://blog.parryqiu.com", {
          method: 'GET',
@@ -180,24 +179,15 @@ var ECommerceHotWordsChart=React.createClass({
                     <div className="row ec-hotword">
                         <div className="col-md-6"><HotWord/></div>
                         <div className="col-md-5"><WsTable4 data={bigHotData}/></div>
-{/*=======
-                <div className="ec-word-table">
-                    <div className="ec-hotword">
-                        <HotWord echotword={this.state.echotword}/>
-                    </div>
-                    <div className="ec-wsTable4">
-                        <WsTable4 ectable={this.state.ectable}/>
->>>>>>> origin/zhangxinjing*/}
                     </div>
                 </div>
                 <Title icon="vs" name="电商热词横向对标"/>
-                <WsTable6 />
-               <Title icon="hot-commodity" name="热门商品"/>
-                <WsTable6 />
+                <WsTable6 data={itemHotData} />
+                <Title icon="hot-commodity" name="热门商品"/>
+                <WsTable6 data={itemHotData}/>
                 <Title icon="hot-class" name="热门品类"/>
-                <WsTable6 />
+                <WsTable6 data={itemHotData}/>
             </div>
-
 
 
 

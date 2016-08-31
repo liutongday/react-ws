@@ -1,0 +1,89 @@
+/* index.less */
+@import "../../node_modules/gm-bootstrap/less/variables.less";
+@import "../../node_modules/gm-bootstrap/less/mixins.less";
+@import "../../node_modules/gm-bootstrap/less/custom.less";
+@import "../../src/css/variables.less";
+@import "../css/header.less";
+@import "../css/footer.less";
+/*
+body{
+  overflow-x:hidden;
+}
+*/
+.HolyGrail {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: block;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.HolyGrail-body {
+  -webkit-display: flex;
+  -moz-display: flex;
+  -ms-display: block;
+  flex: 1;
+}
+.HolyGrail-nav, .HolyGrail-ads {
+  /* 两个边栏的宽度设为xx em */
+  flex: 0 0 8em;
+  /* 导航放到最左边 */
+  order: -1;
+}
+.HolyGrail-content {
+  flex: 1;
+  margin-left: 3.5em;
+}
+header,
+footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  flex: 1;
+}
+
+@media (max-width: 768px) {
+  .HolyGrail-body {
+    flex-direction: column;
+    flex: 1;
+  }
+  .HolyGrail-nav,
+  .HolyGrail-ads,
+  .HolyGrail-content {
+    flex: auto;
+  }
+}
+@media (max-width: 992px) {
+  .HolyGrail-body {
+    flex-direction: column;
+    flex: 1;
+  }
+  .HolyGrail-nav,
+  .HolyGrail-ads,
+  .HolyGrail-content {
+    flex: auto;
+  }
+}
+/*grid*/
+.Grid {
+  display: flex;
+}
+.Grid-cell {
+  flex: 1;
+}
+
+.Grid-cell.u-full {
+  flex: 0 0 100%;
+}
+
+.Grid-cell.u-1of2 {
+  flex: 0 0 50%;
+}
+
+.Grid-cell.u-1of3 {
+  flex: 0 0 33.3333%;
+}
+
+.Grid-cell.u-1of4 {
+  flex: 0 0 25%;
+}

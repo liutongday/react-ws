@@ -246,4 +246,4 @@ class Pages extends React.Component {
     }
 }
 ReactDOM.render(<Pages></Pages>, document.getElementById('appContainer'));
-ReactDOM.render(<App/>, document.getElementById('appContainer'));
+

@@ -40,7 +40,7 @@ var HotNews = React.createClass({
         var param={
             proId:proId,
             date:date
-        }
+        };
         var self = this;
         console.info("33333");
         console.info(param);
@@ -99,7 +99,7 @@ var HotNews = React.createClass({
                 /*self.setState({
                  data: rolesListData});
                  self.props.callbackParent(rolesListData);*/
-            })
+            });
 
         /*fetch("http://blog.parryqiu.com", {
          method: 'GET',
@@ -163,13 +163,7 @@ var HotNews = React.createClass({
                         <div className=" col-xs-12 col-md-8 col-lg-8">
                             <Title icon="new-relative-event" name="相关新闻"/>
                             <WsTable3 data={newsData}/>
-{/*=======
-                            <WsTable2 hotnewdata={this.state.hotdata}/>
-                        </div>
-                        <div className=" col-xs-12 col-md-8 col-lg-8">
-                            <Title icon="new-relative-event" name="相关新闻"/>
-                            <WsTable3 relativenewdata={this.state.relativedata}/>
->>>>>>> origin/zhangxinjing*/}
+
                         </div>
                     </div>
                 </div>
