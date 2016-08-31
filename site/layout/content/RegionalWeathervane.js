@@ -26,7 +26,7 @@ import HotEvent from '../../component/HotEvent';
 import Table from '../../component/wsTableCol4';
 import LeftNavigation from '../../component/LeftNavigation';
 import WsTable5 from '../../component/wsST4Area';
-import WsTable9 from '../../component/wsT4app';
+import WsTable9 from '../../component/appTopTable';
 import '../../css/regionalWeathervane.less';
 var RegionalWeathervane=React.createClass(
     {

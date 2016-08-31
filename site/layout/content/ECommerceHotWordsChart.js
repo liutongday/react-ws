@@ -21,7 +21,7 @@ import {
     ModulePartition,
     AppCol
 } from '../../../src/index';
-import WsTable6 from '../../component/wsT4text';
+import WsTable6 from '../../component/baseTextTable';
 import WsTable4 from '../../component/wsSimpleT4';
 import '../css/ECommerceHotWordsChart.less';
 var ECommerceHotWordsChart=React.createClass({

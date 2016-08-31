@@ -28,10 +28,10 @@ import '../css/table-ws.less';
 ];*/
 
 function WsTable6(itemHotData) {
-    const data=itemHotData.data;
+    const items=itemHotData.data;
     const dataArr=[];
-    for(let i=0;i<data.length;i+=10){
-        dataArr.push(data.slice(i,i+10));
+    for(let i=0;i<items.length;i+=10){
+        dataArr.push(items.slice(i,i+10));
     }
 
     const talbleType2=dataArr.map(data=>{

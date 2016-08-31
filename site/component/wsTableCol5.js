@@ -28,14 +28,14 @@ function WsTable3(newsData) {
     const data=newsData.data;
     const keys = Object.keys(data[0]);
     const aStyle={
-        width:'836px',
+        width:'100%',
         display:'block',
         textAlign:'right',
         color:'#999C9f',
         backgroundColor:'#fBfBfB',
         height:'43px',
         fontSize:'12px',
-        paddingTop:'10px',
+        paddingTop:'20px',
     };
     const pstyle={
       marginRight:'1px',
@@ -43,6 +43,7 @@ function WsTable3(newsData) {
     };
     return (
         <div>
+         <div style={{height:'545px'}}>
         <Table3 data={data} className={styles.container}>
             <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
             <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} align='left'/>
@@ -51,7 +52,8 @@ function WsTable3(newsData) {
             <Column dataKey={keys[4]} name={keys[4]} key={'col-{keys[4]}'} align='center' />
             <Column dataKey={keys[5]} name={keys[5]} key={'col-{keys[5]}'} align='left'/>
         </Table3>
-            <span style={pstyle}><a style={aStyle}> 更多></a></span>
+         </div>
+            <a style={aStyle}><span style={pstyle}> 更多></span></a>
         </div>
     );
 }
