@@ -12,7 +12,7 @@
  * @date 2016/8/25
  */
 import React from 'react';
-import Apps from '../../component/apps';
+import Wechartconcern from '../../component/wechartconcern';
 import {
     Selector,
     DatePicker,
@@ -30,7 +30,7 @@ var AppRankingList =React.createClass({
     getInitialState: function () {
         return {
             tabledata:null,
-            returendata:[{id :'1',tupian:'u797.png',name:'微信',number:'222222',jiantou:'1'},
+            returendata: [{id :'1',tupian:'u797.png',name:'微信',number:'222222',jiantou:'1'},
                 {id :'2',tupian:'u825.png',name:'QQ',number:'33333',jiantou:'0'},
                 {id :'3',tupian:'u715.png',name:'腾讯视频',number:'44444',jiantou:'-1'},
                 {id :'4',tupian:'u915.png',name:'手机淘宝',number:'55555',jiantou:'1'},
@@ -337,7 +337,8 @@ var AppRankingList =React.createClass({
                 <DatePicker callbackParent={this.onDateChanged}/>
                 <Selector  callbackParent={this.onProChanged}/>
                 <Title icon="app-user" name="APP活跃用户总排行"/>
-               <Apps returendata={this.state.returendata}/>*/}{/*{this.state.data}*/}
+                <Wechartconcern returendata={this.state.returendata}/>
+                {/* <Apps returendata={this.state.returendata}/>/!*{this.state.data}*/}
                 <Title icon="app-part" name="APP分类排行"/>
                 <CheckboxGroup />
                 <Table data={tabledata}/>

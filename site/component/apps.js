@@ -10,9 +10,6 @@
  * <p>Copyright: Copyright BONC(c) 2013 - 2025 </p>
  *
  * <p>Company: 北京东方国信科技股份有限公司 </p>
- *
- * @author panxw
- * @version 1.0.0
  */
 import '../css/apps.less';
 import 'gm-bootstrap/dist/css/bootstrap.css';
@@ -61,7 +58,7 @@ var Apps= React.createClass({
 
         self.setState({
             data: rolesListData});
-        
+
         //console.log(JSON.stringify(param));
             /!*fetch('http://10.0.94.34:8080/api/testredis',{
             credentials:'same-origin',
@@ -108,17 +105,11 @@ var Apps= React.createClass({
         var reciveData = this.props.returendata;
         if (reciveData != null) {
             var rolesListDatainfo = reciveData.map(function (role, index) {
-                console.log("%%%%%%%%%%%%%%%%"+role);
-
-
+                console.log("%%%%%%%%%%%%%%%%"+index);
                 return (
                     <div className="col-xs-4 col-customer-1">
                         <Weixin role={role} key={index}/>
                     </div>
-
-
-
-
                 );
             });
             return (
@@ -131,7 +122,6 @@ var Apps= React.createClass({
                             <p className="biaoshi">></p>
                             <p className="more">展开</p>
                         </div>
-
                         {/*<Flex ws-flex row wrap>*/}
                             {/*{rolesListDatainfo}*/}
                         {/*</Flex>*/}
