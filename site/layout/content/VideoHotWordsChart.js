@@ -12,6 +12,7 @@
  * @date 2016/8/25
  */
 import React from 'react';
+import moment from 'moment';
 import Videoes from '../../component/videoes';
 import {
     Selector,
@@ -25,81 +26,128 @@ import WsTable7 from '../../component/wsT4tv';
 import '../css/VideoHotWordsChart.less';
 var VideoHotWordsChart=React.createClass({
     getInitialState: function () {
-
         return {
-            data: null
+            tabledata:null,
+            data:null,
+            pro:'111',
+            date: moment()
         };
     },
-    onChildChanged: function (newState) {
-        console.info(newState);
+    getCommonListData: function(proId,date){
+        var param={
+            proId:proId,
+            date:date
+        }
+        var self = this;
+        console.info("33333");
+        console.info(param);
+        //缓存数据
+        var rolesListData = [{id :'1',tupian:'u797.png',name:'微信',number:'222222',jiantou:'1'},
+            {id :'2',tupian:'u825.png',name:'QQ',number:'33333',jiantou:'0'},
+            {id :'3',tupian:'u715.png',name:'腾讯视频',number:'44444',jiantou:'-1'},
+            {id :'4',tupian:'u915.png',name:'手机淘宝',number:'55555',jiantou:'1'},
+            {id :'5',tupian:'u7950.png',name:'支付宝',number:'55555',jiantou:'1'},
+            {id :'6',tupian:'u7954.png',name:'爱奇艺视频',number:'55555',jiantou:'1'},
+            {id :'7',tupian:'u7958.png',name:'搜狗输入法',number:'55555',jiantou:'1'},
+            {id :'8',tupian:'u7962.png',name:'手机百度',number:'55555',jiantou:'-1'},
+            {id :'9',tupian:'u7966.png',name:'百度地图',number:'55555',jiantou:'1'},
+            {id :'10',tupian:'u7970.png',name:'爱奇艺PPS影音',number:'55555',jiantou:'1'},
+            {id :'11',tupian:'u7975.png',name:'QQ音乐',number:'55555',jiantou:'1'},
+            {id :'12',tupian:'u7979.png',name:'酷狗音乐',number:'55555',jiantou:'0'},
+            {id :'13',tupian:'u7983.png',name:'高德地图',number:'55555',jiantou:'1'},
+            {id :'14',tupian:'u7987.png',name:'PPTV聚力',number:'55555',jiantou:'1'},
+            {id :'15',tupian:'u7991.png',name:'新浪微博',number:'55555',jiantou:'1'},
+            {id :'16',tupian:'u7995.png',name:'腾讯手机管家',number:'55555',jiantou:'0'},
+            {id :'17',tupian:'u7999.png',name:'UC浏览器',number:'55555',jiantou:'1'},
+            {id :'18',tupian:'u8003.png',name:'京东',number:'55555',jiantou:'1'},
+            {id :'19',tupian:'u8007.png',name:'360手机卫士',number:'55555',jiantou:'1'},
+            {id :'20',tupian:'u8011.png',name:'QQ空间',number:'55555',jiantou:'-1'},];
+        //fectch请求
+        fetch('http://10.0.94.103:8080/api/testredis',{
+            credentials:'same-origin',
+            method: 'POST',
+            //method: 'GET',
+            mode:'cors',//跨域请求
+            headers: {
+                "Content-Type": "application/json; charset=utf-8",
+                ///"User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
+            },
+            //body:param
+            body:JSON.stringify(param)
+            //body: JSON.parse(str)u
+            //body: JSON.stringify(str)
+            //body:"{name:'Hubot',login:'hubot'}"
+        })
+            .then(function(res) {
+                console.log("Response succeeded?", JSON.stringify(res.ok));
+                //console.log(res.json());
+                return res.json();
+            })
+            .then(function(dataSource) {
+                console.log(dataSource);
+                //console.log(self);//此时的this值已经改变（undefined）
+                self.setState({
+                    data: dataSource});
+                //self.props.callbackParent(dataSource);
+                //console.log(self.props.data);
+            })
+            .catch(function(e) {
+                console.log("fetch fail",e.toString());
+                /*self.setState({
+                 data: rolesListData});
+                 self.props.callbackParent(rolesListData);*/
+            })
+
+        /*fetch("http://blog.parryqiu.com", {
+         method: 'GET',
+         mode: 'no-cors',
+         cache: 'default'
+         }).then(function(response){console.log(response)})*/
+    },
+    onProChanged: function (proId) {
+        console.info("11111");
+        console.info(proId);
         this.setState({
-            data: newState
+            pro:proId
         });
+        this.getCommonListData(proId,this.state.date);
+    },
+    onDateChanged: function (date) {
+        console.info("22222");
+        console.info(date);
+        this.setState({
+            date: date
+        });
+        this.getCommonListData(this.state.pro,date);
+    },
+    componentDidMount: function() {
+        this.getCommonListData(this.state);
     },
     render(){
+        var tvTableData=[
+            {排名: '1', 热门视频: '/demo/images/u4070.png,父亲的身份', 热度: 57639,变化: '1'},
+            {排名: '2', 热门视频: '/demo/images/u4085.png,欢乐颂',   热度: 57639,变化: '-1'},
+            {排名: '3', 热门视频: '/demo/images/u4183.png,太阳的后裔', 热度:57639,变化: '0'},
+            {排名: '4', 热门视频: '/demo/images/u4113.png,绝命卦师', 热度: 57639,变化: '0'},
+            {排名: '5', 热门视频: '/demo/images/u4099.png,金水桥边', 热度: 57639,变化: '0'},
+            {排名: '6', 热门视频: '/demo/images/u4141.png,奇妙的时光之旅', 热度: 57639,变化: '1'},
+            {排名: '7', 热门视频: '/demo/images/u4155.png,情迷睡美人',   热度: 57639,变化: '-1'},
+            {排名: '8', 热门视频: '/demo/images/u4169.png,山海经', 热度: 57639,变化: '0'},
+            {排名: '9', 热门视频: '/demo/images/u4127.png,柠檬初上', 热度: 57639,变化: '0'},
+            {排名: '10', 热门视频: '/demo/images/u4197.png,最好的我们', 热度: 57639,变化: '0'},
+
+        ];
         return (
             <div className="Video-Hot-Words-Chart">
                 <ModulePartition id="video_module" name="视频热词风云榜" en_name="Video Hot Words  Chart"/>
-                <DatePicker/>
-                <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
+                <DatePicker callbackParent={this.onDateChanged}/>
+                <Selector  callbackParent={this.onProChanged}/>
                 <Title icon="video-hot-word" name="热门视频"/>
                 <TabHost/>
                 <Title icon="vs" name="热门视频横向对标"/>
-                <TabHost/>
-                <div className="vh-col-table">
-                    <div className="vh-col-table1">
-                        <AppCol name="搜狐视频" col={1}/>
-                      <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table2">
-                        <AppCol name="爱奇艺" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table3">
-                        <AppCol name="乐视视频" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table4">
-                        <AppCol name="腾讯视频" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-
-                </div>
+                <WsTable7/>
                 <Title icon="hot-video" name="热门频道"/>
-                <div className="vh-col-table">
-                    <div className="vh-col-table1">
-                        <AppCol name="搜狐视频" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table2">
-                        <AppCol name="爱奇艺" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table3">
-                        <AppCol name="乐视视频" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                    <div className="vh-col-table4">
-                        <AppCol name="腾讯视频" col={1}/>
-                        <div className="vh-col-table-Wstable7">
-                            <WsTable7/>
-                        </div>
-                    </div>
-                </div>
+                <WsTable7/>
             </div>
         );
     }
