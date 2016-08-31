@@ -346,16 +346,15 @@ var AppRankingList =React.createClass({
                 <Title icon="app-user" name="APP活跃用户总排行"/>
                 {/*<Apps returendata={this.state.data}/>*/}{/*{this.state.data}*/}
                 <Title icon="app-part" name="APP分类排行"/>
-<<<<<<< HEAD
                 <CheckboxGroup callbackParent={this.checkboxChanged}/>
                 <Table tabledata={tabledata}/>
-=======
+
                 <CheckboxGroup />
                 <Table data={tabledata}/>
 {/*=======
                 <Table apptabledata={tabledata}/>
 >>>>>>> origin/zhangxinjing */}
->>>>>>> c1eb2f9e7ea78054ee4f1451926b4124f8779b1f
+
             </div>
         );
     }
