@@ -13,7 +13,8 @@
  */
 import React from 'react';
 import moment from 'moment';
-import Chart from '../../component/chart';
+ import Chart from '../../component/chart';
+
 import {
     Selector,
     DatePicker,
@@ -127,6 +128,9 @@ var HotNews = React.createClass({
         this.getCommonListData(this.state);
     },
     render() {
+
+
+
        var eventData = [
             {排名: '1', 热点新闻事件标题: '教育儿子被认虐童!,1', 热度: '539958,1'},
             {排名: '2', 热点新闻事件标题: '陈德容长成照曝光...,1', 热度: '53958,1'},
@@ -148,6 +152,7 @@ var HotNews = React.createClass({
             {排名: '5', 热点新闻事件标题: '教育儿子被认虐童', 媒体:'腾讯新闻',发表时间:"2016/05/18",热度: '39888',brief:'日前，家住河南省某县城的张先生向本台记者透露，昨日下午由于儿子放学未及时回家处于担心张先生在大街上找到儿子，并教育了一顿，没想到，被路人拍摄下来并发到了网上，还有醒目的标题“父亲虐待儿子”。张先生很是无奈，本来是一件小事...'},
 
         ];
+
         return (
             <div className="Hot-News">
                 <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
@@ -167,8 +172,11 @@ var HotNews = React.createClass({
                         </div>
                     </div>
                 </div>
+
+                <div>
                <Title icon="title-hot-event" name="事件热度趋势"/>
                 <Chart/>
+                </div>
             </div>
         );
     }

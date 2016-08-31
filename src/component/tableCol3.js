@@ -182,7 +182,7 @@ const renderTds = (data, entry, columns, rowIndex) => (
                 style={getStyle(col.props)}
                 className={`ws-table2-td col-${index} col-${dataKey} ${className || ''}`}
             >
-                {contentText||content}  {showInput?<img src={state} width={8}/>:null}
+                {contentText||content}  {showInput?<img src={state} width={8} height={5.78}/>:null}
                 {showInput?<span style={spanDisplay }> </span>:null}
                 {ifNew?<span style={newStyle}>新！</span>:null}
             </td>
