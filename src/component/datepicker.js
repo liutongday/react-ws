@@ -35,7 +35,6 @@ class DatePicker extends React.Component{
     }
 
     ProvList() {
-        console.log("this is the provinces!!");
         this.setState({active:!this.state.active});
     }
 
