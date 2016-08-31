@@ -27,15 +27,7 @@ import WsTable2 from '../../component/wsTableCol3';
 import WsTable3 from '../../component/wsTableCol5';
 import '../css/hotnews.less';
 var HotNews = React.createClass({
-
-
-
     getInitialState: function () {
-<<<<<<< HEAD
-
-
-=======
->>>>>>> c1eb2f9e7ea78054ee4f1451926b4124f8779b1f
         return {
             tabledata:null,
             hotdata:null,
@@ -135,9 +127,9 @@ var HotNews = React.createClass({
         this.getCommonListData(this.state);
     },
     render() {
-<<<<<<< HEAD
 
-=======
+
+
        var eventData = [
             {排名: '1', 热点新闻事件标题: '教育儿子被认虐童!,1', 热度: '539958,1'},
             {排名: '2', 热点新闻事件标题: '陈德容长成照曝光...,1', 热度: '53958,1'},
@@ -159,7 +151,7 @@ var HotNews = React.createClass({
             {排名: '5', 热点新闻事件标题: '教育儿子被认虐童', 媒体:'腾讯新闻',发表时间:"2016/05/18",热度: '39888',brief:'日前，家住河南省某县城的张先生向本台记者透露，昨日下午由于儿子放学未及时回家处于担心张先生在大街上找到儿子，并教育了一顿，没想到，被路人拍摄下来并发到了网上，还有醒目的标题“父亲虐待儿子”。张先生很是无奈，本来是一件小事...'},
 
         ];
->>>>>>> c1eb2f9e7ea78054ee4f1451926b4124f8779b1f
+
         return (
             <div className="Hot-News">
                 <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
@@ -175,21 +167,15 @@ var HotNews = React.createClass({
                         <div className=" col-xs-12 col-md-8 col-lg-8">
                             <Title icon="new-relative-event" name="相关新闻"/>
                             <WsTable3 data={newsData}/>
-{/*=======
-                            <WsTable2 hotnewdata={this.state.hotdata}/>
-                        </div>
-                        <div className=" col-xs-12 col-md-8 col-lg-8">
-                            <Title icon="new-relative-event" name="相关新闻"/>
-                            <WsTable3 relativenewdata={this.state.relativedata}/>
->>>>>>> origin/zhangxinjing*/}
+
                         </div>
                     </div>
                 </div>
-<<<<<<< HEAD
-=======
+
+
                <Title icon="title-hot-event" name="事件热度趋势"/>
                 <Chart/>
->>>>>>> c1eb2f9e7ea78054ee4f1451926b4124f8779b1f
+
             </div>
         );
     }
