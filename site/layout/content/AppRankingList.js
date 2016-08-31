@@ -351,11 +351,6 @@ var AppRankingList =React.createClass({
                 <CheckboxGroup callbackParent={this.checkboxChanged}/>
                 <Table tabledata={tabledata}/>
 
-                <CheckboxGroup />
-                <Table data={tabledata}/>
-{/*=======
-                <Table apptabledata={tabledata}/>
->>>>>>> origin/zhangxinjing */}
 
             </div>
         );
