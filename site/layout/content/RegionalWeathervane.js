@@ -222,7 +222,7 @@ var RegionalWeathervane=React.createClass(
                     </div>
                     <Title icon="regional-horizontal-benchmarking" name="地域横向对标"/>
                     <BigTabHost/>
-                    <TabHost/>
+                    {/*<TabHost/>*/}
                     <WsTable9 data={appTableData}/>
                 </div>
             );
