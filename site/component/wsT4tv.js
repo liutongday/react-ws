@@ -25,10 +25,12 @@ function WsTable7(tvTableData) {
         const tvName=data.tvName;
         const contentData=data.content;
         const keys = Object.keys(contentData[0]);
-
+        const tableStyle={
+            marginTop:'15px',
+        };
         return (
             <div className="col-xs-12 col-sm-6 col-md-3">
-                <div className="wst4text-with-appcol">
+                <div className="wst4text-with-appcol" style={tableStyle}>
                     <AppCol name={data.tvName} col={1}/>
                     <div className="wst4text-div">
                         <Table1 data={contentData} className={'wsT4text tv'}>
@@ -43,7 +45,6 @@ function WsTable7(tvTableData) {
         );
     });
     return (
-
         <div className="container-fluid">
             <div className="row">{talbleType3}</div>
             {/*<Flex ws-flex row wrap>*/}

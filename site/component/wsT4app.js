@@ -52,9 +52,6 @@ var WsTable9=React.createClass({
                         </Table1>
                     </div>
                 </div>
-
-
-
             );
         });
         return (
