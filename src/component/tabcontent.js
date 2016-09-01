@@ -13,18 +13,14 @@ var TabContent = React.createClass({
             fontSize: 18,
             marginLeft: '50px'
         };
-
         var content_data = this.props.data;
-
         var rolesListDatainfo = content_data.map(function (role, index) {
             return (
-                <div className="col-md-2">
+                <div id="video" className="col-xs-12 col-sm-5 col-md-2 col-lg-2">
                     <Video role={role} key={index}/>
                 </div>
-
             );
         })
-
         return (
             <div className="video-total">
                 {/*<div className="videos">*/}
@@ -43,6 +39,5 @@ var TabContent = React.createClass({
         );
     }
 });
-
 
 export default TabContent;
