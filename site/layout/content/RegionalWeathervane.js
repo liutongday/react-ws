@@ -117,7 +117,7 @@ var RegionalWeathervane=React.createClass(
             ];
             return (
                 <div className="Regional-Weather-vane">
-                    <ModulePartition id="area_module" name="地域风向标" en_name="Regional  Weather-vane"/>
+                    <ModulePartition id="content_area_module" name="地域风向标" en_name="Regional  Weather-vane"/>
                     <DatePicker/>
                     <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
                     <Title icon="regional-weather-vane" name="地域热搜"/>
@@ -129,7 +129,7 @@ var RegionalWeathervane=React.createClass(
                     </div>
                     <Title icon="regional-horizontal-benchmarking" name="地域横向对标"/>
                     <BigTabHost/>
-                    <RHBTabHost/>
+                    {/*<RHBTabHost/>*/}
                     <WsTable9 data={appTableData}/>
                 </div>
             );
