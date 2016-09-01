@@ -15,6 +15,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, 'build'),
         filename: '[name].[hash].bundle.js',
+        chunkFilename: '[name].min.js',
         publicPath: '/react-ws/build/'
     },
     plugins: [
@@ -37,7 +38,7 @@ module.exports = {
             test: /\.(css|less)$/,
             loader: 'style!css!postcss!less'
         },{
-            test: /\.(jpg|png|woff|svg|eot|ttf)$/,
+            test: /\.(jpg|png)$/,
             loader: "url?limit=8192"
         }]
     },
