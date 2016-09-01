@@ -4,6 +4,7 @@
 import React from 'react';
 import Video from './video'
 import Flex from './flex'
+import '../../site/css/videoes.less';
 var TabContent = React.createClass({
     render(){
         const divStyle = {
@@ -16,24 +17,15 @@ var TabContent = React.createClass({
         var content_data = this.props.data;
         var rolesListDatainfo = content_data.map(function (role, index) {
             return (
-                <div id="video" className="col-xs-12 col-sm-5 col-md-2 col-lg-2">
+                <div className="col-xs-6 col-sm-4 videos-col-customer-2 videos-col-customer-1">
                     <Video role={role} key={index}/>
                 </div>
             );
         })
         return (
-            <div className="video-total">
-                {/*<div className="videos">*/}
-                {/*<Flex ws-flex row wrap>*/}
-                {/*{rolesListDatainfo}*/}
-                {/*</Flex>*/}
-                {/*</div>*/}
-                <div className="container-fluid">
-                    <div className="videos">
-                        <div className="row">
-                            {rolesListDatainfo}
-                        </div>
-                    </div>
+            <div className="container-fluid video-total">
+                <div className="row videos">
+                    {rolesListDatainfo}
                 </div>
             </div>
         );
