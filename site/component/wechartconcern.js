@@ -103,7 +103,7 @@ var Wechartconcern= React.createClass({
         var reciveData = this.props.data;
         if (reciveData != null) {
             var rolesListDatainfo = reciveData.map(function (role, index) {
-                console.log("************"+role);
+                console.info(index);
                 return (
                     <div className="col-xs-4 col-customer-1">
                         <Weixin role={role} key={index}/>

@@ -65,7 +65,7 @@ var Video = React.createClass({
         var name = data.name;
         var chart2 ="/demo/images/u4077.png";
         return(
-            <div className="video">
+            <div id="video"     className="video">
                 <div className="video-main">
                     <img className="video-main-img" src={chart}/>
                     <input disabled="disabled" className="video-main-sort" value={data.id}/>
