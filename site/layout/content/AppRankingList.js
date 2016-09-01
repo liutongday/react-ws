@@ -13,7 +13,6 @@
  */
 import React from 'react';
 import Wechartconcern from '../../component/wechartconcern';
-import Wechartconcern from '../../component/wechartconcern';
 import {
     Selector,
     DatePicker,
@@ -30,48 +29,6 @@ var AppRankingList =React.createClass({
 
     getInitialState: function () {
         return {
- tabledata:null,
-            returendata: [{id :'1',tupian:'u797.png',name:'微信',number:'222222',jiantou:'1'},
-                {id :'2',tupian:'u825.png',name:'QQ',number:'33333',jiantou:'0'},
-                {id :'3',tupian:'u715.png',name:'腾讯视频',number:'44444',jiantou:'-1'},
-                {id :'4',tupian:'u915.png',name:'手机淘宝',number:'55555',jiantou:'1'},
-                {id :'5',tupian:'u7950.png',name:'支付宝',number:'55555',jiantou:'1'},
-                {id :'6',tupian:'u7954.png',name:'爱奇艺视频',number:'55555',jiantou:'1'},
-                {id :'7',tupian:'u7958.png',name:'搜狗输入法',number:'55555',jiantou:'1'},
-                {id :'8',tupian:'u7962.png',name:'手机百度',number:'55555',jiantou:'-1'},
-                {id :'9',tupian:'u7966.png',name:'百度地图',number:'55555',jiantou:'1'},
-                {id :'10',tupian:'u7970.png',name:'爱奇艺PPS影音',number:'55555',jiantou:'1'},
-                {id :'11',tupian:'u7975.png',name:'QQ音乐',number:'55555',jiantou:'1'},
-                {id :'12',tupian:'u7979.png',name:'酷狗音乐',number:'55555',jiantou:'0'},
-                {id :'13',tupian:'u7983.png',name:'高德地图',number:'55555',jiantou:'1'},
-                {id :'14',tupian:'u7987.png',name:'PPTV聚力',number:'55555',jiantou:'1'},
-                {id :'15',tupian:'u7991.png',name:'新浪微博',number:'55555',jiantou:'1'},
-                {id :'16',tupian:'u7995.png',name:'腾讯手机管家',number:'55555',jiantou:'0'},
-                {id :'17',tupian:'u7999.png',name:'UC浏览器',number:'55555',jiantou:'1'},
-                {id :'18',tupian:'u8003.png',name:'京东',number:'55555',jiantou:'1'},
-                {id :'19',tupian:'u8007.png',name:'360手机卫士',number:'55555',jiantou:'1'},
-                {id :'20',tupian:'u8011.png',name:'QQ空间',number:'55555',jiantou:'-1'},],<<<<<<< .mine
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-=======
             returendata: [{id :'1',tupian:'u797.png',name:'微信',number:'222222',jiantou:'1'},
                 {id :'2',tupian:'u825.png',name:'QQ',number:'33333',jiantou:'0'},
                 {id :'3',tupian:'u715.png',name:'腾讯视频',number:'44444',jiantou:'-1'},
@@ -92,7 +49,6 @@ var AppRankingList =React.createClass({
                 {id :'18',tupian:'u8003.png',name:'京东',number:'55555',jiantou:'1'},
                 {id :'19',tupian:'u8007.png',name:'360手机卫士',number:'55555',jiantou:'1'},
                 {id :'20',tupian:'u8011.png',name:'QQ空间',number:'55555',jiantou:'-1'},],
->>>>>>> .theirs
             pro:'111',
             date:moment(),
         };
@@ -189,11 +145,8 @@ var AppRankingList =React.createClass({
     },
 
     render() {
-<<<<<<< .mine
-        var taledata= [
-=======
+
         var tabledata= [
->>>>>>> .theirs
             {排名: '1', "/site/images/table/sociality.png,社交": '/site/images/table/weixin.png,微信', 活跃用户数: 57639,变化: '0'},
             {排名: '2', "/site/images/table/sociality.png,社交": '/site/images/table/qq.png,QQ',   活跃用户数: 53958,变化: '0'},
             {排名: '3', "/site/images/table/sociality.png,社交": '/site/images/table/weibo.png,新浪微博', 活跃用户数: 10184,变化: '0'},
@@ -381,26 +334,10 @@ var AppRankingList =React.createClass({
                 <DatePicker callbackParent={this.onDateChanged}/>
                 <Selector  callbackParent={this.onProChanged}/>
                 <Title icon="app-user" name="APP活跃用户总排行"/>
- <Wechartconcern returendata={this.state.returendata}/>
-                {/* <Apps returendata={this.state.returendata}/>/!*{this.state.data}*/}<<<<<<< .mine
-                {/*<Apps data={this.state.data}/>*/}
-=======
-                {/* <Apps returendata={this.state.returendata}/>/!*{this.state.data}*/}
->>>>>>> .theirs
+                <Wechartconcern returendata={this.state.returendata}/>
                 <Title icon="app-part" name="APP分类排行"/>
                 <CheckboxGroup />
-                <Table data={taledata}/>
-<<<<<<< .mine
-{/*=======
-                <Table apptabledata={tabledata}/>
->>>>>>> .theirs
->>>>>>> origin/zhangxinjing */}
-=======
-
-
-
-
->>>>>>> .theirs
+                <Table data={tabledata}/>
             </div>
         );
     }
