@@ -119,7 +119,7 @@ const renderThs = (columns) => (
         }
         const imgStyle={
             position:'absolute',
-            top:'10px',
+            top:'8px',
             zIndex:'10px',
             width:'55px',
             height:'55px',
