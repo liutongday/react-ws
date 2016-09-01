@@ -35,22 +35,22 @@ function WsTable3() {
         backgroundColor:'#fBfBfB',
         height:'43px',
         fontSize:'12px',
-        paddingTop:'10px',
+        paddingTop:'20px',
     };
     const pstyle={
         marginRight:'18px',
     };
     return (
         <div>
-        <Table3 data={data} className={styles.container}>
-            <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
-            <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} align='left'/>
-            <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'} align='center'/>
-            <Column dataKey={keys[3]} name={keys[3]} key={'col-{keys[3]}'} align='center'/>
-            <Column dataKey={keys[4]} name={keys[4]} key={'col-{keys[4]}'} align='center' />
-            <Column dataKey={keys[5]} name={keys[5]} key={'col-{keys[5]}'} align='left'/>
-        </Table3>
-        <a style={aStyle}><span style={pstyle}>更多></span></a>
+            <Table3 data={data} className={styles.container}>
+                <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
+                <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} align='left'/>
+                <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'} align='center'/>
+                <Column dataKey={keys[3]} name={keys[3]} key={'col-{keys[3]}'} align='center'/>
+                <Column dataKey={keys[4]} name={keys[4]} key={'col-{keys[4]}'} align='center' />
+                <Column dataKey={keys[5]} name={keys[5]} key={'col-{keys[5]}'} align='left'/>
+            </Table3>
+            <a style={aStyle}><span style={pstyle}>更多></span></a>
         </div>
     );
 }

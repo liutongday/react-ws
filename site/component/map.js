@@ -2,7 +2,7 @@
  *
  * <p>Title: BONC - React </p>
  *
- * <p>Description:  </p>
+ * <p>Description: 地图 </p>
  *
  * <p>Copyright: Copyright BONC(c) 2013 - 2025 </p>
  *
@@ -16,7 +16,6 @@ import React from 'react';
 import '../css/map.less';
 import 'echarts/src/chart/map';
 import echarts from 'echarts/src/echarts';
-//import 'echarts/src/chart/wordCloud';
 var Map = React.createClass({
 
     getInitialState: function() {
@@ -73,14 +72,14 @@ var Map = React.createClass({
                                 show: false
                             }
                         },
-                        emphasis: {                 // 也是选中样式
+                        emphasis: {
                             borderWidth:2,
                             borderColor:'#fff',
-                            color: '#32cd32',
+                            color: '#D3E0EE',
                             label: {
-                                show: true,
+                                show: false,//省名称是否显示
                                 textStyle: {
-                                    color: '#fff'
+                                    color: '#fff'//省名称颜色
                                 }
                             }
                         }
@@ -93,7 +92,7 @@ var Map = React.createClass({
                         symbolSize: [30,10],
                         label:{
                             normal:{
-                                show:true,
+                                show:false,
                                 textStyle: {
                                     fontFamily: 'sans-serif'
                                 },

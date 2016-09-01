@@ -11,10 +11,11 @@
 </head>
 <body>
 <div id="pageContainer"></div>
-
-<script src="../dist/react-ws.js"></script>
 <script>
-/*    document.write('<script src="' + window.WEBPACK_ASSETS['site'].js + '"><\/script>');*/
+    document.write('<script src="../build/webpack-assets.js?v=' + Math.random() + '"><\/script>');
+</script>
+<script>
+    document.write('<script src="' + window.WEBPACK_ASSETS['site'].js + '"><\/script>');
 </script>
 </body>
 </html>

@@ -12,6 +12,7 @@
  * @date 2016/8/16
  */
 import React from 'react';
+import '../css/selector.less';
 import ReactDOM from 'react-dom';
     var data1=[{proId:"111",proName:"全国"}, {proId:"036",proName:"浙江"}, {proId:"011",proName:"北京"},
         {proId:"031",proName:"上海"}, {proId:"013",proName:"天津"}, {proId:"083",proName:"重庆"},
@@ -38,16 +39,15 @@ var Selector = React.createClass({
         console.log('i is selected!!');
         this.setState({active: !this.state.active});
         this.setState({pro:data1[i]});
-        this.props.callbackParent(data1[i]);
+      /*  this.props.setState({
+            pro:data1[i].proId
+        });*/
+        this.props.callbackParent(data1[i].proId);
     },
     ProvList:function () {
         console.log("this is the provinces!!");
         this.setState({active:!this.state.active});
     },
-
-    /*componentDidMount: function() {
-        this.getCommonListData();
-    }*/
     render() {
         return (
             <div className="sel_outer_div">
@@ -70,15 +70,12 @@ var Selector = React.createClass({
                     {data1.map(function (pro,i) {
                         return(
                         <div className="sel_inner2_div1" key={i} style={{left:10+i%4*65,top:10+Math.floor(i/4)*35}}>
-
                             <span className="sel_span" title={pro.proId} key={i} onClick={this.selectedProv.bind(this,i)}>
                                 {pro.proName}
                             </span>
                         </div>
-
                         );
                     },this)
-
                     }
                 </div>
             </div>

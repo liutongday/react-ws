@@ -2,7 +2,7 @@
  *
  * <p>Title: BONC - React </p>
  *
- * <p>Description:  </p>
+ * <p>Description: 热度视频列表 </p>
  *
  * <p>Copyright: Copyright BONC(c) 2013 - 2025 </p>
  *
@@ -96,26 +96,27 @@ var Videoes= React.createClass({
             //debugger
             var rolesListDatainfo = reciveData.map(function (role, index) {
                 return (
-                    <Video role={role} key={index}/>
-                );
-            })
+                    <div className="col-xs-6 col-sm-4 videos-col-customer-2 videos-col-customer-1">
+                        <Video role={role} key={index}/>
+                    </div>
 
+                );
+            });
             return (
-                <div className="video-total">
-                    <div className="videos">
-                        <Flex ws-flex row wrap>
-                            {rolesListDatainfo}
-                        </Flex>
+                <div className="container-fluid video-total">
+                    <div className="row videos">
+                        {rolesListDatainfo}
+                        {/*<Flex ws-flex row wrap>*/}
+                        {/*{rolesListDatainfo}*/}
+                        {/*</Flex>*/}
                     </div>
                 </div>
-
             );
         } else {
             return(
                 <div className="video-total"/>
             )
         }
-
     }
 });
 export default Videoes;
