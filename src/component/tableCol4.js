@@ -121,7 +121,7 @@ const renderThs = (columns) => (
             position:'relative',
             marginRight:"5px",
             zIndex:'10px',
-            bottom:'10px',
+            bottom:'15px',
             width:'55px',
             height:'55px',
         };
@@ -208,11 +208,6 @@ const renderTds = (data, entry, columns, rowIndex) => (
                 style={getStyle(col.props)}
                 className={`ws-td col-${index} col-${dataKey} ${className || ''}  `}
             >
-
-
-
-
-
 
                 {showImage?<img src={contentImg} style={{marginRight:'15px'}} width={30} height={30} />:null}
                 {contentText||content}

@@ -33,6 +33,7 @@ function WsTable1(tabledata) {
             backgroundColor: '#fBfBfB',
             height: '26px',
             fontSize: '12px',
+            paddingTop:'5px',
         };
         const pstyle = {
             marginRight: '18px',
