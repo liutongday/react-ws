@@ -168,7 +168,7 @@ var VideoHotWordsChart=React.createClass({
         ];
         return (
             <div className="Video-Hot-Words-Chart">
-                <ModulePartition id="video_module" name="视频热词风云榜" en_name="Video Hot Words  Chart"/>
+                <ModulePartition id="content_video_module" name="视频热词风云榜" en_name="Video Hot Words  Chart"/>
                 <DatePicker callbackParent={this.onDateChanged}/>
                 <Selector  callbackParent={this.onProChanged}/>
                 <Title icon="video-hot-word" name="热门视频"/>

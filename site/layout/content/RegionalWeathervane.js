@@ -117,7 +117,7 @@ var RegionalWeathervane=React.createClass(
             ];
             return (
                 <div className="Regional-Weather-vane">
-                    <ModulePartition id="area_module" name="地域风向标" en_name="Regional  Weather-vane"/>
+                    <ModulePartition id="content_area_module" name="地域风向标" en_name="Regional  Weather-vane"/>
                     <DatePicker/>
                     <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
                     <Title icon="regional-weather-vane" name="地域热搜"/>
