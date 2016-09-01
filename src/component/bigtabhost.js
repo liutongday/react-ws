@@ -8,7 +8,7 @@ import BigTabContent from './bigtabcontent'
 var BigTabHost = React.createClass({
     getInitialState:function () {
         return {data:[
-            { title: 'App排行榜', content: {name:'1' }},
+            { title: 'APP排行榜', content: {name:'1' }},
             { title: '热点新闻', content: {name:'2' }},
             { title: '电商热词', content: {name:'3' }},
             { title: '视频热词', content: {name:'4' }},

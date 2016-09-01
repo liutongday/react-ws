@@ -34,7 +34,7 @@ class Navigator extends React.Component {
     }
     render() {
 
-        const list = [{"id":"app","img_url":"../site/images/left-nav/app","content":"App排行榜"},
+        const list = [{"id":"app","img_url":"../site/images/left-nav/app","content":"APP排行榜"},
                 {"id":"new","img_url":"../site/images/left-nav/new","content":"热点新闻"},
                 {"id":"busi","img_url":"../site/images/left-nav/busi","content":"电商热词风云榜"},
                 {"id":"video","img_url":"../site/images/left-nav/video","content":"视频热词风云榜"},

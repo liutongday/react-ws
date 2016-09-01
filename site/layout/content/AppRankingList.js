@@ -329,7 +329,7 @@ var AppRankingList =React.createClass({
         ];
         return (
             <div className="App-Ranking-List">
-                <ModulePartition id="app_module" name="App排行榜" en_name="App Ranking List"/>
+                <ModulePartition id="app_module" name="APP排行榜" en_name="App Ranking List"/>
                 <DatePicker callbackParent={this.onDateChanged}/>
                 <Selector  callbackParent={this.onProChanged}/>
                 <Title icon="app-user" name="APP活跃用户总排行"/>
