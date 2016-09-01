@@ -7,12 +7,24 @@
  * <p>Copyright: Copyright BONC(c) 2013 - 2025 </p>
  *
  * <p>Company: 北京东方国信科技股份有限公司 </p>
+<<<<<<< HEAD
 <<<<<<< HEAD:site/component/app.js
 =======
  *
  * @author zhangxinjing
  * @date 2016/8/29
 >>>>>>> origin/zhangxinjing:site/component/apps.js
+=======
+<<<<<<< .mine
+ *
+ * @author zhangxinjing
+ * @date 2016/8/29
+=======
+
+
+
+>>>>>>> .theirs
+>>>>>>> origin/zhangxinjing
  */
 import '../css/apps.less';
 import 'gm-bootstrap/dist/css/bootstrap.css';
@@ -59,45 +71,48 @@ var Apps= React.createClass({
      {id :'19',tupian:'u8007.png',name:'360手机卫士',number:'55555',jiantou:'1'},
      {id :'20',tupian:'u8011.png',name:'QQ空间',number:'55555',jiantou:'-1'},];
 
+<<<<<<< HEAD
 <<<<<<< HEAD:site/component/app.js
         self.setState({
             data: rolesListData});
-
-        //console.log(JSON.stringify(param));
-            /!*fetch('http://10.0.94.34:8080/api/testredis',{
-            credentials:'same-origin',
-            method: 'POST',
-            //method: 'GET',
-            mode:'cors',
-            headers: {
-                "Content-Type": "application/x-www-form-urlencoded",
-                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
-            },
-                body:encodeURI(JSON.stringify(param),"utf-8")
-                //body: JSON.parse(str)
-                //body: JSON.stringify(param)
-                //body:"name=123&login=123456"
-        })
-            .then(function(res) {
-                console.log("Response succeeded?", JSON.stringify(res.ok));
-                //console.log(res.json());
-                return res.json();
-        })
-            .then(function(dataSource) {
-                console.log("********");
-                console.log(dataSource);
-                console.log(self);//此时的this值已经改变（undefined）
-                self.setState({
-                    data: dataSource});
-                //console.log(self.props.data);
-            })
-            .catch(function(e) {
-                console.log("fetch fail",e.toString());
-                self.setState({
-                    data: rolesListData});
-            })
 =======
+self.setState({
+     data: rolesListData});
+>>>>>>> origin/zhangxinjing
+
+     //console.log(JSON.stringify(param));
+     /!*fetch('http://10.0.94.34:8080/api/testredis',{
+     credentials:'same-origin',
+     method: 'POST',
+     //method: 'GET',
+     mode:'cors',
+     headers: {
+     "Content-Type": "application/x-www-form-urlencoded",
+     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
+     },
+     body:encodeURI(JSON.stringify(param),"utf-8")
+     //body: JSON.parse(str)
+     //body: JSON.stringify(param)
+     //body:"name=123&login=123456"
+     })
+     .then(function(res) {
+     console.log("Response succeeded?", JSON.stringify(res.ok));
+     //console.log(res.json());
+     return res.json();
+     })
+     .then(function(dataSource) {
+     console.log("********");
+     console.log(dataSource);
+     console.log(self);//此时的this值已经改变（undefined）
      self.setState({
+     data: dataSource});
+     //console.log(self.props.data);
+     })
+     .catch(function(e) {
+     console.log("fetch fail",e.toString());
+     self.setState({
+     data: rolesListData});
+     })<<<<<<< .mine
      data: rolesListData});
 
      //console.log(JSON.stringify(param));
@@ -133,7 +148,47 @@ var Apps= React.createClass({
      self.setState({
      data: rolesListData});
      })
+<<<<<<< HEAD
 >>>>>>> origin/zhangxinjing:site/component/apps.js
+=======
+=======
+            data: rolesListData});
+
+        //console.log(JSON.stringify(param));
+            /!*fetch('http://10.0.94.34:8080/api/testredis',{
+            credentials:'same-origin',
+            method: 'POST',
+            //method: 'GET',
+            mode:'cors',
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded",
+                "User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
+            },
+                body:encodeURI(JSON.stringify(param),"utf-8")
+                //body: JSON.parse(str)
+                //body: JSON.stringify(param)
+                //body:"name=123&login=123456"
+        })
+            .then(function(res) {
+                console.log("Response succeeded?", JSON.stringify(res.ok));
+                //console.log(res.json());
+                return res.json();
+        })
+            .then(function(dataSource) {
+                console.log("********");
+                console.log(dataSource);
+                console.log(self);//此时的this值已经改变（undefined）
+                self.setState({
+                    data: dataSource});
+                //console.log(self.props.data);
+            })
+            .catch(function(e) {
+                console.log("fetch fail",e.toString());
+                self.setState({
+                    data: rolesListData});
+            })
+>>>>>>> .theirs
+>>>>>>> origin/zhangxinjing
      *!/
 
      },
