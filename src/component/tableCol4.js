@@ -118,10 +118,9 @@ const renderThs = (columns) => (
             }
         }
         const imgStyle={
-            position:'relative',
-            marginRight:"5px",
+            position:'absolute',
+            top:'10px',
             zIndex:'10px',
-            bottom:'15px',
             width:'55px',
             height:'55px',
         };
@@ -132,7 +131,7 @@ const renderThs = (columns) => (
                 className={`-ws-th col-${index} col-${dataKey} ${className || ''} `}
             >
                 {showImg?<img src={contentImg} style={imgStyle} width={50}/>:null}
-                 {contentText||content}
+                <span > {contentText||content}</span>
             </th>
         );
     })
