@@ -39,9 +39,11 @@ var Selector = React.createClass({
         console.log('i is selected!!');
         this.setState({active: !this.state.active});
         this.setState({pro:data1[i]});
+
       /*  this.props.setState({
             pro:data1[i].proId
         });*/
+
         this.props.callbackParent(data1[i].proId);
     },
     ProvList:function () {
