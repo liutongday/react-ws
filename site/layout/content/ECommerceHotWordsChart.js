@@ -177,8 +177,8 @@ var ECommerceHotWordsChart=React.createClass({
                 <Title icon="e-commerce-hot-word" name="电商热词"/>
                 <div className="container-fluid">
                     <div className="row ec-hotword">
-                        <div className="col-md-6 "><HotWord/></div>
-                        <div className="col-md-5 "><WsTable4 data={bigHotData}/></div>
+                        <div className="col-xs-12 EC-col-customer-6 col-lg-6"><HotWord/></div>
+                        <div className="col-xs-12 EC-col-customer-5 col-lg-5"><WsTable4 data={bigHotData}/></div>
                     </div>
                 </div>
                 <Title icon="vs" name="电商热词横向对标"/>
