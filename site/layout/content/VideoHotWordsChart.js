@@ -174,6 +174,7 @@ var VideoHotWordsChart=React.createClass({
                 <Title icon="video-hot-word" name="热门视频"/>
                 <TabHost/>
                 <Title icon="vs" name="热门视频横向对标"/>
+                <HVHTabHost/>
                 <WsTable7 data={tvTableData}/>
                 <Title icon="hot-video" name="热门频道"/>
                 <WsTable7 data={tvTableData}/>
