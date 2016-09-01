@@ -39,7 +39,6 @@ var CalendarMonth = React.createClass({
                         <i className="glyphicon glyphicon-chevron-left"></i>
                     </a>
                         <span className="ws-calendar-head-title">
-                            <span>{month + 1}月</span>
                             <span>&nbsp;&nbsp;{m.year()}</span>
                         </span>
                     <a href="javascript:;" className="ws-calendar-head-next pull-right"
@@ -55,14 +54,54 @@ var CalendarMonth = React.createClass({
         var month=this.state.moment.month();
         var months=[];
         var className='ws-calendar-month';
-        for (var i=0;i<12;i++){
-            months.push(
-                <span key={i} className={i === month ? className + " ws-calendar-active": className}
-                    onClick={this.handleChangeMonth.bind(this, i)}>
-                    {i+1}月
-                </span>
-            );
-        }
+        months.push((
+            <span key={0} className={0 === month ? className + " ws-calendar-active": className}
+                  onClick={this.handleChangeMonth.bind(this, 0)}>JAN</span>
+        ));
+        months.push((
+            <span key={1} className={1 === month ? className + " ws-calendar-active": className}
+                  onClick={this.handleChangeMonth.bind(this, 1)}>FEB</span>
+        ));
+        months.push((
+            <span key={2} className={2 === month ? className + " ws-calendar-active": className}
+                  onClick={this.handleChangeMonth.bind(this, 2)}>MAR</span>
+        ));
+        months.push((
+            <span key={3} className={3 === month ? className + " ws-calendar-active": className}
+                  onClick={this.handleChangeMonth.bind(this, 3)}>APR</span>
+        ));
+        months.push((
+            <span key={4} className={4 === month ? className + " ws-calendar-active": className}
+                  onClick={this.handleChangeMonth.bind(this, 4)}>MAY</span>
+        ));
+        months.push((
+            <span key={5} className={5 === month ? className + " ws-calendar-active": className}
+                  onClick={this.handleChangeMonth.bind(this, 5)}>JUN</span>
+        ));
+        months.push((
+            <span key={6} className={6 === month ? className + " ws-calendar-active": className}
+                  onClick={this.handleChangeMonth.bind(this, 6)}>JUL</span>
+        ));
+        months.push((
+            <span key={7} className={7 === month ? className + " ws-calendar-active": className}
+                  onClick={this.handleChangeMonth.bind(this, 7)}>AUG</span>
+        ));
+        months.push((
+            <span key={8} className={8 === month ? className + " ws-calendar-active": className}
+                  onClick={this.handleChangeMonth.bind(this, 8)}>SEP</span>
+        ));
+        months.push((
+            <span key={9} className={9 === month ? className + " ws-calendar-active": className}
+                  onClick={this.handleChangeMonth.bind(this, 9)}>OCT</span>
+        ));
+        months.push((
+            <span key={10} className={10 === month ? className + " ws-calendar-active": className}
+                  onClick={this.handleChangeMonth.bind(this, 10)}>NOV</span>
+        ));
+        months.push((
+            <span key={11} className={11 === month ? className + " ws-calendar-active": className}
+                  onClick={this.handleChangeMonth.bind(this, 11)}>DEC</span>
+        ));
         return(
             <div className="ws-calendarMonth-months">
                 {months}

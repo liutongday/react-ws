@@ -32,6 +32,8 @@ import RegionalSelector from './component/regionalselector';
 import BigTabHost from './component/bigtabhost';
 // import CheckboxGroup from './component/CheckboxGroup';
 import './index.less';
+import RecentAccess from './component/recentAccess';
+import EasyAccess from './component/easyAccess';
 module.exports = {
 	Util,
     Flex,
@@ -59,5 +61,8 @@ module.exports = {
     TabHost,
     Video,
     RegionalSelector,
-    BigTabHost
+    BigTabHost,
+    RecentAccess,
+    EasyAccess,
+
 };
