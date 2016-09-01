@@ -61,6 +61,7 @@ var Weixin = React.createClass({
         //var data = {id :'1',tupian:'u797.png',name:'微信',number:'222222',jiantou:'1'};
         var chart ="/src/images/"+data.tupian;
         var name = data.name;
+        console.info(name);
         //var chart ="/demo/images/u797.png";
         return(
             <div className="main">

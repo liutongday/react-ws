@@ -1,1 +1,1 @@
-window.WEBPACK_ASSETS = {"index":{"js":"/react-ws/build/index.0250a7d0da23be56115b.bundle.js"},"portal":{"js":"/react-ws/build/portal.0250a7d0da23be56115b.bundle.js"},"site":{"js":"/react-ws/build/site.0250a7d0da23be56115b.bundle.js"}}
+window.WEBPACK_ASSETS = {"index":{"js":"/react-ws/build/index.64aec9e3cfe4a149ff93.bundle.js"},"portal":{"js":"/react-ws/build/portal.64aec9e3cfe4a149ff93.bundle.js"},"site":{"js":"/react-ws/build/site.64aec9e3cfe4a149ff93.bundle.js"}}

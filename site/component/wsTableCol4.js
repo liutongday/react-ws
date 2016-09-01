@@ -33,9 +33,14 @@ function WsTable1(tabledata) {
             backgroundColor: '#fBfBfB',
             height: '26px',
             fontSize: '12px',
+            paddingTop:'5px',
         };
+
+
+
         const pstyle = {
             marginRight: '18px',
+            marginTop:'4px',
         };
         return (
             <div className="col-xs-12 col-sm-6 col-md-4 col-customer-3">

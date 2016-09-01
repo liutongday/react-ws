@@ -185,5 +185,6 @@ var VideoHotWordsChart=React.createClass({
 
 
 
+
 });
 export default VideoHotWordsChart;

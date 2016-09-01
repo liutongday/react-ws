@@ -34,6 +34,8 @@ import HVHTabHost from './component/hvhtabhost';
 import RHBTabHost from './component/rhbtabhost';
 // import CheckboxGroup from './component/CheckboxGroup';
 import './index.less';
+import RecentAccess from './component/recentAccess';
+import EasyAccess from './component/easyAccess';
 module.exports = {
 	Util,
     Flex,
@@ -63,5 +65,8 @@ module.exports = {
     RegionalSelector,
     BigTabHost,
     HVHTabHost,
-    RHBTabHost
+    RHBTabHost,
+    RecentAccess,
+    EasyAccess,
+
 };

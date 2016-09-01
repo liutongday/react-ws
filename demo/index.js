@@ -26,6 +26,8 @@ import {
     Video,
     AppCol,
     DatePickerCS,
+    RecentAccess,
+    EasyAccess,
 } from '../src/index';
 import _ from 'underscore';
 import Layout from './component/layout';
@@ -181,22 +183,8 @@ var App=React.createClass({
                         <LeftNavigation />
                     </nav>
                     <div className="HolyGrail-content">
-                        <Form />
-                        <DatePicker callbackParent={this.onDateChanged}/>
-                        <Selector initialState={this.state.data} callbackParent={this.onProChanged}/>
-                        <Title icon="u10340.png" name="APP分类排行"/>
-                        <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
-                        <WsTable1 data={tableData} />
-                        <WsTable2/>
-                        <WsTable3/>
-                        <WsTable4/>
-                        <WsTable5/>
-                        <WsTable6/>
-                        <WsTable7/>
-                        <WsTable8/>
-                        <WsTable9/>
-                        <Title icon="u10340.png" name="APP分类排行"/>
-                        <Apps returendata={this.state.data}/>
+                        <RecentAccess />
+                        <EasyAccess />
                     </div>
                     </div>
                 </div>
