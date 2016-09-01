@@ -34,8 +34,12 @@ function WsTable1(tabledata) {
             height: '26px',
             fontSize: '12px',
         };
+
+
+
         const pstyle = {
             marginRight: '18px',
+            marginTop:'4px',
         };
         return (
             <div className="col-xs-12 col-md-4 col-lg-4">

@@ -55,15 +55,7 @@ var AppRankingList =React.createClass({
         };
     },
     getCommonListData: function(proId,date){
-        var param={
-            proId:proId,
-            date:date
-        }
-        var self = this;
-        console.info("33333");
-        console.info(param);
-        //缓存数据
-        var rolesListData = [{id :'1',tupian:'u797.png',name:'微信',number:'222222',jiantou:'1'},
+        var rolesListData =[{id :'1',tupian:'u797.png',name:'微信',number:'222222',jiantou:'1'},
             {id :'2',tupian:'u825.png',name:'QQ',number:'33333',jiantou:'0'},
             {id :'3',tupian:'u715.png',name:'腾讯视频',number:'44444',jiantou:'-1'},
             {id :'4',tupian:'u915.png',name:'手机淘宝',number:'55555',jiantou:'1'},
@@ -83,6 +75,14 @@ var AppRankingList =React.createClass({
             {id :'18',tupian:'u8003.png',name:'京东',number:'55555',jiantou:'1'},
             {id :'19',tupian:'u8007.png',name:'360手机卫士',number:'55555',jiantou:'1'},
             {id :'20',tupian:'u8011.png',name:'QQ空间',number:'55555',jiantou:'-1'},];
+        var param={
+            proId:proId,
+            date:date
+        };
+        var self = this;
+        console.info("33333");
+        console.info(param);
+        //缓存数据
         //fectch请求
         fetch('http://10.0.94.103:8080/api/testredis',{
             credentials:'same-origin',
@@ -106,7 +106,7 @@ var AppRankingList =React.createClass({
             })
             .then(function(dataSource) {
                 console.log(dataSource);
-                //console.log(self);//此时的this值已经改变（undefined）
+                console.log(self);//此时的this值已经改变（undefined）
                 self.setState({
                     data: dataSource});
                 //self.props.callbackParent(dataSource);
@@ -116,7 +116,7 @@ var AppRankingList =React.createClass({
                 console.log("fetch fail",e.toString());
                 self.setState({
                     data: rolesListData});
-                //self.props.callbackParent(rolesListData);
+                 //self.props.callbackParent(rolesListData);
             })
 
         /*fetch("http://blog.parryqiu.com", {
@@ -144,9 +144,7 @@ var AppRankingList =React.createClass({
     componentDidMount: function() {
         this.getCommonListData(this.state);
     },
-   /* componentDidUpdate:function () {
-        this.getCommonListData(this.state);
-    },*/
+
     render() {
         var tabledata= [
             {排名: '1', "/site/images/table/sociality.png,社交": '/site/images/table/weixin.png,微信', 活跃用户数: 57639,变化: '0'},
@@ -341,6 +339,7 @@ var AppRankingList =React.createClass({
                 <Title icon="app-part" name="APP分类排行"/>
                 <CheckboxGroup />
                 <Table data={tabledata}/>
+
             </div>
         );
     }
