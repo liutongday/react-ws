@@ -20,6 +20,7 @@ import {
     Title,
     ModulePartition,
     TabHost,
+    HVHTabHost,
     AppCol
 } from '../../../src/index';
 import WsTable7 from '../../component/wsT4tv';
@@ -179,5 +180,9 @@ var VideoHotWordsChart=React.createClass({
             </div>
         );
     }
+
+
+
+
 });
 export default VideoHotWordsChart;
