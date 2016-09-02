@@ -14,6 +14,7 @@
 
 import React from 'react';
 import LeftNavigation from '../component/LeftNavigation';
+import {CustomizedButton,CustomizedPanel} from '../../src/index';
 export default class Content extends React.Component {
     constructor(props) {
         super(props);
@@ -25,6 +26,8 @@ export default class Content extends React.Component {
                     <LeftNavigation />
                 </nav>
                 <div className="HolyGrail-content">
+                    <CustomizedButton/>
+                    {/*<CustomizedPanel/>*/}
                     {/*<AppRankingList/>
                     <HotNews/>
                     <ECommerceHotWordsChart/>
