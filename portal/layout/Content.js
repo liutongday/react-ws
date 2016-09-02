@@ -14,6 +14,7 @@
 
 import React from 'react';
 import LeftNavigation from '../component/LeftNavigation';
+import Title from '../component/title';
 export default class Content extends React.Component {
     constructor(props) {
         super(props);
@@ -25,6 +26,7 @@ export default class Content extends React.Component {
                     <LeftNavigation />
                 </nav>
                 <div className="HolyGrail-content">
+                    <Title icon="" name=""/>
                     {/*<AppRankingList/>
                     <HotNews/>
                     <ECommerceHotWordsChart/>

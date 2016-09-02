@@ -367,6 +367,7 @@ var CheckboxGroup = React.createClass({
                )
            }
 });
+
 //class Component extends React.Component{
 //                 render(){
 //         return (
