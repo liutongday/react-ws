@@ -31,7 +31,7 @@ class RecentAccess extends React.Component{
                     return(
                         <div className="ws-recentAccess-access">
                             <img className="ws-recentAccess-contentImg" src={"/src/images/recentAccess/"+i_data.img}/>
-                            <span className="ws-recentAccess-contentText"><a href={i_data.href}>{i_data.text}</a></span>
+                            <span className="ws-recentAccess-contentText"><a className="ws-recentAccess-a" href={i_data.href}>{i_data.text}</a></span>
                         </div>
                     );
                 },this)}
