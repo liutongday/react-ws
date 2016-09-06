@@ -32,6 +32,7 @@ import RegionalSelector from './component/regionalselector';
 import BigTabHost from './component/bigtabhost';
 import HVHTabHost from './component/hvhtabhost';
 import RHBTabHost from './component/rhbtabhost';
+import MoveScroll from './component/movescroll'
 // import CheckboxGroup from './component/CheckboxGroup';
 import './index.less';
 module.exports = {
@@ -63,5 +64,6 @@ module.exports = {
     RegionalSelector,
     BigTabHost,
     HVHTabHost,
-    RHBTabHost
+    RHBTabHost,
+    MoveScroll
 };

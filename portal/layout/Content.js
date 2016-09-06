@@ -14,6 +14,7 @@
 
 import React from 'react';
 import LeftNavigation from '../component/LeftNavigation';
+import Scroll from '../component/scroll';
 export default class Content extends React.Component {
     constructor(props) {
         super(props);
@@ -25,12 +26,7 @@ export default class Content extends React.Component {
                     <LeftNavigation />
                 </nav>
                 <div className="HolyGrail-content">
-                    {/*<AppRankingList/>
-                    <HotNews/>
-                    <ECommerceHotWordsChart/>
-                    <VideoHotWordsChart/>
-                    <WeChatOfficialAccountsChart/>
-                    <RegionalWeathervane/>*/}
+                    <Scroll/>
                 </div>
             </div>
         )

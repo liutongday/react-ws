@@ -52,6 +52,7 @@ import Day from './component/calendar';
 //import DatePicker from './component/datepicker';
 import CheckboxGroup from './component/CheckboxGroup';
 import moment from 'moment';
+import Scroll from './component/scroll'
 window.Storage = Storage;
 
 function initNav() {
@@ -183,7 +184,7 @@ var App=React.createClass({
                         <LeftNavigation />
                     </nav>
                     <div className="HolyGrail-content">
-
+                        <Scroll/>
                     </div>
                     </div>
                 </div>
