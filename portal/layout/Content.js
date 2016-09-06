@@ -18,12 +18,14 @@ import LeftNavigation from '../component/LeftNavigation';
 import {
     Selector,
     DatePicker,
-    ModulePartition,
-} from '../../src/index';
-import moment from 'moment';
+    RecentAccess,
+    EasyAccess
 
+} from '../../src/index';
 import Title from '../component/title';
-import TabHost from '../component/tabhost';import Scroll from '../component/scroll';export default class Content extends React.Component {
+import TabHost from '../component/tabhost';
+import Scroll from '../component/scroll';
+export default class Content extends React.Component {
     constructor(props) {
         super(props);
     }
@@ -42,10 +44,8 @@ import TabHost from '../component/tabhost';import Scroll from '../component/scro
                     <Scroll/>
                     <Title icon="fire" name="热点关注"/>
                     <TabHost/>
-
-
-
-
+                    <RecentAccess/>
+                    <EasyAccess/>
                 </div>
             </div>
         )
