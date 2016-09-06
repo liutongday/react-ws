@@ -184,10 +184,15 @@ var App=React.createClass({
                         <LeftNavigation />
                     </nav>
                     <div className="HolyGrail-content">
-                        <Scroll/>
+<Scroll/><<<<<<< .mine
+
+=======
+                        <EasyAccess />
+>>>>>>> .theirs
                     </div>
                     </div>
                 </div>
+
         );
     },
 });
@@ -205,6 +210,7 @@ class Pages extends React.Component {
                 </Route>
             </Router>
         )
+
     }
 }
 ReactDOM.render(<Pages></Pages>, document.getElementById('appContainer'));

@@ -155,17 +155,17 @@ var HotNews = React.createClass({
 
         return (
             <div className="Hot-News">
-                <ModulePartition id="new_module" name="热点新闻" en_name="Hot News"/>
+                <ModulePartition id="content_new_module" name="热点新闻" en_name="Hot News"/>
                 <DatePicker callbackParent={this.onDateChanged}/>
                 <Selector  callbackParent={this.onProChanged}/>
                 <div     id="new-fluid"    className="container-fluid">
-                    <div  className="row">
-                        <div className=" col-xs-12 col-md-4 col-lg-4">
+                    <div id="row" className="row">
+                        <div id="hot_new_left" className=" col-xs-12 col-md-4 col-lg-4">
                             <Title icon="new-hot-event" name="热点新闻事件"/>
                             <WsTable2 data={eventData}/>
 
                         </div>
-                        <div className=" col-xs-12 col-md-8 col-lg-8">
+                        <div id="hot_new_right" className=" col-xs-12 col-md-8 col-lg-8">
                             <Title icon="new-relative-event" name="相关新闻"/>
                             <WsTable3 data={newsData}/>
 

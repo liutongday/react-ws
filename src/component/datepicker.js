@@ -111,8 +111,8 @@ class DatePicker extends React.Component{
                     <div className="ws-datepicker-inputDiv">
                         <span className={"ws-datepicker-selected"+(this.state.active?'':'-change')}>
                             {this.state.sel?
-                            this.state.date && moment(this.state.date).format('YYYY-MM-DD'):
-                            this.state.date && moment(this.state.date).format('YYYY-MM')}
+                            this.state.date && moment(this.state.date).format('YYYY年MM月DD日'):
+                            this.state.date && moment(this.state.date).format('YYYY年MM月')}
 
                         </span>
                     </div>

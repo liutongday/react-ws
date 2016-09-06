@@ -18,7 +18,7 @@ var Chart = React.createClass({
     },
     componentDidMount: function () {
         //debugger
-        console.log(this.state.data);
+       /* console.log(this.state.data);*/
         this.drawCharts(this.state.data);
     },
     drawCharts: function (dataSet) {

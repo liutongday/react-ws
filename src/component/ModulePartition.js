@@ -40,8 +40,10 @@ var ModulePartition=React.createClass(
                             </div>
                         </div>
                         <div id="module_title">
-                            <div id="chinese_title"><p>{chinese_module_title}</p></div>
-                            <div id="english_title">{english_module_title}</div>
+                            <div id="module_text">
+                               <p id="chinese_title">{chinese_module_title}</p>
+                                <p id="english_title">{english_module_title}</p>
+                            </div>
                         </div>
                     </div>
                 </div>

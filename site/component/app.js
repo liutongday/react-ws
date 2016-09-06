@@ -7,6 +7,14 @@
  * <p>Copyright: Copyright BONC(c) 2013 - 2025 </p>
  *
  * <p>Company: 北京东方国信科技股份有限公司 </p>
+<<<<<<< HEAD
+<<<<<<< HEAD:site/component/app.js
+=======
+ *
+ * @author zhangxinjing
+ * @date 2016/8/29
+>>>>>>> origin/zhangxinjing:site/component/apps.js
+=======
 <<<<<<< .mine
  *
  * @author zhangxinjing
@@ -16,6 +24,7 @@
 
 
 >>>>>>> .theirs
+>>>>>>> origin/zhangxinjing
  */
 import '../css/apps.less';
 import 'gm-bootstrap/dist/css/bootstrap.css';
@@ -62,8 +71,14 @@ var Apps= React.createClass({
      {id :'19',tupian:'u8007.png',name:'360手机卫士',number:'55555',jiantou:'1'},
      {id :'20',tupian:'u8011.png',name:'QQ空间',number:'55555',jiantou:'-1'},];
 
+<<<<<<< HEAD
+<<<<<<< HEAD:site/component/app.js
+        self.setState({
+            data: rolesListData});
+=======
 self.setState({
      data: rolesListData});
+>>>>>>> origin/zhangxinjing
 
      //console.log(JSON.stringify(param));
      /!*fetch('http://10.0.94.34:8080/api/testredis',{
@@ -133,6 +148,9 @@ self.setState({
      self.setState({
      data: rolesListData});
      })
+<<<<<<< HEAD
+>>>>>>> origin/zhangxinjing:site/component/apps.js
+=======
 =======
             data: rolesListData});
 
@@ -170,6 +188,7 @@ self.setState({
                     data: rolesListData});
             })
 >>>>>>> .theirs
+>>>>>>> origin/zhangxinjing
      *!/
 
      },

@@ -33,12 +33,17 @@ function WsTable1(tabledata) {
             backgroundColor: '#fBfBfB',
             height: '26px',
             fontSize: '12px',
+            paddingTop:'5px',
         };
+
+
+
         const pstyle = {
             marginRight: '18px',
+            marginTop:'4px',
         };
         return (
-            <div className="col-xs-12 col-md-4 col-lg-4">
+            <div className="col-xs-12 col-sm-6 col-md-4 col-customer-3">
                     <a style={aStyle}><span style={pstyle}>更多></span></a>
                     <Table1 data={data} className={'basic'}>
                         <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
