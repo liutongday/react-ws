@@ -29,10 +29,12 @@ class RecentAccess extends React.Component{
             <div className="ws-recentAccess-content">
                 {data1.map(function (i_data,index) {
                     return(
-                        <div className="ws-recentAccess-access">
+                        <a className="ws-recentAccess-a" href={i_data.href}>
+                        <div onClick={window.open('http://www.baidu.com')} className="ws-recentAccess-access">
                             <img className="ws-recentAccess-contentImg" src={"/src/images/recentAccess/"+i_data.img}/>
-                            <span className="ws-recentAccess-contentText"><a className="ws-recentAccess-a" href={i_data.href}>{i_data.text}</a></span>
+                            <span className="ws-recentAccess-contentText">{i_data.text}</span>
                         </div>
+                        </a>
                     );
                 },this)}
                 <div className="ws-recentAccess-access"></div>
