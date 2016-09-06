@@ -36,7 +36,6 @@ var Selector = React.createClass({
         };
     },
     selectedProv:function (i) {
-        console.log('i is selected!!');
         this.setState({active: !this.state.active});
         this.setState({pro:data1[i]});
 
@@ -47,7 +46,6 @@ var Selector = React.createClass({
         this.props.callbackParent(data1[i].proId);
     },
     ProvList:function () {
-        console.log("this is the provinces!!");
         this.setState({active:!this.state.active});
     },
     render() {

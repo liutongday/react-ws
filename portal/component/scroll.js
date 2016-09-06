@@ -67,17 +67,17 @@ var Scroll= React.createClass({
         $("#scroll-move1").animate({'left':'0px','display':'block'},1000);
         $("#scroll-move2").animate({'left':'0px','display':'block'},1000);
         //$("#scroll-move").animate({left:'+=50px'});
-       /* if($('#scroll-move').offset().left>=400){
-            //$("#scroll-move").animate({'left':'0px','visibility':'hidden'},1000);
-            $('#scroll-move').stop(true).animate({'left':'600px','visibility':'block'},1000);
-            //$("#scroll-move").animate({'left':'0px','visibility':'hidden'},1000);
-            $('#scroll-move').css('left','0px');
-            //setInterval(this.hideDiv, 1000);
-        }
-        console.info(show);
-        if($('#scroll-move').offset().left<=150&&show==false){
-            $('#scroll-move').css('visibility','visible');
-        }*/
+        /* if($('#scroll-move').offset().left>=400){
+         //$("#scroll-move").animate({'left':'0px','visibility':'hidden'},1000);
+         $('#scroll-move').stop(true).animate({'left':'600px','visibility':'block'},1000);
+         //$("#scroll-move").animate({'left':'0px','visibility':'hidden'},1000);
+         $('#scroll-move').css('left','0px');
+         //setInterval(this.hideDiv, 1000);
+         }
+         console.info(show);
+         if($('#scroll-move').offset().left<=150&&show==false){
+         $('#scroll-move').css('visibility','visible');
+         }*/
     },
     componentDidMount: function() {
         //setInterval(this.myanimate,2000);
@@ -154,7 +154,7 @@ var Scroll= React.createClass({
                                 color:'#95D2C6',
                             },
                             areaStyle: {type: 'default',
-                            color:'#F1F9F7'}
+                                color:'#F1F9F7'}
                         }
                     },
                     //标记点的样式
@@ -187,6 +187,7 @@ var Scroll= React.createClass({
          date: data,
          });*/
     },
+
     render() {
         var self=this;
         var data = [{chart :'money.png',movename:'移网日发展用户数',numone:'111',numtwo:'111',numpersent:'11%',jiantou:'money.png',bar:'money.png'},
@@ -221,25 +222,25 @@ var Scroll= React.createClass({
 
         );
         /*var data1 = {chart :'money.png',movename:'移网日发展用户数',numone:'111',numtwo:'111',numpersent:'11%',jiantou:'money.png',bar:'money.png'};
-        var data2 = {chart :'money.png',movename:'移网日发展用户数',numone:'222',numtwo:'222',numpersent:'22%',jiantou:'money.png',bar:'money.png'};
-        var data3 = {chart :'money.png',movename:'移网日发展用户数',numone:'333',numtwo:'333',numpersent:'33%',jiantou:'money.png',bar:'money.png'};
-        var data4 = {chart :'money.png',movename:'移网日发展用户数',numone:'444',numtwo:'444',numpersent:'44%',jiantou:'money.png',bar:'money.png'};
-        return (
-            <div classID="scroll-main" className="scroll-main">
-                <div id="scroll-move-one" className="scroll-move-one">
-                    <MoveScroll  data={data1}/>
-                </div>
-                <div id="scroll-move-two" className="scroll-move-two">
-                    <MoveScroll  data={data2}/>
-                </div>
-                <div id="scroll-move-three" className="scroll-move-three">
-                    <MoveScroll  data={data3}/>
-                </div>
-                <div id="scroll-move-four" className="scroll-move-four">
-                    <MoveScroll  data={data4}/>
-                </div>
-            </div>
-        );*/
+         var data2 = {chart :'money.png',movename:'移网日发展用户数',numone:'222',numtwo:'222',numpersent:'22%',jiantou:'money.png',bar:'money.png'};
+         var data3 = {chart :'money.png',movename:'移网日发展用户数',numone:'333',numtwo:'333',numpersent:'33%',jiantou:'money.png',bar:'money.png'};
+         var data4 = {chart :'money.png',movename:'移网日发展用户数',numone:'444',numtwo:'444',numpersent:'44%',jiantou:'money.png',bar:'money.png'};
+         return (
+         <div classID="scroll-main" className="scroll-main">
+         <div id="scroll-move-one" className="scroll-move-one">
+         <MoveScroll  data={data1}/>
+         </div>
+         <div id="scroll-move-two" className="scroll-move-two">
+         <MoveScroll  data={data2}/>
+         </div>
+         <div id="scroll-move-three" className="scroll-move-three">
+         <MoveScroll  data={data3}/>
+         </div>
+         <div id="scroll-move-four" className="scroll-move-four">
+         <MoveScroll  data={data4}/>
+         </div>
+         </div>
+         );*/
     }
 });
 export default Scroll;
