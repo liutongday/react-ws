@@ -19,6 +19,7 @@ import {
     DatePicker,
     Title,
     TabHost,
+    RHBTabHost,
     ModulePartition,
     BigTabHost
 } from '../../../src/index';
@@ -69,7 +70,7 @@ var RegionalWeathervane=React.createClass(
                 {排名: '10', 热搜词: '腾讯视频', 热度: 9394748,变化: '0'},
 
             ];
-          /*  var appTableData=[
+            var appTableData=[
                 {排名: '1', APP名称: '/site/images/table/weixin.png,微信', 活跃用户数: 57639,变化: '1'},
                 {排名: '2', APP名称: '/site/images/table/qq.png,QQ',   活跃用户数: 53958,变化: '-1'},
                 {排名: '3', APP名称: '/site/images/table/weibo.png,新浪微博', 活跃用户数:10184,变化: '0'},
@@ -113,10 +114,10 @@ var RegionalWeathervane=React.createClass(
                 {排名: '8', APP名称: '/site/images/table/u735.png,PPTV聚力', 活跃用户数:1018 ,变化: '0'},
                 {排名: '9', APP名称: '/site/images/table/qqkj.png,QQ空间', 活跃用户数: 864,变化: '0'},
                 {排名: '10', APP名称: '/site/images/table/zhfb.png,旺信', 活跃用户数:668 ,变化: '0'},
-            ];*/
+            ];
             return (
                 <div className="Regional-Weather-vane">
-                    <ModulePartition id="area_module" name="地域风向标" en_name="Regional  Weather-vane"/>
+                    <ModulePartition id="content_area_module" name="地域风向标" en_name="Regional  Weather-vane"/>
                     <DatePicker/>
                     <Selector initialState={this.state.data} callbackParent={this.onChildChanged}/>
                     <Title icon="regional-weather-vane" name="地域热搜"/>
@@ -128,8 +129,8 @@ var RegionalWeathervane=React.createClass(
                     </div>
                     <Title icon="regional-horizontal-benchmarking" name="地域横向对标"/>
                     <BigTabHost/>
-                    {/*<TabHost/>*/}
-                    <WsTable9 />
+                    {/*<RHBTabHost/>*/}
+                    <WsTable9 data={appTableData}/>
                 </div>
             );
         }

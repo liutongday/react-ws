@@ -18,7 +18,7 @@ var BigTab = React.createClass({
         this.setState({currentIndex: index});
     },
     changeTabStyle:function (index) {
-        return  index == this.state.currentIndex? 'col-xs-3 col-sm-2 col-md-1 col-lg-1 big-tab-onclick': 'col-xs-3 col-sm-2 col-md-1 col-lg-1';
+        return  index == this.state.currentIndex? 'col-xs-3 col-sm-2 col-md-1 col-lg-1 big-tab-onclick': 'col-xs-3 col-sm-2 col-md-1 col-lg-1 big-tab-noclick';
     },
     changeTabIndicate:function (index) {
         return index == this.state.currentIndex ? 'big-bottom-line-show' : 'big-bottom-line-none';

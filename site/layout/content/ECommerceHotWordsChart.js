@@ -171,14 +171,14 @@ var ECommerceHotWordsChart=React.createClass({
     ];
         return (
             <div className="ECommerce-Hot-Words-Chart">
-                <ModulePartition id="busi_module" name="电商热词风云榜" en_name="E-Commerce Hot Words Chart"/>
+                <ModulePartition id="content_busi_module" name="电商热词风云榜" en_name="E-Commerce Hot Words Chart"/>
                 <DatePicker callbackParent={this.onDateChanged}/>
                 <Selector  callbackParent={this.onProChanged}/>
                 <Title icon="e-commerce-hot-word" name="电商热词"/>
                 <div className="container-fluid">
                     <div className="row ec-hotword">
-                        <div className="col-md-6"><HotWord/></div>
-                        <div className="col-md-5"><WsTable4 data={bigHotData}/></div>
+                        <div className="col-xs-12 EC-col-customer-6 col-lg-6"><HotWord/></div>
+                        <div className="col-xs-12 EC-col-customer-5 col-lg-5"><WsTable4 data={bigHotData}/></div>
                     </div>
                 </div>
                 <Title icon="vs" name="电商热词横向对标"/>

@@ -118,10 +118,9 @@ const renderThs = (columns) => (
             }
         }
         const imgStyle={
-            position:'relative',
-            marginRight:"5px",
+            position:'absolute',
+            top:'8px',
             zIndex:'10px',
-            bottom:'10px',
             width:'55px',
             height:'55px',
         };
@@ -132,7 +131,7 @@ const renderThs = (columns) => (
                 className={`-ws-th col-${index} col-${dataKey} ${className || ''} `}
             >
                 {showImg?<img src={contentImg} style={imgStyle} width={50}/>:null}
-                 {contentText||content}
+                <span > {contentText||content}</span>
             </th>
         );
     })
@@ -208,14 +207,14 @@ const renderTds = (data, entry, columns, rowIndex) => (
                 style={getStyle(col.props)}
                 className={`ws-td col-${index} col-${dataKey} ${className || ''}  `}
             >
-                {showImage?<img src={contentImg} style={{marginRight:'15px'}} width={30}/>:null}
+
+                {showImage?<img src={contentImg} style={{marginRight:'15px'}} width={30} height={30} />:null}
                 {contentText||content}
-                {showInput?<img src={state} width={16}/>:null}
+                {showInput?<img src={state} width={16} height={11.58}/>:null}
             </td>
         );
     })
 );
-
 const renderRows = (data, columns) => {
     if (!data || !data.length) {return null;}
 

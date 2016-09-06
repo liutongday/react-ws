@@ -19,7 +19,7 @@ var Title = React.createClass({
         let icon = this.props.icon;
         let chart ="/site/images/title/"+icon+".png";
         let name = this.props.name;
-       /* console.log(name);*/
+        console.log(name);
         return(
             <div className="title">
                 <img className="chart" src={chart}/>

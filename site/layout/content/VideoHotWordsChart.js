@@ -20,6 +20,7 @@ import {
     Title,
     ModulePartition,
     TabHost,
+    HVHTabHost,
     AppCol
 } from '../../../src/index';
 import WsTable7 from '../../component/wsT4tv';
@@ -167,17 +168,23 @@ var VideoHotWordsChart=React.createClass({
         ];
         return (
             <div className="Video-Hot-Words-Chart">
-                <ModulePartition id="video_module" name="视频热词风云榜" en_name="Video Hot Words  Chart"/>
+                <ModulePartition id="content_video_module" name="视频热词风云榜" en_name="Video Hot Words  Chart"/>
                 <DatePicker callbackParent={this.onDateChanged}/>
                 <Selector  callbackParent={this.onProChanged}/>
                 <Title icon="video-hot-word" name="热门视频"/>
                 <TabHost/>
                 <Title icon="vs" name="热门视频横向对标"/>
+                <HVHTabHost/>
                 <WsTable7 data={tvTableData}/>
                 <Title icon="hot-video" name="热门频道"/>
                 <WsTable7 data={tvTableData}/>
             </div>
         );
     }
+
+
+
+
+
 });
 export default VideoHotWordsChart;

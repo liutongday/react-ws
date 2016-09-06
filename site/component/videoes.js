@@ -107,7 +107,7 @@ var Videoes= React.createClass({
                     <div className="row videos">
                         {rolesListDatainfo}
                         {/*<Flex ws-flex row wrap>*/}
-                            {/*{rolesListDatainfo}*/}
+                        {/*{rolesListDatainfo}*/}
                         {/*</Flex>*/}
                     </div>
                 </div>

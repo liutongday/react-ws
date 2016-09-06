@@ -14,53 +14,7 @@
 import React, { PropTypes } from 'react';
 import {Table1,Column,Flex,RegionalSelector} from '../../src/index';
 import '../css/table-ws.less';
-const data = [
-    {排名: '1', APP名称: '/site/images/table/weixin.png,微信', 活跃用户数: 57639,变化: '1'},
-    {排名: '2', APP名称: '/site/images/table/qq.png,QQ',   活跃用户数: 53958,变化: '-1'},
-    {排名: '3', APP名称: '/site/images/table/weibo.png,新浪微博', 活跃用户数:10184,变化: '0'},
-    {排名: '4', APP名称: '/site/images/table/u7942.png,腾讯视频', 活跃用户数: 8643,变化: '0'},
-    {排名: '5', APP名称: '/site/images/table/u7954.png,爱奇艺', 活跃用户数: 6689,变化: '0'},
-    {排名: '6', APP名称: '/site/images/table/u785.png,蘑菇街', 活跃用户数: 5763,变化: '1'},
-    {排名: '7', APP名称: '/site/images/table/u777.png,唯品会',   活跃用户数: 5395,变化: '-1'},
-    {排名: '8', APP名称: '/site/images/table/u735.png,PPTV聚力', 活跃用户数:1018 ,变化: '0'},
-    {排名: '9', APP名称: '/site/images/table/qqkj.png,QQ空间', 活跃用户数: 864,变化: '0'},
-    {排名: '10', APP名称: '/site/images/table/zhfb.png,旺信', 活跃用户数:668 ,变化: '0'},
 
-    {排名: '1', APP名称: '/site/images/table/weixin.png,微信', 活跃用户数: 57639,变化: '1'},
-    {排名: '2', APP名称: '/site/images/table/qq.png,QQ',   活跃用户数: 53958,变化: '-1'},
-    {排名: '3', APP名称: '/site/images/table/weibo.png,新浪微博', 活跃用户数:10184,变化: '0'},
-    {排名: '4', APP名称: '/site/images/table/u7942.png,腾讯视频', 活跃用户数: 8643,变化: '0'},
-    {排名: '5', APP名称: '/site/images/table/u7954.png,爱奇艺', 活跃用户数: 6689,变化: '0'},
-    {排名: '6', APP名称: '/site/images/table/u785.png,蘑菇街', 活跃用户数: 5763,变化: '1'},
-    {排名: '7', APP名称: '/site/images/table/u777.png,唯品会',   活跃用户数: 5395,变化: '-1'},
-    {排名: '8', APP名称: '/site/images/table/u735.png,PPTV聚力', 活跃用户数:1018 ,变化: '0'},
-    {排名: '9', APP名称: '/site/images/table/qqkj.png,QQ空间', 活跃用户数: 864,变化: '0'},
-    {排名: '10', APP名称: '/site/images/table/zhfb.png,旺信', 活跃用户数:668 ,变化: '0'},
-
-    {排名: '1', APP名称: '/site/images/table/weixin.png,微信', 活跃用户数: 57639,变化: '1'},
-    {排名: '2', APP名称: '/site/images/table/qq.png,QQ',   活跃用户数: 53958,变化: '-1'},
-    {排名: '3', APP名称: '/site/images/table/weibo.png,新浪微博', 活跃用户数:10184,变化: '0'},
-    {排名: '4', APP名称: '/site/images/table/u7942.png,腾讯视频', 活跃用户数: 8643,变化: '0'},
-    {排名: '5', APP名称: '/site/images/table/u7954.png,爱奇艺', 活跃用户数: 6689,变化: '0'},
-    {排名: '6', APP名称: '/site/images/table/u785.png,蘑菇街', 活跃用户数: 5763,变化: '1'},
-    {排名: '7', APP名称: '/site/images/table/u777.png,唯品会',   活跃用户数: 5395,变化: '-1'},
-    {排名: '8', APP名称: '/site/images/table/u735.png,PPTV聚力', 活跃用户数:1018 ,变化: '0'},
-    {排名: '9', APP名称: '/site/images/table/qqkj.png,QQ空间', 活跃用户数: 864,变化: '0'},
-    {排名: '10', APP名称: '/site/images/table/zhfb.png,旺信', 活跃用户数:668 ,变化: '0'},
-
-    {排名: '1', APP名称: '/site/images/table/weixin.png,微信', 活跃用户数: 57639,变化: '1'},
-    {排名: '2', APP名称: '/site/images/table/qq.png,QQ',   活跃用户数: 53958,变化: '-1'},
-    {排名: '3', APP名称: '/site/images/table/weibo.png,新浪微博', 活跃用户数:10184,变化: '0'},
-    {排名: '4', APP名称: '/site/images/table/u7942.png,腾讯视频', 活跃用户数: 8643,变化: '0'},
-    {排名: '5', APP名称: '/site/images/table/u7954.png,爱奇艺', 活跃用户数: 6689,变化: '0'},
-    {排名: '6', APP名称: '/site/images/table/u785.png,蘑菇街', 活跃用户数: 5763,变化: '1'},
-    {排名: '7', APP名称: '/site/images/table/u777.png,唯品会',   活跃用户数: 5395,变化: '-1'},
-    {排名: '8', APP名称: '/site/images/table/u735.png,PPTV聚力', 活跃用户数:1018 ,变化: '0'},
-    {排名: '9', APP名称: '/site/images/table/qqkj.png,QQ空间', 活跃用户数: 864,变化: '0'},
-    {排名: '10', APP名称: '/site/images/table/zhfb.png,旺信', 活跃用户数:668 ,变化: '0'},
-
-
-];
 var WsTable9=React.createClass({
     getInitialState: function () {
 
@@ -76,10 +30,11 @@ var WsTable9=React.createClass({
             data: newState
         });
     },
-    render:function () {
+    render() {
+        const items=this.props.data;
         const dataArr=[];
-        for(let i=0;i<data.length;i+=10){
-            dataArr.push(data.slice(i,i+10));
+        for(let i=0;i<items.length;i+=10){
+            dataArr.push(items.slice(i,i+10));
         }
 
         const talbleType4=dataArr.map(data=>{
@@ -97,9 +52,6 @@ var WsTable9=React.createClass({
                         </Table1>
                     </div>
                 </div>
-
-
-
             );
         });
         return (

@@ -187,6 +187,7 @@ var App=React.createClass({
                     </div>
                     </div>
                 </div>
+
         );
     },
 });
@@ -204,6 +205,7 @@ class Pages extends React.Component {
                 </Route>
             </Router>
         )
+
     }
 }
 ReactDOM.render(<Pages></Pages>, document.getElementById('appContainer'));

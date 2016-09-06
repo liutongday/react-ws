@@ -12,28 +12,30 @@
  * @date 2016/8/31
  */
 import React from 'react';
-
+var data1=[{img:"u486.png",href:"http://hao.xueui.cn/",text:"APP排行榜"},
+    {img:"u484.png",href:"https://www.baidu.com/",text:"地域风向标"},
+    {img:"u504.png",href:"http://hao.xueui.cn/",text:"电商热词搜索"},
+    {img:"u492.png",href:"https://www.baidu.com/",text:"微信公众号"},
+    {img:"u496.png",href:"http://hao.xueui.cn/",text:"热点新闻"},
+    {img:"u500.png",href:"https://www.baidu.com/",text:"运营总览"},
+    {img:"u550.png",href:"http://hao.xueui.cn/",text:"视频热词搜锁"},
+    {img:"u486.png",href:"http://hao.xueui.cn/",text:"APP排行榜"},
+];
 class RecentAccess extends React.Component{
-    rendHead(){
-        return(
-            <div className="ws-recentAccess-header">
-                <img className="ws-recentAccess-img" src="/src/images/recentAccess/u558.png"/>
-                <span className="ws-recentAccess-text">近期访问</span>
-            </div>
-        );
-    }
+
+
     rendContent(){
-        var access=[];
-        access.push((
-            <span className="ws-recentAccess-access">
-                <img className="ws-recentAccess-contentImg" src="/src/images/recentAccess/u484.png">
-                </img>
-                <p>APP排行榜</p>
-            </span>
-        ));
         return(
             <div className="ws-recentAccess-content">
-                {access}
+                {data1.map(function (i_data,index) {
+                    return(
+                        <div className="ws-recentAccess-access">
+                            <img className="ws-recentAccess-contentImg" src={"/src/images/recentAccess/"+i_data.img}/>
+                            <span className="ws-recentAccess-contentText"><a href={i_data.href}>{i_data.text}</a></span>
+                        </div>
+                    );
+                },this)}
+                <div className="ws-recentAccess-access"></div>
             </div>
         );
     }
@@ -41,7 +43,6 @@ class RecentAccess extends React.Component{
         var t=this;
         return(
             <div className="ws-recentAccess">
-                {t.rendHead()}
                 {t.rendContent()}
             </div>
         );
