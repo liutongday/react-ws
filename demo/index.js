@@ -184,7 +184,6 @@ var App=React.createClass({
                     </nav>
                     <div className="HolyGrail-content">
                         <RecentAccess />
-                        <EasyAccess />
                     </div>
                     </div>
                 </div>

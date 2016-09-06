@@ -36,7 +36,6 @@ export default class Page extends React.Component {
                 <Footer />
 
             </div>
-
         );
     }
 }
