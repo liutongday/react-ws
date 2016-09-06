@@ -184,11 +184,8 @@ var App=React.createClass({
                         <LeftNavigation />
                     </nav>
                     <div className="HolyGrail-content">
-<Scroll/><<<<<<< .mine
-
-=======
+                        <Scroll/>
                         <EasyAccess />
->>>>>>> .theirs
                     </div>
                     </div>
                 </div>

@@ -13,7 +13,15 @@
  */
 
 import React from 'react';
+import './Content.less'
 import LeftNavigation from '../component/LeftNavigation';
+import {
+    Selector,
+    DatePicker,
+    ModulePartition,
+} from '../../src/index';
+import moment from 'moment';
+
 import Title from '../component/title';
 import TabHost from '../component/tabhost';import Scroll from '../component/scroll';export default class Content extends React.Component {
     constructor(props) {
@@ -26,15 +34,14 @@ import TabHost from '../component/tabhost';import Scroll from '../component/scro
                     <LeftNavigation />
                 </nav>
                 <div className="HolyGrail-content">
-<Title icon="core" name="核心指标"/>
-                    <Title icon="rocket" name="便捷访问"/>
-                    <TabHost/><Scroll/><<<<<<< .mine
-
-
-=======
+                    <div className="time-pro">
+                        <DatePicker callbackParent={this.onDateChanged}/>
+                        <Selector  callbackParent={this.onProChanged}/>
+                    </div>
+                    <Title icon="core" name="核心指标"/>
+                    <Scroll/>
+                    <Title icon="rocket" name="热点关注"/>
                     <TabHost/>
-
->>>>>>> .theirs
                 </div>
             </div>
         )

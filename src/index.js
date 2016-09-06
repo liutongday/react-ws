@@ -66,14 +66,9 @@ module.exports = {
     RegionalSelector,
     BigTabHost,
     HVHTabHost,
-RHBTabHost,
+    RHBTabHost,
     RecentAccess,
-    EasyAccess,MoveScroll<<<<<<< .mine
-};
-
-
-=======
     EasyAccess,
-
+    MoveScroll
 };
->>>>>>> .theirs
+
