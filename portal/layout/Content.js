@@ -15,6 +15,7 @@
 import React from 'react';
 import LeftNavigation from '../component/LeftNavigation';
 import Title from '../component/title';
+import TabHost from '../component/tabhost';
 export default class Content extends React.Component {
     constructor(props) {
         super(props);
@@ -26,13 +27,10 @@ export default class Content extends React.Component {
                     <LeftNavigation />
                 </nav>
                 <div className="HolyGrail-content">
-                    <Title icon="" name=""/>
-                    {/*<AppRankingList/>
-                    <HotNews/>
-                    <ECommerceHotWordsChart/>
-                    <VideoHotWordsChart/>
-                    <WeChatOfficialAccountsChart/>
-                    <RegionalWeathervane/>*/}
+                    <Title icon="core" name="核心指标"/>
+                    <Title icon="rocket" name="便捷访问"/>
+                    <TabHost/>
+
                 </div>
             </div>
         )

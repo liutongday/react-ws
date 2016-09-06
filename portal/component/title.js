@@ -17,7 +17,7 @@ var Title = React.createClass({
     },*/
     render:function () {
         let icon = this.props.icon;
-        let chart ="/site/images/title/"+icon+".png";
+        let chart ="/portal/images/title/"+icon+".png";
         let name = this.props.name;
         console.log(name);
         return(
