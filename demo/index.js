@@ -183,7 +183,7 @@ var App=React.createClass({
                         <LeftNavigation />
                     </nav>
                     <div className="HolyGrail-content">
-                        <RecentAccess />
+                        <EasyAccess/>
                     </div>
                     </div>
                 </div>
