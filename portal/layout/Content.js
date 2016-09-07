@@ -25,6 +25,7 @@ import {
 import Title from '../component/title';
 import TabHost from '../component/tabhost';
 import Scroll from '../component/scroll';
+import {CustomizedButton,CustomizedPanel} from '../../src/index';
 export default class Content extends React.Component {
     constructor(props) {
         super(props);
@@ -44,6 +45,9 @@ export default class Content extends React.Component {
                         <div className="row">
                             <div className="col-xs-12 col-md-9 col-lg-9">
                                 <Title icon="core" name="核心指标"/>
+                                <div >
+                                    <CustomizedButton/>
+                                </div>
                                 <Scroll/>
                             </div>
                             <div id="right-recent" className="col-xs-12 col-md-3 col-lg-3">
@@ -55,6 +59,7 @@ export default class Content extends React.Component {
 
                             <div className="col-xs-12 col-md-9 col-lg-9">
                                 <Title icon="fire" name="热点关注"/>
+
                                 <TabHost/>
                             </div>
                             <div id="right-easy" className="col-xs-12 col-md-3 col-lg-3">
