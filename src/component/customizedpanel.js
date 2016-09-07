@@ -25,7 +25,6 @@ var CustomizedPanel=React.createClass({
     },
     handleItemClick:function (index) {
         var to_right_data=this.state.rightData;
-        console.log(index+"#############################");
         var left_can_to_right=this.state.leftData;
         to_right_data.push(left_can_to_right[index]);
         var realRightData=this.unique(to_right_data);
@@ -55,65 +54,15 @@ var CustomizedPanel=React.createClass({
         all_right_data.splice(index,1);
         this.setState({rightData:all_right_data});
     },
-    handleShowSubItem:function (index) {
-        this.setState({currentIndex: index});
-        /*var ulStyle=document.getElementsByClassName("ul-detail-list-hidden")[index].style.display;
-        if(ulStyle=='none'){
-            $(".list-item-icon")[index].addClass(".transform-list-icon");
-            document.getElementsByClassName("ul-detail-list-hidden")[index].style.display='block';
-        }
-        else {
-            //$(".list-item-icon")[index].removeClass(".transform-list-icon");
-            document.getElementsByClassName("ul-detail-list-hidden")[index].style.display='none';
-        }*/
-
-    },
-    changeUlStyle:function (index) {
-        debugger
-        return  index == this.state.currentIndex? 'ul-detail-list-show': 'ul-detail-list-hidden';
-    },
-    changeItemIcon:function (index) {
-        debugger
-        return  index == this.state.currentIndex? 'list-item-icon transform-list-icon': 'list-item-icon';
-    },
     render:function () {
-       /* const leftData=[{listTitle:'aaaaaaaa',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
-            {listTitle:'aaaaaaaa',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
-            {listTitle:'aaaaaaaa',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
-            {listTitle:'aaaaaaaa',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
-            {listTitle:'aaaaaaaa',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
-            {listTitle:'aaaaaaaa',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
-            {listTitle:'aaaaaaaa',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
-            {listTitle:'aaaaaaaa',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
-            {listTitle:'aaaaaaaa',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]}];*/
+        var leftTitle=this.props.leftPanelTitle;
         var self = this;
         var leftData=this.state.leftData;
         var leftList=leftData.map(function (data,index) {
             var list_title=data.listTitle;
-            var list_details=data.listDetails;
             return (
                 <div id="left-list">
-                    {/*<details onClick={self.handleItemClick.bind(this,index)}>
-                        <summary>{list_title}</summary>
-                        <ul id="ul-detail-list">
-                            {list_details.map(function (d_data,key) {
-                                return(
-                                <li>{d_data.detailTitle}</li>
-                                );
-                            })}
-                        </ul>
-                    </details>*/}
-                        <img className={self.changeItemIcon(index)} src="/src/images/customize/list-item-icon.png" onClick={self.handleShowSubItem.bind(this,index)} ></img>
-                        <div>
-                            <span className="list-item" onClick={self.handleItemClick.bind(this,index)}>{list_title}</span>
-                            <ul className={self.changeUlStyle(index)}>
-                                {list_details.map(function (d_data,key) {
-                                    return(
-                                        <li>{d_data.detailTitle}</li>
-                                    );
-                                })}
-                            </ul>
-                        </div>
+                    <span className="list-item" onClick={self.handleItemClick.bind(this,index)}>{list_title}</span>
                 </div>
             );
         });
@@ -121,30 +70,9 @@ var CustomizedPanel=React.createClass({
         if(rightData!=null){
             var rightList=rightData.map(function (data,index) {
                 var list_title=data.listTitle;
-                var list_details=data.listDetails;
                 return (
                     <div id="left-list">
-                        {/*<details>
-                            <summary>{list_title}</summary>
-                            <ul className="ul-detail-list">
-                                {list_details.map(function (d_data,key) {
-                                    return(
-                                        <li>{d_data.detailTitle}</li>
-                                    );
-                                })}
-                            </ul>
-                        </details>*/}
-                        <img className={self.changeItemIcon(index)} src="/src/images/customize/list-item-icon.png" onClick={self.handleShowSubItem.bind(this,index)} ></img>
-                        <div>
-                            <span className="list-item">{list_title}</span>
-                            <ul className={self.changeUlStyle(index)}>
-                                {list_details.map(function (d_data,key) {
-                                    return(
-                                        <li>{d_data.detailTitle}</li>
-                                    );
-                                })}
-                            </ul>
-                        </div>
+                        <span className="list-item">{list_title}</span>
                         <img id="delete" src="/src/images/customize/close.png" onClick={self.handleDelete.bind(this,index)}></img>
                     </div>
                 );
@@ -163,11 +91,13 @@ var CustomizedPanel=React.createClass({
                 </div>
                 <div id="bottom-content">
                     <div id="left-area">
-                        {leftList}
+                        <span id="leftPanelTitle">{leftTitle}</span>
+                        <div className="list-data-div">{leftList}</div>
                     </div>
                     <img id="center-arrow" src="/src/images/customize/center-arrow.png"></img>
                     <div id="right-area">
-                        {rightList}
+                        <span id="leftPanelTitle">已选指标</span>
+                        <div className="list-data-div">{rightList}</div>
                     </div>
                     <div id="bottom-button">
                         <div id="cancel-button" onClick={this.handleCancel}>取消</div>
