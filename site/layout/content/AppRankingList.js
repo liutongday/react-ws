@@ -113,9 +113,10 @@ var AppRankingList =React.createClass({
             })
             .catch(function(e) {
                 console.log("fetch fail",e.toString());
-                self.setState({
-                    data: rolesListData});
-                 //self.props.callbackParent(rolesListData);
+
+                /*self.setState({
+                 data: rolesListData});
+                 self.props.callbackParent(rolesListData);*/
             })
 
         /*fetch("http://blog.parryqiu.com", {
@@ -140,10 +141,18 @@ var AppRankingList =React.createClass({
         });
         this.getCommonListData(this.state.pro,date);
     },
+    checkboxChanged: function (value) {
+        console.info("12345");
+        console.info(value);
+        this.setState({
+            value: value
+        });
+         this.getCommonListData(this.state.value);
+    },
+
     componentDidMount: function() {
         this.getCommonListData(this.state);
     },
-
     render() {
         var tabledata= [
             {排名: '1', "/site/images/table/sociality.png,社交": '/site/images/table/weixin.png,微信', 活跃用户数: 57639,变化: '0'},
@@ -329,13 +338,13 @@ var AppRankingList =React.createClass({
         ];
         return (
             <div className="App-Ranking-List">
-                <ModulePartition id="app_module" name="App排行榜" en_name="App Ranking List"/>
+                <ModulePartition id="content_app_module" name="APP排行榜" en_name="App Ranking List"/>
                 <DatePicker callbackParent={this.onDateChanged}/>
                 <Selector  callbackParent={this.onProChanged}/>
                 <Title icon="app-user" name="APP活跃用户总排行"/>
                 <Wechartconcern returendata={this.state.returendata}/>
                 <Title icon="app-part" name="APP分类排行"/>
-                <CheckboxGroup />
+                <CheckboxGroup callbackParent={this.checkboxChanged}/>
                 <Table data={tabledata}/>
             </div>
         );

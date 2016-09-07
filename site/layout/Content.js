@@ -21,6 +21,7 @@ import VideoHotWordsChart from './content/VideoHotWordsChart'
 import WeChatOfficialAccountsChart from './content/WeChatOfficialAccountsChart'
 import RegionalWeathervane from './content/RegionalWeathervane'
 import LeftNavigation from '../component/LeftNavigation';
+
 export default class Content extends React.Component {
     constructor(props) {
         super(props);

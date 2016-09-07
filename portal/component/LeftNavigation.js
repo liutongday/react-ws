@@ -33,14 +33,12 @@ class Navigator extends React.Component {
 
     }
     render() {
-
-        const list = [{"id":"app","img_url":"../site/images/left-nav/app","content":"App排行榜"},
-                {"id":"new","img_url":"../site/images/left-nav/new","content":"热点新闻"},
-                {"id":"busi","img_url":"../site/images/left-nav/busi","content":"电商热词风云榜"},
-                {"id":"video","img_url":"../site/images/left-nav/video","content":"视频热词风云榜"},
-                {"id":"weixinpic","img_url":"../site/images/left-nav/weixin","content":"微信公众号"},
-                {"id":"area","img_url":"../site/images/left-nav/area","content":"地域风向标"}];
-
+        const list = [{"id":"content_myportal","img_url":"../site/images/left-nav/portal","content":"App排行榜"},
+                {"id":"content_new","img_url":"../site/images/left-nav/customization","content":"热点新闻"},
+               /* {"id":"content_busi","img_url":"../site/images/left-nav/busi","content":"电商热词风云榜"},
+                {"id":"content_video","img_url":"../site/images/left-nav/video","content":"视频热词风云榜"},
+                {"id":"content_wechat","img_url":"../site/images/left-nav/weixin","content":"微信公众号"},
+                {"id":"content_area","img_url":"../site/images/left-nav/area","content":"地域风向标"}*/];
         const jumper = _.map(list, (demo) => {
             const id = demo.id;
             const content = demo.content;
@@ -52,12 +50,12 @@ class Navigator extends React.Component {
                                 <img src={`${demo.img_url}`+'.png'} className="img-size"/>
                             </a>
                             <div onMouseOut={this.outLine.bind(this,id)}  id={`${demo.id}`} className="row display_n ws-left-lab-bg">
-                                <a href={'#'+`${demo.id}`+'_module'}><img src={`${demo.img_url}`+'_rep.png'} className="rep-img-size "/></a>
-                                <span className="ws-left-text-marg-t"><font>{content}</font></span>
+                                <a href={'#'+`${demo.id}`+'_module'}><img src={`${demo.img_url}`+'_rep.png'} className="rep-img-size "/>
+                                </a>
+                                {/*<span className="ws-left-text-marg-t"><font>{content}</font></span>*/}
                             </div>
                         </li>
                     </div>
-
                 </div>
             );
         });
@@ -74,9 +72,12 @@ export default class LeftNavigation extends React.Component{
     render(){
 
         return (
-            <Affix offsetTop={105}>
-               <Navigator />
-            </Affix>
+            <div style={{height:window.innerHeight, width:40, backgroundColor: '#475767',position: 'fixed',zIndex:1000,marginTop:-68}}>
+                <Affix offsetTop={200}>
+                    <Navigator />
+                </Affix>
+            </div>
+            
         );
     }
 }

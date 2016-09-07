@@ -49,7 +49,7 @@ var CustomizedPanel=React.createClass({
         $('#customer-panel-box').animate({marginTop:-y},500);
     },
     handleDelete:function (index) {
-        debugger
+      /*  debugger*/
         var all_right_data=this.state.rightData;
         all_right_data.splice(index,1);
         this.setState({rightData:all_right_data});

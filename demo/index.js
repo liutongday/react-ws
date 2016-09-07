@@ -52,6 +52,7 @@ import Day from './component/calendar';
 //import DatePicker from './component/datepicker';
 import CheckboxGroup from './component/CheckboxGroup';
 import moment from 'moment';
+import Scroll from './component/scroll'
 window.Storage = Storage;
 
 function initNav() {
@@ -183,14 +184,21 @@ var App=React.createClass({
                         <LeftNavigation />
                     </nav>
                     <div className="HolyGrail-content">
-                        <RecentAccess />
-                        <EasyAccess />
+                        <Scroll/>
+                        <EasyAccess/>
                     </div>
                     </div>
                 </div>
+
         );
     },
 });
+
+
+
+
+
+
 class Pages extends React.Component {
     render() {
         return (
@@ -205,7 +213,10 @@ class Pages extends React.Component {
                 </Route>
             </Router>
         )
+
     }
 }
 ReactDOM.render(<Pages></Pages>, document.getElementById('appContainer'));
+
+
 

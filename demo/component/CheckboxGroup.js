@@ -37,7 +37,23 @@ class CheckboxGroup extends  React.Component {
          }
      }
  }
-
+    onTextChange() {
+        console.info("onTextChange");
+        console.info ("var newState = document.getElementsByTagName()");
+        for(var i=0;i<inputs.length;i++){
+            var obj = inputs[i];
+            if(obj.type=='checkbox'){
+                if(obj.checked==true){
+                    sign=1;
+                    alert(obj.value);
+                }
+            }
+        }
+        if(sign==0)//没有被选择项
+        {
+            alert("未选择");
+        }
+    }
  render() {
                 return (
                     <div id="screen_down">
@@ -49,11 +65,11 @@ class CheckboxGroup extends  React.Component {
                                         <strong><span> <label htmlFor=" 全选"> 全选</label></span></strong>
                                     </td>
                                     <td>
-                                        <input type="checkbox" name="checkbox1"value="layer1" onClick={this.singleSelectparent}id=" 社交"/>
+                                        <input type="checkbox" name="checkbox1"value="layer1" onClick={this.onTextChange}id=" 社交"/>
                                         <span> <label htmlFor=" 社交"> 社交</label></span>
                                     </td>
                                     <td>
-                                        <input type="checkbox"   name="checkbox1" value="layer2"onClick={this.singleSelectparent}id=" 视频"/>
+                                        <input type="checkbox"   name="checkbox1" value="layer2"onClick={this.onTextChange}id=" 视频"/>
                                         <span> <label htmlFor=" 视频"><span> 视频</span></label></span>
                                     </td>
                                     <td>

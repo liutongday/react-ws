@@ -38,7 +38,8 @@ var RHBTabHost = React.createClass({
             { title: '科技', content: {name:'科技内容' }},
             { title: '财经', content: {name:'财经内容' }},
             { title: '搞笑', content: {name:'搞笑内容' }},
-        ],contentData:[{id :'01',tupian:'u4070.png',name:'父亲的身份',number:'222222',jiantou:'1'},
+        ],contentData:[
+            {id :'01',tupian:'u4070.png',name:'父亲的身份',number:'222222',jiantou:'1'},
             {id :'02',tupian:'u4085.png',name:'欢乐颂',number:'33452',jiantou:'-1'},
             {id :'03',tupian:'u4099.png',name:'金水桥边',number:'543522',jiantou:'1'},
             {id :'04',tupian:'u4113.png',name:'绝命卦师',number:'63754',jiantou:'-1'},

@@ -89,8 +89,7 @@ var Chart = React.createClass({
                 <div className="whit"></div>
                 <div className="background1">
                     <div className="background2">
-                        <div id="charts" >
-                        </div>
+                        <div id="charts" ></div>
                     </div>
                 </div>
             </div>

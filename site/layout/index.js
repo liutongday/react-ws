@@ -49,7 +49,7 @@ class Pages extends React.Component {
                 <Route path="/" component={Page}>
                     <IndexRoute component={Content}></IndexRoute>
                     <Route path="content1" component={Content}></Route>
-                    <Route path="content2" component={WsTable1}></Route>
+                    <Route path="content2" component={Footer}></Route>
                 </Route>
             </Router>
         );

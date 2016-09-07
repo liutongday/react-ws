@@ -8,6 +8,7 @@ src 是源代码，通过webpack打包到dist
 #访问地址
 http://localhost:3000/demo/
 http://localhost:3000/site/
+http://localhost:3000/portal/
 
 #Git地址
 https://github.com/panxianwen/react-ws
@@ -17,4 +18,5 @@ https://github.com/panxianwen/react-ws
 2、新增Flex布局样式
 3、在start项目之前，先在Terminal中执行: webpack --config webpack.config.dev.js
 4、正式项目的访问路径为: http://localhost:3000/site/
+5、第二个页面正式访问路径：http://localhost:3000/portal/
 
