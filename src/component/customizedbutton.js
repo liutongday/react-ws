@@ -8,15 +8,11 @@ import CustomizedPanel from '../component/customizedpanel'
 var CustomizedButton=React.createClass({
     getInitialState:function () {
         return {
-            data:[{listTitle:'aaaaaaaa',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
-                {listTitle:'App排行榜',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
-                {listTitle:'电商热词',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
-                {listTitle:'视频热词',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
-                {listTitle:'地域风向标',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
-                {listTitle:'bbbbbbb',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
-                {listTitle:'微信公众号',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
-                {listTitle:'报表1',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
-                {listTitle:'报表2',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]}]
+            data:[{listTitle:'aaaaaaaa'},{listTitle:'App排行榜'},
+                {listTitle:'电商热词'}, {listTitle:'视频热词'},
+                {listTitle:'地域风向标'},{listTitle:'bbbbbbb'},
+                {listTitle:'微信公众号'}, {listTitle:'报表1'},
+                {listTitle:'报表2'}],leftPanelTitle:'核心指标'
         };
     },
     handleClick:function () {
@@ -31,8 +27,7 @@ var CustomizedButton=React.createClass({
         return(
             <div id="customized-div">
                 <div id="customer-panel-box">
-                    {/*<h1>sssssssssssssssssss</h1>*/}
-                    <CustomizedPanel leftData={this.state.data}/>
+                    <CustomizedPanel leftData={this.state.data} leftPanelTitle={this.state.leftPanelTitle}/>
                 </div>
                 <img onClick={this.handleClick} id="customized-icon" src="/src/images/customize/customized-button-bg.png"/>
             </div>
