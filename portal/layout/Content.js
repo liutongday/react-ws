@@ -40,12 +40,30 @@ export default class Content extends React.Component {
                         <DatePicker callbackParent={this.onDateChanged}/>
                         <Selector  callbackParent={this.onProChanged}/>
                     </div>
-                    <Title icon="core" name="核心指标"/>
-                    <Scroll/>
-                    <Title icon="fire" name="热点关注"/>
-                    <TabHost/>
-                    <RecentAccess/>
-                    <EasyAccess/>
+                    <div className="container-fluid">
+                        <div className="row">
+                            <div className="col-xs-12 col-md-9 col-lg-9">
+                                <Title icon="core" name="核心指标"/>
+                                <Scroll/>
+                            </div>
+                            <div id="right-recent" className="col-xs-12 col-md-3 col-lg-3">
+                                <Title icon='date' name="近期访问"/>
+                                <RecentAccess/>
+                            </div>
+                        </div>
+                        <div className="row">
+
+                            <div className="col-xs-12 col-md-9 col-lg-9">
+                                <Title icon="fire" name="热点关注"/>
+                                <TabHost/>
+                            </div>
+                            <div id="right-easy" className="col-xs-12 col-md-3 col-lg-3">
+                                <Title icon="rocket" name="便捷访问"/>
+                                <EasyAccess/>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         )

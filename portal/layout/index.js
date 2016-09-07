@@ -33,7 +33,10 @@ export default class Page extends React.Component {
             <div className="HolyGrail">
                 <Header />
                 {this.props.children}
-                <Footer />
+                {/*<Footer />*/}
+
+
+
 
             </div>
         );
