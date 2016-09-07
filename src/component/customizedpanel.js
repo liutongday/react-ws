@@ -7,7 +7,8 @@ var CustomizedPanel=React.createClass({
     getInitialState:function () {
        return{
            leftData:this.props.leftData,
-           rightData:[]
+           rightData:[],
+           currentIndex: -1
        };
     },
     handleSearch:function () {
@@ -54,6 +55,27 @@ var CustomizedPanel=React.createClass({
         all_right_data.splice(index,1);
         this.setState({rightData:all_right_data});
     },
+    handleShowSubItem:function (index) {
+        this.setState({currentIndex: index});
+        /*var ulStyle=document.getElementsByClassName("ul-detail-list-hidden")[index].style.display;
+        if(ulStyle=='none'){
+            $(".list-item-icon")[index].addClass(".transform-list-icon");
+            document.getElementsByClassName("ul-detail-list-hidden")[index].style.display='block';
+        }
+        else {
+            //$(".list-item-icon")[index].removeClass(".transform-list-icon");
+            document.getElementsByClassName("ul-detail-list-hidden")[index].style.display='none';
+        }*/
+
+    },
+    changeUlStyle:function (index) {
+        debugger
+        return  index == this.state.currentIndex? 'ul-detail-list-show': 'ul-detail-list-hidden';
+    },
+    changeItemIcon:function (index) {
+        debugger
+        return  index == this.state.currentIndex? 'list-item-icon transform-list-icon': 'list-item-icon';
+    },
     render:function () {
        /* const leftData=[{listTitle:'aaaaaaaa',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
             {listTitle:'aaaaaaaa',listDetails:[{detailTitle:'aaab'},{detailTitle:'aaab'},{detailTitle:'aaab'}]},
@@ -71,8 +93,8 @@ var CustomizedPanel=React.createClass({
             var list_details=data.listDetails;
             return (
                 <div id="left-list">
-                    <details onClick={self.handleItemClick.bind(this,index)}>
-                    <summary>{list_title}</summary>
+                    {/*<details onClick={self.handleItemClick.bind(this,index)}>
+                        <summary>{list_title}</summary>
                         <ul id="ul-detail-list">
                             {list_details.map(function (d_data,key) {
                                 return(
@@ -80,7 +102,18 @@ var CustomizedPanel=React.createClass({
                                 );
                             })}
                         </ul>
-                </details>
+                    </details>*/}
+                        <img className={self.changeItemIcon(index)} src="/src/images/customize/list-item-icon.png" onClick={self.handleShowSubItem.bind(this,index)} ></img>
+                        <div>
+                            <span className="list-item" onClick={self.handleItemClick.bind(this,index)}>{list_title}</span>
+                            <ul className={self.changeUlStyle(index)}>
+                                {list_details.map(function (d_data,key) {
+                                    return(
+                                        <li>{d_data.detailTitle}</li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
                 </div>
             );
         });
@@ -91,16 +124,27 @@ var CustomizedPanel=React.createClass({
                 var list_details=data.listDetails;
                 return (
                     <div id="left-list">
-                        <details>
+                        {/*<details>
                             <summary>{list_title}</summary>
-                            <ul id="ul-detail-list">
+                            <ul className="ul-detail-list">
                                 {list_details.map(function (d_data,key) {
                                     return(
                                         <li>{d_data.detailTitle}</li>
                                     );
                                 })}
                             </ul>
-                        </details>
+                        </details>*/}
+                        <img className={self.changeItemIcon(index)} src="/src/images/customize/list-item-icon.png" onClick={self.handleShowSubItem.bind(this,index)} ></img>
+                        <div>
+                            <span className="list-item">{list_title}</span>
+                            <ul className={self.changeUlStyle(index)}>
+                                {list_details.map(function (d_data,key) {
+                                    return(
+                                        <li>{d_data.detailTitle}</li>
+                                    );
+                                })}
+                            </ul>
+                        </div>
                         <img id="delete" src="/src/images/customize/close.png" onClick={self.handleDelete.bind(this,index)}></img>
                     </div>
                 );

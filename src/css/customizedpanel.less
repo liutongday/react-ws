@@ -23,8 +23,21 @@
     background-color: #F7F7F7;
     height: 450px;
 }
-#ul-detail-list{
+.list-item{
+    cursor: pointer;
+    position: relative;
+    left: 16px;
+    top: -20px;
+}
+.ul-detail-list-hidden{
+    display: none;
     list-style-type: none;
+    margin-top: -19px;
+}
+.ul-detail-list-show{
+    display: block;
+    list-style-type: none;
+    margin-top: -19px;
 }
 #search-div{
     position: relative;
@@ -127,7 +140,7 @@
     position: relative;
     width: 14px;
     left: 156px;
-    top: -21px;
+    top: -38px;
 }
 #panel-close{
     width: 24px;
@@ -136,4 +149,12 @@
     left: 533px;
     position: relative;
     cursor: pointer;
+}
+.list-item-icon{
+    cursor: default;
+    width: 9px;
+    height: 9px;
+}
+.transform-list-icon{
+    -webkit-transform: rotateZ(90deg);
 }
