@@ -47,7 +47,6 @@ export default class Content extends React.Component {
                                 <Title icon="core" name="核心指标"/>
                                 <div id="customization">
                                     <CustomizedButton/>
-
                                 </div>
                                 <Scroll/>
                             </div>
