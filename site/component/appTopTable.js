@@ -30,7 +30,7 @@ function WsTable9(appTableData) {
                  <div className="app-table-with-selector">
                      <Table1 data={data} className={'wsT4text app'}>
                          <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
-                       <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} />
+                         <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} />
                          <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'} align='center'/>
                          <Column dataKey={keys[3]} name={keys[3]} key={'col-{keys[3]}'} align='center'/>
                    </Table1>

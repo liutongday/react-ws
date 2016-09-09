@@ -5,7 +5,6 @@
  * descprition：app单个组件
  */
 import React from 'react';
-//
 import '../css/weixin.less';
 var Weixin = React.createClass({
     getInitialState(){

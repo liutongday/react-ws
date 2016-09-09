@@ -42,30 +42,11 @@ var Scroll= React.createClass({
             if(document.getElementById('demo2').offsetWidth-document.getElementById('demo').scrollLeft<=0)
                 document.getElementById('demo').scrollLeft-=document.getElementById('demo1').offsetWidth
             else{
-                document.getElementById('demo').scrollLeft+=175;
+                document.getElementById('demo').scrollLeft+=1;
             }
         }
     },
     myanimate:function(){
-        $("#scroll-move0").animate({'left':'600px','display':'none'},1000);
-        $("#scroll-move1").animate({'left':'-200px','display':'block'},1000);
-        $("#scroll-move2").animate({'left':'-200px','display':'block'},1000);
-        $("#scroll-move3").animate({'left':'-200px','display':'block'},1000);
-
-        $("#scroll-move1").animate({'left':'400px','display':'none'},1000);
-        $("#scroll-move2").animate({'left':'-400px','display':'block'},1000);
-        $("#scroll-move3").animate({'left':'-400px','display':'block'},1000);
-        $("#scroll-move0").animate({'left':'400px','display':'block'},1000);
-
-        $("#scroll-move2").animate({'left':'200px','display':'none'},1000);
-        $("#scroll-move3").animate({'left':'-600px','display':'block'},1000);
-        $("#scroll-move0").animate({'left':'200px','display':'block'},1000);
-        $("#scroll-move1").animate({'left':'200px','display':'block'},1000);
-
-        $("#scroll-move3").animate({'left':'0px','display':'none'},1000);
-        $("#scroll-move0").animate({'left':'0px','display':'block'},1000);
-        $("#scroll-move1").animate({'left':'0px','display':'block'},1000);
-        $("#scroll-move2").animate({'left':'0px','display':'block'},1000);
         //$("#scroll-move").animate({left:'+=50px'});
        /* if($('#scroll-move').offset().left>=400){
             //$("#scroll-move").animate({'left':'0px','visibility':'hidden'},1000);

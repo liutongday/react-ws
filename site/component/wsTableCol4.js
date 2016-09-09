@@ -35,9 +35,6 @@ function WsTable1(tabledata) {
             fontSize: '12px',
             paddingTop:'5px',
         };
-
-
-
         const pstyle = {
             marginRight: '18px',
             marginTop:'4px',

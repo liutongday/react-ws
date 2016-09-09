@@ -68,11 +68,11 @@ function WsTable6(itemHotData) {
                 <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} align='center'/>
                 <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'} align='center'/>
                 <Column dataKey={keys[3]} name={keys[3]} key={'col-{keys[3]}'} align='center'/>
-
             </Table1>
 
         );
     });
+
     return (
         <div className="container-fluid" >
             <div className="row">{talbleType2}</div>

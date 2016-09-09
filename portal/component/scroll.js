@@ -33,19 +33,25 @@ var Scroll= React.createClass({
     },
     scrollmove:function() {
         var speed=30
-        var MyMar=setInterval(Marquee,1000)
+        var MyMar=setInterval(Marquee,30)
         document.getElementById('demo2').innerHTML=document.getElementById('demo1').innerHTML
         document.getElementById('demo').onmouseover=function() {clearInterval(MyMar)}
-        document.getElementById('demo').onmouseout=function() {MyMar=setInterval(Marquee,1000)}
-
+        document.getElementById('demo').onmouseout=function() {MyMar=setInterval(Marquee,30)}
         function Marquee(){
+            console.info("*****************");
+            console.info(document.getElementById('demo2').offsetWidth);
+            console.info(document.getElementById('demo').scrollLeft);
+            console.info(document.getElementById('demo1').offsetWidth);
             if(document.getElementById('demo2').offsetWidth-document.getElementById('demo').scrollLeft<=0)
                 document.getElementById('demo').scrollLeft-=document.getElementById('demo1').offsetWidth
             else{
-                document.getElementById('demo').scrollLeft+=175;
+                document.getElementById('demo').scrollLeft+=1;
+                //$("#demo1").animate({left: '-=100'}, "slow");
+                //$('#demo').stop(true).animate({'left':'-100px'},1000);
             }
         }
     },
+
     myanimate:function(){
         $("#scroll-move0").animate({'left':'600px','display':'none'},1000);
         $("#scroll-move1").animate({'left':'-200px','display':'block'},1000);
@@ -91,6 +97,9 @@ var Scroll= React.createClass({
         var option = {
             xAxis : [
                 {
+                    axisTick:{
+                        show:false,
+                    },
                     //坐标轴刻度文字样式设置
                     axisLabel:{
                         textStyle:{
@@ -117,6 +126,7 @@ var Scroll= React.createClass({
                 {
                     //坐标轴刻度文字样式设置
                     axisLabel:{
+                        show:true,
                         textStyle:{
                             color:'#E3EBE9'
                         },
@@ -209,7 +219,8 @@ var Scroll= React.createClass({
                 <div id="demo" style={{overflow:'hidden',height:'100px',width:'710px'}}>
                     <table cellpadding="0" cellspace="0" border="0">
                         <tr>
-                            <td id="demo1"><table width="710" border="0" cellspacing="0" cellpadding="0">
+                            <td id="demo1" style={{position:'relative'}}>
+                                <table width="710" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
                                     {rolesListDatainfo}
                                 </tr>

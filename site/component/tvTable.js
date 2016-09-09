@@ -41,65 +41,57 @@ const data = [
 
     {排名: '10', 热门视频: '/demo/images/u4197.png,最好的我们', 热度: 57639,变化: '0'},
 
-];
-];*/
-
+]
 function WsTable7() {
-function WsTable7(tvTableData) {
-    const items=tvTableData.data;
-    const dataArr=[];
-    for(let i=0;i<data.length;i+=10){
-        dataArr.push(data.slice(i,i+10));
-    }
-    for(let i=0;i<items.length;i+=10){
-        dataArr.push(items.slice(i,i+10));
-    }
+    function WsTable7(tvTableData) {
+        const items = tvTableData.data;
+        const dataArr = [];
+        for (let i = 0; i < data.length; i += 10) {
+            dataArr.push(data.slice(i, i + 10));
+        }
+        for (let i = 0; i < items.length; i += 10) {
+            dataArr.push(items.slice(i, i + 10));
+        }
 
-    const talbleType3=dataArr.map(data=>{
-        const keys = Object.keys(data[0]);
+        const talbleType3 = dataArr.map(data=> {
+            const keys = Object.keys(data[0]);
+
+
+            return (
+
+                <Table1 data={data} className={'wsT4text tv'}>
+                    <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
+                    <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'}/>
+                    <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'}/>
+                    <Column dataKey={keys[3]} name={keys[3]} key={'col-{keys[3]}'} align='center'/>
+
+                </Table1>
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+            );
+        });
         return (
-
-            <Table1 data={data} className={'wsT4text tv'}>
-                <Column dataKey={keys[0]} name={keys[0]} key={'col-{keys[0]}'} align='center'/>
-                <Column dataKey={keys[1]} name={keys[1]} key={'col-{keys[1]}'} />
-                <Column dataKey={keys[2]} name={keys[2]} key={'col-{keys[2]}'} />
-                <Column dataKey={keys[3]} name={keys[3]} key={'col-{keys[3]}'} align='center'/>
-
-            </Table1>
+            <div >
+                <Flex ws-flex row wrap>
+                    {talbleType3}
+                </Flex>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+            </div>
         );
-    });
-    return (
-        <div >
-            <Flex ws-flex row wrap>
-                {talbleType3}
-            </Flex>
 
-
-
-
-
-
-        </div>
-    );
-
+    }
 }
-
-
-export default WsTable7;
+export default WsTable7

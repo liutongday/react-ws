@@ -12,6 +12,7 @@ import ValidateMixin from './component/validate.mixin';
 import Table1 from './component/tableCol4';
 import Table2 from './component/tableCol3';
 import Table3 from './component/tableCol5';
+import Twopagetable from './component/twopagetable';
 import Column from './component/column';
 import NowTime from './component/nowtime';
 import Calendar from './component/calendar';
@@ -23,7 +24,7 @@ import Weixin from './component/weixin';
 import Title from './component/title';
 import Video from './component/video';
 import ModulePartition from './component/ModulePartition';
-
+import Twopageta from './component/twopagetable';
 import AppCol from './component/appCol';
 import Tab from './component/tab';
 import TabContent from './component/tabcontent';
@@ -51,6 +52,7 @@ module.exports = {
     Table1,
     Table2,
     Table3,
+    Twopageta,
     Column,
     NowTime,
     Calendar,
@@ -69,6 +71,6 @@ module.exports = {
     RHBTabHost,
     RecentAccess,
     EasyAccess,
-    MoveScroll
+    MoveScroll,
 };
 

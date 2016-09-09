@@ -23,9 +23,27 @@ import {
 import moment from 'moment';
 
 import Title from '../component/title';
-import TabHost from '../component/tabhost';import Scroll from '../component/scroll';export default class Content extends React.Component {
+import TabHost from '../component/tabhost';
+import Scroll from '../component/scroll';
+export default class Content extends React.Component {
     constructor(props) {
         super(props);
+    }
+    onProChanged(proId) {
+        console.info("11111");
+        console.info(proId);
+        this.setState({
+            pro:proId
+        });
+        this.getCommonListData(proId,this.state.date);
+    }
+    onDateChanged (date) {
+        console.info("22222");
+        console.info(date);
+        this.setState({
+            date: date
+        });
+        this.getCommonListData(this.state.pro,date);
     }
     render() {
         return (
