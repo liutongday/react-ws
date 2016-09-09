@@ -6,7 +6,9 @@ import '../css/tab.less';
 var Tab = React.createClass({
     getInitialState:function () {
         return {
-            currentIndex:0
+            currentIndex:0,
+            data:this.props.data,
+            value:'aaaa',
         };
     },
     handleClick:function(index){
@@ -19,6 +21,21 @@ var Tab = React.createClass({
     changeTabIndicate:function (index) {
         return index == this.state.currentIndex ? 'bottom-line-show' : 'bottom-line-none';
     },
+    addMiddle:function () {
+        var addData=this.state.data.slice();
+        addData.push({ title: '', content: {id:'01',module:'/portal/images/newtab/mobileService.png'}},);
+        this.setState({
+            data:addData,
+        });
+
+    },
+
+    handleChange(e) {
+        let value=e.target.value;
+        this.setState({
+            value: value
+        });
+    },
 
 
 
@@ -30,13 +47,12 @@ var Tab = React.createClass({
         const row_bg={
             backgroundColor:'#F7F7F7'
         };
-        var data=this.props.data;
         return (
             <div className="container-fluid tab_container">
                 <div className="row">
                     <div className="up-line">
                     </div>
-                    { data.map(function (i_data,index) {
+                    { this.state.data.map(function (i_data,index) {
                         var bound = this.handleClick.bind(this,index);
                         return (
                             <div className={'col-xs-3 col-sm-2 col-md-1 col-lg-1'}>
@@ -48,6 +64,12 @@ var Tab = React.createClass({
                                 </div>
                             </div>);
                     },this)}
+                    <div className={'col-xs-3 col-sm-2 col-md-1 col-lg-1'}>
+                        <div className="tab-name-div">
+                            <span className="span-middle" onClick={this.addMiddle.bind(this)}><img src="/portal/images/newtab/addButton.png"/></span>
+                            <input onChange={this.handleChange.bind(this)} className="input" value={this.state.value} />
+                        </div>
+                    </div>
                 </div>
             </div>
         );
