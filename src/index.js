@@ -38,6 +38,8 @@ import MoveScroll from './component/movescroll'
 import './index.less';
 import RecentAccess from './component/recentAccess';
 import EasyAccess from './component/easyAccess';
+import CustomizedButton from './component/customizedbutton';
+import CustomizedPanel from './component/customizedpanel';
 module.exports = {
 	Util,
     Flex,
@@ -71,6 +73,15 @@ module.exports = {
     RHBTabHost,
     RecentAccess,
     EasyAccess,
-    MoveScroll,
+CustomizedButton,
+    CustomizedPanel<<<<<<< .mine
+
+
+=======
+    CustomizedButton,
+    CustomizedPanel
+>>>>>>> .theirs
 };
+
+
 

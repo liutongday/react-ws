@@ -158,7 +158,7 @@ var HotNews = React.createClass({
                 <ModulePartition id="content_new_module" name="热点新闻" en_name="Hot News"/>
                 <DatePicker callbackParent={this.onDateChanged}/>
                 <Selector  callbackParent={this.onProChanged}/>
-                <div     id="new-fluid"    className="container-fluid">
+                <div   id="new-fluid"    className="container-fluid">
                     <div id="row" className="row">
                         <div id="hot_new_left" className=" col-xs-12 col-md-4 col-lg-4">
                             <Title icon="new-hot-event" name="热点新闻事件"/>

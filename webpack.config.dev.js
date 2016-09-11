@@ -7,9 +7,7 @@ var precss = require('precss');
 module.exports = {
     devtool: 'eval',
     entry: {
-        'index': [
-            './demo/index'
-        ],
+        'index': './demo/index',
         'site': './site/layout/index',
         'portal':'./portal/layout/index'
     },
