@@ -73,14 +73,9 @@ module.exports = {
     RHBTabHost,
     RecentAccess,
     EasyAccess,
-CustomizedButton,
-    CustomizedPanel<<<<<<< .mine
-
-
-=======
     CustomizedButton,
-    CustomizedPanel
->>>>>>> .theirs
+    CustomizedPanel,
+    CustomizedButton,
 };
 
 

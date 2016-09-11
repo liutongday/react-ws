@@ -87,25 +87,19 @@ var App=React.createClass({
                 <header>Unicom Test</header>
                 <Head />
                 <div className="HolyGrail-body">
-
                    <nav className="HolyGrail-nav">
                         <LeftNavigation />
                     </nav>
                     <div className="HolyGrail-content">
                         <Scroll/>
-<Twopagetab/>                    </div>
+                        <Twopagetab/>
+                    </div>
                     </div>
                 </div>
 
         );
     },
 });
-
-
-
-
-
-
 class Pages extends React.Component {
     render() {
         return (
@@ -124,6 +118,4 @@ class Pages extends React.Component {
     }
 }
 ReactDOM.render(<Pages></Pages>, document.getElementById('appContainer'));
-
-
 
