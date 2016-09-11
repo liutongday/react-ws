@@ -106,8 +106,6 @@ const renderTds = (data, entry, columns, rowIndex) => (
             className="twopage-table-one"
         }
         else {
-            console.info("**********")
-            console.info(value.toString()=='null')
             if(value.toString()=='null'){
                 content='-';
             }

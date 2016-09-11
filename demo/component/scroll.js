@@ -33,16 +33,23 @@ var Scroll= React.createClass({
     },
     scrollmove:function() {
         var speed=30
-        var MyMar=setInterval(Marquee,1000)
+        var MyMar=setInterval(Marquee,30)
         document.getElementById('demo2').innerHTML=document.getElementById('demo1').innerHTML
         document.getElementById('demo').onmouseover=function() {clearInterval(MyMar)}
-        document.getElementById('demo').onmouseout=function() {MyMar=setInterval(Marquee,1000)}
-
+        document.getElementById('demo').onmouseout=function() {MyMar=setInterval(Marquee,30)}
         function Marquee(){
+            console.info("*****************");
+            console.info(document.getElementById('demo2').offsetWidth);
+            console.info(document.getElementById('demo').scrollLeft);
+            console.info(document.getElementById('demo1').offsetWidth);
             if(document.getElementById('demo2').offsetWidth-document.getElementById('demo').scrollLeft<=0)
                 document.getElementById('demo').scrollLeft-=document.getElementById('demo1').offsetWidth
             else{
-                document.getElementById('demo').scrollLeft+=1;
+
+
+                //document.getElementById('demo').scrollLeft+=1;
+                $("#demo1").animate({left: '-=100'}, "slow");
+                //$('#demo').stop(true).animate({'left':'-100px'},1000);
             }
         }
     },

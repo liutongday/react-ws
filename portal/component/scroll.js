@@ -33,8 +33,9 @@ var Scroll= React.createClass({
     },
     scrollmove:function() {
         var speed=30
-        var MyMar=setInterval(Marquee,30)
+        var MyMar=setInterval(Marquee,1000)
         document.getElementById('demo2').innerHTML=document.getElementById('demo1').innerHTML
+        document.getElementById('demo1').innerHTML=document.getElementById('demo2').innerHTML
         document.getElementById('demo').onmouseover=function() {clearInterval(MyMar)}
         document.getElementById('demo').onmouseout=function() {MyMar=setInterval(Marquee,30)}
         function Marquee(){
@@ -45,8 +46,9 @@ var Scroll= React.createClass({
             if(document.getElementById('demo2').offsetWidth-document.getElementById('demo').scrollLeft<=0)
                 document.getElementById('demo').scrollLeft-=document.getElementById('demo1').offsetWidth
             else{
-                document.getElementById('demo').scrollLeft+=1;
+                //document.getElementById('demo').scrollLeft+=1;
                 //$("#demo1").animate({left: '-=100'}, "slow");
+                //$("#demo2").animate({left: '-=100'}, "slow");
                 //$('#demo').stop(true).animate({'left':'-100px'},1000);
             }
         }
@@ -225,7 +227,7 @@ var Scroll= React.createClass({
                                     {rolesListDatainfo}
                                 </tr>
                             </table></td>
-                            <td id="demo2"></td>
+                            <td id="demo2" style={{position:'relative'}}></td>
                         </tr>
                     </table>
                 </div>
