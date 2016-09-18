@@ -4,3 +4,4 @@ build/
 /webpack-assets.js
 .idea
 node_modules/
+node_modules.zip
