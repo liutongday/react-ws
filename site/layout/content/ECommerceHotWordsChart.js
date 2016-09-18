@@ -72,11 +72,7 @@ var ECommerceHotWordsChart=React.createClass({
                 "Content-Type": "application/json; charset=utf-8",
                 ///"User-Agent": "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 Safari/537.36"
             },
-            //body:param
             body:JSON.stringify(param)
-            //body: JSON.parse(str)u
-            //body: JSON.stringify(str)
-            //body:"{name:'Hubot',login:'hubot'}"
         })
             .then(function(res) {
                 console.log("Response succeeded?", JSON.stringify(res.ok));
@@ -97,12 +93,6 @@ var ECommerceHotWordsChart=React.createClass({
                  data: rolesListData});
                  self.props.callbackParent(rolesListData);*/
             });
-
-        /*fetch("http://blog.parryqiu.com", {
-         method: 'GET',
-         mode: 'no-cors',
-         cache: 'default'
-         }).then(function(response){console.log(response)})*/
     },
     onProChanged: function (proId) {
         console.info("11111");

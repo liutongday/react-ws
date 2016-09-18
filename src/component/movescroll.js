@@ -18,7 +18,7 @@ var MoveScroll= React.createClass({
         var data=this.props.role;
         var chart ="/demo/images/scroll/"+data.chart;
         var bar="/demo/images/scroll/"+data.bar;
-        var jiantou="/demo/images/scroll/"+data.jiantou;
+        var jian="/demo/images/scroll/"+data.jiantou;
         return (
             <div id="scroll">
                 <img className="money" src={chart}/>
@@ -26,7 +26,7 @@ var MoveScroll= React.createClass({
                 <input disabled="disabled" className="numone" value={data.numone} />
                 <input disabled="disabled" className="numtwo" value={data.numtwo} />
                 <input disabled="disabled" className="numpersent" value={data.numpersent} />
-                <img className="index" jiantou={jiantou}/>
+                <img className="index" jiantou={jian}/>
                 <img className="bar" src={bar}/>
             </div>
         )

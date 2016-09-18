@@ -163,16 +163,13 @@ var HotNews = React.createClass({
                         <div id="hot_new_left" className=" col-xs-12 col-md-4 col-lg-4">
                             <Title icon="new-hot-event" name="热点新闻事件"/>
                             <WsTable2 data={eventData}/>
-
                         </div>
                         <div id="hot_new_right" className=" col-xs-12 col-md-8 col-lg-8">
                             <Title icon="new-relative-event" name="相关新闻"/>
                             <WsTable3 data={newsData}/>
-
                         </div>
                     </div>
                 </div>
-
                 <div>
                <Title icon="title-hot-event" name="事件热度趋势"/>
                 <Chart/>

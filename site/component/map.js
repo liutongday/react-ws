@@ -20,8 +20,8 @@ var Map = React.createClass({
 
     getInitialState: function() {
         var dataSet=[
-            {name : '鹿晗退出跑男录制', value : 234,symbolSize:[50,10]},
-            {name : '爱奇艺', value : 234,symbol: 'image://images/map-label.png',x: 180, y: 310},
+            {name : '鹿晗退出跑男录制', value : 234,symbolSize:[50,15]},
+            {name : '爱奇艺', value : 234,symbol: 'image://images/chart/map-label.png',x: 180, y: 310},
             {name : '淘宝', value : 103},
             {
                 name : '我的奇妙男友',
@@ -88,8 +88,8 @@ var Map = React.createClass({
                     ],
                     //控制标签是否显示，也就是如果要显示标签必须有label如果不想要省名称可以将normal设为false
                     markPoint : {
-                        symbol: 'roundRect',
-                        symbolSize: [30,10],
+                        symbol:  'image://images/chart/map-label.png',
+                        symbolSize: [30,15],
                         label:{
                             normal:{
                                 show:false,

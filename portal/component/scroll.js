@@ -32,34 +32,53 @@ var Scroll= React.createClass({
         };
     },
     scrollmove:function() {
-        var speed=30
-        var MyMar=setInterval(Marquee,1000)
+        var self=this;
+        var flag=0;
+        var MyMar=setInterval(Marquee,3000)
         document.getElementById('demo2').innerHTML=document.getElementById('demo1').innerHTML
-        document.getElementById('demo1').innerHTML=document.getElementById('demo2').innerHTML
         document.getElementById('demo').onmouseover=function() {clearInterval(MyMar)}
-        document.getElementById('demo').onmouseout=function() {MyMar=setInterval(Marquee,30)}
+        document.getElementById('demo').onmouseout=function() {MyMar=setInterval(Marquee,3000)}
         function Marquee(){
-            console.info("*****************");
-            console.info(document.getElementById('demo2').offsetWidth);
-            console.info(document.getElementById('demo').scrollLeft);
-            console.info(document.getElementById('demo1').offsetWidth);
-            if(document.getElementById('demo2').offsetWidth-document.getElementById('demo').scrollLeft<=0)
-                document.getElementById('demo').scrollLeft-=document.getElementById('demo1').offsetWidth
+            //切换折线图
+            if($('#demo1').offset().left>=65&&$('#demo1').offset().left<=75
+                ||$('#demo2').offset().left>=65&&$('#demo2').offset().left<=75){
+                self.changechart(1);
+            }
+            else if($('#demo1').offset().left>=740&&$('#demo1').offset().left<=750
+                ||$('#demo2').offset().left>=740&&$('#demo2').offset().left<=750){
+                self.changechart(2);
+            }
+            else if($('#demo1').offset().left>=515&&$('#demo1').offset().left<=525
+                ||$('#demo2').offset().left>=515&&$('#demo2').offset().left<=525){
+                self.changechart(3);
+            }
             else{
-                //document.getElementById('demo').scrollLeft+=1;
-                //$("#demo1").animate({left: '-=100'}, "slow");
-                //$("#demo2").animate({left: '-=100'}, "slow");
-                //$('#demo').stop(true).animate({'left':'-100px'},1000);
+                self.changechart(4);
+            }
+            //移动demo1
+            console.info("@@@@@@");
+            var demoright=$('#demo1').css('width')
+            console.info(250-demoright);
+            if($('#demo1').offset().left>(250-parseInt(demoright))){
+                $("#demo1").animate({left: '-=225'}, 2000);
+            }
+            else {
+                $("#demo1").css("left","672px");
+            }
+            //移动demo2
+            if($('#demo2').offset().left>(100-parseInt(demoright))){
+                $("#demo2").animate({left: '-=225'}, 2000);
+            }
+            else {
+                $("#demo2").css("left","-231.5px");
             }
         }
     },
-
     myanimate:function(){
         $("#scroll-move0").animate({'left':'600px','display':'none'},1000);
         $("#scroll-move1").animate({'left':'-200px','display':'block'},1000);
         $("#scroll-move2").animate({'left':'-200px','display':'block'},1000);
         $("#scroll-move3").animate({'left':'-200px','display':'block'},1000);
-
         $("#scroll-move1").animate({'left':'400px','display':'none'},1000);
         $("#scroll-move2").animate({'left':'-400px','display':'block'},1000);
         $("#scroll-move3").animate({'left':'-400px','display':'block'},1000);
@@ -92,7 +111,6 @@ var Scroll= React.createClass({
         this.scrollmove();
         this.scrollCharts(this.state.data);
     },
-
     scrollCharts:function(dataSet){
         var myChart = echarts.init(document.getElementById('scroll-chart'));
         // 指定图表的配置项和数据
@@ -199,7 +217,6 @@ var Scroll= React.createClass({
          date: data,
          });*/
     },
-
     render() {
         var self=this;
         var data = [{chart :'money.png',movename:'移网日发展用户数',numone:'111',numtwo:'111',numpersent:'11%',jiantou:'money.png',bar:'money.png'},
@@ -209,6 +226,7 @@ var Scroll= React.createClass({
         var rolesListDatainfo = data.map(function (role, index) {
             var id="scroll-move"+index;
             var left=1*index
+
             return (
                 <div id={id} className={index} style={{left: left,position:'relative'}} onClick={self.changechart.bind(this,index)}>
                     <MoveScroll role={role} key={index}/>
@@ -218,21 +236,20 @@ var Scroll= React.createClass({
         return (
             <div className="scroll-main">
                 <div id="scroll-chart" ></div>
-                <div id="demo" style={{overflow:'hidden',height:'100px',width:'710px'}}>
+                <div id="demo" style={{overflow:'hidden',height:'100px',width:'900px'}}>
                     <table cellpadding="0" cellspace="0" border="0">
                         <tr>
-                            <td id="demo1" style={{position:'relative'}}>
-                                <table width="710" border="0" cellspacing="0" cellpadding="0">
+                            <td id="demo1">
+                                <table width="900" border="0" cellspacing="0" cellpadding="0">
                                 <tr>
                                     {rolesListDatainfo}
                                 </tr>
                             </table></td>
-                            <td id="demo2" style={{position:'relative'}}></td>
+                            <td id="demo2"></td>
                         </tr>
                     </table>
                 </div>
             </div>
-
         );
         /*var data1 = {chart :'money.png',movename:'移网日发展用户数',numone:'111',numtwo:'111',numpersent:'11%',jiantou:'money.png',bar:'money.png'};
          var data2 = {chart :'money.png',movename:'移网日发展用户数',numone:'222',numtwo:'222',numpersent:'22%',jiantou:'money.png',bar:'money.png'};

@@ -74,14 +74,10 @@ function initNav() {
 var App=React.createClass({
 
     render() {
-        var tableData=[
-            {排名: '1', "/src/images/u8852.png,网银支付": '/src/images/weixin.png,微信', 活跃用户数: 57639,变化: '1'},
-            {排名: '2', "/src/images/u8852.png,网银支付": '/src/images/qq.png,QQ',   活跃用户数: 53958,变化: '0'},
-            {排名: '3', "/src/images/u8852.png,网银支付": '/src/images/weibo.png,新浪微博', 活跃用户数: 10184,变化: '0'},
-            {排名: '4', "/src/images/u8852.png,网银支付": '/src/images/qqkj.png,QQ空间', 活跃用户数: 8643,变化: '0'},
-            {排名: '5', "/src/images/u8852.png,网银支付": '/src/images/zhfb.png,支付宝', 活跃用户数: 6689,变化: '0'},
-
-        ];
+        var scrolldata = [{chart :'money.png',movename:'移网日发展用户数',numone:'111',numtwo:'111',numpersent:'11%',jiantou:'money.png',bar:'money.png'},
+            {chart :'money.png',movename:'移网日发展用户数',numone:'222',numtwo:'222',numpersent:'22%',jiantou:'money.png',bar:'money.png'},
+            {chart :'money.png',movename:'移网日发展用户数',numone:'333',numtwo:'333',numpersent:'33%',jiantou:'money.png',bar:'money.png'},
+            {chart :'money.png',movename:'移网日发展用户数',numone:'444',numtwo:'444',numpersent:'44%',jiantou:'money.png',bar:'money.png'}]
         return (
             <div className="HolyGrail">
                 <header>Unicom Test</header>
@@ -91,7 +87,7 @@ var App=React.createClass({
                         <LeftNavigation />
                     </nav>
                     <div className="HolyGrail-content">
-                        <Scroll/>
+                        <Scroll data={scrolldata}/>
                         <Twopagetab/>
                     </div>
                     </div>

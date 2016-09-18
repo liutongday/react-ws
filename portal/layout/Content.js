@@ -64,7 +64,7 @@ export default class Content extends React.Component {
                                 <div id="customization">
                                     <CustomizedButton/>
                                 </div>
-                                {/*<Scroll/>*/}
+                                <Scroll/>
                             </div>
                             <div id="right-recent" className="col-xs-12 col-md-3 col-lg-3">
                                 <Title icon='date' name="近期访问"/>
