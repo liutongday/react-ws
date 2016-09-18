@@ -12,6 +12,7 @@ var Tab = React.createClass({
         };
     },
     handleClick:function(index){
+        console.log("aaaaaaaa"+index);
         this.props.onClick(index);
         this.setState({currentIndex: index});
     },
@@ -23,18 +24,23 @@ var Tab = React.createClass({
     },
     addMiddle:function () {
         var addData=this.state.data.slice();
-        addData.push({ title: '', content: {id:'01',module:'/portal/images/newtab/mobileService.png'}},);
+        addData.push({ title: 'abc', content: {id:'03',module:'/portal/images/newtab/mobileService.png'}},);
         this.setState({
             data:addData,
         });
 
+        this.props.callbackParent(addData);
     },
 
     handleChange(e) {
         let value=e.target.value;
+        var dataUpdate=this.state.data.slice();
+        var i=e.target.id;
+        dataUpdate[i].title=value;
         this.setState({
-            value: value
+            data:dataUpdate
         });
+        this.props.callbackParent(dataUpdate);
     },
 
 
@@ -60,14 +66,13 @@ var Tab = React.createClass({
                                     <img className="img" src="/portal/images/newtab/red-arrow.png"/>
                                 </div>
                                 <div className="tab-name-div">
-                                    <span className="span-middle" onClick={bound}>{i_data.title}</span>
+                                    <input className="span-middle ws-tab-input" id={index} onChange={this.handleChange} onClick={bound} value={i_data.title}/>
                                 </div>
                             </div>);
                     },this)}
                     <div className={'col-xs-3 col-sm-2 col-md-1 col-lg-1'}>
                         <div className="tab-name-div">
                             <span className="span-middle" onClick={this.addMiddle.bind(this)}><img src="/portal/images/newtab/addButton.png"/></span>
-                            <input onChange={this.handleChange.bind(this)} className="input" value={this.state.value} />
                         </div>
                     </div>
                 </div>

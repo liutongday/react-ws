@@ -20,11 +20,17 @@ var TabHost = React.createClass({
 
         this.setState({contentData:this.state.data[index].content});
     },
+    onChildChanged: function (newState) {
+        this.setState({
+            data: newState
+        });
+    },
     render(){
         var data=this.state.data;
         return (
             <div>
-                    <Tab onClick={this.handleClick} data={data}/>
+                    <Tab onClick={this.handleClick} data={data}
+                         callbackParent={this.onChildChanged}/>
                     <TabContent data={this.state.contentData}/>
             </div>
         );
